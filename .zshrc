@@ -57,7 +57,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Add Homebrew paths if `brew` is installed.
 if command -v brew >/dev/null; then
   HOMEBREW=/usr/local/bin:/usr/local/sbin
-  export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
   export PATH=$HOMEBREW:$PATH
 fi
 

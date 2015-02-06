@@ -1,0 +1,73 @@
+# ~/.tmuxinator/lmpm.yml
+
+name: 'Cloud Engine - Property Manager'
+root: ~/Repos/lmpm/
+
+# Optional tmux socket
+socket_name: lmpm
+
+# Runs before everything. Use it to start daemons etc.
+pre: boot2docker start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: $(b2d shellinit)
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+tmux_options: -2
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+
+  - "Control":
+      layout: even-horizontal
+      panes:
+        - nvim docker-compose.yml
+        - docker-compose:
+          - dc pull
+          - dc build
+          - dc up -d
+          - dc logs
+
+  - "Main App":
+      pre:
+        - cd main-app
+      layout: main-vertical
+      panes:
+        - nvim
+        - vagrant version
+        - grunt --version
+
+  - "API":
+      pre:
+        - cd api
+      layout: main-vertical
+      panes:
+        - nvim
+        - dc logs api
+
+  - "Wordpress":
+      layout: even-horizontal
+      panes:
+        - theme:
+          - cd wordpress-theme
+          - nvim
+        - plugin:
+          - cd wordpress-plugin
+          - nvim
+
+  - "Spine":
+      pre:
+        - cd ~/Repos/spine-xp
+      layout: main-vertical
+      panes:
+        - nvim
+        - git status
+
+  - "Dotfiles":
+      pre:
+        - cd ~/.dotfiles
+      leyout: even-horizontal
+      panes:
+        - nvim .nvimrc

@@ -79,3 +79,6 @@ alias b2d-start='b2d init && b2d start && $(b2d shellinit)'
 alias dc='docker-compose'
 alias dock-rm='docker rm $(docker ps -a -q)' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
 alias dock-rmi='docker rmi $(docker images -q --filter "dangling=true")' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
+
+# LMPM
+alias lmpm-builder='~/Repos/lmpm/builder/use.sh'

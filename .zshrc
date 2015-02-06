@@ -72,3 +72,10 @@ alias vundle='vim +BundleInstall! +BundleClean +qall'
 alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
 
 alias awsp='/Users/adam/.local/lib/aws/bin/aws' # TEMP
+
+# Docker
+alias b2d='boot2docker'
+alias b2d-start='b2d init && b2d start && $(b2d shellinit)'
+alias dc='docker-compose'
+alias dock-rm='docker rm $(docker ps -a -q)' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+alias dock-rmi='docker rmi $(docker images -q --filter "dangling=true")' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883

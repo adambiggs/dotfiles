@@ -44,10 +44,6 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
 
-### SSH ###
-ssh-add ~/.ssh/hvh-us-east.pem
-
-
 ### PATHS ###
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 

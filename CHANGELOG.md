@@ -1,3 +1,16 @@
+### 1.0.1 (2015-02-06)
+
+
+#### Bug Fixes
+
+* always use absolute path of `link.sh` script when creating symlinks ([fe9d3d2e](https://github.com/adambiggs/dotfiles.git/commit/fe9d3d2eccce581a96ffbc07a1c0bcdaa290fd8b))
+
+
+#### Features
+
+* added tmuxinator config to the repo ([a8c50709](https://github.com/adambiggs/dotfiles.git/commit/a8c507092ff7acd706329d6859dcf162c32003b7))
+
+
 ## 1.0.0 (2015-02-06)
 
 

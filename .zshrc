@@ -69,6 +69,6 @@ alias kmux='tmux kill-server'
 alias vu='vagrant up --provider=vmware_fusion'
 alias vs='vagrant ssh'
 alias vundle='vim +BundleInstall! +BundleClean +qall'
-alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimundo ~/.vimviews ~/.vimbackup'
+alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
 
 alias awsp='/Users/adam/.local/lib/aws/bin/aws' # TEMP

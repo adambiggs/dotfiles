@@ -1,0 +1,23 @@
+{
+  "name": "adams-dotfiles",
+  "version": "0.1.0",
+  "description": "Repo for my personal dotfiles",
+  "private": true,
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Warning: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adambiggs/dotfiles.git"
+  },
+  "author": "Adam Biggs <adam.biggs@lightmaker.com>",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/adambiggs/dotfiles/issues"
+  },
+  "homepage": "https://github.com/adambiggs/dotfiles",
+  "devDependencies": {
+    "big-gulp": "git+ssh://git@github.com:LightmakerCanada/big-gulp.git"
+  }
+}

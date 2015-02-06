@@ -1,12 +1,12 @@
-## Link dotfiles from this repo to your user directory ##
+#!/bin/bash
+COLOR=`tput setaf 4`
+GREEN=`tput setaf 2`
+RESET=`tput sgr0`
+DIR=`dirname "$0"` # Find the relative path of the script.
 
-# First back up existing files if they exist
-# TODO
-
-pwd
-
-# Create the links
-ln -s $(pwd)/.zshrc ~/.zshrc
-ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-
-echo 'Dotfiles linked to your user directory'
+# Link dotfiles from this repo to your user directory
+echo -e "\n${COLOR}Linking dotfiles into your user directory...${RESET}"
+ln -s $DIR/.zshrc ~/.zshrc
+ln -s $DIR/.tmux.conf ~/.tmux.conf
+ln -s $DIR/.nvimrc ~/.nvimrc
+echo -e "${GREEN}Done.${RESET}\n"

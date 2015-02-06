@@ -48,9 +48,6 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 ssh-add ~/.ssh/hvh-us-east.pem
 
 
-### SOURCES ###
-source ~/.nvm/nvm.sh # NVM (https://github.com/creationix/nvm)
-
 ### PATHS ###
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -82,3 +79,7 @@ alias dock-rmi='docker rmi $(docker images -q --filter "dangling=true")' # http:
 
 # LMPM
 alias lmpm-builder='~/Repos/lmpm/builder/use.sh'
+
+
+### LIBRARY CONFIG ###
+source ~/.nvm/nvm.sh # NVM (https://github.com/creationix/nvm)

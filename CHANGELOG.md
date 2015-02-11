@@ -1,3 +1,14 @@
+## 1.1.0 (2015-02-11)
+
+
+#### Features
+
+* added powerline patched fonts as submodule ([9c09c670](https://github.com/adambiggs/dotfiles.git/commit/9c09c670e5c67b0372370921c1dc8886537935fe))
+* switched theme from `solarized` to `eighties` (using `base16` library) ([7e1a16b4](https://github.com/adambiggs/dotfiles.git/commit/7e1a16b4e5b58f5359ffb1a60459b7518d16dbc6))
+* added `base16` terminal themes as submodules ([80d11e7e](https://github.com/adambiggs/dotfiles.git/commit/80d11e7e5ecef899aaff6e3eec90e16a84da0905))
+* **vim:** let Airline choose it's theme automatically based on Vim theme ([aa887267](https://github.com/adambiggs/dotfiles.git/commit/aa8872674cd4252796235ea0de3ca47ee3df5128))
+
+
 ### 1.0.2 (2015-02-10)
 
 

@@ -1,3 +1,15 @@
+### 1.0.2 (2015-02-10)
+
+
+#### Bug Fixes
+
+* link script creating weird nested links if run multiple times ([6191f480](https://github.com/adambiggs/dotfiles.git/commit/6191f4807285ff295b07d7b2a3be5898d2ea892c))
+* did I just refer to myself in the 3rd person? ([9404d863](https://github.com/adambiggs/dotfiles.git/commit/9404d863874a159b2ab8054600048e82c45ee4ae))
+* cursor not changing shape in insert mode ([714972d4](https://github.com/adambiggs/dotfiles.git/commit/714972d4db0f3ad49fa6396666f1b6fb5670c3aa))
+* **tmuxinator:** can't do that there... ([b98e187c](https://github.com/adambiggs/dotfiles.git/commit/b98e187c7b87f2a5182156d301f4044658b8553b))
+* **vim:** spell file errors when opening certain files ([b908db59](https://github.com/adambiggs/dotfiles.git/commit/b908db59e01cfce733df3d6dfd6fa5fc3fa4b3e9), closes [#1](https://github.com/adambiggs/dotfiles.git/issues/1))
+
+
 ### 1.0.1 (2015-02-06)
 
 

@@ -1,3 +1,16 @@
+### 1.1.1 (2015-02-11)
+
+
+#### Bug Fixes
+
+* **vim:** Airline patched fonts not working in NeoVim ([52bd64cd](https://github.com/adambiggs/dotfiles.git/commit/52bd64cd2c2a44a3ce5ec6930fa3a675a43709e0))
+
+
+#### Features
+
+* **zsh:** switched from `antigen` to `zgen` ([44b3e39f](https://github.com/adambiggs/dotfiles.git/commit/44b3e39f8db375188ffb0b8fd6962028f4c18ae5))
+
+
 ## 1.1.0 (2015-02-11)
 
 

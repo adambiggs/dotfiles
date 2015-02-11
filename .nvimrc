@@ -231,9 +231,11 @@
 
   " Airline {
     if isdirectory(expand("~/.vim/plugged/vim-airline/"))
-      let g:airline_exclude_preview         = 1
-      "let g:airline#extensions#tabline#enabled   = 1  " Enable tabline
-      "let g:airline#extensions#tabline#tab_min_count = 2  " Only show tabline if using multiple tabs
+      let g:airline_exclude_preview                  = 1
+      let g:airline_detect_iminsert                  = 1
+      let g:airline_powerline_fonts                  = 1
+      let g:airline#extensions#tabline#enabled       = 1  " Enable tabline
+      let g:airline#extensions#tabline#tab_min_count = 2  " Only show tabline if using multiple tabs
     endif
   " }
 

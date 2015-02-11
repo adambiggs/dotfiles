@@ -17,7 +17,7 @@
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
   " Theme
-  Plug 'blueyed/vim-colors-solarized'
+  Plug 'chriskempson/base16-vim'
 
   " Coding
   Plug 'adambiggs/vim-autoclose'
@@ -130,7 +130,7 @@
   set list
   set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
-  highlight clear SignColumn    " SignColumn should match background
+  highlight clear SignColumn  " SignColumn should match background
   highlight clear LineNr      " Current line number row will have same background color in relative mode
 
   " User patched Powerline fonts
@@ -139,14 +139,9 @@
   " Highlight column 80
   set colorcolumn=80
 
-  " Solarized
-  if filereadable(expand("~/.vim/plugged/vim-colors-solarized/colors/solarized.vim"))
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-    let g:solarized_contrast="normal"
-    let g:solarized_visibility="normal"
-    color solarized       " Load a colorscheme
-  endif
+  " Colorscheme
+  let base16colorspace=256  " Access colors present in 256 colorspace
+  colorscheme base16-eighties
 
   " Tmux
   if exists('$TMUX')
@@ -225,9 +220,9 @@
 
   " Indent Guides {
     if isdirectory(expand("~/.vim/plugged/vim-indent-guides/"))
-      let g:indent_guides_guide_size        = 2
-      let g:indent_guides_start_level       = 1
-      let g:indent_guides_auto_colors       = 0
+      let g:indent_guides_guide_size            = 2
+      let g:indent_guides_start_level           = 1
+      let g:indent_guides_auto_colors           = 0
       let g:indent_guides_enable_on_vim_startup = 1
       autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=NONE
       autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=Black

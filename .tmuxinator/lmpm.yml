@@ -24,11 +24,10 @@ windows:
       layout: even-horizontal
       panes:
         - nvim docker-compose.yml
+        - docker-compose --version
         - docker-compose:
-          - dc pull
-          - dc build
-          - dc up -d
-          - dc logs
+          - docker-compose --version
+          - docker-compose ps
 
   - "Main App":
       pre:

@@ -1,2 +1,4 @@
-# dotfiles
-Bootstrap of my personal dotfiles, and a Dockerfile of my dev environment.
+# Adam's Dotfiles
+My various dotfiles with a simple script to link them up.
+
+Currently running NeoVim + Tmux using iTerm2 in OSX Yosemite.

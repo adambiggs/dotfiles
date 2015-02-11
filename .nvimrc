@@ -224,8 +224,8 @@
       let g:indent_guides_start_level           = 1
       let g:indent_guides_auto_colors           = 0
       let g:indent_guides_enable_on_vim_startup = 1
-      autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=NONE
-      autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=Black
+      autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+      autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
     endif
   " }
 

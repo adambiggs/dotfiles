@@ -45,7 +45,7 @@ windows:
       layout: main-vertical
       panes:
         - nvim
-        - dc logs api
+        - npm outdated
 
   - "Wordpress":
       layout: even-horizontal

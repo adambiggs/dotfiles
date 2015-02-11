@@ -11,3 +11,8 @@ ln -shiv $SCRIPTPATH/.tmux.conf ~/.tmux.conf
 ln -shiv $SCRIPTPATH/.tmuxinator ~/.tmuxinator
 ln -shiv $SCRIPTPATH/.zshrc ~/.zshrc
 echo -e "${good}Done.${clear}"
+
+echo -e "\n${info}Linking Vim spellfiles to NeoVim...${clear}"
+echo -e "(See https://github.com/neovim/neovim/issues/1551#issuecomment-65432622)"
+ln -shiv ~/.vim/spell ~/.nvim/spell
+echo -e "${good}Done.${clear}\n"

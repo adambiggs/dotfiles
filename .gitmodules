@@ -1,0 +1,6 @@
+[submodule "themes/base16-iterm2"]
+	path = themes/base16-iterm2
+	url = https://github.com/chriskempson/base16-iterm2.git
+[submodule "themes/base16-shell"]
+	path = themes/base16-shell
+	url = https://github.com/chriskempson/base16-shell.git

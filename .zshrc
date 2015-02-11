@@ -1,27 +1,34 @@
 ### PLUGINS ###
-source $HOME/.antigen/antigen.zsh # http://antigen.sharats.me
+source $HOME/.dotfiles/zgen/zgen.zsh
 
-antigen use oh-my-zsh # Load oh-my-zsh.
+# check if there's no init script
+if ! zgen saved; then
+  echo "Creating zgen init script..."
 
-# Default oh-my-zsh bundles.
-antigen bundle cake
-antigen bundle command-not-found
-antigen bundle docker
-antigen bundle git
-antigen bundle npm
-antigen bundle osx
-antigen bundle pip
-antigen bundle symfony2
-antigen bundle tmux
+  # oh-my-zsh plugins.
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/cake
+  zgen oh-my-zsh plugins/command-not-found
+  zgen oh-my-zsh plugins/docker
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/npm
+  zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/pip
+  zgen oh-my-zsh plugins/symfony2
+  zgen oh-my-zsh plugins/tmux
 
-# Other 3rd party plugins.
-antigen bundle Tarrasch/zsh-bd
-antigen bundle zsh-users/zsh-completions src
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-syntax-highlighting
+  # Other plugins.
+  zgen load Tarrasch/zsh-bd
+  zgen load zsh-users/zsh-completions src
+  zgen load zsh-users/zsh-history-substring-search
+  zgen load zsh-users/zsh-syntax-highlighting
 
-antigen theme agnoster # Set theme.
-antigen apply # Apply antigen config.
+  # Theme.
+  zgen oh-my-zsh themes/agnoster
+
+  # Save init script.
+  zgen save
+fi
 
 
 ### CONFIG ###

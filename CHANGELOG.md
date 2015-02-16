@@ -1,3 +1,24 @@
+## 1.2.0 (2015-02-16)
+
+
+#### Bug Fixes
+
+* **lmpm:** `docker-compose` startup commands take way too long ([430ae0f9](https://github.com/adambiggs/dotfiles.git/commit/430ae0f9af17182d42e6f2abced227b80cab8557))
+* **vim:** finally found nice looking colors for `vim-indent-guides` plugin ([a7dbac52](https://github.com/adambiggs/dotfiles.git/commit/a7dbac521471d9319c76a4dcb245e1855c24987b))
+* **zgen:** `selfupdate` doesn't work ([2014af40](https://github.com/adambiggs/dotfiles.git/commit/2014af40a7845d34ecce17db898eac420eca67cf))
+
+
+#### Features
+
+* added a couple more `Tabular` bindings ([fe898804](https://github.com/adambiggs/dotfiles.git/commit/fe898804db185097e68a0d573474a5e3f34edf5a))
+* **tux:** custom Tmuxline theme that works outside Vim ([007634f7](https://github.com/adambiggs/dotfiles.git/commit/007634f70866c4cd20834b457cc66ce19522e50f))
+* **vim:** slightly smaller NERDTree window ([d6d88bc9](https://github.com/adambiggs/dotfiles.git/commit/d6d88bc9aab72d7e3bc41ea9ec511b983feccd06))
+* **zsh:**
+  * added a few more useful zsh plugins ([87d941db](https://github.com/adambiggs/dotfiles.git/commit/87d941db1b07cc6cdb44a4cef718b6c2e2ddbb93))
+  * added basic find-and-replace `sed` shortcut ([a8a54cb9](https://github.com/adambiggs/dotfiles.git/commit/a8a54cb9ad1119eb18b77c2ce2c45bbc4c143886))
+  * removed some unused aliases ([b6220645](https://github.com/adambiggs/dotfiles.git/commit/b6220645d904febcb2f0aed5601dce5926274d0f))
+
+
 ### 1.1.1 (2015-02-11)
 
 

@@ -62,6 +62,8 @@ fi
 
 
 ### ALIASES ###
+
+# Basic shortcuts
 alias ..='cd ..'
 alias ls='ls -lhsGF'
 alias lsa='ls -alhsGF'
@@ -70,6 +72,8 @@ alias vu='vagrant up --provider=vmware_fusion'
 alias vs='vagrant ssh'
 alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
 
+# Scripts
+alias far='$HOME/.dotfiles/scripts/find-and-replace.sh'
 
 # Docker
 alias b2d='boot2docker'

@@ -257,9 +257,17 @@
 
   " Tmuxline {
     if isdirectory(expand("~/.vim/plugged/tmuxline.vim/"))
-      let g:tmuxline_preset = 'crosshair'
+      "let g:tmuxline_preset = 'crosshair'
       "let g:tmuxline_theme  = 'airline_insert'
       "let g:airline#extensions#tmuxline#enabled = 0
+      let g:tmuxline_preset = {
+        \'a'    : '#S',
+        \'b'    : '#(whoami)',
+        \'win'  : ['#I', '#W'],
+        \'cwin' : ['#I', '#W', '#F'],
+        \'x'    : ['#(~/.dotfiles/scripts/wifi-signal.sh)', '#(battery -t -p)'],
+        \'y'    : '%a %b %e',
+        \'z'    : '%l:%M %p'}
     endif
   " }
 

@@ -22,6 +22,9 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-history-substring-search
   zgen load zsh-users/zsh-syntax-highlighting
+  zgen load peterhurford/git-it-on.zsh
+  zgen load supercrabtree/k
+  zgen load hchbaw/opp.zsh
 
   # Theme.
   zgen oh-my-zsh themes/agnoster
@@ -44,6 +47,7 @@ export DISABLE_AUTO_TITLE=true
 
 ### KEY BINDINGS ###
 KEYTIMEOUT=1 # Prevents key timeout lag.
+bindkey -v
 
 # Bind UP and DOWN arrow keys for subsstring search.
 zmodload zsh/terminfo

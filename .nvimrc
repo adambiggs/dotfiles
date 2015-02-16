@@ -190,12 +190,9 @@
   autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1
 
   " Automatically check for changed files outside Vim
-  autocmd BufRead,BufEnter,FocusGained * checktime
-
-  " Syntax highlighting for Vagrantfile
-  augroup vagrant
-    au!
-    au BufRead,BufNewFile Vagrantfile set filetype=ruby
+  augroup changes
+    autocmd!
+    autocmd BufRead,BufEnter,FocusGained * checktime
   augroup END
 
   " Enable omni-completion.
@@ -206,6 +203,25 @@
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
   autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" }
+
+" Syntax {
+
+  " Vagrantfile {
+    augroup vagrant
+      autocmd!
+      autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+    augroup END
+  " }
+
+  " Handlebars {
+    autocmd FileType html.handlebars setlocal foldmethod=indent
+  " }
+
+  " Stylus {
+    autocmd FileType stylus setlocal foldmethod=indent
+  " }
 
 " }
 

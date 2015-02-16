@@ -342,17 +342,17 @@
 
   " NERDTree {
     if isdirectory(expand("~/.vim/plugged/nerdtree/"))
-      "let NERDTreeShowLineNumbers  = 1
-      let NERDTreeShowBookmarks   = 0
-      let NERDTreeIgnore        = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
-      let NERDTreeMapOpenVSplit   = 'v'
+      "let NERDTreeShowLineNumbers    = 1
+      let NERDTreeShowBookmarks       = 0
+      let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
+      let NERDTreeMapOpenVSplit       = 'v'
       let NERDTreeAutoCenterThreshold = 50
-      let NERDTreeWinSize       = 50
-      let NERDTreeAutoDeleteBuffer  = 1
-      let NERDTreeChDirMode     = 0
-      let NERDTreeQuitOnOpen      = 1
-      let NERDTreeMouseMode     = 2
-      let NERDTreeShowHidden      = 1
+      let NERDTreeWinSize             = 35
+      let NERDTreeAutoDeleteBuffer    = 1
+      let NERDTreeChDirMode           = 0
+      let NERDTreeQuitOnOpen          = 1
+      let NERDTreeMouseMode           = 2
+      let NERDTreeShowHidden          = 1
     endif
   " }
 

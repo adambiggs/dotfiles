@@ -21,10 +21,9 @@ tmux_options: -2
 windows:
 
   - "Control":
-      layout: even-horizontal
+      layout: main-vertical
       panes:
         - nvim docker-compose.yml
-        - docker-compose --version
         - docker-compose:
           - docker-compose --version
           - docker-compose ps

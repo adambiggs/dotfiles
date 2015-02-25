@@ -1,3 +1,13 @@
+### 1.2.1 (2015-02-24)
+
+
+#### Features
+
+* added `.zlogin` file ([e402e81b](https://github.com/adambiggs/dotfiles.git/commit/e402e81b2d511b1df6dd14839ad091a59e6c15c0))
+* **tmux:** added CPU meter and now-playing to Tmuxline template ([6e327c82](https://github.com/adambiggs/dotfiles.git/commit/6e327c8283896c1f467bc758eb58bebedffeedf6))
+* **tmuxinator:** got rid of unnecessary panel from main control window ([03f0c68b](https://github.com/adambiggs/dotfiles.git/commit/03f0c68b612cd31ea1f6341587e1961001633d9e))
+
+
 ## 1.2.0 (2015-02-16)
 
 

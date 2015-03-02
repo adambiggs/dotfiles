@@ -1,3 +1,14 @@
+### 1.2.2 (2015-03-02)
+
+
+#### Features
+
+* **tmux:** update status line every 5 seconds ([e2b6dbbb](https://github.com/adambiggs/dotfiles.git/commit/e2b6dbbb1ae7aa9ac5be89b9ee0c038627897169))
+* **tmuxinator:** update to use new window-root feature ([1c6c55f0](https://github.com/adambiggs/dotfiles.git/commit/1c6c55f0b86860aa2dcfcf4c9555e9ca5dd143e2))
+* **zgen:** update to latest version ([fc00be5e](https://github.com/adambiggs/dotfiles.git/commit/fc00be5ea3829a39c6361f019b53481903dc6e88))
+* **zsh:** add `docker-machine` alias ([8684b1cb](https://github.com/adambiggs/dotfiles.git/commit/8684b1cb90dbe57f3012a1f7dfa5793248bef98b))
+
+
 ### 1.2.1 (2015-02-24)
 
 

@@ -68,7 +68,6 @@
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'
   Plug 'joonty/vdebug'
-  Plug 'joonty/vdebug'
   Plug 'szw/vim-ctrlspace'
   Plug 'thinca/vim-localrc'
 

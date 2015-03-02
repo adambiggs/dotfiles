@@ -29,17 +29,14 @@ windows:
           - docker-compose ps
 
   - "Main App":
-      pre:
-        - cd main-app
+      root: ~/Repos/lmpm/app
       layout: main-vertical
       panes:
         - nvim
-        - vagrant version
         - grunt --version
 
   - "API":
-      pre:
-        - cd api
+      root: ~/Repos/lmpm/api
       layout: main-vertical
       panes:
         - nvim
@@ -56,16 +53,14 @@ windows:
           - nvim
 
   - "Spine":
-      pre:
-        - cd ~/Repos/spine-xp
+      root: ~/Repos/spine-xp
       layout: main-vertical
       panes:
         - nvim
         - git status
 
   - "Dotfiles":
-      pre:
-        - cd ~/.dotfiles
+      root: ~/.dotfiles
       leyout: even-horizontal
       panes:
         - nvim .nvimrc

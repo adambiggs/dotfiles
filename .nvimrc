@@ -15,6 +15,7 @@
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+  Plug 'bronson/vim-visual-star-search'
 
   " Theme
   Plug 'chriskempson/base16-vim'
@@ -454,7 +455,6 @@
       " Search
       nmap s <Plug>(easymotion-s2)
       vmap s <Plug>(easymotion-s2)
-      nmap * /<C-r><C-w><CR>
 
       " Arrow navigation
       map <Leader>l <Plug>(easymotion-lineforward)

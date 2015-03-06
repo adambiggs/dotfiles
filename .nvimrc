@@ -462,6 +462,10 @@
       map <Leader>k <Plug>(easymotion-k)
       map <Leader>h <Plug>(easymotion-linebackward)
 
+      " Easier word navigation
+      nmap f <Leader><Leader>w
+      nmap F <Leader><Leader>b
+
     endif
   " }
 

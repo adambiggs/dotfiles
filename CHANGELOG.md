@@ -1,3 +1,20 @@
+### 1.2.3 (2015-03-06)
+
+
+#### Bug Fixes
+
+* **vim:** highlight isn't re-enabled when performing a search ([1090090d](https://github.com/adambiggs/dotfiles.git/commit/1090090dc40da60bcfa12903b7ee15f2f1a78d5f))
+
+
+#### Features
+
+* **lmpm:** updated tmuxinator template a little ([1fe16fd4](https://github.com/adambiggs/dotfiles.git/commit/1fe16fd4b74d01c470928781b9d9d1c88a50b2e4))
+* **vim:**
+  * added mappings for quick EasyMotion word navigation ([54414a41](https://github.com/adambiggs/dotfiles.git/commit/54414a411e6fb088c794010685c552e1c9cd52d8))
+  * added `vim-visual-star-search` plugin ([0ff4e172](https://github.com/adambiggs/dotfiles.git/commit/0ff4e172b383a16abb909f0d49096f5a9e1fb506))
+* **zgen:** upgraded to latest version ([48098935](https://github.com/adambiggs/dotfiles.git/commit/4809893563e8aee515d86f16d82d80fb878f8a8b))
+
+
 ### 1.2.2 (2015-03-02)
 
 

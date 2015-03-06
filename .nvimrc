@@ -410,7 +410,7 @@
     let mapleader = ','
 
     " Turn off search highlighting
-    nmap <silent> <leader>\ :set invhlsearch<CR>
+    nmap <silent> <leader>\ :nohlsearch<CR>
 
     " Visual shifting (does not exit Visual mode)
     vnoremap < <gv

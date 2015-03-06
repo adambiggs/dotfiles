@@ -1,6 +1,6 @@
 # ~/.tmuxinator/lmpm.yml
 
-name: 'Cloud Engine - Property Manager'
+name: 'Lightmaker Property Manager'
 root: ~/Repos/lmpm/
 
 # Optional tmux socket
@@ -43,14 +43,10 @@ windows:
         - npm outdated
 
   - "Wordpress":
-      layout: even-horizontal
+      layout: main-vertical
       panes:
-        - theme:
-          - cd wordpress-theme
-          - nvim
-        - plugin:
-          - cd wordpress-plugin
-          - nvim
+        - nvim
+        - ls
 
   - "Spine":
       root: ~/Repos/spine-xp
@@ -61,6 +57,7 @@ windows:
 
   - "Dotfiles":
       root: ~/.dotfiles
-      leyout: even-horizontal
+      layout: main-vertical
       panes:
         - nvim .nvimrc
+        - ls

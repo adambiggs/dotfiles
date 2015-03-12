@@ -49,7 +49,7 @@ windows:
         - ls
 
   - "Spine":
-      root: ~/Repos/spine-xp
+      root: ~/Repos/lmpm/spine-xp
       layout: main-vertical
       panes:
         - nvim

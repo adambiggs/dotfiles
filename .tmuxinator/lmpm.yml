@@ -55,6 +55,13 @@ windows:
         - nvim
         - git status
 
+  - "Base Images":
+      root: ~/Repos/docker-images
+      layout: main-vertical
+      panes:
+        - nvim
+        - git status
+
   - "Dotfiles":
       root: ~/.dotfiles
       layout: main-vertical

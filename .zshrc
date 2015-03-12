@@ -20,6 +20,7 @@ if ! zgen saved; then
   # Other plugins.
   zgen load Tarrasch/zsh-bd
   zgen load zsh-users/zsh-completions src
+  zgen load sdurrheimer/docker-compose-zsh-completion
   zgen load zsh-users/zsh-history-substring-search
   zgen load zsh-users/zsh-syntax-highlighting
   zgen load peterhurford/git-it-on.zsh

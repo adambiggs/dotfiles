@@ -78,15 +78,30 @@ alias vs='vagrant ssh'
 alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
 
 # Scripts
-alias far='$HOME/.dotfiles/scripts/find-and-replace.sh'
+alias fr='$HOME/.dotfiles/scripts/find-and-replace.sh'
 
 # Docker
-alias b2d='boot2docker'
-alias b2d-start='b2d init && b2d start && $(b2d shellinit)'
+alias drun='docker run --rm -ti'
+alias drc='docker rm $(docker ps -a -q)' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+alias dri='docker rmi $(docker images -q --filter "dangling=true")' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
+
+# Boot2Docker
+alias 2d='boot2docker'
+alias 2ds='boot2docker start && $(b2d shellinit)'
+
+# Docker Compose
 alias dc='docker-compose'
+alias dcu='docker-compose up -d'
+alias dcl='docker-compose logs'
+alias dcr='docker-compose run --rm'
+docker_compose_rm() {
+  docker-compose stop $@
+  docker-compose rm --force $@
+}
+alias dcrm=docker_compose_rm
+
+# Docker Machine
 alias dm='docker-machine'
-alias dock-rm='docker rm $(docker ps -a -q)' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
-alias dock-rmi='docker rmi $(docker images -q --filter "dangling=true")' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
 
 # LMPM
 alias lmpm-builder='~/Repos/lmpm/builder/use.sh'

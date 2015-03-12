@@ -10,7 +10,7 @@ socket_name: lmpm
 pre: boot2docker start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: $(b2d shellinit)
+pre_window: $(boot2docker shellinit)
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 tmux_options: -2

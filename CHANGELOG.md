@@ -1,3 +1,24 @@
+### 1.2.4 (2015-03-20)
+
+
+#### Bug Fixes
+
+* **vim:** `<C-h>` key mapping no longer working due to weird terminal behaviour ([2c1e935b](https://github.com/adambiggs/dotfiles.git/commit/2c1e935ba34a95a93daf7260284020fe0eb42ba3))
+* **zsh:** `2ds` boot2docker alias not working ([6de4ac4e](https://github.com/adambiggs/dotfiles.git/commit/6de4ac4eeab56814c92477f4ed55b87cd0e7e24e))
+
+
+#### Features
+
+* installed `neovim-ruby` submodule ([680fe4f6](https://github.com/adambiggs/dotfiles.git/commit/680fe4f67182319281043d159ab5b9351db66ddb))
+* **tmuxinator:**
+  * added window to work on base Docker images ([b8fd6657](https://github.com/adambiggs/dotfiles.git/commit/b8fd66570da21bd6acb9836acba37ab702c44b3b))
+  * moved `spine-xp` repo into `lmpm` project directory ([75b5125a](https://github.com/adambiggs/dotfiles.git/commit/75b5125aead3feb727692c24be7028a5c1c70b80))
+* **vim:** changed PHP indentation to use 4 spaces as per PSR-2 ([7dcb4f42](https://github.com/adambiggs/dotfiles.git/commit/7dcb4f42ee99109fb5794573581104d7053949a6))
+* **zsh:**
+  * updated aliases ([cfe0d2ce](https://github.com/adambiggs/dotfiles.git/commit/cfe0d2cef0c63fb317acca3642ddfd10dce6f0cb))
+  * added Docker Compose zsh completion plugin ([78270620](https://github.com/adambiggs/dotfiles.git/commit/78270620f903737d32f83252f670fb02ba3d2f4b))
+
+
 ### 1.2.3 (2015-03-06)
 
 

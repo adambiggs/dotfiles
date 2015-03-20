@@ -223,6 +223,10 @@
     autocmd FileType stylus setlocal foldmethod=indent
   " }
 
+  " PHP {
+    autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+  " }
+
 " }
 
 " Plugin Config {

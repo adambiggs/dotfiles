@@ -87,7 +87,7 @@ alias dri='docker rmi $(docker images -q --filter "dangling=true")' # http://jim
 
 # Boot2Docker
 alias 2d='boot2docker'
-alias 2ds='boot2docker start && $(b2d shellinit)'
+alias 2ds='boot2docker start && $(boot2docker shellinit)'
 
 # Docker Compose
 alias dc='docker-compose'

@@ -46,6 +46,7 @@
   Plug 'tpope/vim-fugitive'
 
   " UI
+  Plug 'mhinz/vim-startify'
   Plug 'bling/vim-airline'
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree'
@@ -230,6 +231,75 @@
 " }
 
 " Plugin Config {
+
+  " Startify {
+    if isdirectory(expand("~/.vim/plugged/vim-startify/"))
+
+      " Center the header
+      function! s:filter_header(lines) abort
+          let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+          let centered_lines = map(copy(a:lines),
+              \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+          return centered_lines
+      endfunction
+
+      " Center section headings with lines
+      function! s:filter_heading(lines) abort
+          let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+          let space_chars    = ((&columns / 2) - (longest_line / 2)) - 3
+          let centered_lines = map(copy(a:lines),
+              \ '"   " . repeat("-", space_chars) . v:val . repeat("-", space_chars) . "   "')
+          return centered_lines
+      endfunction
+
+      " Header
+      let g:startify_custom_header = s:filter_header([
+              \ '',
+              \ '',
+              \ '        _/      _/  _/_/_/_/    _/_/    _/      _/  _/_/_/  _/      _/    ',
+              \ '       _/_/    _/  _/        _/    _/  _/      _/    _/    _/_/  _/_/     ',
+              \ '      _/  _/  _/  _/_/_/    _/    _/  _/      _/    _/    _/  _/  _/      ',
+              \ '     _/    _/_/  _/        _/    _/    _/  _/      _/    _/      _/       ',
+              \ '    _/      _/  _/_/_/_/    _/_/        _/      _/_/_/  _/      _/        ',
+              \ '',
+              \ '',
+              \ ])
+      let g:startify_custom_footer =
+            \ s:filter_header(['', '', ''] + map(split(system('nvim --version | head -n1'), '\n'), '"   ". v:val') + [' ', ' ', ' '])
+      let g:startify_relative_path      = 0
+      let g:startify_change_to_dir      = 0
+      let g:startify_change_to_vcs_root = 1
+      let g:startify_list_order = [
+            \ s:filter_heading(['  Recent files in current directory  ']),
+            \ 'dir',
+            \ s:filter_heading(['  Recent files everywhere  ']),
+            \ 'files',
+            \ s:filter_heading(['  Bookmarks  ']),
+            \ 'bookmarks',
+            \ 'sessions',
+            \ ]
+      let g:startify_skiplist = [
+            \ 'plugged/.*/doc',
+            \ 'nvim/runtime/doc',
+            \ '.git/',
+            \ ]
+      "let g:startify_bookmarks = ['~/Repos/lmpm']
+
+      " Colors
+      highlight StartifySection ctermfg=145
+      highlight StartifyBracket ctermfg=240
+      highlight StartifyFooter  ctermfg=240
+      "highlight StartifyHeader  ctermfg=114
+      highlight StartifyNumber  ctermfg=215
+      highlight StartifyPath    ctermfg=245
+      highlight StartifySlash   ctermfg=240
+      highlight StartifySpecial ctermfg=240
+
+      "autocmd User Startified setlocal cursorline
+      autocmd User Startified let g:indent_guides_indent_levels = 0
+      autocmd User Startified setlocal colorcolumn=
+    endif
+  " }
 
   " LocalRC {
     if isdirectory(expand("~/.vim/plugged/vim-localrc/"))

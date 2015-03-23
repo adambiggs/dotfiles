@@ -108,7 +108,12 @@ alias lmpm-builder='~/Repos/lmpm/builder/use.sh'
 
 
 ### LIBRARY CONFIG ###
-source ~/.nvm/nvm.sh # NVM (https://github.com/creationix/nvm)
+
+# NVM (https://github.com/creationix/nvm)
+NVM_DIR=~/.nvm
+if [ -d "$NVM_DIR" ]; then
+  source $NVM_DIR/nvm.sh
+fi
 
 # Base16 theme.
 source ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh

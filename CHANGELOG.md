@@ -1,3 +1,15 @@
+## 1.3.0 (2015-03-23)
+
+
+#### Features
+
+* update script (wip) ([772dc031](https://github.com/adambiggs/dotfiles.git/commit/772dc0310a6c2c7b737128d7c7c4f749716dada1))
+* more better install script ([fa3bac6b](https://github.com/adambiggs/dotfiles.git/commit/fa3bac6b667f1059ba99b5a9f22f66cb81dda96f))
+* install script ([609ace72](https://github.com/adambiggs/dotfiles.git/commit/609ace72ad2504c646e945e8f144729bf80f5a60))
+* **vim:** added Startify plugin and customized config ([422ccac4](https://github.com/adambiggs/dotfiles.git/commit/422ccac4953a249c394ad59e0fb543700e123e47))
+* **zsh:** only source `nvm` if it's been installed ([014893ae](https://github.com/adambiggs/dotfiles.git/commit/014893ae35a9126fc43a9f95442ee23a7208ad58))
+
+
 ### 1.2.4 (2015-03-20)
 
 

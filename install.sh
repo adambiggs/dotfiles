@@ -55,5 +55,12 @@ if [ -e "$VIMPLUG_PATH" ]; then
   echo -e "${good}Already installed.${clear}\n"
 else
   curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  echo -e "${good}Done.${clear}\n"
+  echo -e "${good}Done.${clear}"
 fi
+
+# Open Vim and install plugins.
+echo -e "\n${info}Starting NeoVim and installing plugins...${clear}"
+echo -e "You'll have to quite NeoVim manually when complete."
+echo -e "See: https://github.com/junegunn/vim-plug/issues/104"
+nvim +PlugInstall
+echo -e "${good}Done.${clear}\n"

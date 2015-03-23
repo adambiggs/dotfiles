@@ -265,7 +265,7 @@
               \ '',
               \ ])
       let g:startify_custom_footer =
-            \ s:filter_header(['', '', ''] + map(split(system('nvim --version | head -n1'), '\n'), '"   ". v:val') + [' ', ' ', ' '])
+            \ s:filter_header(['', '', ''] + map(split(system('nvim --version | head -n2'), '\n'), '"   ". v:val') + [' ', ' ', ' '])
       let g:startify_relative_path      = 0
       let g:startify_change_to_dir      = 0
       let g:startify_change_to_vcs_root = 1

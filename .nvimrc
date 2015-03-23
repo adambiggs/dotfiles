@@ -276,6 +276,7 @@
             \ 'files',
             \ s:filter_heading(['  Bookmarks  ']),
             \ 'bookmarks',
+            \ s:filter_heading(['  Sessions  ']),
             \ 'sessions',
             \ ]
       let g:startify_skiplist = [

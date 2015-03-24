@@ -27,3 +27,5 @@ echo -e "${good}Done.${clear}"
 #zgen selfupdate
 #zgen update
 #echo -e "${good}Done.${clear}"
+
+echo -e ""

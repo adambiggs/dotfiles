@@ -456,8 +456,8 @@
   " CoffeeScript {
     if isdirectory(expand("~/.vim/plugged/vim-coffee-script/"))
       let coffee_compile_vert = 1
-      let coffee_watch_vert = 1
-      let coffee_run_vert   = 1
+      let coffee_watch_vert   = 1
+      let coffee_run_vert     = 1
       autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
       autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
     endif

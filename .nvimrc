@@ -544,19 +544,16 @@
   " EasyMotion {
     if isdirectory(expand("~/.vim/plugged/vim-easymotion/"))
 
+      " Use <Leader> as easymotion prefix.
+      map <Leader> <Plug>(easymotion-prefix)
+
       " Search
       nmap s <Plug>(easymotion-s2)
       vmap s <Plug>(easymotion-s2)
 
-      " Arrow navigation
-      map <Leader>l <Plug>(easymotion-lineforward)
-      map <Leader>j <Plug>(easymotion-j)
-      map <Leader>k <Plug>(easymotion-k)
+      " Same-line navigation
       map <Leader>h <Plug>(easymotion-linebackward)
-
-      " Easier word navigation
-      nmap f <Leader><Leader>w
-      nmap F <Leader><Leader>b
+      map <Leader>l <Plug>(easymotion-lineforward)
 
     endif
   " }

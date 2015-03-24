@@ -26,8 +26,10 @@ fi
 install_brew_pkg neovim
 install_brew_pkg zsh
 install_brew_pkg git
+install_brew_pkg ctags
 install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
+install_brew_pkg battery
 install_brew_pkg wget
 echo -e "${good}Done.${clear}"
 

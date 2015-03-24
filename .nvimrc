@@ -4,7 +4,7 @@
 
 " Plugins {
 
-  call plug#begin('~/.vim/plugged')
+  call plug#begin('~/.nvim/plugged')
 
   " Theme
   Plug 'chriskempson/base16-vim'
@@ -243,7 +243,7 @@
 " Plugin Config {
 
   " Startify {
-    if isdirectory(expand("~/.vim/plugged/vim-startify/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-startify/"))
 
       " Center the header
       function! s:filter_header(lines) abort
@@ -311,14 +311,14 @@
   " }
 
   " LocalRC {
-    if isdirectory(expand("~/.vim/plugged/vim-localrc/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-localrc/"))
       let g:localrc_filename = '.vimrc.local'
       let g:localrc_filetype = '/^\.vimrc\..*\<%s\>.*\.local$'
     endif
   " }
 
   " Indent Guides {
-    if isdirectory(expand("~/.vim/plugged/vim-indent-guides/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-indent-guides/"))
       let g:indent_guides_start_level           = 1
       let g:indent_guides_auto_colors           = 0
       let g:indent_guides_enable_on_vim_startup = 1
@@ -329,7 +329,7 @@
   " }
 
   " Airline {
-    if isdirectory(expand("~/.vim/plugged/vim-airline/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-airline/"))
       let g:airline_exclude_preview                  = 1
       let g:airline_detect_iminsert                  = 1
       let g:airline_powerline_fonts                  = 1
@@ -339,7 +339,7 @@
   " }
 
   " Tmuxline {
-    if isdirectory(expand("~/.vim/plugged/tmuxline.vim/"))
+    if isdirectory(expand("~/.nvim/plugged/tmuxline.vim/"))
       "let g:tmuxline_preset = 'crosshair'
       "let g:tmuxline_theme  = 'airline_insert'
       "let g:airline#extensions#tmuxline#enabled = 0
@@ -355,12 +355,12 @@
   " }
 
   " Unite {
-    if isdirectory(expand("~/.vim/plugged/unite.vim/"))
+    if isdirectory(expand("~/.nvim/plugged/unite.vim/"))
       call unite#filters#matcher_default#use(['matcher_fuzzy'])
       call unite#filters#sorter_default#use(['sorter_rank'])
 
       let g:unite_source_history_yank_enable = 1
-      let g:unite_data_directory         = '~/.vim/.cache/unite'
+      let g:unite_data_directory         = '~/.nvim/.cache/unite'
       let g:unite_enable_start_insert      = 1
       let g:unite_source_history_yank_enable = 1
       let g:unite_prompt             = '» '
@@ -393,14 +393,14 @@
   " }
 
   " CtrlSpace {
-    if isdirectory(expand("~/.vim/plugged/vim-ctrlspace/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-ctrlspace/"))
       let g:ctrlspace_save_workspace_on_exit = 1
       let g:ctrlspace_ignored_files = '\v(tmp|temp|node_modules)[\/]'
     endif
   " }
 
   " YouCompleteMe {
-    if isdirectory(expand("~/.vim/plugged/YouCompleteMe/"))
+    if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))
       let g:ycm_min_num_of_chars_for_completion   = 1
       let g:ycm_complete_in_comments          = 1
       let g:ycm_collect_identifiers_from_tags_files = 1
@@ -411,7 +411,7 @@
   " }
 
   " Syntastic {
-    if isdirectory(expand("~/.vim/plugged/syntastic/"))
+    if isdirectory(expand("~/.nvim/plugged/syntastic/"))
       let g:syntastic_mode_map = { 'mode': 'active',
         \ 'active_filetypes': [],
         \ 'passive_filetypes': ['html', 'coffee'] }
@@ -419,20 +419,20 @@
   " }
 
   " Neomake {
-    if isdirectory(expand("~/.vim/plugged/neomake/"))
+    if isdirectory(expand("~/.nvim/plugged/neomake/"))
       autocmd BufWritePost *.coffee Neomake
     endif
   " }
 
   " UndoTree {
-    if isdirectory(expand("~/.vim/plugged/undotree/"))
+    if isdirectory(expand("~/.nvim/plugged/undotree/"))
       let g:undotree_SplitWidth  = 35
       let g:undotree_TreeNodeShape = '◉'
     endif
   " }
 
   " NERDTree {
-    if isdirectory(expand("~/.vim/plugged/nerdtree/"))
+    if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
       "let NERDTreeShowLineNumbers    = 1
       let NERDTreeShowBookmarks       = 0
       let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
@@ -448,13 +448,13 @@
   " }
 
   " AutoClose {
-    if isdirectory(expand("~/.vim/plugged/vim-autoclose/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-autoclose/"))
       let g:autoclose_vim_commentmode = 1
     endif
   " }
 
   " CoffeeScript {
-    if isdirectory(expand("~/.vim/plugged/vim-coffee-script/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-coffee-script/"))
       let coffee_compile_vert = 1
       let coffee_watch_vert   = 1
       let coffee_run_vert     = 1
@@ -464,13 +464,13 @@
   " }
 
   " CoffeeTags {
-    if isdirectory(expand("~/.vim/plugged/CoffeeTags/"))
+    if isdirectory(expand("~/.nvim/plugged/CoffeeTags/"))
       let g:CoffeeAutoTagIncludeVars = 1
     endif
   " }
 
   " TagBar {
-    if isdirectory(expand("~/.vim/plugged/tagbar/"))
+    if isdirectory(expand("~/.nvim/plugged/tagbar/"))
       let g:tagbar_autoshowtag    = 1  " Open folds if necessary when navigating to a tag
       let g:tagbar_autoclose      = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
       let g:tagbar_show_linenumbers = 2  " Show relative line numbers
@@ -479,13 +479,13 @@
   " }
 
   " Handlebars {
-    if isdirectory(expand("~/.vim/plugged/vim-mustache-handlebars/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-mustache-handlebars/"))
       let g:mustache_abbreviations = 1
     endif
   " }
 
   " Vdebug {
-    if isdirectory(expand("~/.vim/plugged/vdebug/"))
+    if isdirectory(expand("~/.nvim/plugged/vdebug/"))
       let g:vdebug_options = {}
       let g:vdebug_options['server']          = ''
       let g:vdebug_options['break_on_open']   = 0
@@ -529,20 +529,20 @@
   " }
 
   " CoffeeScript {
-    if isdirectory(expand("~/.vim/plugged/vim-coffee-script/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-coffee-script/"))
       nnoremap <Leader>cw :CoffeeWatch<CR>
     endif
   " }
 
   " Vim-Over {
-    if isdirectory(expand("~/.vim/plugged/vim-over/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-over/"))
       nnoremap <f> :OverCommandLine<CR>%s/
       nnoremap <C-f> :OverCommandLine<CR>%s/<C-r><C-w>/
     endif
   " }
 
   " EasyMotion {
-    if isdirectory(expand("~/.vim/plugged/vim-easymotion/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-easymotion/"))
 
       " Use <Leader> as easymotion prefix.
       map <Leader> <Plug>(easymotion-prefix)
@@ -559,7 +559,7 @@
   " }
 
   " Vimux {
-    if isdirectory(expand("~/.vim/plugged/vimux/"))
+    if isdirectory(expand("~/.nvim/plugged/vimux/"))
       noremap <Leader>tst :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm test")<CR>
       noremap <Leader>stt :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm start")<CR>
       noremap <Leader>dbg :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm run debug")<CR>
@@ -568,13 +568,13 @@
   " }
 
   " NERDTree {
-    if isdirectory(expand("~/.vim/plugged/nerdtree/"))
+    if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
       map <C-e> :NERDTreeToggle<CR>
     endif
   " }
 
   " Tabularize {
-    if isdirectory(expand("~/.vim/plugged/tabular/"))
+    if isdirectory(expand("~/.nvim/plugged/tabular/"))
       nmap <Leader>a& :Tabularize /&<CR>
       vmap <Leader>a& :Tabularize /&<CR>
       nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
@@ -593,7 +593,7 @@
   " }
 
   " Unite {
-    if isdirectory(expand("~/.vim/plugged/unite.vim/"))
+    if isdirectory(expand("~/.nvim/plugged/unite.vim/"))
       nnoremap <silent> <C-p> :Unite -auto-resize -start-insert buffer file_rec/async:!<CR>
       nnoremap <leader>/ :Unite grep:.<CR>
       nnoremap <leader>? :Unite grep<CR>
@@ -603,7 +603,7 @@
   " }
 
   " Fugitive {
-    if isdirectory(expand("~/.vim/plugged/vim-fugitive/"))
+    if isdirectory(expand("~/.nvim/plugged/vim-fugitive/"))
       nnoremap <silent> <leader>gs :Gstatus<CR>
       nnoremap <silent> <leader>gd :Gdiff<CR>
       nnoremap <silent> <leader>gc :Gcommit<CR>
@@ -620,7 +620,7 @@
   "}
 
   " YouCompleteMe {
-    if isdirectory(expand("~/.vim/plugged/YouCompleteMe/"))
+    if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))
       let g:acp_enableAtStartup = 0
 
       " enable completion from tags
@@ -650,7 +650,7 @@
   " }
 
   " UndoTree {
-    if isdirectory(expand("~/.vim/plugged/undotree/"))
+    if isdirectory(expand("~/.nvim/plugged/undotree/"))
       nnoremap <Leader>u :UndotreeToggle<CR>
       " If undotree is opened, it is likely one wants to interact with it.
       let g:undotree_SetFocusWhenToggle=1
@@ -658,7 +658,7 @@
   " }
 
   " UtilSnips {
-    if isdirectory(expand("~/.vim/plugged/ultisnips"))
+    if isdirectory(expand("~/.nvim/plugged/ultisnips"))
       " remap Ultisnips for compatibility for YCM
       let g:UltiSnipsExpandTrigger     = '<C-j>'
       let g:UltiSnipsJumpForwardTrigger  = '<C-j>'

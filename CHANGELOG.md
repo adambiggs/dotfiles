@@ -1,3 +1,24 @@
+### 1.3.1 (2015-03-23)
+
+
+#### Bug Fixes
+
+* **vim:** Startify config disables IndentGuides plugin globally ([4b216d5b](https://github.com/adambiggs/dotfiles.git/commit/4b216d5bf48838258d3d336153f3a58c28482c61))
+* **zsh:** only source NVM if it exists ([26a4b5b7](https://github.com/adambiggs/dotfiles.git/commit/26a4b5b74ab07bba6c791a6c3e74bba2c352a3ca))
+
+
+#### Features
+
+* store iTerm2 preferences in the repo ([4fff5d59](https://github.com/adambiggs/dotfiles.git/commit/4fff5d59e8dfc67bc7c70bd7bde1a971c273eb70))
+* install script now installs Vim plugins ([16930f9a](https://github.com/adambiggs/dotfiles.git/commit/16930f9aaf17f3e7494e1deef5ff1643b11973d8))
+* **install:** added `ctags` and `battery` brew packages ([acccc9b5](https://github.com/adambiggs/dotfiles.git/commit/acccc9b57d97296676432193f74d37c075938d14))
+* **tmux:** tweaked some tmux settings ([a93ab8ee](https://github.com/adambiggs/dotfiles.git/commit/a93ab8eee2fabbfe2b4f793ddf8d70c96eadf7e5))
+* **vim:**
+  * better looking indent guides when not using default 2-spaces ([686772c9](https://github.com/adambiggs/dotfiles.git/commit/686772c9d0c8fd48f17b257f23af133088fda101))
+  * show NeoVim commit in Startify footer ([6531dd36](https://github.com/adambiggs/dotfiles.git/commit/6531dd369c1b257192fcd0ff2121c44157b04082))
+  * added heading for Startify sessions ([dd159f08](https://github.com/adambiggs/dotfiles.git/commit/dd159f08f4d43718eb1da30298253410b5b0acd2))
+
+
 ## 1.3.0 (2015-03-23)
 
 

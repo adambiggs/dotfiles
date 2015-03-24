@@ -68,11 +68,11 @@
   "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
+  Plug 'adambiggs/vdebug', { 'branch': 'ordered-path-maps' }
   Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'
-  Plug 'joonty/vdebug'
   Plug 'szw/vim-ctrlspace'
   Plug 'thinca/vim-localrc'
 

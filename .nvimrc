@@ -6,62 +6,64 @@
 
   call plug#begin('~/.vim/plugged')
 
+  " Theme
+  Plug 'chriskempson/base16-vim'
+
+  " UI
+  Plug 'bling/vim-airline'
+  Plug 'majutsushi/tagbar'
+  Plug 'mbbill/undotree'
+  Plug 'mhinz/vim-startify'
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'vim-scripts/restore_view.vim'
   Plug 'tmux-plugins/vim-tmux-focus-events'
+
   " Search & Navigation
-  Plug 'kshenoy/vim-signature'
   Plug 'Lokaltog/vim-easymotion'
-  "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
-  Plug 'osyo-manga/vim-over'
   Plug 'Shougo/neomru.vim'
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
   Plug 'bronson/vim-visual-star-search'
+  Plug 'kshenoy/vim-signature'
+  "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
+  Plug 'osyo-manga/vim-over'
 
-  " Theme
-  Plug 'chriskempson/base16-vim'
+  " Autocomplete
+  Plug 'SirVer/ultisnips'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+  Plug 'honza/vim-snippets'
+  Plug 'marijnh/tern_for_vim'
 
   " Coding
   Plug 'adambiggs/vim-autoclose'
-  Plug 'beyondwords/vim-twig'
-  Plug 'briancollins/vim-jst'
-  Plug 'ekalinin/Dockerfile.vim'
-  Plug 'elzr/vim-json'
   Plug 'godlygeek/tabular'
-  Plug 'groenewege/vim-less'
-  Plug 'hail2u/vim-css3-syntax'
-  Plug 'jtratner/vim-flavored-markdown'
-  Plug 'kchmck/vim-coffee-script'
-  Plug 'mustache/vim-mustache-handlebars'
-  Plug 'othree/html5.vim'
-  Plug 'othree/xml.vim'
-  Plug 'pangloss/vim-javascript'
-  Plug 'rodjek/vim-puppet'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
-  Plug 'wavded/vim-stylus'
 
   " Source Control
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
 
-  " UI
-  Plug 'mhinz/vim-startify'
-  Plug 'bling/vim-airline'
-  Plug 'majutsushi/tagbar'
-  Plug 'mbbill/undotree'
-  Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'scrooloose/nerdtree'
-  Plug 'vim-scripts/restore_view.vim'
-
-  " Autocomplete
-  Plug 'honza/vim-snippets'
-  Plug 'marijnh/tern_for_vim'
-  Plug 'SirVer/ultisnips'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+  " Syntax
+  Plug 'beyondwords/vim-twig', { 'for': 'twig' }
+  Plug 'briancollins/vim-jst', { 'for': 'jst' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+  Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
+  Plug 'elzr/vim-json', { 'for': 'json' }
+  Plug 'groenewege/vim-less', { 'for': 'less' }
+  Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+  Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown' }
+  Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+  Plug 'mustache/vim-mustache-handlebars', { 'for': 'handlebars' }
+  Plug 'othree/html5.vim', { 'for': 'html' }
+  Plug 'othree/xml.vim', { 'for': 'xml' }
+  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+  Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
+  Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
   " Building
   Plug 'benekastah/neomake'

@@ -1,3 +1,25 @@
+## 1.4.0 (2015-03-24)
+
+
+#### Bug Fixes
+
+* typo in `install.sh` script ([5126559c](https://github.com/adambiggs/dotfiles.git/commit/5126559cd0bec05705f1b9d2dd3379f6dbe02e71))
+* **vim:** insert mode cursor shape not changing ([6c015e4f](https://github.com/adambiggs/dotfiles.git/commit/6c015e4f7853c9a57da54639e7a8da805bca7c04))
+
+
+#### Features
+
+* added `nvm` as a submodule ([5a467e8d](https://github.com/adambiggs/dotfiles.git/commit/5a467e8d16d7726c5c0fb646b295270c5fdaa4c4))
+* **update:** update git submodules ([16bbe99c](https://github.com/adambiggs/dotfiles.git/commit/16bbe99c305162bf03ae4a1fd0111baf8192d8e1))
+* **vim:**
+  * set global options for `vdebug` plugin ([c735dfcd](https://github.com/adambiggs/dotfiles.git/commit/c735dfcd1bfb80dd5ed2a92d59ffc31effbc437f))
+  * some extra vim config tweaks ([6985f814](https://github.com/adambiggs/dotfiles.git/commit/6985f8147598730fd16ba0e47bf8871154aa37ea))
+  * on-demand plugin loading for faster launch ([f298f6f1](https://github.com/adambiggs/dotfiles.git/commit/f298f6f13b83a5297925e6f7e73beb20240f84bc))
+  * switched to my fork of `vdebug` plugin ([2affc766](https://github.com/adambiggs/dotfiles.git/commit/2affc766a2f6bf93b57e1066b78822bd7e4e90d1))
+  * added `sass-syntax` plugin ([48a4ced8](https://github.com/adambiggs/dotfiles.git/commit/48a4ced851691e19caa55920123ab0bccac25d44))
+  * added `vim-tmux` and `vim-tmux-focus-events` plugins ([7501f27e](https://github.com/adambiggs/dotfiles.git/commit/7501f27e634c8f7e4961404c3008b1d0f4071ea7))
+
+
 ### 1.3.1 (2015-03-23)
 
 

@@ -62,7 +62,7 @@ fi
 
 # Open Vim and install plugins.
 echo -e "\n${info}Starting NeoVim and installing plugins...${clear}"
-echo -e "You'll have to quite NeoVim manually when complete."
+echo -e "You'll have to quit NeoVim manually when complete."
 echo -e "See: https://github.com/junegunn/vim-plug/issues/104"
 nvim +PlugInstall
 echo -e "${good}Done.${clear}\n"

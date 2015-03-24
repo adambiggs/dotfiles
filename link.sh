@@ -13,7 +13,3 @@ ln -shiv $SCRIPTPATH/.zshrc ~/.zshrc
 ln -shiv $SCRIPTPATH/.zlogin ~/.zlogin
 echo -e "${good}Done.${clear}"
 
-echo -e "\n${info}Linking Vim spellfiles to NeoVim...${clear}"
-echo -e "(See https://github.com/neovim/neovim/issues/1551#issuecomment-65432622)"
-ln -shiv ~/.vim/spell ~/.nvim/spell
-echo -e "${good}Done.${clear}\n"

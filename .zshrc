@@ -44,6 +44,7 @@ DISABLE_CORRECTION=true
 export UPDATE_ZSH_DAYS=1
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
+export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/2007#issuecomment-74863439
 
 
 ### KEY BINDINGS ###

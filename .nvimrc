@@ -60,6 +60,7 @@
   Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+  Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
   " Building

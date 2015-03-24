@@ -6,6 +6,7 @@
 
   call plug#begin('~/.vim/plugged')
 
+  Plug 'tmux-plugins/vim-tmux-focus-events'
   " Search & Navigation
   Plug 'kshenoy/vim-signature'
   Plug 'Lokaltog/vim-easymotion'
@@ -59,6 +60,7 @@
   Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+  Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 
   " Building
   Plug 'benekastah/neomake'

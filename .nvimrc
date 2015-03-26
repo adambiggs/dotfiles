@@ -20,21 +20,21 @@
   Plug 'tmux-plugins/vim-tmux-focus-events'
 
   " Search & Navigation
+  Plug 'bronson/vim-visual-star-search'
+  Plug 'kshenoy/vim-signature'
   Plug 'Lokaltog/vim-easymotion'
+  "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
+  Plug 'osyo-manga/vim-over'
   Plug 'Shougo/neomru.vim'
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-  Plug 'bronson/vim-visual-star-search'
-  Plug 'kshenoy/vim-signature'
-  "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
-  Plug 'osyo-manga/vim-over'
 
   " Autocomplete
-  Plug 'SirVer/ultisnips'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
   Plug 'honza/vim-snippets'
   Plug 'marijnh/tern_for_vim'
+  Plug 'SirVer/ultisnips'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
   " Coding
   Plug 'adambiggs/vim-autoclose'

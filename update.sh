@@ -30,7 +30,6 @@ echo -e "${good}Done.${clear}"
 
 # Git submodules
 echo -e "\n${info}Updating zsh plugins...${clear}"
-git submodule sync
 git submodule update
 echo -e "${good}Done.${clear}"
 

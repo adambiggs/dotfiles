@@ -13,3 +13,10 @@ ln -shiv $SCRIPTPATH/.zshrc ~/.zshrc
 ln -shiv $SCRIPTPATH/.zlogin ~/.zlogin
 echo -e "${good}Done.${clear}"
 
+if [[ $OSTYPE == darwin* ]]; then
+  echo -e "\n${info}Linking custom Karabiner key mappings...${clear}"
+  ln -shiv $SCRIPTPATH/prefs/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
+  echo -e "${good}Done.${clear}"
+fi
+
+echo ""

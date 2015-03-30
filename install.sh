@@ -43,8 +43,11 @@ install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
 install_brew_pkg battery
 install_brew_pkg wget
-install_brew_pkg reattach-to-user-namespace
-install_brew_pkg boot2docker
+if [[ $OSTYPE == darwin* ]]; then
+  # Mac specific packages
+  install_brew_pkg reattach-to-user-namespace
+  install_brew_pkg boot2docker
+fi
 echo -e "${good}Done.${clear}"
 
 # Homebrew Casks
@@ -53,11 +56,14 @@ if [ -z `brew ls | grep brew-cask` ]; then
   brew install caskroom/cask/brew-cask
   brew tap caskroom/versions
 fi
-install_brew_cask iterm2-nightly
-install_brew_cask spectacle
-install_brew_cask flycut
-install_brew_cask sourcetree
-install_brew_cask virtualbox
+if [[ $OSTYPE == darwin* ]]; then
+  # Mac spcific apps
+  install_brew_cask iterm2-nightly
+  install_brew_cask spectacle
+  install_brew_cask flycut
+  install_brew_cask sourcetree
+  install_brew_cask virtualbox
+fi
 echo -e "${good}Done.${clear}"
 
 # Homebrew cleanup
@@ -89,13 +95,15 @@ themes/patched-fonts/install.sh
 echo -e "${good}Done.${clear}"
 
 # iTerm CLI
-echo -e "\n${info}Installing iTerm cli integration...${clear}"
-ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
-if [ -e "$ITERM_CLI_PATH" ]; then
-  echo -e "${good}Already installed.${clear}"
-else
-  curl -L iterm2.com/misc/install_shell_integration.sh | bash
-  echo -e "${good}Done.${clear}"
+if [[ $OSTYPE == darwin* ]]; then
+  echo -e "\n${info}Installing iTerm cli integration...${clear}"
+  ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
+  if [ -e "$ITERM_CLI_PATH" ]; then
+    echo -e "${good}Already installed.${clear}"
+  else
+    curl -L iterm2.com/misc/install_shell_integration.sh | bash
+    echo -e "${good}Done.${clear}"
+  fi
 fi
 
 # Ruby Gems

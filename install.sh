@@ -103,6 +103,11 @@ echo -e "\n${info}Installing Ruby gems...${clear}"
 sudo gem install CoffeeTags tmuxinator
 echo -e "${good}Done.${clear}"
 
+# PIP packages
+echo -e "\n${info}Installing PIP packages...${clear}"
+sudo pip install --no-cache-dir neovim awscli
+echo -e "${good}Done.${clear}"
+
 # Vim-Plug
 echo -e "\n${info}Installing Vim-Plug...${clear}"
 VIMPLUG_PATH=~/.nvim/autoload/plug.vim

@@ -27,6 +27,7 @@ if ! zgen saved; then
   zgen load peterhurford/git-it-on.zsh
   zgen load supercrabtree/k
   zgen load hchbaw/opp.zsh
+  zgen load marzocchi/zsh-notify . next-iterm
 
   # Theme.
   zgen oh-my-zsh themes/agnoster
@@ -50,6 +51,7 @@ export UPDATE_ZSH_DAYS=1
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/2007#issuecomment-74863439
+export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
 
 
 ### KEY BINDINGS ###

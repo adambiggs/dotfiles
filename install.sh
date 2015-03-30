@@ -30,6 +30,15 @@ function install_brew_cask() {
   fi
 }
 
+# Install a Gem if not already installed.
+function install_ruby_gem() {
+  gem_name=$1
+  gem_installed=`gem list --no-versions | grep $gem_name`
+  if [ -z $gem_installed ]; then
+    sudo gem install $gem_name
+  fi
+}
+
 # Homebrew
 echo -e "\n${info}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
@@ -108,7 +117,8 @@ fi
 
 # Ruby Gems
 echo -e "\n${info}Installing Ruby gems...${clear}"
-sudo gem install CoffeeTags tmuxinator
+install_ruby_gem CoffeeTags
+install_ruby_gem tmuxinator
 echo -e "${good}Done.${clear}"
 
 # PIP packages
@@ -131,4 +141,6 @@ echo -e "\n${info}Starting NeoVim and installing plugins...${clear}"
 echo -e "You'll have to quit NeoVim manually when complete."
 echo -e "See: https://github.com/junegunn/vim-plug/issues/104"
 nvim +PlugInstall
-echo -e "${good}Done.${clear}\n"
+echo -e "${good}Done.${clear}"
+
+echo ""

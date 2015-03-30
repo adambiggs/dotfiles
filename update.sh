@@ -29,7 +29,7 @@ echo -e "${good}Done.${clear}"
 #echo -e "${good}Done.${clear}"
 
 # Git submodules
-echo -e "\n${info}Updating zsh plugins...${clear}"
+echo -e "\n${info}Updating git submodules...${clear}"
 git submodule update
 echo -e "${good}Done.${clear}"
 

@@ -36,7 +36,7 @@ install_brew_pkg battery
 install_brew_pkg wget
 echo -e "${good}Done.${clear}"
 
-# Use zsh as default shell.
+# Use zsh as default shell
 echo -e "\n${info}Switching default shell to ZSH...${clear}"
 ZSH_DIR=`whereis zsh`
 DEFAULT_SHELL=`finger $LOGNAME | grep Shell | awk -F':' '{print $3}'`
@@ -47,28 +47,38 @@ else
   echo -e "${good}Done.${clear}"
 fi
 
-# Install Git submodules.
+# Git submodules
 echo -e "\n${info}Installing Git submodules...${clear}"
 git submodule init
 git submodule update
 echo -e "${good}Done.${clear}"
 
-# Install patched fonts.
+# Fonts
 echo -e "\n${info}Installing patched fonts...${clear}"
 themes/patched-fonts/install.sh
 echo -e "${good}Done.${clear}"
 
-# Install vim-plugged.
+# iTerm CLI
+echo -e "\n${info}Installing iTerm cli integration...${clear}"
+ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
+if [ -e "$ITERM_CLI_PATH" ]; then
+  echo -e "${good}Already installed.${clear}"
+else
+  curl -L iterm2.com/misc/install_shell_integration.sh | bash
+  echo -e "${good}Done.${clear}"
+fi
+
+# Vim-Plug
 echo -e "\n${info}Installing Vim-Plug...${clear}"
 VIMPLUG_PATH=~/.nvim/autoload/plug.vim
 if [ -e "$VIMPLUG_PATH" ]; then
-  echo -e "${good}Already installed.${clear}\n"
+  echo -e "${good}Already installed.${clear}"
 else
   curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   echo -e "${good}Done.${clear}"
 fi
 
-# Open Vim and install plugins.
+# Vim plugins
 echo -e "\n${info}Starting NeoVim and installing plugins...${clear}"
 echo -e "You'll have to quit NeoVim manually when complete."
 echo -e "See: https://github.com/junegunn/vim-plug/issues/104"

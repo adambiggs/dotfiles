@@ -50,6 +50,11 @@ git submodule init
 git submodule update
 echo -e "${good}Done.${clear}"
 
+# Install patched fonts.
+echo -e "\n${info}Installing patched fonts...${clear}"
+themes/patched-fonts/install.sh
+echo -e "${good}Done.${clear}"
+
 # Install vim-plugged.
 echo -e "\n${info}Installing Vim-Plug...${clear}"
 VIMPLUG_PATH=~/.nvim/autoload/plug.vim

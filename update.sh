@@ -9,6 +9,7 @@ echo -e "\n${info}Updating Homebrew packages...${clear}"
 brew update
 brew upgrade
 #brew reinstall --HEAD neovim # TODO: check for updates before reisntalling...
+brew cleanup
 echo -e "${good}Done.${clear}"
 
 # pip

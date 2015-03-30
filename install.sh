@@ -21,6 +21,15 @@ function install_brew_pkg() {
   fi
 }
 
+# Install a Homebrew Cask package if not already installed.
+function install_brew_cask() {
+  cask_name=$1
+  cask_insalled=`brew cask ls | grep $cask_name`
+  if [ -z $cask_insalled  ]; then
+    brew cask install $cask_name
+  fi
+}
+
 # Homebrew
 echo -e "\n${info}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
@@ -34,6 +43,27 @@ install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
 install_brew_pkg battery
 install_brew_pkg wget
+install_brew_pkg reattach-to-user-namespace
+install_brew_pkg boot2docker
+echo -e "${good}Done.${clear}"
+
+# Homebrew Casks
+echo -e "\n${info}Installing Homebrew Casks...${clear}"
+if [ -z `brew ls | grep brew-cask` ]; then
+  brew install caskroom/cask/brew-cask
+  brew tap caskroom/versions
+fi
+install_brew_cask iterm2-nightly
+install_brew_cask spectacle
+install_brew_cask flycut
+install_brew_cask sourcetree
+install_brew_cask virtualbox
+echo -e "${good}Done.${clear}"
+
+# Homebrew cleanup
+echo -e "\n${info}Cleaning up Homebrew installation files...${clear}"
+brew cleanup
+brew cask cleanup
 echo -e "${good}Done.${clear}"
 
 # Use zsh as default shell

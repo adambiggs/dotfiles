@@ -16,6 +16,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/symfony2
   zgen oh-my-zsh plugins/tmux
+  zgen oh-my-zsh plugins/brew-cask
 
   # Other plugins.
   zgen load Tarrasch/zsh-bd

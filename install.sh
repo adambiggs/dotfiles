@@ -72,6 +72,7 @@ if [[ $OSTYPE == darwin* ]]; then
   install_brew_cask flycut
   install_brew_cask sourcetree
   install_brew_cask virtualbox
+  install_brew_cask karabiner
 fi
 echo -e "${good}Done.${clear}"
 

@@ -83,6 +83,9 @@ alias vu='vagrant up --provider=vmware_fusion'
 alias vs='vagrant ssh'
 alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
 
+# Git
+alias github='gitit'
+
 # Scripts
 alias fr='$HOME/.dotfiles/scripts/find-and-replace.sh'
 

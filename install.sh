@@ -98,6 +98,11 @@ else
   echo -e "${good}Done.${clear}"
 fi
 
+# Ruby Gems
+echo -e "\n${info}Installing Ruby gems...${clear}"
+sudo gem install CoffeeTags tmuxinator
+echo -e "${good}Done.${clear}"
+
 # Vim-Plug
 echo -e "\n${info}Installing Vim-Plug...${clear}"
 VIMPLUG_PATH=~/.nvim/autoload/plug.vim

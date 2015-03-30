@@ -1,3 +1,35 @@
+## 1.5.0 (2015-03-30)
+
+
+#### Bug Fixes
+
+* **install:**
+  * shouldn't try to install Mac packages in Linux... ([61872ee0](https://github.com/adambiggs/dotfiles.git/commit/61872ee0282924b15d628493d999cf326293ac75))
+  * `battery` brew package needs to be tapped ([d56c790c](https://github.com/adambiggs/dotfiles.git/commit/d56c790c27cb24988b1d091def0885a2db5ffd22))
+* **update:** `git submodule sync` command seems to leave submodules detached ([7f6415eb](https://github.com/adambiggs/dotfiles.git/commit/7f6415eb1251a0732506503dbef4caff5fb1d382))
+
+
+#### Features
+
+* added aws cli zsh completions ([d2dcebb5](https://github.com/adambiggs/dotfiles.git/commit/d2dcebb538302d2a39e1f57208c4ed9852066c55))
+* store custom Karabiner key mappings ([36f876ea](https://github.com/adambiggs/dotfiles.git/commit/36f876ea835190a048fe7f19d615ac35ae06d7ea))
+* added iTerm CLI integration feature ([991e84f2](https://github.com/adambiggs/dotfiles.git/commit/991e84f25264811da41d0b67ec860c9bfb41509d))
+* don't create neovim spellfile symlink. use `:set spell` instead ([d90ce437](https://github.com/adambiggs/dotfiles.git/commit/d90ce4377459c4afba5a84ef049c64156323a019))
+* **docker:** much improved Dockerfile ([1e99d2a3](https://github.com/adambiggs/dotfiles.git/commit/1e99d2a3296e1dee6ca8371a931d06903724f3fb))
+* **install:**
+  * install Pip packages ([a05e7c86](https://github.com/adambiggs/dotfiles.git/commit/a05e7c86c4edf505e6cca66ebcb659154ec84e99))
+  * install Ruby gems ([2612689d](https://github.com/adambiggs/dotfiles.git/commit/2612689dcbb8f99c1a31ccff7907cd4e971740e0))
+  * install GUI apps using Homebrew Cask ([b4b0fe75](https://github.com/adambiggs/dotfiles.git/commit/b4b0fe75a2e23c0daa6a5cf51524c0ccbce08ca1))
+  * update script to install patched Powerline fonts ([3892ecd7](https://github.com/adambiggs/dotfiles.git/commit/3892ecd7026c6f7b900e46b795ba739764dc1da7))
+* **vim:**
+  * switch from VimPlug back to Syntastic due to breaking NeoVim changes ([03bb9098](https://github.com/adambiggs/dotfiles.git/commit/03bb90981654a18d6489fbddf72062bf48094c25))
+  * move all neovim plugins to `~/.nvim/plugged` directory ([f6242b9b](https://github.com/adambiggs/dotfiles.git/commit/f6242b9bc83ff86cf931d3f3edf3a44d79535524))
+  * use a single `<Leader>` for all default EasyMotion mappings ([25119bd6](https://github.com/adambiggs/dotfiles.git/commit/25119bd6a9ce93945b682f5d67a9cccc44851675))
+* **zsh:**
+  * added `zsh-notify` plugin ([41f38372](https://github.com/adambiggs/dotfiles.git/commit/41f383725e1c0cf5b7dc08166cf4555d2f5f6037))
+  * alias `github` to `gitit` ([007df21a](https://github.com/adambiggs/dotfiles.git/commit/007df21a80d1b96f42b992fd9c29f629dbfab36b))
+
+
 ## 1.4.0 (2015-03-24)
 
 

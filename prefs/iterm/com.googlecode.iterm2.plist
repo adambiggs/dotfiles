@@ -36776,7 +36776,7 @@
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/iterm-prefs</string>
+	<string>~/.dotfiles/prefs/iterm</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -36821,7 +36821,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>954 311 781 270 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>995 828 918 464 0 0 2560 1417 </string>
+	<string>995 858 796 475 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1080 984 400 129 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -38337,7 +38337,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/adam/.dotfiles/iterm-prefs</string>
+	<string>/Users/adam/.dotfiles/prefs/iterm</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>

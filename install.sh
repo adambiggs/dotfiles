@@ -12,6 +12,9 @@ function install_brew_pkg() {
     if [ $pkg_name == 'neovim' ]; then
       brew tap neovim/homebrew-neovim
       brew install --HEAD neovim
+    elif [ $pkg_name == 'battery' ]; then
+      brew tap Goles/battery
+      brew install $pkg_name
     else
       brew install $pkg_name
     fi

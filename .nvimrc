@@ -66,8 +66,8 @@
   Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
   " Building
-  Plug 'benekastah/neomake'
-  "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
+  "Plug 'benekastah/neomake' " Currently broken. See: https://github.com/benekastah/neomake/issues/72
+  Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
   Plug 'adambiggs/vdebug', { 'branch': 'ordered-path-maps' }

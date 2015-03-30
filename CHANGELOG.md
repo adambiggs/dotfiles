@@ -1,3 +1,13 @@
+### 1.5.1 (2015-03-30)
+
+
+#### Features
+
+* **install:**
+  * install Karabiner ([87bc341e](https://github.com/adambiggs/dotfiles.git/commit/87bc341e110f70dacbb78cbe212a6cbadf5243d0))
+  * check if ruby gems are already installed ([4f93c878](https://github.com/adambiggs/dotfiles.git/commit/4f93c8788d92cd83c3ef6da4c5967304e7cf54a2))
+
+
 ## 1.5.0 (2015-03-30)
 
 

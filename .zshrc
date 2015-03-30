@@ -36,6 +36,10 @@ if ! zgen saved; then
 fi
 
 
+### COMPLETIONS ###
+source /usr/local/bin/aws_zsh_completer.sh
+
+
 ### CONFIG ###
 DEFAULT_USER="adam"
 COMPLETION_WAITING_DOTS=true

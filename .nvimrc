@@ -44,8 +44,8 @@
   Plug 'tpope/vim-surround'
 
   " Source Control
-  Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 
   " Syntax
   Plug 'beyondwords/vim-twig', { 'for': 'twig' }

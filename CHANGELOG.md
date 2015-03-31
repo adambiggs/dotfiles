@@ -1,3 +1,15 @@
+### 1.5.2 (2015-03-31)
+
+
+#### Features
+
+* **link:** make link script non-interactive (regenerate links without asking) ([8734d21e](https://github.com/adambiggs/dotfiles.git/commit/8734d21e33f8b8149e6aa2b22c575ff7c8a013a8))
+* **vim:**
+  * expand paths of temp files to avoid filename clashes ([3e36aed2](https://github.com/adambiggs/dotfiles.git/commit/3e36aed2c91c46e88e5d444f9266af70b74a6df5))
+  * who needs swap files anyway? ([03061376](https://github.com/adambiggs/dotfiles.git/commit/030613760a68edfd6eceaf861cf33a6df19c47b0))
+  * switch from `vim-signify` to `vim-gitgutter` cuz I only use Git ([e853ee60](https://github.com/adambiggs/dotfiles.git/commit/e853ee60025aaa2998d5ce7b0ce02e5de2b3c77d))
+
+
 ### 1.5.1 (2015-03-30)
 
 

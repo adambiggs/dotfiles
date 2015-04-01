@@ -567,10 +567,10 @@
 
   " Vimux {
     if isdirectory(expand("~/.nvim/plugged/vimux/"))
-      noremap <Leader>tst :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm test")<CR>
-      noremap <Leader>stt :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm start")<CR>
-      noremap <Leader>dbg :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm run debug")<CR>
-      noremap <Leader>grr :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; grunt")<CR>
+      "noremap <Leader>tst :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm test")<CR>
+      "noremap <Leader>stt :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm start")<CR>
+      "noremap <Leader>dbg :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm run debug")<CR>
+      "noremap <Leader>grr :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; grunt")<CR>
     endif
   " }
 

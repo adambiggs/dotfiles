@@ -464,6 +464,12 @@
     endif
   " }
 
+  " Over.vim {
+    if isdirectory(expand("~/.nvim/plugged/vim-over/"))
+      let g:over#command_line#paste_escape_chars = '/.*$^~'
+    endif
+  " }
+
   " CoffeeTags {
     if isdirectory(expand("~/.nvim/plugged/CoffeeTags/"))
       let g:CoffeeAutoTagIncludeVars = 1

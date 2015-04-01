@@ -541,10 +541,11 @@
     endif
   " }
 
-  " Vim-Over {
+  " Over.vim {
     if isdirectory(expand("~/.nvim/plugged/vim-over/"))
-      nnoremap <f> :OverCommandLine<CR>%s/
-      nnoremap <C-f> :OverCommandLine<CR>%s/<C-r><C-w>/
+      nnoremap <Leader>o :OverCommandLine<CR>%s/
+      nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
+      vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
     endif
   " }
 

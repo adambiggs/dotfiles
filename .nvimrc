@@ -29,6 +29,7 @@
   Plug 'Shougo/unite-outline'
   Plug 'Shougo/unite.vim'
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+  Plug 'junegunn/fzf', { 'dir': '~/.dotfiles/libs/fzf', 'do': 'yes \| ./install' }
 
   " Autocomplete
   Plug 'honza/vim-snippets'

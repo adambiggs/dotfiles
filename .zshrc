@@ -39,6 +39,7 @@ fi
 
 ### COMPLETIONS ###
 source /usr/local/bin/aws_zsh_completer.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 ### CONFIG ###
@@ -52,6 +53,7 @@ export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/2007#issuecomment-74863439
 export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
+export FZF_DEFAULT_COMMAND='ag -l -g ""' # Use ag as the default source for fzf
 
 
 ### KEY BINDINGS ###

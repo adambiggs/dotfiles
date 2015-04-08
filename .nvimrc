@@ -1,5 +1,5 @@
 " Modeline and Notes {
-" vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker=\ {,\ } foldlevel=0 foldmethod=marker spell:
 " }
 
 " Plugins {
@@ -351,7 +351,7 @@
         \'cwin' : ['#I', '#W', '#F'],
         \'x'    : ['#(~/.dotfiles/scripts/now-playing.sh)', '#(~/.dotfiles/scripts/cpu-load.py)', '#(~/.dotfiles/scripts/wifi-signal.sh)', '#(battery -t -p)'],
         \'y'    : ['%a %b %e'],
-        \'z'    : ['%l:%M %p']}
+        \'z'    : ['%l:%M %p'] }
     endif
   " }
 
@@ -476,7 +476,7 @@
     endif
   " }
 
-  " TagBar {
+  " Tagbar {
     if isdirectory(expand("~/.nvim/plugged/tagbar/"))
       let g:tagbar_autoshowtag    = 1  " Open folds if necessary when navigating to a tag
       let g:tagbar_autoclose      = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
@@ -493,7 +493,7 @@
 
   " Vdebug {
     if isdirectory(expand("~/.nvim/plugged/vdebug/"))
-      let g:vdebug_options = {}
+      let g:vdebug_options = { }
       let g:vdebug_options['server']          = ''
       let g:vdebug_options['break_on_open']   = 0
       let g:vdebug_options['continuous_mode'] = 0
@@ -625,7 +625,7 @@
       nnoremap <silent> <leader>gi :Git add -p %<CR>
       nnoremap <silent> <leader>gg :SignifyToggle<CR>
     endif
-  "}
+  " }
 
   " YouCompleteMe {
     if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))

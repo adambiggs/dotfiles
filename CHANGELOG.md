@@ -1,3 +1,25 @@
+### 1.5.3 (2015-04-08)
+
+
+#### Bug Fixes
+
+* **vim:** remove `vim-tmux-focus-events` plugin b/c it doesn't work with NeoVim ([64fcba65](https://github.com/adambiggs/dotfiles.git/commit/64fcba65c223771bf3d083d55ce55005bbe54e66))
+
+
+#### Features
+
+* add `fzf` vim plugin, zsh config, and add it to install script ([c6f37d13](https://github.com/adambiggs/dotfiles.git/commit/c6f37d13b80e1044e0440e51a5881c577182be71))
+* updated `patched-fonts` to latest version ([0d894cf5](https://github.com/adambiggs/dotfiles.git/commit/0d894cf58e6a1ef1e400345a93bb0393e865781b))
+* updated NVM to latest version ([0483ba66](https://github.com/adambiggs/dotfiles.git/commit/0483ba66dfec281e0ac2293f5f71d5044157202f))
+* added `fzf` git submodule ([a9ca4aa1](https://github.com/adambiggs/dotfiles.git/commit/a9ca4aa1d1db6cc8575ff86b18c3374cdf0f8721))
+* **update:** rebase submodules to latest commit in remote tracking branch ([7828dc89](https://github.com/adambiggs/dotfiles.git/commit/7828dc8961492f4faedf156f5a3bda06a327476e))
+* **vim:**
+  * disable `smartindent` b/c it was acting weird in some scenarios ([16e0a1ea](https://github.com/adambiggs/dotfiles.git/commit/16e0a1ea5cb0fc13dbffede985d629df111a4e5f))
+  * change Over.vim keymaps and add one to substitute visual selection ([909b8514](https://github.com/adambiggs/dotfiles.git/commit/909b85149c68ad7d418aebbbd2d5d856ce0c4f5e))
+  * disable unused Vimux keymappings ([992093fb](https://github.com/adambiggs/dotfiles.git/commit/992093fbe4b6e3f140c6e0561934beac5bbad900))
+  * auto-escape pasted characters in Over.vim commands ([141cfc76](https://github.com/adambiggs/dotfiles.git/commit/141cfc76f4f4cad3c2e1b6132e36d6acb32f5984))
+
+
 ### 1.5.2 (2015-03-31)
 
 

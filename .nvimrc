@@ -17,7 +17,7 @@
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'vim-scripts/restore_view.vim'
-  Plug 'tmux-plugins/vim-tmux-focus-events'
+  "Plug 'tmux-plugins/vim-tmux-focus-events'
 
   " Search & Navigation
   Plug 'bronson/vim-visual-star-search'

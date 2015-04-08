@@ -31,7 +31,7 @@ echo -e "${good}Done.${clear}"
 
 # Git submodules
 echo -e "\n${info}Updating git submodules...${clear}"
-git submodule update
+git submodule update --remote --rebase
 echo -e "${good}Done.${clear}"
 
 echo -e ""

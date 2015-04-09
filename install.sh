@@ -37,6 +37,15 @@ function install_ruby_gem() {
   fi
 }
 
+# Install a Pip package if not already installed.
+function install_pip_pkg() {
+  pip_pkg_name=$1
+  pip_pkg_installed=`pip list | grep $pip_pkg_name`
+  if [[ -z $pip_pkg_installed ]]; then
+    pip install $pip_pkg_name
+  fi
+}
+
 # Homebrew
 echo -e "\n${info}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
@@ -135,7 +144,8 @@ echo -e "${good}Done.${clear}"
 
 # PIP packages
 echo -e "\n${info}Installing PIP packages...${clear}"
-sudo pip install --no-cache-dir neovim awscli
+install_pip_pkg neovim
+install_pip_pkg awscli
 echo -e "${good}Done.${clear}"
 
 # Vim-Plug

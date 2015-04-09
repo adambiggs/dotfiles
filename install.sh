@@ -33,7 +33,7 @@ function install_ruby_gem() {
   gem_name=$1
   gem_installed=`gem list --no-versions | grep $gem_name`
   if [ -z $gem_installed ]; then
-    sudo gem install $gem_name
+    gem install $gem_name
   fi
 }
 

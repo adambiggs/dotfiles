@@ -32,35 +32,36 @@ windows:
       root: ~/Repos/lmpm/app
       layout: main-vertical
       panes:
-        - nvim
+        - git status
         - grunt --version
 
   - "API":
       root: ~/Repos/lmpm/api
       layout: main-vertical
       panes:
-        - nvim
+        - git status
         - npm outdated
 
-  - "Wordpress":
+  - "Wordpress Theme":
+      root: ~/Repos/lmpm/wordpress-theme
       layout: main-vertical
       panes:
-        - nvim
+        - git status
+        - ls
+
+  - "Wordpress Plugin":
+      root: ~/Repos/lmpm/wordpress-plugin
+      layout: main-vertical
+      panes:
+        - git status
         - ls
 
   - "Spine":
       root: ~/Repos/lmpm/spine-xp
       layout: main-vertical
       panes:
-        - nvim
         - git status
-
-  - "Base Images":
-      root: ~/Repos/docker-images
-      layout: main-vertical
-      panes:
-        - nvim
-        - git status
+        - ls
 
   - "Dotfiles":
       root: ~/.dotfiles

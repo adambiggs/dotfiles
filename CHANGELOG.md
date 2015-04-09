@@ -1,3 +1,21 @@
+### 1.5.4 (2015-04-09)
+
+
+#### Bug Fixes
+
+* **install:** don't install `gem` packages with sudo ([55b6e715](https://github.com/adambiggs/dotfiles.git/commit/55b6e71594ecd1ba81ff90dfc12663d37e8ba4fa))
+* **update:** don't use sudo when updating `pip` packages ([95b9cbee](https://github.com/adambiggs/dotfiles.git/commit/95b9cbeee1ebdaf4b167633b6bfee2fc5bf65ebd))
+
+
+#### Features
+
+* **install:**
+  * install script updates existing git submodules to latest remote ([3bec2959](https://github.com/adambiggs/dotfiles.git/commit/3bec2959903fbc4a825f78b8faa054c7d896f3e2))
+  * only install `pip` packages that haven't been installed yet ([dedffbfb](https://github.com/adambiggs/dotfiles.git/commit/dedffbfb2380783b8910c2d41e007e52f22c6eb5))
+  * install brewed `python`, and improved Linux support ([ab4f853d](https://github.com/adambiggs/dotfiles.git/commit/ab4f853d37eb9ac167e31401f8d6005810f3f277))
+* **tmuxinator:** updated lmpm workspace layout ([1b849a0e](https://github.com/adambiggs/dotfiles.git/commit/1b849a0e4507652b8c5b64264fd5fd2fe762e639))
+
+
 ### 1.5.3 (2015-04-08)
 
 

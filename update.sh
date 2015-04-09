@@ -14,7 +14,7 @@ echo -e "${good}Done.${clear}"
 
 # pip
 echo -e "\n${info}Updating certain pip packages...${clear}"
-sudo pip install -U neovim awscli
+pip install -U neovim awscli
 echo -e "${good}Done.${clear}"
 
 # gem

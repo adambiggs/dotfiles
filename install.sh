@@ -7,17 +7,15 @@ clear=`tty -s && tput sgr0`
 # Install a Homebrew package if not already installed.
 function install_brew_pkg() {
   pkg_name=$1
+  args=$2
   pkg_installed=`brew ls | grep $pkg_name`
   if [ -z $pkg_installed ]; then
     if [ $pkg_name == 'neovim' ]; then
       brew tap neovim/homebrew-neovim
-      brew install --HEAD neovim
     elif [ $pkg_name == 'battery' ]; then
       brew tap Goles/battery
-      brew install $pkg_name
-    else
-      brew install $pkg_name
     fi
+    brew install $args $pkg_name
   fi
 }
 
@@ -42,21 +40,29 @@ function install_ruby_gem() {
 # Homebrew
 echo -e "\n${info}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  if [[ $OSTYPE == darwin* ]]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+  fi
 fi
-install_brew_pkg neovim
+if [[ $OSTYPE == darwin* ]]; then
+  # Mac specific packages
+  install_brew_pkg reattach-to-user-namespace
+  install_brew_pkg boot2docker
+  install_brew_pkg git
+else
+  # Linux specific packages
+  install_brew_pkg git '--with-brewed-curl --with-brewed-openssl'
+fi
+install_brew_pkg python
+install_brew_pkg neovim '--HEAD'
 install_brew_pkg zsh
-install_brew_pkg git
 install_brew_pkg ctags
 install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
 install_brew_pkg battery
 install_brew_pkg wget
-if [[ $OSTYPE == darwin* ]]; then
-  # Mac specific packages
-  install_brew_pkg reattach-to-user-namespace
-  install_brew_pkg boot2docker
-fi
 echo -e "${good}Done.${clear}"
 
 # Homebrew Casks

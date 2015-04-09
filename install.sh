@@ -111,7 +111,7 @@ fi
 # Git submodules
 echo -e "\n${info}Installing Git submodules...${clear}"
 git submodule init
-git submodule update
+git submodule update --remote --rebase
 echo -e "${good}Done.${clear}"
 
 # Fonts

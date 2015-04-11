@@ -25,10 +25,6 @@
   Plug 'Lokaltog/vim-easymotion'
   "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
   Plug 'osyo-manga/vim-over'
-  Plug 'Shougo/neomru.vim'
-  Plug 'Shougo/unite-outline'
-  Plug 'Shougo/unite.vim'
-  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
   Plug 'junegunn/fzf', { 'dir': '~/.dotfiles/libs/fzf', 'do': 'yes \| ./install' }
 
   " Autocomplete
@@ -356,44 +352,6 @@
     endif
   " }
 
-  " Unite {
-    if isdirectory(expand("~/.nvim/plugged/unite.vim/"))
-      call unite#filters#matcher_default#use(['matcher_fuzzy'])
-      call unite#filters#sorter_default#use(['sorter_rank'])
-
-      let g:unite_source_history_yank_enable = 1
-      let g:unite_data_directory         = '~/.nvim/.cache/unite'
-      let g:unite_enable_start_insert      = 1
-      let g:unite_source_history_yank_enable = 1
-      let g:unite_prompt             = '» '
-      let g:unite_split_rule           = 'botright'
-
-      let g:unite_source_rec_async_command =
-        \ 'ag --nocolor --nogroup --ignore ".hg" --ignore ".svn" ' .
-        \ '--ignore ".git" --ignore ".bzr" --ignore "bower_components" ' .
-        \ ' --ignore "node_modules" --hidden -g ""'
-      let g:unite_source_grep_command    = 'ag'
-      let g:unite_source_grep_default_opts =
-        \ '-i --line-numbers --nocolor --nogroup --hidden --ignore ' .
-        \ '".hg" --ignore ".svn" --ignore ".git" --ignore ".bzr"'
-      let g:unite_source_grep_recursive_opt = ''
-
-      " Make Unite act more like CtrlP
-      autocmd FileType unite call s:unite_settings()
-
-      function! s:unite_settings()
-        imap <buffer> <C-j> <Plug>(unite_select_next_line)
-        imap <buffer> <C-k> <Plug>(unite_select_previous_line)
-        imap <silent><buffer><expr> <C-s> unite#do_action('split')
-        imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
-        imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
-        imap <buffer> <C-p> <Plug>(unite_narrowing_input_history)
-        nmap <buffer> <C-p> <Plug>(unite_narrowing_input_history)
-        nmap <buffer> <ESC> <Plug>(unite_exit)
-      endfunction
-    endif
-  " }
-
   " CtrlSpace {
     if isdirectory(expand("~/.nvim/plugged/vim-ctrlspace/"))
       let g:ctrlspace_save_workspace_on_exit = 1
@@ -601,13 +559,6 @@
     endif
   " }
 
-  " Unite {
-    if isdirectory(expand("~/.nvim/plugged/unite.vim/"))
-      nnoremap <silent> <C-p> :Unite -auto-resize -start-insert buffer file_rec/async:!<CR>
-      nnoremap <leader>/ :Unite grep:.<CR>
-      nnoremap <leader>? :Unite grep<CR>
-      nnoremap <leader>p :Unite history/yank<CR>
-      nnoremap <leader><space> :Unite -quick-match buffer<CR>
     endif
   " }
 

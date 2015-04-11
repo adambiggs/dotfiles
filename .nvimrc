@@ -494,6 +494,15 @@
     map zl zL
     map zh zH
 
+    " Terminal split navigation
+    if has('nvim')
+      tmap <C-j> <C-\><C-n><C-j>
+      tmap <C-k> <C-\><C-n><C-k>
+      tmap <C-h> <C-\><C-n><C-h>
+      tmap <C-l> <C-\><C-n><C-l>
+      au WinEnter term://* startinsert
+    endif
+
   " }
 
   " CoffeeScript {

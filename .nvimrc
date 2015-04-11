@@ -634,9 +634,9 @@
   " UtilSnips {
     if isdirectory(expand("~/.nvim/plugged/ultisnips"))
       " remap Ultisnips for compatibility for YCM
-      let g:UltiSnipsExpandTrigger       = '<C-x>'
-      let g:UltiSnipsJumpForwardTrigger  = '<C-s>'
-      let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+      let g:UltiSnipsExpandTrigger       = '<C-s>'
+      let g:UltiSnipsJumpForwardTrigger  = '<C-n>'
+      let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
       let g:UltiSnipsEditSplit           = 'vertical'
     endif
   " }

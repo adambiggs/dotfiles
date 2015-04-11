@@ -54,7 +54,7 @@
   Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
   Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown' }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-  Plug 'mustache/vim-mustache-handlebars', { 'for': 'handlebars' }
+  Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
   Plug 'othree/html5.vim', { 'for': 'html' }
   Plug 'othree/xml.vim', { 'for': 'xml' }
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }

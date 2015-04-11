@@ -79,11 +79,7 @@ fi
 
 # Basic shortcuts
 alias ..='cd ..'
-alias ls='ls -lhsGF'
-alias lsa='ls -alhsGF'
 alias kmux='tmux kill-server'
-alias vu='vagrant up --provider=vmware_fusion'
-alias vs='vagrant ssh'
 alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
 
 # Git

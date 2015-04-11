@@ -1,3 +1,26 @@
+## 1.6.0 (2015-04-10)
+
+
+#### Bug Fixes
+
+* **vim:**
+  * pane navigation keymaps broken in new NeoVim terminal buffers ([9af92f1f](https://github.com/adambiggs/dotfiles.git/commit/9af92f1fe636f45ca846da75a791263a0630e66a))
+  * Utilsnips keymaps not working ([744ea439](https://github.com/adambiggs/dotfiles.git/commit/744ea4396c45366cde426873fae5a2a002b506e3))
+  * Handlebars plugin not activating properly ([c0a02c55](https://github.com/adambiggs/dotfiles.git/commit/c0a02c552d66235ba120d024ba8fcabc9e4c5dd0))
+* **zsh:** `fzf` keybindings not working ([cd978bf9](https://github.com/adambiggs/dotfiles.git/commit/cd978bf9fda75a4b231068c042a085c031c34d16))
+
+
+#### Features
+
+* update fzf ([862b1182](https://github.com/adambiggs/dotfiles.git/commit/862b1182828dd72f3c878c59bda5abbe4e2f72aa))
+* **vim:**
+  * deactivate Tern plugin till I get around to making shit work right ([b7edb7bd](https://github.com/adambiggs/dotfiles.git/commit/b7edb7bdcfbd03049b92ee64901b943c8b9b4703))
+  * update Airline tabline config ([ab19ae16](https://github.com/adambiggs/dotfiles.git/commit/ab19ae160ad09f64e34d2d8cb683fb16a4af97ec))
+  * replace Unite with fzf for CtrlP mapping ([8a6cefa3](https://github.com/adambiggs/dotfiles.git/commit/8a6cefa37d3a9221c69efa21d4955f61b7de314f))
+  * remove Unite plugin ([48a82b44](https://github.com/adambiggs/dotfiles.git/commit/48a82b444557fc01c8572a7e8cd8cfdd2c671cbb))
+* **zsh:** get rid of aliases I don't use anymore ([4a741db0](https://github.com/adambiggs/dotfiles.git/commit/4a741db0b2896ec101c1df909e05c9f918e2a05b))
+
+
 ### 1.5.4 (2015-04-09)
 
 

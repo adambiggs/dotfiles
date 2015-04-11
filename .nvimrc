@@ -331,8 +331,10 @@
       let g:airline_exclude_preview                  = 1
       let g:airline_detect_iminsert                  = 1
       let g:airline_powerline_fonts                  = 1
-      let g:airline#extensions#tabline#enabled       = 1  " Enable tabline
-      let g:airline#extensions#tabline#tab_min_count = 2  " Only show tabline if using multiple tabs
+      let g:airline#extensions#tabline#enabled       = 1
+      let g:airline#extensions#tabline#show_tabs     = 1
+      let g:airline#extensions#tabline#tab_nr_type   = 2 " Show # of splits and tab #
+      let g:airline#extensions#tabline#show_tab_type = 1
     endif
   " }
 

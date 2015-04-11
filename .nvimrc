@@ -28,7 +28,7 @@
   Plug 'junegunn/fzf', { 'dir': '~/.dotfiles/libs/fzf', 'do': 'yes \| ./install' }
 
   " Autocomplete
-  Plug 'marijnh/tern_for_vim'
+  "Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }

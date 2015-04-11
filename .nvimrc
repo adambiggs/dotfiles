@@ -28,9 +28,9 @@
   Plug 'junegunn/fzf', { 'dir': '~/.dotfiles/libs/fzf', 'do': 'yes \| ./install' }
 
   " Autocomplete
-  Plug 'honza/vim-snippets'
   Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
   " Coding
@@ -623,9 +623,10 @@
   " UtilSnips {
     if isdirectory(expand("~/.nvim/plugged/ultisnips"))
       " remap Ultisnips for compatibility for YCM
-      let g:UltiSnipsExpandTrigger     = '<C-j>'
-      let g:UltiSnipsJumpForwardTrigger  = '<C-j>'
+      let g:UltiSnipsExpandTrigger       = '<C-x>'
+      let g:UltiSnipsJumpForwardTrigger  = '<C-s>'
       let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+      let g:UltiSnipsEditSplit           = 'vertical'
     endif
   " }
 

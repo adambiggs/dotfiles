@@ -559,6 +559,9 @@
     endif
   " }
 
+  " Fzf {
+    if isdirectory(expand("~/.dotfiles/libs/fzf/"))
+      nnoremap <silent> <C-p> :FZF<CR>
     endif
   " }
 

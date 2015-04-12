@@ -1,3 +1,18 @@
+### 1.6.1 (2015-04-12)
+
+
+#### Bug Fixes
+
+* **install:** if `brew` already exists, it might install out-of-date packages ([d1a0dbf8](https://github.com/adambiggs/dotfiles.git/commit/d1a0dbf8882283b420e214ab00c17d44e4b9f7d3))
+
+
+#### Features
+
+* updated `nvm` ([41bd3707](https://github.com/adambiggs/dotfiles.git/commit/41bd3707a0e4fffd5d50693f6ca850a84de2a3bc))
+* updated `fzf` ([d55afc2c](https://github.com/adambiggs/dotfiles.git/commit/d55afc2c09cd05b5d7b47c31a577d9142aae0bc9))
+* **vim:** more smarter Utilsnips keymaps ([7a7cec59](https://github.com/adambiggs/dotfiles.git/commit/7a7cec59cd3cae088039bffae28555436b32f69c))
+
+
 ## 1.6.0 (2015-04-10)
 
 

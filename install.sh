@@ -55,6 +55,7 @@ if ! type brew > /dev/null; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
   fi
 fi
+brew update
 if [[ $OSTYPE == darwin* ]]; then
   # Mac specific packages
   install_brew_pkg reattach-to-user-namespace

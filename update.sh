@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 info=`tty -s && tput setaf 4`
 good=`tty -s && tput setaf 2`
 bad=`tty -s && tput setaf 1`
@@ -23,11 +23,14 @@ gem update tmuxinator CoffeeTags
 echo -e "${good}Done.${clear}"
 
 # zgen
-# TODO: Not working...
-#echo -e "\n${info}Updating zsh plugins...${clear}"
-#zgen selfupdate
-#zgen update
-#echo -e "${good}Done.${clear}"
+echo -e "\n${info}Updating zgen...${clear}"
+source ~/.dotfiles/libs/zgen/zgen.zsh
+zgen-selfupdate
+echo -e "${good}Done.${clear}"
+echo -e "\n${info}Updating zgen plugins...${clear}"
+zgen-update
+echo -e "${good}Done.${clear}"
+echo -e "${info}If there were any zgen plugin updates, you should ${good}exit${info} and start a new terminal session.${clear}"
 
 # Git submodules
 echo -e "\n${info}Updating git submodules...${clear}"

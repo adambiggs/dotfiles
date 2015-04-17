@@ -500,7 +500,7 @@
       tmap <C-k> <C-\><C-n><C-k>
       tmap <C-h> <C-\><C-n><C-h>
       tmap <C-l> <C-\><C-n><C-l>
-      au WinEnter term://* startinsert
+      autocmd WinEnter term://* startinsert
     endif
 
   " }
@@ -570,9 +570,13 @@
     endif
   " }
 
-  " Fzf {
+  " FZF {
     if isdirectory(expand("~/.dotfiles/libs/fzf/"))
       nnoremap <silent> <C-p> :FZF<CR>
+      autocmd WinEnter \[FZF\] startinsert
+      autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
+      autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
+      autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
     endif
   " }
 

@@ -72,7 +72,6 @@
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'
-  Plug 'szw/vim-ctrlspace'
   Plug 'thinca/vim-localrc'
 
   call plug#end()
@@ -354,13 +353,6 @@
     endif
   " }
 
-  " CtrlSpace {
-    if isdirectory(expand("~/.nvim/plugged/vim-ctrlspace/"))
-      let g:ctrlspace_save_workspace_on_exit = 1
-      let g:ctrlspace_ignored_files = '\v(tmp|temp|node_modules)[\/]'
-    endif
-  " }
-
   " YouCompleteMe {
     if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))
       let g:ycm_min_num_of_chars_for_completion   = 1
@@ -406,6 +398,31 @@
       let NERDTreeQuitOnOpen          = 1
       let NERDTreeMouseMode           = 2
       let NERDTreeShowHidden          = 1
+    endif
+  " }
+
+  " FZF {
+    if isdirectory(expand("~/.dotfiles/libs/fzf/"))
+
+      " Select buffers with FZF
+      function! s:buflist()
+        redir => ls
+        silent ls
+        redir END
+        return split(ls, '\n')
+      endfunction
+
+      function! s:bufopen(e)
+        execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+      endfunction
+
+      nnoremap <silent> <C-@> :call fzf#run({
+      \   'source':  reverse(<sid>buflist()),
+      \   'sink':    function('<sid>bufopen'),
+      \   'options': '+m',
+      \   'down':    len(<sid>buflist()) + 2
+      \ })<CR>
+
     endif
   " }
 

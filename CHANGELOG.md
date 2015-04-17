@@ -1,3 +1,16 @@
+### 1.6.2 (2015-04-17)
+
+
+#### Features
+
+* updated `nvm` ([caf8b802](https://github.com/adambiggs/dotfiles.git/commit/caf8b802abcf6ae9b5f793448fd3fb0d80e4789c))
+* **fzf:**
+  * use CtrlP mappings in FZF ([7a402349](https://github.com/adambiggs/dotfiles.git/commit/7a4023493155aae979a16b9a0e46513ba244f7fd))
+  * use `--multi` mode by default ([d478f7cd](https://github.com/adambiggs/dotfiles.git/commit/d478f7cde377313645339afb547b28eb91543e26))
+* **update:** update `zgen` and use it to update `zsh` plugins ([a077f184](https://github.com/adambiggs/dotfiles.git/commit/a077f18487a54cd8043ffddf3de6281bbb651f9a))
+* **vim:** browse buffers with FZF and remove CtrlSpace ([212e9ee0](https://github.com/adambiggs/dotfiles.git/commit/212e9ee0f0705e0ffc2b78689ab54a1339c532f7))
+
+
 ### 1.6.1 (2015-04-12)
 
 

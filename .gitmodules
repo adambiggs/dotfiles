@@ -19,3 +19,6 @@
 [submodule "libs/fzf"]
 	path = libs/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "themes/glyph-patched-fonts"]
+	path = themes/glyph-patched-fonts
+	url = https://github.com/ryanoasis/nerd-filetype-glyphs-fonts-patcher.git

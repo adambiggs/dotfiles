@@ -15,8 +15,9 @@
   Plug 'mbbill/undotree'
   Plug 'mhinz/vim-startify'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'scrooloose/nerdtree'
   Plug 'vim-scripts/restore_view.vim'
+  Plug 'ryanoasis/vim-webdevicons'
   "Plug 'tmux-plugins/vim-tmux-focus-events'
 
   " Search & Navigation
@@ -305,6 +306,13 @@
 
       autocmd User Startified setlocal colorcolumn=
     endif
+  " }
+
+  " WebDevIcons {
+  if isdirectory(expand("~/.nvim/plugged/vim-webdevicons/"))
+    let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+    let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+  endif
   " }
 
   " LocalRC {

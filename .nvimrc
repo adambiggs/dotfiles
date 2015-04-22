@@ -74,6 +74,8 @@
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'
   Plug 'thinca/vim-localrc'
+  Plug 'tpope/vim-obsession'
+  Plug 'dhruvasagar/vim-prosession'
 
   call plug#end()
 
@@ -320,6 +322,14 @@
       let g:localrc_filename = '.vimrc.local'
       let g:localrc_filetype = '/^\.vimrc\..*\<%s\>.*\.local$'
     endif
+  " }
+
+  " ProSession {
+  if isdirectory(expand("~/.nvim/plugged/vim-prosession/"))
+    let g:prosession_dir             = "~/.nvim/session/"
+    let g:prosession_per_branch      = 1
+    let g:prosession_default_session = 0
+  endif
   " }
 
   " Indent Guides {

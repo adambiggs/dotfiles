@@ -23,7 +23,7 @@ windows:
   - "Control":
       layout: main-vertical
       panes:
-        - nvim docker-compose.yml
+        - nvim
         - docker-compose:
           - docker-compose --version
           - docker-compose ps
@@ -33,7 +33,8 @@ windows:
       layout: main-vertical
       panes:
         - git status
-        - grunt --version
+        - bower list
+        - npm outdated
 
   - "API":
       root: ~/Repos/lmpm/api
@@ -47,7 +48,8 @@ windows:
       layout: main-vertical
       panes:
         - git status
-        - ls
+        - bower list
+        - npm outdated
 
   - "Wordpress Plugin":
       root: ~/Repos/lmpm/wordpress-plugin
@@ -61,11 +63,11 @@ windows:
       layout: main-vertical
       panes:
         - git status
-        - ls
+        - npm outdated
 
   - "Dotfiles":
       root: ~/.dotfiles
       layout: main-vertical
       panes:
-        - nvim .nvimrc
-        - ls
+        - nvim
+        - git status

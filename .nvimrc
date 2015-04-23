@@ -60,6 +60,7 @@
   Plug 'othree/xml.vim', { 'for': 'xml' }
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+  Plug 'StanAngeloff/php.vim', { 'for': 'php' }
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 

@@ -1,0 +1,42 @@
+#!/bin/zsh
+echo ""
+
+SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+# Source external scripts.
+source $SCRIPT_PATH/../scripts/colors
+
+# Homebrew
+echo -e "\n${blue}Updating Homebrew packages...${clear}"
+brew update
+brew upgrade
+#brew reinstall --HEAD neovim # TODO: check for updates before reisntalling...
+brew cleanup
+echo -e "${green}Done.${clear}"
+
+# pip
+echo -e "\n${blue}Updating certain pip packages...${clear}"
+pip install -U neovim awscli
+echo -e "${green}Done.${clear}"
+
+# gem
+echo -e "\n${blue}Updating certain ruby gems...${clear}"
+gem update tmuxinator CoffeeTags
+echo -e "${green}Done.${clear}"
+
+# zgen
+echo -e "\n${blue}Updating zgen...${clear}"
+source ~/.dotfiles/libs/zgen/zgen.zsh
+zgen-selfupdate
+echo -e "${green}Done.${clear}"
+echo -e "\n${blue}Updating zgen plugins...${clear}"
+zgen-update
+echo -e "${green}Done.${clear}"
+echo -e "${blue}If there were any zgen plugin updates, you should ${green}exit${blue} and start a new terminal session.${clear}"
+
+# Git submodules
+echo -e "\n${blue}Updating git submodules...${clear}"
+git submodule update --remote --rebase
+echo -e "${green}Done.${clear}"
+
+echo ""

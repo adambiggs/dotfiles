@@ -1,0 +1,31 @@
+#!/bin/bash
+echo ""
+
+SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+# Source external scripts.
+source $SCRIPT_PATH/../scripts/colors
+
+echo -e "\n${blue}Linking dotfiles into your user directory...${clear}"
+ln -sfv $SCRIPT_PATH/.nvimrc ~/.nvimrc
+ln -sfv $SCRIPT_PATH/.tmux.conf ~/.tmux.conf
+ln -sfv $SCRIPT_PATH/.tmuxinator ~/.tmuxinator
+ln -sfv $SCRIPT_PATH/.zshrc ~/.zshrc
+ln -sfv $SCRIPT_PATH/.zlogin ~/.zlogin
+echo -e "${green}Done.${clear}"
+
+if [[ $OSTYPE == darwin* ]]; then
+  echo -e "\n${blue}Linking custom Karabiner key mappings...${clear}"
+  ln -sfv $SCRIPT_PATH/prefs/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
+  echo -e "${green}Done.${clear}"
+fi
+
+# TODO: For some reason NeoVim doesn't seem to follow the symlink...
+#echo -e "\n${blue}Linking NeoVim spellfiles...${clear}"
+#if [ ! -d ~/.nvim ]; then
+  #mkdir ~/.nvim
+#fi
+#ln -shiv $SCRIPT_PATH/.nvim/spell ~/.nvim/spell
+#echo -e "${green}Done.${clear}"
+
+echo ""

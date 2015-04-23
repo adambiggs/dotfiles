@@ -1,0 +1,5 @@
+#!/bin/bash
+blue=`tput setaf 4 2>/dev/null`
+green=`tput setaf 2 2>/dev/null`
+red=`tput setaf 1 2>/dev/null`
+clear=`tput sgr0 2>/dev/null`

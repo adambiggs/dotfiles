@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function install_patched_fonts() {
+
+  # Get font directory for current OS.
+  if [[ $OSTYPE == darwin* ]]; then
+    FONT_DIR="$HOME/Library/Fonts"
+  else
+    FONT_DIR="$HOME/.fonts"
+    mkdir -p $FONT_DIR
+  fi
+
+  # Copy patched fonts to font directory.
+  PATCHED_FONT_DIR="$( cd "$(dirname "$0")" ; pwd -P )"/themes/glyph-patched-fonts/patched-fonts
+  PATCHED_FONT_CMD="find \"$PATCHED_FONT_DIR\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
+  eval $PATCHED_FONT_CMD | xargs -0 -I % cp "%" "$FONT_DIR/"
+
+  # Reset font cache on Linux
+  if [[ -n `which fc-cache` ]]; then
+    fc-cache -f $FONT_DIR
+  fi
+
+}

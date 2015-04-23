@@ -1,8 +1,8 @@
 #!/bin/bash
-info=`tty -s && tput setaf 4`
-good=`tty -s && tput setaf 2`
-bad=`tty -s && tput setaf 1`
-clear=`tty -s && tput sgr0`
+SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+# Source external scripts.
+source $SCRIPT_PATH/scripts/colors
 
 # Install a Homebrew package if not already installed.
 function install_brew_pkg() {
@@ -47,7 +47,7 @@ function install_pip_pkg() {
 }
 
 # Homebrew
-echo -e "\n${info}Installing Homebrew packages...${clear}"
+echo -e "\n${blue}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
   if [[ $OSTYPE == darwin* ]]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -73,10 +73,10 @@ install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
 install_brew_pkg battery
 install_brew_pkg wget
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # Homebrew Casks
-echo -e "\n${info}Installing Homebrew Casks...${clear}"
+echo -e "\n${blue}Installing Homebrew Casks...${clear}"
 if [ -z `brew ls | grep brew-cask` ]; then
   brew install caskroom/cask/brew-cask
   brew tap caskroom/versions
@@ -90,80 +90,81 @@ if [[ $OSTYPE == darwin* ]]; then
   install_brew_cask virtualbox
   install_brew_cask karabiner
 fi
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # Homebrew cleanup
-echo -e "\n${info}Cleaning up Homebrew installation files...${clear}"
+echo -e "\n${blue}Cleaning up Homebrew installation files...${clear}"
 brew cleanup
 brew cask cleanup
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # Use zsh as default shell
-echo -e "\n${info}Switching default shell to ZSH...${clear}"
+echo -e "\n${blue}Switching default shell to ZSH...${clear}"
 ZSH_DIR=`whereis zsh`
 DEFAULT_SHELL=`finger $LOGNAME | grep Shell | awk -F':' '{print $3}'`
 if [ $ZSH_DIR == $DEFAULT_SHELL ]; then
-  echo -e "${good}Default shell already using${clear}$DEFAULT_SHELL${good}.${clear}"
+  echo -e "${green}Default shell already using${clear}$DEFAULT_SHELL${green}.${clear}"
 else
   chsh -s `which zsh`
-  echo -e "${good}Done.${clear}"
+  echo -e "${green}Done.${clear}"
 fi
 
 # Git submodules
-echo -e "\n${info}Installing Git submodules...${clear}"
+echo -e "\n${blue}Installing Git submodules...${clear}"
 git submodule init
 git submodule update --remote --rebase
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # Fonts
-echo -e "\n${info}Installing patched fonts...${clear}"
-themes/patched-fonts/install.sh
-echo -e "${good}Done.${clear}"
+echo -e "\n${blue}Installing patched fonts...${clear}"
+source $SCRIPT_PATH/scripts/install-fonts
+install_patched_fonts
+echo -e "${green}Done.${clear}"
 
 # fzf
-echo -e "\n${info}Installing fzf...${clear}"
+echo -e "\n${blue}Installing fzf...${clear}"
 libs/fzf/install
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # iTerm CLI
 if [[ $OSTYPE == darwin* ]]; then
-  echo -e "\n${info}Installing iTerm cli integration...${clear}"
+  echo -e "\n${blue}Installing iTerm cli integration...${clear}"
   ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
   if [ -e "$ITERM_CLI_PATH" ]; then
-    echo -e "${good}Already installed.${clear}"
+    echo -e "${green}Already installed.${clear}"
   else
     curl -L iterm2.com/misc/install_shell_integration.sh | bash
-    echo -e "${good}Done.${clear}"
+    echo -e "${green}Done.${clear}"
   fi
 fi
 
 # Ruby Gems
-echo -e "\n${info}Installing Ruby gems...${clear}"
+echo -e "\n${blue}Installing Ruby gems...${clear}"
 install_ruby_gem CoffeeTags
 install_ruby_gem tmuxinator
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # PIP packages
-echo -e "\n${info}Installing PIP packages...${clear}"
+echo -e "\n${blue}Installing PIP packages...${clear}"
 install_pip_pkg neovim
 install_pip_pkg awscli
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 # Vim-Plug
-echo -e "\n${info}Installing Vim-Plug...${clear}"
+echo -e "\n${blue}Installing Vim-Plug...${clear}"
 VIMPLUG_PATH=~/.nvim/autoload/plug.vim
 if [ -e "$VIMPLUG_PATH" ]; then
-  echo -e "${good}Already installed.${clear}"
+  echo -e "${green}Already installed.${clear}"
 else
   curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  echo -e "${good}Done.${clear}"
+  echo -e "${green}Done.${clear}"
 fi
 
 # Vim plugins
-echo -e "\n${info}Starting NeoVim and installing plugins...${clear}"
+echo -e "\n${blue}Starting NeoVim and installing plugins...${clear}"
 echo -e "You'll have to quit NeoVim manually when complete."
 echo -e "See: https://github.com/junegunn/vim-plug/issues/104"
 nvim +PlugInstall
-echo -e "${good}Done.${clear}"
+echo -e "${green}Done.${clear}"
 
 echo ""

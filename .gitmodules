@@ -4,9 +4,6 @@
 [submodule "themes/base16-shell"]
 	path = themes/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
-[submodule "themes/patched-fonts"]
-	path = themes/patched-fonts
-	url = https://github.com/powerline/fonts.git
 [submodule "libs/zgen"]
 	path = libs/zgen
 	url = https://github.com/tarjoilija/zgen.git

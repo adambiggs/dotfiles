@@ -36787,6 +36787,8 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -36823,9 +36825,9 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>356 477 201 309 0 0 2560 1440 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1466 721 767 530 0 0 2560 1417 </string>
+	<string>1009 607 1349 676 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1067 292 918 464 0 0 2560 1417 </string>
+	<string>175 303 918 464 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1080 984 400 129 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -37385,7 +37387,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>LiterationMonoPowerlinePlusNerdFileTypes 13</string>
+			<string>MesloLGMPlusNerdFileTypes 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -37553,11 +37555,11 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use HFS Plus Mapping</key>
-			<false/>
+			<true/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1.0911633968353271</real>
 			<key>Visual Bell</key>
@@ -38537,7 +38539,7 @@
 				<real>0.63921570777893066</real>
 			</dict>
 			<key>Guid</key>
-			<string>A891C82D-3E5D-4462-B551-4DFF9E49E261</string>
+			<string>942639BD-B9D6-4AE3-B9E3-8A5B6E214587</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -38851,7 +38853,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>LiterationMonoPowerlinePlusNerdFileTypes 13</string>
+			<string>LiterationMonoPowerlinePlusNerdFileTypes 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -39018,6 +39020,8 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1.0911633968353271</real>
 			<key>Visual Bell</key>
@@ -39100,7 +39104,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-04-20T15:31:49Z</date>
+	<date>2015-04-22T15:53:29Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -40776,7 +40780,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20150420-nightly</string>
+	<string>2.9.20150422-nightly</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>

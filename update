@@ -1,6 +1,4 @@
 #!/bin/zsh
-echo ""
-
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Source external scripts.
@@ -10,9 +8,20 @@ source $SCRIPT_PATH/scripts/colors
 echo -e "\n${blue}Updating Homebrew packages...${clear}"
 brew update
 brew upgrade
-#brew reinstall --HEAD neovim # TODO: check for updates before reisntalling...
 brew cleanup
 echo -e "${green}Done.${clear}"
+
+# NeoVim
+echo -e "\n${blue}Updating NeoVim to latest HEAD...${clear}"
+NEOVIM_REPO_PATH=/Library/Caches/Homebrew/neovim--git/
+NEOVIM_LOCAL_SHA=`cd $NEOVIM_REPO_PATH && git rev-parse @`
+NEOVIM_REMOTE_SHA=`cd $NEOVIM_REPO_PATH && git rev-parse @{u}`
+if [[ $NEOVIM_LOCAL_SHA == $NEOVIM_REMOTE_SHA ]]; then
+  echo -e "${green}NeoVim already up to date.${clear}"
+else
+  brew reinstall --HEAD neovim
+  echo -e "\n${green}Done.${clear}"
+fi
 
 # pip
 echo -e "\n${blue}Updating certain pip packages...${clear}"
@@ -32,7 +41,7 @@ echo -e "${green}Done.${clear}"
 echo -e "\n${blue}Updating zgen plugins...${clear}"
 zgen-update
 echo -e "${green}Done.${clear}"
-echo -e "${blue}If there were any zgen plugin updates, you should ${green}exit${blue} and start a new terminal session.${clear}"
+echo -e "${blue}Note:${clear} If there were any zgen plugin updates, you should probably start a new terminal session."
 
 # Git submodules
 echo -e "\n${blue}Updating git submodules...${clear}"

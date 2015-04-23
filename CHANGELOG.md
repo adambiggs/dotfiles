@@ -1,3 +1,24 @@
+## 2.0.0 (2015-04-23)
+
+
+#### Bug Fixes
+
+* **update:** wrong path to `colors` script ([83c70dd4](https://github.com/adambiggs/dotfiles.git/commit/83c70dd4e6ab3f7b9ee69a0aa706711c5059f4ce))
+
+
+#### Features
+
+* updated `fzf`, `nvm`, and `zgen` submodules ([8063787f](https://github.com/adambiggs/dotfiles.git/commit/8063787f0e40ae039d139f51b214b1f69ab713e5))
+* removed `patched-fonts` submodule ([1d3ba379](https://github.com/adambiggs/dotfiles.git/commit/1d3ba37974b81b20e8ffd687ba3fbbe3204b429b))
+* install glyph fonts, refactored `install`/`link`/`update` scripts ([e6272eff](https://github.com/adambiggs/dotfiles.git/commit/e6272effb00fb80946c3d9ea92249226bf5ef19c))
+* **iTerm:** changed font ([d0839a3b](https://github.com/adambiggs/dotfiles.git/commit/d0839a3bbdf1db7fdcc2121d420560436b30d504))
+* **tmuxinator:** updated `lmpm.yml` to make better use of `vim-prosession` ([d8612332](https://github.com/adambiggs/dotfiles.git/commit/d8612332de08dfccc3291e4c869ff15d9ccfec6c))
+* **vim:**
+  * installed `php.vim` plugin ([1af69543](https://github.com/adambiggs/dotfiles.git/commit/1af6954368ee8c78a78cf886d0ee3f4fb89d3ec0))
+  * installed `vim-prosession` session management plugin ([14cbbb26](https://github.com/adambiggs/dotfiles.git/commit/14cbbb26946032a2b170debcc660755f5e700221))
+  * installed `vim-webdevicons` and glyph patched fonts ([a8f55330](https://github.com/adambiggs/dotfiles.git/commit/a8f553305f618e5934dd1743ec2d56f46acbadef))
+
+
 ### 1.6.2 (2015-04-17)
 
 

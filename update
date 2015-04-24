@@ -15,7 +15,7 @@ echo -e "${green}Done.${clear}"
 echo -e "\n${blue}Updating NeoVim to latest HEAD...${clear}"
 NEOVIM_REPO_PATH=/Library/Caches/Homebrew/neovim--git/
 NEOVIM_LOCAL_SHA=`cd $NEOVIM_REPO_PATH && git rev-parse @`
-NEOVIM_REMOTE_SHA=`cd $NEOVIM_REPO_PATH && git rev-parse @{u}`
+NEOVIM_REMOTE_SHA=`cd $NEOVIM_REPO_PATH && git fetch && git rev-parse @{u}`
 if [[ $NEOVIM_LOCAL_SHA == $NEOVIM_REMOTE_SHA ]]; then
   echo -e "${green}NeoVim already up to date.${clear}"
 else

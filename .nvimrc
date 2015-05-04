@@ -421,7 +421,7 @@
   " }
 
   " FZF {
-    if isdirectory(expand("~/.dotfiles/libs/fzf/"))
+    if isdirectory(expand("~/.fzf/"))
 
       " Select buffers with FZF
       function! s:buflist()
@@ -436,11 +436,11 @@
       endfunction
 
       nnoremap <silent> <C-@> :call fzf#run({
-      \   'source':  reverse(<sid>buflist()),
-      \   'sink':    function('<sid>bufopen'),
-      \   'options': '+m',
-      \   'down':    len(<sid>buflist()) + 2
-      \ })<CR>
+      \  'source':  reverse(<sid>buflist()),
+      \  'sink':    function('<sid>bufopen'),
+      \  'options': '+m',
+      \  'down':    len(<sid>buflist()) + 2
+      \})<CR>
 
     endif
   " }
@@ -607,7 +607,7 @@
   " }
 
   " FZF {
-    if isdirectory(expand("~/.dotfiles/libs/fzf/"))
+    if isdirectory(expand("~/.fzf/"))
       nnoremap <silent> <C-p> :FZF<CR>
       autocmd WinEnter \[FZF\] startinsert
       autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>

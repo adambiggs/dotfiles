@@ -475,10 +475,29 @@
 
   " Tagbar {
     if isdirectory(expand("~/.nvim/plugged/tagbar/"))
-      let g:tagbar_autoshowtag    = 1  " Open folds if necessary when navigating to a tag
-      let g:tagbar_autoclose      = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
-      let g:tagbar_show_linenumbers = 2  " Show relative line numbers
-      let g:tagbar_foldlevel      = 1  " Custom fold level
+      let g:tagbar_autoshowtag = 1  " Open folds if necessary when navigating to a tag
+      let g:tagbar_autoclose   = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
+      let g:tagbar_foldlevel   = 1  " Custom fold level
+      let g:tagbar_iconchars   = ['▸', '▾']
+
+      " CoffeeScript tags
+      let g:tagbar_type_coffee = {
+        \   'ctagsbin' : 'coffeetags',
+        \   'ctagsargs' : ['--include-vars'],
+        \   'kinds' : [
+        \     'f:functions',
+        \     'c:classes',
+        \     'o:object',
+        \     'v:variables',
+        \     'p:prototypes',
+        \     'b:blocks'
+        \   ],
+        \   'sro' : '.',
+        \   'kind2scope' : {
+        \     'f' : 'object',
+        \     'o' : 'object',
+        \   }
+        \ }
     endif
   " }
 
@@ -552,6 +571,12 @@
       nnoremap <Leader>o :OverCommandLine<CR>%s/
       nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
       vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
+    endif
+  " }
+
+  " Tagbar {
+    if isdirectory(expand("~/.nvim/plugged/tagbar/"))
+      nnoremap <Leader><Leader>t :Tagbar<CR>
     endif
   " }
 

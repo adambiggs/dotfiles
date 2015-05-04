@@ -1,3 +1,19 @@
+## 2.1.0 (2015-05-04)
+
+
+#### Bug Fixes
+
+* **update:**
+  * OhMyZSH waits for prompt before updating ([4afa1f1e](https://github.com/adambiggs/dotfiles.git/commit/4afa1f1e1350f35429fecc096d80a94e8d0768ee))
+  * fetch remote before comparing NeoVim commits ([40cb2bcd](https://github.com/adambiggs/dotfiles.git/commit/40cb2bcdc004231ed5948baddffa45fc3afeb417))
+
+
+#### Features
+
+* removed `fzf` git submodule, install with VimPlug instead ([c893a6a0](https://github.com/adambiggs/dotfiles.git/commit/c893a6a06322e9496c4f86d3997aa426048ef970))
+* **update:** reinstall NeoVim from latest HEAD if there are updates available ([c965d403](https://github.com/adambiggs/dotfiles.git/commit/c965d403a83ca2115fe806ba6a6dcde553c652b2))
+
+
 ## 2.0.0 (2015-04-23)
 
 

@@ -65,8 +65,8 @@
   Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
   " Building
-  "Plug 'benekastah/neomake' " Currently broken. See: https://github.com/benekastah/neomake/issues/72
-  Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
+  Plug 'benekastah/neomake'
+  "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
   Plug 'adambiggs/vdebug', { 'branch': 'ordered-path-maps' }
@@ -394,6 +394,12 @@
   " Neomake {
     if isdirectory(expand("~/.nvim/plugged/neomake/"))
       autocmd BufWritePost *.coffee Neomake
+
+      " CoffeeTags maker
+      let g:neomake_coffee_coffeetags_maker = {
+        \ 'args': ['--include-vars', '--append', '-f./tags']
+        \ }
+      let g:neomake_coffee_enabled_makers = ['coffeelint', 'coffeetags']
     endif
   " }
 

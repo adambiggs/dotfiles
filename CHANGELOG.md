@@ -1,3 +1,19 @@
+### 2.1.1 (2015-05-04)
+
+
+#### Bug Fixes
+
+* **vim:** `fzf` keymaps not working after changing install directory ([c4af63f0](https://github.com/adambiggs/dotfiles.git/commit/c4af63f029339b3fffee0885f2ed0bdeb13de16d))
+
+
+#### Features
+
+* updated NVM to latest origin commit ([261e980e](https://github.com/adambiggs/dotfiles.git/commit/261e980eb524d9dc4dab392904d12833e994fc6f))
+* **vim:**
+  * switched Syntastic back to NeoMake (no longer broken in NeoVim) ([b36969fc](https://github.com/adambiggs/dotfiles.git/commit/b36969fc2a00f0e2575e5aed693001a31d429c34))
+  * got Tagbar plugin working again ([ba4ad776](https://github.com/adambiggs/dotfiles.git/commit/ba4ad776bf4e0a5d05940996bfe7739f1f8d5f3b))
+
+
 ## 2.1.0 (2015-05-04)
 
 

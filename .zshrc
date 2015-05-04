@@ -42,11 +42,11 @@ source /usr/local/bin/aws_zsh_completer.sh
 
 
 ### CONFIG ###
-DEFAULT_USER="adam"
-COMPLETION_WAITING_DOTS=true
-DISABLE_UPDATE_PROMPT=true
-DISABLE_CORRECTION=true
-# DISABLE_UNTRACKED_FILES_DIRTY=true # Improves repo status check time.
+export DEFAULT_USER="adam"
+export COMPLETION_WAITING_DOTS=true
+export DISABLE_UPDATE_PROMPT=true
+export DISABLE_CORRECTION=true
+# export DISABLE_UNTRACKED_FILES_DIRTY=true # Improves repo status check time.
 export UPDATE_ZSH_DAYS=1
 export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true

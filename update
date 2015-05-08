@@ -7,7 +7,7 @@ source $SCRIPT_PATH/scripts/colors
 # Homebrew
 echo -e "\n${blue}Updating Homebrew packages...${clear}"
 brew update
-brew upgrade
+brew upgrade --all
 brew cleanup
 echo -e "${green}Done.${clear}"
 

@@ -19,6 +19,7 @@
   Plug 'vim-scripts/restore_view.vim'
   Plug 'ryanoasis/vim-webdevicons'
   "Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'junegunn/vim-peekaboo'
 
   " Search & Navigation
   Plug 'bronson/vim-visual-star-search'

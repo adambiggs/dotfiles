@@ -105,19 +105,6 @@
   set noswapfile " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead.
   set viewoptions=cursor,folds
 
-  " Restore cursor to file position in previous editing session
-  " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
-  function! ResCur()
-    if line("'\"") <= line("$")
-      normal! g`"
-      return 1
-    endif
-  endfunction
-
-  augroup resCur
-    autocmd!
-    autocmd BufWinEnter * call ResCur()
-  augroup END
 
 " }
 

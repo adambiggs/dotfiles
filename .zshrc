@@ -86,6 +86,10 @@ alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminf
 # Git
 alias github='gitit'
 
+# NeoVim
+alias nvim-debug='ulimit -c unlimited && nvim'
+alias nvim-backtrace='gdb -q -n -ex bt -batch /usr/local/bin/nvim /cores/core.* > backtrace.txt && rm -f /cores/core.*'
+
 # Scripts
 alias fr='$HOME/.dotfiles/scripts/find-and-replace.sh'
 

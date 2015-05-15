@@ -1,3 +1,26 @@
+## 2.2.0 (2015-05-15)
+
+
+#### Bug Fixes
+
+* **vim:**
+  * FZF currently very broken in NeoVim - Switch back to CtrlP for now ([08944cb4](https://github.com/adambiggs/dotfiles.git/commit/08944cb42cc67cd9b11158a55b7787a0e9e16ad4))
+  * remove `options` from `viewoptions` setting ([9aa38d3d](https://github.com/adambiggs/dotfiles.git/commit/9aa38d3d11090d14c328530d1e7d0482e2a73cf5))
+
+
+#### Features
+
+* updated `zgen` ([3bdb128e](https://github.com/adambiggs/dotfiles.git/commit/3bdb128e488e1f9e7ddd0c7dba48066227f2974a))
+* updated `nvm` ([2a2534bb](https://github.com/adambiggs/dotfiles.git/commit/2a2534bb0d94bf457e979622463d77b527493ee0))
+* updated `nvm` ([a63b2c5e](https://github.com/adambiggs/dotfiles.git/commit/a63b2c5ea1f68c04cf0b67805274e930ec6bc748))
+* updated `zgen` ([4c36faff](https://github.com/adambiggs/dotfiles.git/commit/4c36faff8fcbddaa1a0565b31e8037d3352e82fe))
+* **vim:**
+  * installed `visualrepeat` plugin ([3d1a4a9f](https://github.com/adambiggs/dotfiles.git/commit/3d1a4a9fc6553b3d9dbb3855d3bc9195f6a60ed2))
+  * installed NERDTree CoffeeScript filter plugin ([214accd7](https://github.com/adambiggs/dotfiles.git/commit/214accd728cc266e843468b65263c14e49008342))
+  * installed `vim-peekaboo` plugin ([87002f29](https://github.com/adambiggs/dotfiles.git/commit/87002f2969546570cc2cd31bf8fc289b2a4e586f))
+* **zsh:** added aliases to help debug NeoVim segfaults ([01b61b1a](https://github.com/adambiggs/dotfiles.git/commit/01b61b1a19e25fb084a21b0973ca79f6d515e277))
+
+
 ### 2.1.1 (2015-05-04)
 
 

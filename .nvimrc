@@ -42,6 +42,7 @@
   Plug 'godlygeek/tabular'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-repeat'
+  Plug 'vim-scripts/visualrepeat'
   Plug 'tpope/vim-surround'
 
   " Source Control

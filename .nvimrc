@@ -28,7 +28,8 @@
   Plug 'Lokaltog/vim-easymotion'
   "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
   Plug 'osyo-manga/vim-over'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+  "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+  Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
 
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'
@@ -451,6 +452,13 @@
       \  'down':    len(<sid>buflist()) + 2
       \})<CR>
 
+    endif
+  " }
+
+  " CtrlP {
+    if isdirectory(expand("~/.nvim/plugged/ctrlp/"))
+      let g:ctrlp_user_command = 'ag -l -g %s'
+      let g:ctrlp_show_hidden  = 1
     endif
   " }
 

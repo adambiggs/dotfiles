@@ -30,6 +30,7 @@
   Plug 'osyo-manga/vim-over'
   "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
   Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
+  Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
 
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'
@@ -454,6 +455,8 @@
             \ --ignore .git
             \ --ignore .DS_Store
             \ -g ""'
+      let g:ctrlp_match_func  = { 'match' : 'matcher#cmatch' } " User cmatcher
+      let g:ctrlp_max_files   = 0
     endif
   " }
 

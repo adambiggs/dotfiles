@@ -444,9 +444,16 @@
   " }
 
   " CtrlP {
-    if isdirectory(expand("~/.nvim/plugged/ctrlp/"))
-      let g:ctrlp_user_command = 'ag -l -g %s'
-      let g:ctrlp_show_hidden  = 1
+    if isdirectory(expand("~/.nvim/plugged/ctrlp.vim/"))
+      let g:ctrlp_user_command = 'ag %s
+            \ --ignore-case
+            \ --hidden
+            \ --files-with-matches
+            \ --nocolor
+            \ --nogroup
+            \ --ignore .git
+            \ --ignore .DS_Store
+            \ -g ""'
     endif
   " }
 

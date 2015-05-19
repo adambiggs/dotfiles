@@ -658,6 +658,12 @@
     endif
   " }
 
+  " CtrlP {
+    if isdirectory(expand("~/.nvim/plugged/ctrlp.vim/"))
+      nnoremap <C-@> :CtrlPBuffer<CR>
+    endif
+  " }
+
   " Fugitive {
     if isdirectory(expand("~/.nvim/plugged/vim-fugitive/"))
       nnoremap <silent> <leader>gs :Gstatus<CR>

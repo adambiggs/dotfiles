@@ -457,6 +457,8 @@
             \ -g ""'
       let g:ctrlp_match_func  = { 'match' : 'matcher#cmatch' } " User cmatcher
       let g:ctrlp_max_files   = 0
+      let g:ctrlp_lazy_update = 10
+      let g:ctrlp_extensions  = ['tag']
     endif
   " }
 

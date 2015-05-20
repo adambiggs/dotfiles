@@ -1,3 +1,23 @@
+## 3.0.0 (2015-05-19)
+
+
+#### Bug Fixes
+
+* **vim:** CtrlP plugin config not working ([53c05a43](https://github.com/adambiggs/dotfiles.git/commit/53c05a43066496f7c1e77d85d573753391b40f5d))
+
+
+#### Features
+
+* updated `nvm` ([76aaaf7b](https://github.com/adambiggs/dotfiles.git/commit/76aaaf7b9dcf7cc2744e4f9e2290d4b43116333e))
+* **tmux:** changed leader mapping from `C-a` to `C-t` for Vim compatability ([e326d714](https://github.com/adambiggs/dotfiles.git/commit/e326d714e12bbb6ced8fa95380c9fa555dbc566b))
+* **vim:**
+  * got rid of `vim-startify` because I wasn't using it ([1fd6f813](https://github.com/adambiggs/dotfiles.git/commit/1fd6f813989e5092ee4641484be7d9fa108fab8c))
+  * switched `tabular` plugin to `vim-easy-align` ([1665a21d](https://github.com/adambiggs/dotfiles.git/commit/1665a21dc9413c3d4a3d86288328deedf337399a))
+  * added Ctrl-Space mapping for buffer browsing with CtrlP ([28d071db](https://github.com/adambiggs/dotfiles.git/commit/28d071db074ea8969dd89dfc4678d4a22ebdbb0b))
+  * enabled CtrlP lazy update and Tag search extension ([bdec2c5a](https://github.com/adambiggs/dotfiles.git/commit/bdec2c5a8ba9abd404b28d52ed3b8dcf867b2b3b))
+  * added `ctrlp-cmatcher` plugin ([7a7cece0](https://github.com/adambiggs/dotfiles.git/commit/7a7cece0b9a9a0c62716c74f7dbc6beff8aa8462))
+
+
 ## 2.2.0 (2015-05-15)
 
 

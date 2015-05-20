@@ -40,7 +40,7 @@
 
   " Coding
   Plug 'adambiggs/vim-autoclose'
-  Plug 'godlygeek/tabular'
+  Plug 'junegunn/vim-easy-align'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-repeat'
   Plug 'vim-scripts/visualrepeat'
@@ -629,22 +629,18 @@
     endif
   " }
 
-  " Tabularize {
-    if isdirectory(expand("~/.nvim/plugged/tabular/"))
-      nmap <Leader>a& :Tabularize /&<CR>
-      vmap <Leader>a& :Tabularize /&<CR>
-      nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
-      vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
-      nmap <Leader>a: :Tabularize /^[^:]*\zs:<CR>
-      vmap <Leader>a: :Tabularize /^[^:]*\zs:<CR>
-      nmap <Leader>a$ :Tabularize /^[^\$]*\zs\$/l1l0<CR>
-      vmap <Leader>a$ :Tabularize /^[^\$]*\zs\$/l1l0<CR>
-      nmap <Leader>a, :Tabularize /,<CR>
-      vmap <Leader>a, :Tabularize /,<CR>
-      nmap <Leader>a,, :Tabularize /,\zs<CR>
-      vmap <Leader>a,, :Tabularize /,\zs<CR>
-      nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-      vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+  " EasyAlign {
+    if isdirectory(expand("~/.nvim/plugged/vim-easy-align/"))
+      " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+      vmap <CR> <Plug>(EasyAlign)
+      " Start interactive EasyAlign for a motion/text object (e.g. ga<Leader>a)
+      nmap <Leader>a <Plug>(EasyAlign)
+
+      " Presets
+      vmap <Leader>a: <CR><Right>:
+      nmap <Leader>a: vip<Leader>a:
+      vmap <Leader>a= <CR>=
+      nmap <Leader>a= vip<Leader>a=
     endif
   " }
 

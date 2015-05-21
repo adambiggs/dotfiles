@@ -7,11 +7,11 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 source $SCRIPT_PATH/scripts/colors
 
 echo -e "\n${blue}Linking dotfiles into your user directory...${clear}"
-ln -sfv $SCRIPT_PATH/.nvimrc ~/.nvimrc
-ln -sfv $SCRIPT_PATH/.tmux.conf ~/.tmux.conf
-ln -sfv $SCRIPT_PATH/.tmuxinator ~/.tmuxinator
-ln -sfv $SCRIPT_PATH/.zshrc ~/.zshrc
-ln -sfv $SCRIPT_PATH/.zlogin ~/.zlogin
+ln -sfhv $SCRIPT_PATH/.nvimrc ~/.nvimrc
+ln -sfhv $SCRIPT_PATH/.tmux.conf ~/.tmux.conf
+ln -sfhv $SCRIPT_PATH/.tmuxinator ~/.tmuxinator
+ln -sfhv $SCRIPT_PATH/.zshrc ~/.zshrc
+ln -sfhv $SCRIPT_PATH/.zlogin ~/.zlogin
 echo -e "${green}Done.${clear}"
 
 if [[ $OSTYPE == darwin* ]]; then

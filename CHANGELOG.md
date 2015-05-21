@@ -1,3 +1,21 @@
+## 3.1.0 (2015-05-21)
+
+
+#### Bug Fixes
+
+* `link` script creates nested `.tmuxinator` symlinks ([6e597061](https://github.com/adambiggs/dotfiles.git/commit/6e5970610a618da31f512e4013457e3a89806c8e))
+* `link` script throws an error due to wrong path ([d9006c50](https://github.com/adambiggs/dotfiles.git/commit/d9006c50831d0573002d5b44168b1abced412df9))
+
+
+#### Features
+
+* added global `.agignore` file ([026a6b9b](https://github.com/adambiggs/dotfiles.git/commit/026a6b9b1e5594651398e08618a796c4d005ced8))
+* added global `.gitignore` file ([8a06a41e](https://github.com/adambiggs/dotfiles.git/commit/8a06a41ed56c0fba4a6f44edbb74dc44e68d8a62))
+* **vim:**
+  * activated Vdebug continuous mode by default ([60cc8a6c](https://github.com/adambiggs/dotfiles.git/commit/60cc8a6c00945dcaa45527f9cf206626493d8366))
+  * added `ag.nvim` plugin ([87ce4e8d](https://github.com/adambiggs/dotfiles.git/commit/87ce4e8d5e19bb3ae3220502c73d8812f55da6f5))
+
+
 ## 3.0.0 (2015-05-19)
 
 

@@ -4,7 +4,7 @@ echo ""
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Source external scripts.
-source $SCRIPT_PATH/../scripts/colors
+source $SCRIPT_PATH/scripts/colors
 
 echo -e "\n${blue}Linking dotfiles into your user directory...${clear}"
 ln -sfv $SCRIPT_PATH/.nvimrc ~/.nvimrc

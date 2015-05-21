@@ -30,6 +30,7 @@
   "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
   Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
   Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
+  Plug 'Numkil/ag.nvim'
 
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'
@@ -390,6 +391,12 @@
       let g:ctrlp_max_files   = 0
       let g:ctrlp_lazy_update = 10
       let g:ctrlp_extensions  = ['tag']
+    endif
+  " }
+
+  " Ag {
+    if isdirectory(expand("~/.nvim/plugged/ag.nvim"))
+      let g:ag_highlight = 1
     endif
   " }
 

@@ -12,6 +12,7 @@ ln -sfhv $SCRIPT_PATH/.tmux.conf ~/.tmux.conf
 ln -sfhv $SCRIPT_PATH/.tmuxinator ~/.tmuxinator
 ln -sfhv $SCRIPT_PATH/.zshrc ~/.zshrc
 ln -sfhv $SCRIPT_PATH/.zlogin ~/.zlogin
+ln -sfhv $SCRIPT_PATH/.gitignore_global ~/.gitignore
 echo -e "${green}Done.${clear}"
 
 if [[ $OSTYPE == darwin* ]]; then

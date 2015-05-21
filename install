@@ -109,6 +109,11 @@ else
   echo -e "${green}Done.${clear}"
 fi
 
+# Global .gitignore
+echo -e "\n${blue}Setting global Git ignore file path...${clear}"
+git config --global core.excludesfile ~/.gitignore
+echo -e "${green}Done.${clear}"
+
 # Git submodules
 echo -e "\n${blue}Installing Git submodules...${clear}"
 git submodule init

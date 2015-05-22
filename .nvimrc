@@ -471,6 +471,12 @@
     endif
   " }
 
+  " GitGutter {
+    if isdirectory(expand("~/.nvim/plugged/vim-gitgutter/"))
+      let g:gitgutter_max_signs = 10000
+    endif
+  " }
+
 " }
 
 " Key (re)Mappings {

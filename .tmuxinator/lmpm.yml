@@ -20,7 +20,7 @@ tmux_options: -2
 
 windows:
 
-  - "Control":
+  - "Compose":
       layout: main-vertical
       panes:
         - nvim
@@ -28,7 +28,7 @@ windows:
           - docker-compose --version
           - docker-compose ps
 
-  - "Main App":
+  - "App":
       root: ~/Repos/lmpm/app
       layout: main-vertical
       panes:
@@ -43,7 +43,7 @@ windows:
         - git status
         - npm outdated
 
-  - "Wordpress Theme":
+  - "WP - Theme":
       root: ~/Repos/lmpm/wordpress-theme
       layout: main-vertical
       panes:
@@ -51,18 +51,35 @@ windows:
         - bower list
         - npm outdated
 
-  - "Wordpress Plugin":
+  - "WP - Plugin":
       root: ~/Repos/lmpm/wordpress-plugin
+      layout: main-vertical
+      panes:
+        - git status
+        - bower list
+        - npm outdated
+
+  - "WP - App":
+      root: ~/Repos/lmpm/wordpress
       layout: main-vertical
       panes:
         - git status
         - ls
 
   - "Spine":
+      root: ~/Repos/lmpm/spine
+      layout: main-vertical
+      panes:
+        - git status
+        - npm outdated
+        - ls
+
+  - "Spine XP":
       root: ~/Repos/lmpm/spine-xp
       layout: main-vertical
       panes:
         - git status
+        - bower list
         - npm outdated
 
   - "Dotfiles":

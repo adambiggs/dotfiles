@@ -27,7 +27,6 @@ if ! zgen saved; then
   zgen load peterhurford/git-it-on.zsh
   zgen load supercrabtree/k
   zgen load hchbaw/opp.zsh
-  zgen load marzocchi/zsh-notify . next-iterm
 
   # Theme.
   zgen oh-my-zsh themes/agnoster

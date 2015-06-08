@@ -98,6 +98,7 @@
   set undofile      " So is persistent undo ...
   set undolevels=1000   " Maximum number of changes that can be undone
   set undoreload=10000  " Maximum number lines to save for undo on a buffer reload
+  set updatetime=750
   "set smartindent
   set autoread " Automatically update buffers when file changes
   set shiftround

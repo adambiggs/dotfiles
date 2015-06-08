@@ -117,7 +117,6 @@
   set tabpagemax=15       " Only show 15 tabs
   set showmode          " Display the current mode
   set cursorline          " Highlight current line
-  set backspace=indent,eol,start  " Backspace for dummies
   set linespace=0         " No extra spaces between rows
   set nu              " Line numbers on
   set showmatch         " Show matching brackets/parenthesis

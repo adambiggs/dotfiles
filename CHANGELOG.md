@@ -1,3 +1,24 @@
+### 3.1.1 (2015-06-08)
+
+
+#### Bug Fixes
+
+* **git:** only globally ignore `tags` in the root of a repo ([2227b55b](https://github.com/adambiggs/dotfiles.git/commit/2227b55b0278df887c9a674d90025465ff7fbe20))
+* **vim:** GitGutter default mappings cause delay with EasyMotion mappings ([cc159263](https://github.com/adambiggs/dotfiles.git/commit/cc159263c314cac83545e4a64c13417a34ef3e17))
+
+
+#### Features
+
+* updated NVM to latest HEAD ([93e0c02b](https://github.com/adambiggs/dotfiles.git/commit/93e0c02b23a591341c4534b46924404b77a5057a))
+* **vim:**
+  * reduce `updatetime` to 750ms ([88949980](https://github.com/adambiggs/dotfiles.git/commit/889499807483cb75d9a836d6b472cf8c29e8c1b2))
+  * change Markdown preview from `Marked.app` to `Marked 2.app` ([2d6d5e95](https://github.com/adambiggs/dotfiles.git/commit/2d6d5e954b3f4b589e011513edb238c94985e73d))
+  * increase GitGutter max number of signs from `500` to `10000` ([1b715f68](https://github.com/adambiggs/dotfiles.git/commit/1b715f683b6928dd8de2c96b69e4e08cd795dabd))
+* **zsh:**
+  * uninstall `opp.zsh` - Zsh 5.0.8 has native `textobject` support ([c0f138fe](https://github.com/adambiggs/dotfiles.git/commit/c0f138fe71daba32de80c516cebea5453279036f))
+  * remove `zsh-notify` plugin cuz it was getting annoying ([ce3fbbf3](https://github.com/adambiggs/dotfiles.git/commit/ce3fbbf3cb9536855903a34c935249578796434f))
+
+
 ## 3.1.0 (2015-05-21)
 
 

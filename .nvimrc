@@ -670,7 +670,7 @@
 
     " Markdown preview via Marked.app
     function! s:setupMarkdownPreview()
-      nnoremap <leader>md :silent !open -a Marked.app '%:p'<cr>
+      nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
     endfunction
     autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
 

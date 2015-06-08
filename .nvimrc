@@ -92,19 +92,19 @@
   scriptencoding utf-8
   set shell=/bin/zsh    " Use zsh as shell
   set clipboard=unnamed " Use * register for copy-paste
-  set history=1000    " Store a ton of history (default is 50)
-  set hidden        " Allow buffer switching without saving
-  set backup        " Backups are nice ...
-  set undofile      " So is persistent undo ...
+  set history=1000      " Store a ton of history (default is 50)
+  set hidden            " Allow buffer switching without saving
+  set backup            " Backups are nice ...
+  set undofile          " So is persistent undo ...
   set undolevels=1000   " Maximum number of changes that can be undone
   set undoreload=10000  " Maximum number lines to save for undo on a buffer reload
   set updatetime=750
   "set smartindent
-  set autoread " Automatically update buffers when file changes
+  set autoread          " Automatically update buffers when file changes
   set shiftround
   set visualbell
-  set gdefault " Substitute all matches on a line by default
-  set noswapfile " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead.
+  set gdefault          " Substitute all matches on a line by default
+  set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead.
   set viewoptions=cursor,folds
 
 
@@ -335,7 +335,6 @@
 
   " NERDTree {
     if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
-      "let NERDTreeShowLineNumbers    = 1
       let NERDTreeShowBookmarks       = 0
       let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
       let NERDTreeMapOpenVSplit       = 'v'

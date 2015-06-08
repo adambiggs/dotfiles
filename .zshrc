@@ -26,7 +26,6 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting
   zgen load peterhurford/git-it-on.zsh
   zgen load supercrabtree/k
-  zgen load hchbaw/opp.zsh
 
   # Theme.
   zgen oh-my-zsh themes/agnoster

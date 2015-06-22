@@ -100,7 +100,6 @@
   set undoreload=10000  " Maximum number lines to save for undo on a buffer reload
   set updatetime=750
   "set smartindent
-  set autoread          " Automatically update buffers when file changes
   set shiftround
   set visualbell
   set gdefault          " Substitute all matches on a line by default
@@ -112,17 +111,13 @@
 
 " Vim UI {
 
-  set mouse=a           " Automatically enable mouse usage
   set mousehide         " Hide the mouse cursor while typing
   set background=dark       " Assume a dark background
-  set tabpagemax=15       " Only show 15 tabs
   set showmode          " Display the current mode
   set cursorline          " Highlight current line
   set linespace=0         " No extra spaces between rows
   set nu              " Line numbers on
   set showmatch         " Show matching brackets/parenthesis
-  set incsearch         " Find as you type search
-  set hlsearch          " Highlight search terms
   set winminheight=0        " Windows can be 0 line high
   set ignorecase          " Case insensitive search
   set smartcase         " Case sensitive when uc present
@@ -180,7 +175,6 @@
 " Formatting {
 
   set nowrap      " Do not wrap long lines
-  set autoindent    " Indent at the same level of the previous line
   set shiftwidth=2  " Use indents of 2 spaces
   set expandtab   " Tabs are spaces, not tabs
   set tabstop=2   " An indentation every four columns

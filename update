@@ -33,19 +33,22 @@ echo -e "\n${blue}Updating certain ruby gems...${clear}"
 gem update tmuxinator CoffeeTags
 echo -e "${green}Done.${clear}"
 
+# Git submodules
+echo -e "\n${blue}Updating git submodules...${clear}"
+git submodule update --remote --rebase
+echo -e "${green}Done.${clear}"
+
 # zgen
 echo -e "\n${blue}Updating zgen...${clear}"
 source ~/.dotfiles/libs/zgen/zgen.zsh
 zgen-selfupdate
 echo -e "${green}Done.${clear}"
+
 echo -e "\n${blue}Updating zgen plugins...${clear}"
 zgen-update
+#zgen-save # For some reason this breaks the zsh template...
 echo -e "${green}Done.${clear}"
-echo -e "${blue}Note:${clear} If there were any zgen plugin updates, you should probably start a new terminal session."
 
-# Git submodules
-echo -e "\n${blue}Updating git submodules...${clear}"
-git submodule update --remote --rebase
-echo -e "${green}Done.${clear}"
+echo -e "\n💻  ${blue}You should start a new terminal session now.${clear}"
 
 echo ""

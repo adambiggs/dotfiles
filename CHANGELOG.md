@@ -1,3 +1,16 @@
+### 3.1.2 (2015-06-22)
+
+
+#### Features
+
+* iTerm options changed after update ([0b7bf40a](https://github.com/adambiggs/dotfiles.git/commit/0b7bf40a5fd3b7d10b465825f90940208a792622))
+* updated patched fonts ([80863750](https://github.com/adambiggs/dotfiles.git/commit/8086375041f7c515ab6d14aceb71d4111ed8ee0a))
+* updated zgen ([0694e494](https://github.com/adambiggs/dotfiles.git/commit/0694e494ae2e0d82e21725ba6e47c4ce2efc146b))
+* updated NVM ([b36b5071](https://github.com/adambiggs/dotfiles.git/commit/b36b50715ed63f9ef8a54624c5eb8b5aa3b13cfe))
+* **vim:** removed options that are now NeoVim defaults ([11a35212](https://github.com/adambiggs/dotfiles.git/commit/11a3521273a6aa3aa34cf299d70486d4636c0488))
+* **zsh:** update git submodules before updating zgen plugins ([eda235a7](https://github.com/adambiggs/dotfiles.git/commit/eda235a772724642a2b325d0364cb1ed4de7454d))
+
+
 ### 3.1.1 (2015-06-08)
 
 

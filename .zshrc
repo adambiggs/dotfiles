@@ -93,8 +93,8 @@ alias fr='$HOME/.dotfiles/scripts/find-and-replace.sh'
 
 # Docker
 alias drun='docker run --rm -ti'
-alias drc='docker rm $(docker ps -a -q)' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
-alias dri='docker rmi $(docker images -q --filter "dangling=true")' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
+alias drc='docker rm $(docker ps -a -q) 2>/dev/null' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+alias dri='docker rmi $(docker images -q --filter "dangling=true") 2>/dev/null' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
 
 # Boot2Docker
 alias 2d='boot2docker'

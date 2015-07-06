@@ -36,7 +36,7 @@ fi
 
 
 ### COMPLETIONS ###
-source /usr/local/bin/aws_zsh_completer.sh
+[ -f /usr/local/bin/aws_zsh_completer.sh ] && source /usr/local/bin/aws_zsh_completer.sh
 
 
 ### CONFIG ###
@@ -102,7 +102,7 @@ alias 2ds='boot2docker start && $(boot2docker shellinit)'
 
 # Docker Compose
 alias dc='docker-compose'
-alias dcu='docker-compose up -d'
+alias dcu='docker-compose up -d --x-smart-recreate'
 alias dcl='docker-compose logs'
 alias dcr='docker-compose run --rm'
 docker_compose_rm() {

@@ -1,3 +1,22 @@
+## 3.2.0 (2015-07-06)
+
+
+#### Features
+
+* renamed linked files ([7e2fc670](https://github.com/adambiggs/dotfiles.git/commit/7e2fc670f9c155779796af025b19f6a92c855911))
+* **git:**
+  * added some useful command aliases ([0189308b](https://github.com/adambiggs/dotfiles.git/commit/0189308bbd6d390e2416562e7bafbc0ba6fc51b0))
+  * added linked `.gitconfig` file ([ace06d26](https://github.com/adambiggs/dotfiles.git/commit/ace06d26704e239f615481321d8a8cfd4cab7ca8))
+* **tmux:** added icon to wifi status line module ([0965ed2f](https://github.com/adambiggs/dotfiles.git/commit/0965ed2f66406282c1d40214269b2a70dfcccf03))
+* **tmuxinator:** added layout for Docker Machine setup ([52a14cd8](https://github.com/adambiggs/dotfiles.git/commit/52a14cd8fc6b21f982d01739b63790228a0c2a6e))
+* **vim:**
+  * added Incsearch.vim plugin ([596946a8](https://github.com/adambiggs/dotfiles.git/commit/596946a823a43dd0cf9f6e0ddfa89bc6b987c081))
+  * renamed `.nvimrc` file and some minor cleanup ([86501208](https://github.com/adambiggs/dotfiles.git/commit/865012084dbff47f93647fd34e806350f6f46a86))
+* **zsh:**
+  * update `dcu` alias, fix issue with AWS completion, and rename file ([1f9df91b](https://github.com/adambiggs/dotfiles.git/commit/1f9df91bbe23a92b0e9fc9e1f183d053b5d7e866))
+  * silence errors in Docker cleanup aliases ([9c13e6ef](https://github.com/adambiggs/dotfiles.git/commit/9c13e6ef179c9cce91938c32f67efd7995187b7b))
+
+
 ### 3.1.2 (2015-06-22)
 
 

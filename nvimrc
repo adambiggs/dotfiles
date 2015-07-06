@@ -27,6 +27,8 @@
   Plug 'Lokaltog/vim-easymotion'
   "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
   Plug 'osyo-manga/vim-over'
+  Plug 'haya14busa/incsearch.vim'
+  Plug 'haya14busa/incsearch-easymotion.vim'
   "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
   Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
   Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
@@ -530,6 +532,20 @@
       nnoremap <Leader>o :OverCommandLine<CR>%s/
       nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
       vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
+    endif
+  " }
+
+  " Incsearch.vim {
+    if isdirectory(expand("~/.nvim/plugged/incsearch.vim/"))
+      map / <Plug>(incsearch-forward)
+      map ? <Plug>(incsearch-backward)
+    endif
+  " }
+
+  " Incsearch-EasyMotion.vim {
+    if isdirectory(expand("~/.nvim/plugged/incsearch-easymotion.vim/"))
+      map <Leader>/ <Plug>(incsearch-easymotion-/)
+      map <Leader>? <Plug>(incsearch-easymotion-?)
     endif
   " }
 

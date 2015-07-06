@@ -106,7 +106,6 @@
   set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead.
   set viewoptions=cursor,folds
 
-
 " }
 
 " Vim UI {
@@ -229,10 +228,10 @@
 " Plugin Config {
 
   " WebDevIcons {
-  if isdirectory(expand("~/.nvim/plugged/vim-webdevicons/"))
-    let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
-    let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-  endif
+    if isdirectory(expand("~/.nvim/plugged/vim-webdevicons/"))
+      let g:WebDevIconsNerdTreeAfterGlyphPadding  = ' '
+      let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+    endif
   " }
 
   " LocalRC {
@@ -265,6 +264,7 @@
     if isdirectory(expand("~/.nvim/plugged/vim-airline/"))
       let g:airline_exclude_preview                  = 1
       let g:airline_detect_iminsert                  = 1
+      let g:airline_detect_crypt                     = 0 " https://github.com/bling/vim-airline/issues/792
       let g:airline_powerline_fonts                  = 1
       let g:airline#extensions#tabline#enabled       = 1
       let g:airline#extensions#tabline#show_tabs     = 1
@@ -339,6 +339,12 @@
       let NERDTreeQuitOnOpen          = 1
       let NERDTreeMouseMode           = 2
       let NERDTreeShowHidden          = 1
+
+      " NERDTress File highlighting
+      function! NERDTreeHighlightFile(extension, fg, bg)
+        exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg
+        exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+      endfunction
     endif
   " }
 

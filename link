@@ -7,12 +7,13 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 source $SCRIPT_PATH/scripts/colors
 
 echo -e "\n${blue}Linking dotfiles into your user directory...${clear}"
-ln -sfhv $SCRIPT_PATH/.tmux.conf ~/.tmux.conf
-ln -sfhv $SCRIPT_PATH/.tmuxinator ~/.tmuxinator
-ln -sfhv $SCRIPT_PATH/.zlogin ~/.zlogin
-ln -sfhv $SCRIPT_PATH/.agignore_global ~/.agignore
-ln -sfhv $SCRIPT_PATH/.gitignore_global ~/.gitignore
+ln -sfhv $SCRIPT_PATH/agignore ~/.agignore
+ln -sfhv $SCRIPT_PATH/gitconfig ~/.gitconfig
+ln -sfhv $SCRIPT_PATH/gitignore ~/.gitignore
 ln -sfhv $SCRIPT_PATH/nvimrc ~/.nvimrc
+ln -sfhv $SCRIPT_PATH/tmux.conf ~/.tmux.conf
+ln -sfhv $SCRIPT_PATH/tmuxinator ~/.tmuxinator
+ln -sfhv $SCRIPT_PATH/zlogin ~/.zlogin
 ln -sfhv $SCRIPT_PATH/zshrc ~/.zshrc
 echo -e "${green}Done.${clear}"
 

@@ -1,0 +1,55 @@
+[user]
+  name  = Adam Biggs
+  email = adam.biggs@lightmaker.com
+
+[core]
+  excludesfile = /Users/adam/.gitignore
+  excludefile  = /Users/adam/.gitignore
+  editor       = nvim
+
+[color]
+  ui     = true
+  status = true
+
+[push]
+  default = simple
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[diff]
+  tool = Kaleidoscope
+
+[difftool]
+  prompt = false
+
+[mergetool "Kaleidoscope"]
+  cmd           = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+
+[mergetool]
+  prompt = false
+
+[merge]
+  tool = Kaleidoscope
+
+[filter "media"]
+  required = true
+  clean    = git media clean %f
+  smudge   = git media smudge %f
+
+[credential "https://github.com"]
+  username = adambiggs
+
+[credential]
+  helper = osxkeychain
+
+[filter "hawser"]
+  clean    = git hawser clean %f
+  smudge   = git hawser smudge %f
+  required = true
+
+[filter "lfs"]
+  clean    = git lfs clean %f
+  smudge   = git lfs smudge %f
+  required = true

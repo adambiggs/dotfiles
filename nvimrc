@@ -17,7 +17,7 @@
   Plug 'scrooloose/nerdtree'
   Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': '~/.nvim/nerdtree_plugin/coffee_filter.vim' }
   Plug 'vim-scripts/restore_view.vim'
-  Plug 'ryanoasis/vim-webdevicons'
+  Plug 'ryanoasis/vim-devicons'
   "Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'junegunn/vim-peekaboo'
 

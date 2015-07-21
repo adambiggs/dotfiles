@@ -77,7 +77,7 @@
 
   " Workflow
   Plug 'adambiggs/vdebug', { 'branch': 'ordered-path-maps' }
-  Plug 'benmills/vimux'
+  "Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'

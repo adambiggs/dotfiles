@@ -1,3 +1,24 @@
+### 3.2.1 (2015-07-21)
+
+
+#### Bug Fixes
+
+* **zsh:** no way to disable `--x-smart-recreate` option with `dcu` alias ([25546804](https://github.com/adambiggs/dotfiles.git/commit/255468042b11d3f06b94399914fb534556b679bb))
+
+
+#### Features
+
+* **iTerm:** switched back to stable `v2.1.1` cuz nightly was totes ridic slow ([d902ef23](https://github.com/adambiggs/dotfiles.git/commit/d902ef23922de020e541cb0686b7c65ade74125f))
+* **tmux:**
+  * change back to default `C-b` prefix binding so Vim can use `C-t` ([bc251984](https://github.com/adambiggs/dotfiles.git/commit/bc251984f50c3f8603705593c7ac13a632a2fa60))
+  * added dotfiles window back into Tmuxinator template ([ac198bfa](https://github.com/adambiggs/dotfiles.git/commit/ac198bfa53e765c6cab578b440e4d854995c1fc7))
+* **vim:**
+  * UtilSnips now uses `C-s` to expand snippets *and* jump forward ([3c15ed9e](https://github.com/adambiggs/dotfiles.git/commit/3c15ed9e063285ddd72432077533301326d1b0cf))
+  * cleaned up & revised YCM config ([5c702a8d](https://github.com/adambiggs/dotfiles.git/commit/5c702a8df728635fe30987f01be295f54a18d244))
+  * forked `honza/vim-snippets` ([72a1ae2f](https://github.com/adambiggs/dotfiles.git/commit/72a1ae2ff72edcab517926e87ed895f33528bcb3))
+* **zsh:** switch to more active fork of `zsh-syntax-highlighting` plugin ([e1ccb8aa](https://github.com/adambiggs/dotfiles.git/commit/e1ccb8aab201f418380fa3986785ad7d0fec591e))
+
+
 ## 3.2.0 (2015-07-06)
 
 

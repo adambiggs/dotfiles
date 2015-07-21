@@ -102,7 +102,7 @@ alias 2ds='boot2docker start && $(boot2docker shellinit)'
 
 # Docker Compose
 alias dc='docker-compose'
-alias dcu='docker-compose up -d --x-smart-recreate'
+alias dcu='docker-compose up -d'
 alias dcl='docker-compose logs'
 alias dcr='docker-compose run --rm'
 docker_compose_rm() {

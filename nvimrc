@@ -326,10 +326,11 @@
     if isdirectory(expand("~/.nvim/plugged/neomake/"))
       autocmd BufWritePost *.coffee Neomake
 
-      " CoffeeTags maker
+      " Generate tags via CoffeeTags
       let g:neomake_coffee_coffeetags_maker = {
         \ 'args': ['--include-vars', '--append', '-f./tags']
         \ }
+
       let g:neomake_coffee_enabled_makers = ['coffeelint', 'coffeetags']
     endif
   " }

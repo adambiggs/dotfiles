@@ -23,7 +23,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-completions src
   zgen load sdurrheimer/docker-compose-zsh-completion
   zgen load zsh-users/zsh-history-substring-search
-  zgen load zsh-users/zsh-syntax-highlighting
+  zgen load jimmijj/zsh-syntax-highlighting
   zgen load peterhurford/git-it-on.zsh
   zgen load supercrabtree/k
 

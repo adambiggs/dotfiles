@@ -59,3 +59,10 @@ windows:
         - sidebar:
           - bower list
           - npm outdated
+
+  - "Dotfiles":
+      root: ~/.dotfiles
+      layout: main-vertical
+      panes:
+        - git status
+        - npm outdated

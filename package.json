@@ -1,6 +1,6 @@
 {
   "name": "adams-dotfiles",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "Repo for my personal dotfiles",
   "private": true,
   "main": "gulpfile.js",

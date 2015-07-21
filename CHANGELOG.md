@@ -1,3 +1,15 @@
+<a name="3.3.0"></a>
+# 3.3.0 (2015-07-21)
+
+
+### Features
+
+* removed private repo dependancy for `$ gulp release` task ([1b62e67](https://github.com/adambiggs/dotfiles/commit/1b62e67))
+* **vim:** disable `vimux` plugin for now because I wasn't using it ([0aca592](https://github.com/adambiggs/dotfiles/commit/0aca592))
+* **vim:** reorganize `nvimrc` for faster launch times ([626c4df](https://github.com/adambiggs/dotfiles/commit/626c4df))
+
+
+
 ### 3.2.1 (2015-07-21)
 
 

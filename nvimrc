@@ -227,6 +227,49 @@
 
 " }
 
+" Keymaps {
+
+  let mapleader = ','
+
+  " Turn off search highlighting
+  nmap <silent> <leader>\ :nohlsearch<CR>
+
+  " Visual shifting (does not exit Visual mode)
+  vnoremap < <gv
+  vnoremap > >gv
+
+  " Adjust viewports to the same size
+  map <Leader>= <C-w>=
+
+  " Zoom current split
+  nnoremap <Leader>- <C-W><Bar>
+  nnoremap <Leader>_ <C-W>_
+
+  " Wrapped lines goes down/up to next row, rather than next line in file.
+  noremap j gj
+  noremap k gk
+
+  " Yank from the cursor to the end of the line, to be consistent with C and D.
+  nnoremap Y y$
+
+  " Easier horizontal scrolling
+  map zl zL
+  map zh zH
+
+  " Terminal split navigation
+  if has('nvim')
+    tmap <C-j> <C-\><C-n><C-j>
+    tmap <C-k> <C-\><C-n><C-k>
+    tmap <C-h> <C-\><C-n><C-h>
+    tmap <C-l> <C-\><C-n><C-l>
+    autocmd WinEnter term://* startinsert
+  endif
+
+  " Find merge conflict markers
+  map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+" }
+
 " Plugin Config {
 
   " WebDevIcons {
@@ -256,7 +299,7 @@
       let g:indent_guides_start_level           = 1
       let g:indent_guides_auto_colors           = 0
       let g:indent_guides_enable_on_vim_startup = 1
-      let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
+      let g:indent_guides_exclude_filetypes     = ['help', 'nerdtree', 'startify']
       autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
       autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
     endif
@@ -293,24 +336,32 @@
 
   " YouCompleteMe {
     if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))
-      let g:ycm_min_num_of_chars_for_completion               = 1
-      let g:ycm_complete_in_comments                          = 1
-      let g:ycm_cache_omnifunc                                = 0
-      let g:ycm_collect_identifiers_from_tags_files           = 1 " enable completion from tags
-      let g:ycm_collect_identifiers_from_comments_and_strings = 1
-      let g:ycm_seed_identifiers_with_syntax                  = 1
-      let g:ycm_add_preview_to_completeopt                    = 1
-      let g:ycm_autoclose_preview_window_after_completion     = 1
-      let g:ycm_disable_for_files_larger_than_kb              = 5000
 
-      " Enable omni completion.
-      autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-      autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-      autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-      autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-      autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-      autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-      autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+      " Config {
+        let g:ycm_min_num_of_chars_for_completion               = 1
+        let g:ycm_complete_in_comments                          = 1
+        let g:ycm_cache_omnifunc                                = 0
+        let g:ycm_collect_identifiers_from_tags_files           = 1 " enable completion from tags
+        let g:ycm_collect_identifiers_from_comments_and_strings = 1
+        let g:ycm_seed_identifiers_with_syntax                  = 1
+        let g:ycm_add_preview_to_completeopt                    = 1
+        let g:ycm_autoclose_preview_window_after_completion     = 1
+        let g:ycm_disable_for_files_larger_than_kb              = 5000
+
+        " Enable omni completion.
+        autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+        autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+        autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+        autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+      " }
+
+      " Mappings {
+        let g:ycm_key_list_previous_completion = ['<C-Tab>', '<Up>']
+      " }
+
     endif
   " }
 
@@ -337,77 +388,112 @@
 
   " UndoTree {
     if isdirectory(expand("~/.nvim/plugged/undotree/"))
-      let g:undotree_SplitWidth  = 35
-      let g:undotree_TreeNodeShape = '◉'
+
+      " Config {
+        let g:undotree_SplitWidth         = 35
+        let g:undotree_TreeNodeShape      = '◉'
+        let g:undotree_SetFocusWhenToggle = 1
+      " }
+
+      " Mappings {
+        nnoremap <Leader>u :UndotreeToggle<CR>
+      " }
+
     endif
   " }
 
   " NERDTree {
     if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
-      let NERDTreeShowBookmarks       = 0
-      let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
-      let NERDTreeMapOpenVSplit       = 'v'
-      let NERDTreeAutoCenterThreshold = 50
-      let NERDTreeWinSize             = 35
-      let NERDTreeAutoDeleteBuffer    = 1
-      let NERDTreeChDirMode           = 0
-      let NERDTreeQuitOnOpen          = 1
-      let NERDTreeMouseMode           = 2
-      let NERDTreeShowHidden          = 1
 
-      " NERDTress File highlighting
-      function! NERDTreeHighlightFile(extension, fg, bg)
-        exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg
-        exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-      endfunction
+      " Config {
+        let NERDTreeShowBookmarks       = 0
+        let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
+        let NERDTreeMapOpenVSplit       = 'v'
+        let NERDTreeAutoCenterThreshold = 50
+        let NERDTreeWinSize             = 35
+        let NERDTreeAutoDeleteBuffer    = 1
+        let NERDTreeChDirMode           = 0
+        let NERDTreeQuitOnOpen          = 1
+        let NERDTreeMouseMode           = 2
+        let NERDTreeShowHidden          = 1
+
+        " NERDTress File highlighting
+        function! NERDTreeHighlightFile(extension, fg, bg)
+          exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg
+          exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+        endfunction
+      " }
+
+      " Mappings {
+        map <C-e> :NERDTreeToggle<CR>
+      " }
+
     endif
   " }
 
   " FZF {
     if isdirectory(expand("~/.fzf/"))
 
-      " Select buffers with FZF
-      function! s:buflist()
-        redir => ls
-        silent ls
-        redir END
-        return split(ls, '\n')
-      endfunction
+      " Config {
+        " Select buffers with FZF
+        function! s:buflist()
+          redir => ls
+          silent ls
+          redir END
+          return split(ls, '\n')
+        endfunction
 
-      function! s:bufopen(e)
-        execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-      endfunction
+        function! s:bufopen(e)
+          execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+        endfunction
 
-      nnoremap <silent> <C-@> :call fzf#run({
-      \  'source':  reverse(<sid>buflist()),
-      \  'sink':    function('<sid>bufopen'),
-      \  'options': '+m',
-      \  'down':    len(<sid>buflist()) + 2
-      \})<CR>
+        nnoremap <silent> <C-@> :call fzf#run({
+        \  'source':  reverse(<sid>buflist()),
+        \  'sink':    function('<sid>bufopen'),
+        \  'options': '+m',
+        \  'down':    len(<sid>buflist()) + 2
+        \})<CR>
+      " }
+
+      " Mappings {
+        nnoremap <silent> <C-p> :FZF<CR>
+        autocmd WinEnter \[FZF\] startinsert
+        autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
+        autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
+        autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
+      " }
 
     endif
   " }
 
   " CtrlP {
     if isdirectory(expand("~/.nvim/plugged/ctrlp.vim/"))
-      let g:ctrlp_user_command = 'ag %s
-            \ --ignore-case
-            \ --hidden
-            \ --files-with-matches
-            \ --nocolor
-            \ --nogroup
-            \ --ignore .git
-            \ --ignore .DS_Store
-            \ -g ""'
-      let g:ctrlp_match_func  = { 'match' : 'matcher#cmatch' } " User cmatcher
-      let g:ctrlp_max_files   = 0
-      let g:ctrlp_lazy_update = 10
-      let g:ctrlp_extensions  = ['tag']
+
+      " Config {
+        let g:ctrlp_user_command = 'ag %s
+              \ --ignore-case
+              \ --hidden
+              \ --files-with-matches
+              \ --nocolor
+              \ --nogroup
+              \ --ignore .git
+              \ --ignore .DS_Store
+              \ -g ""'
+        let g:ctrlp_match_func  = { 'match' : 'matcher#cmatch' } " User cmatcher
+        let g:ctrlp_max_files   = 0
+        let g:ctrlp_lazy_update = 10
+        let g:ctrlp_extensions  = ['tag']
+      " }
+
+      " Mappings {
+        nnoremap <C-@> :CtrlPBuffer<CR>
+      " }
+
     endif
   " }
 
   " Ag {
-    if isdirectory(expand("~/.nvim/plugged/ag.nvim"))
+    if isdirectory(expand("~/.nvim/plugged/ag.nvim/"))
       let g:ag_highlight = 1
     endif
   " }
@@ -420,17 +506,35 @@
 
   " CoffeeScript {
     if isdirectory(expand("~/.nvim/plugged/vim-coffee-script/"))
-      let coffee_compile_vert = 1
-      let coffee_watch_vert   = 1
-      let coffee_run_vert     = 1
-      autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
-      autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
+      " Config {
+        let coffee_compile_vert = 1
+        let coffee_watch_vert   = 1
+        let coffee_run_vert     = 1
+        autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
+        autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+      " }
+
+      " Mappings {
+        nnoremap <Leader>cw :CoffeeWatch<CR>
+      " }
+
     endif
   " }
 
   " Over.vim {
     if isdirectory(expand("~/.nvim/plugged/vim-over/"))
-      let g:over#command_line#paste_escape_chars = '/.*$^~'
+
+      " Config {
+        let g:over#command_line#paste_escape_chars = '/.*$^~'
+      " }
+
+      " Mappings {
+        nnoremap <Leader>o :OverCommandLine<CR>%s/
+        nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
+        vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
+      " }
+
     endif
   " }
 
@@ -442,129 +546,37 @@
 
   " Tagbar {
     if isdirectory(expand("~/.nvim/plugged/tagbar/"))
-      let g:tagbar_autoshowtag = 1  " Open folds if necessary when navigating to a tag
-      let g:tagbar_autoclose   = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
-      let g:tagbar_foldlevel   = 1  " Custom fold level
-      let g:tagbar_iconchars   = ['▸', '▾']
 
-      " CoffeeScript tags
-      let g:tagbar_type_coffee = {
-        \   'ctagsbin' : 'coffeetags',
-        \   'ctagsargs' : ['--include-vars'],
-        \   'kinds' : [
-        \     'f:functions',
-        \     'c:classes',
-        \     'o:object',
-        \     'v:variables',
-        \     'p:prototypes',
-        \     'b:blocks'
-        \   ],
-        \   'sro' : '.',
-        \   'kind2scope' : {
-        \     'f' : 'object',
-        \     'o' : 'object',
-        \   }
-        \ }
-    endif
-  " }
+      " Config {
+        let g:tagbar_autoshowtag = 1  " Open folds if necessary when navigating to a tag
+        let g:tagbar_autoclose   = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
+        let g:tagbar_foldlevel   = 1  " Custom fold level
+        let g:tagbar_iconchars   = ['▸', '▾']
 
-  " Handlebars {
-    if isdirectory(expand("~/.nvim/plugged/vim-mustache-handlebars/"))
-      let g:mustache_abbreviations = 1
-    endif
-  " }
+        " CoffeeScript tags
+        let g:tagbar_type_coffee = {
+          \   'ctagsbin' : 'coffeetags',
+          \   'ctagsargs' : ['--include-vars'],
+          \   'kinds' : [
+          \     'f:functions',
+          \     'c:classes',
+          \     'o:object',
+          \     'v:variables',
+          \     'p:prototypes',
+          \     'b:blocks'
+          \   ],
+          \   'sro' : '.',
+          \   'kind2scope' : {
+          \     'f' : 'object',
+          \     'o' : 'object',
+          \   }
+          \ }
+      " }
 
-  " Vdebug {
-    if isdirectory(expand("~/.nvim/plugged/vdebug/"))
-      let g:vdebug_options = { }
-      let g:vdebug_options['server']          = ''
-      let g:vdebug_options['break_on_open']   = 0
-      let g:vdebug_options['continuous_mode'] = 1
-    endif
-  " }
+      " Mappings {
+        nnoremap <Leader><Leader>t :Tagbar<CR>
+      " }
 
-  " GitGutter {
-    if isdirectory(expand("~/.nvim/plugged/vim-gitgutter/"))
-      let g:gitgutter_max_signs = 10000
-      let g:gitgutter_map_keys  = 0
-    endif
-  " }
-
-" }
-
-" Key (re)Mappings {
-
-  " General {
-
-    let mapleader = ','
-
-    " Turn off search highlighting
-    nmap <silent> <leader>\ :nohlsearch<CR>
-
-    " Visual shifting (does not exit Visual mode)
-    vnoremap < <gv
-    vnoremap > >gv
-
-    " Adjust viewports to the same size
-    map <Leader>= <C-w>=
-
-    " Zoom current split
-    nnoremap <Leader>- <C-W><Bar>
-    nnoremap <Leader>_ <C-W>_
-
-    " Wrapped lines goes down/up to next row, rather than next line in file.
-    noremap j gj
-    noremap k gk
-
-    " Yank from the cursor to the end of the line, to be consistent with C and D.
-    nnoremap Y y$
-
-    " Easier horizontal scrolling
-    map zl zL
-    map zh zH
-
-    " Terminal split navigation
-    if has('nvim')
-      tmap <C-j> <C-\><C-n><C-j>
-      tmap <C-k> <C-\><C-n><C-k>
-      tmap <C-h> <C-\><C-n><C-h>
-      tmap <C-l> <C-\><C-n><C-l>
-      autocmd WinEnter term://* startinsert
-    endif
-
-  " }
-
-  " CoffeeScript {
-    if isdirectory(expand("~/.nvim/plugged/vim-coffee-script/"))
-      nnoremap <Leader>cw :CoffeeWatch<CR>
-    endif
-  " }
-
-  " Over.vim {
-    if isdirectory(expand("~/.nvim/plugged/vim-over/"))
-      nnoremap <Leader>o :OverCommandLine<CR>%s/
-      nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
-      vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
-    endif
-  " }
-
-  " Incsearch.vim {
-    if isdirectory(expand("~/.nvim/plugged/incsearch.vim/"))
-      map / <Plug>(incsearch-forward)
-      map ? <Plug>(incsearch-backward)
-    endif
-  " }
-
-  " Incsearch-EasyMotion.vim {
-    if isdirectory(expand("~/.nvim/plugged/incsearch-easymotion.vim/"))
-      map <Leader>/ <Plug>(incsearch-easymotion-/)
-      map <Leader>? <Plug>(incsearch-easymotion-?)
-    endif
-  " }
-
-  " Tagbar {
-    if isdirectory(expand("~/.nvim/plugged/tagbar/"))
-      nnoremap <Leader><Leader>t :Tagbar<CR>
     endif
   " }
 
@@ -585,23 +597,45 @@
     endif
   " }
 
-  " Vimux {
-    if isdirectory(expand("~/.nvim/plugged/vimux/"))
-      "noremap <Leader>tst :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm test")<CR>
-      "noremap <Leader>stt :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm start")<CR>
-      "noremap <Leader>dbg :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; npm run debug")<CR>
-      "noremap <Leader>grr :call VimuxSendKeys("C-c") <Bar> call VimuxRunCommand("clear; grunt")<CR>
+  " Handlebars {
+    if isdirectory(expand("~/.nvim/plugged/vim-mustache-handlebars/"))
+      let g:mustache_abbreviations = 1
     endif
   " }
 
-  " NERDTree {
-    if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
-      map <C-e> :NERDTreeToggle<CR>
+  " Vdebug {
+    if isdirectory(expand("~/.nvim/plugged/vdebug/"))
+      let g:vdebug_options                    = { }
+      let g:vdebug_options['server']          = ''
+      let g:vdebug_options['break_on_open']   = 0
+      let g:vdebug_options['continuous_mode'] = 1
+    endif
+  " }
+
+  " GitGutter {
+    if isdirectory(expand("~/.nvim/plugged/vim-gitgutter/"))
+      let g:gitgutter_max_signs = 10000
+      let g:gitgutter_map_keys  = 0
+    endif
+  " }
+
+  " Incsearch.vim {
+    if isdirectory(expand("~/.nvim/plugged/incsearch.vim/"))
+      map / <Plug>(incsearch-forward)
+      map ? <Plug>(incsearch-backward)
+    endif
+  " }
+
+  " Incsearch-EasyMotion.vim {
+    if isdirectory(expand("~/.nvim/plugged/incsearch-easymotion.vim/"))
+      map <Leader>/ <Plug>(incsearch-easymotion-/)
+      map <Leader>? <Plug>(incsearch-easymotion-?)
     endif
   " }
 
   " EasyAlign {
     if isdirectory(expand("~/.nvim/plugged/vim-easy-align/"))
+
       " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
       vmap <CR> <Plug>(EasyAlign)
       " Start interactive EasyAlign for a motion/text object (e.g. ga<Leader>a)
@@ -612,22 +646,7 @@
       nmap <Leader>a: vip<Leader>a:
       vmap <Leader>a= <CR>=
       nmap <Leader>a= vip<Leader>a=
-    endif
-  " }
 
-  " FZF {
-    if isdirectory(expand("~/.fzf/"))
-      nnoremap <silent> <C-p> :FZF<CR>
-      autocmd WinEnter \[FZF\] startinsert
-      autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
-      autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
-      autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
-    endif
-  " }
-
-  " CtrlP {
-    if isdirectory(expand("~/.nvim/plugged/ctrlp.vim/"))
-      nnoremap <C-@> :CtrlPBuffer<CR>
     endif
   " }
 
@@ -648,41 +667,21 @@
     endif
   " }
 
-  " YouCompleteMe {
-    if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))
-      let g:ycm_key_list_previous_completion = ['<C-Tab>', '<Up>']
-    endif
-  " }
-
-  " UndoTree {
-    if isdirectory(expand("~/.nvim/plugged/undotree/"))
-      nnoremap <Leader>u :UndotreeToggle<CR>
-      " If undotree is opened, it is likely one wants to interact with it.
-      let g:undotree_SetFocusWhenToggle=1
-    endif
-  " }
-
   " UtilSnips {
     if isdirectory(expand("~/.nvim/plugged/ultisnips"))
-      " remap Ultisnips for compatibility for YCM
-      let g:UltiSnipsExpandTrigger       = '<C-s>'
-      let g:UltiSnipsJumpForwardTrigger  = '<C-s>'
-      let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
-      let g:UltiSnipsEditSplit           = 'vertical'
+
+      " Config {
+        let g:UltiSnipsEditSplit = 'vertical'
+      " }
+
+      " Mappings {
+        " Change default UltiSnips mappings for compatibility with YCM
+        let g:UltiSnipsExpandTrigger       = '<C-s>'
+        let g:UltiSnipsJumpForwardTrigger  = '<C-s>'
+        let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
+      " }
+
     endif
-  " }
-
-  " Misc {
-
-    " Markdown preview via Marked.app
-    function! s:setupMarkdownPreview()
-      nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
-    endfunction
-    autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
-
-    " Find merge conflict markers
-    map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
-
   " }
 
 " }
@@ -735,8 +734,14 @@
       let @/=_s
       call cursor(l, c)
     endfunction
-
     autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  " }
+
+  " Open Markdown file in Marked.app {
+    function! s:setupMarkdownPreview()
+      nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
+    endfunction
+    autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
   " }
 
 " }

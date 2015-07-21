@@ -37,7 +37,7 @@
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
+  Plug 'adambiggs/vim-snippets'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
   " Coding

@@ -58,7 +58,7 @@ fi
 brew update
 if [[ $OSTYPE == darwin* ]]; then
   # Mac specific packages
-  install_brew_pkg reattach-to-user-namespace
+  install_brew_pkg reattach-to-user-namespace # NOTE: No longer needed as of OSX Yosemite.
   install_brew_pkg boot2docker
   install_brew_pkg git
 else

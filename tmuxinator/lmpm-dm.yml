@@ -21,7 +21,7 @@ tmux_options: -2
 windows:
 
   - "Compose":
-      layout: main-vertical
+      layout: even-horizontal
       panes:
         - nvim
         - docker-compose:

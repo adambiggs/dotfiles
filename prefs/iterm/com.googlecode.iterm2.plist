@@ -38308,12 +38308,14 @@
 	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
 	<real>458793063.75282198</real>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
 	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>457997651.59073001</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>459357570.108024</real>
+	<real>459702815.51626199</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>0000</string>
@@ -38389,7 +38391,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-07-23T15:19:28Z</date>
+	<date>2015-07-27T15:11:56Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

@@ -58,9 +58,13 @@ fi
 brew update
 if [[ $OSTYPE == darwin* ]]; then
   # Mac specific packages
-  install_brew_pkg reattach-to-user-namespace # NOTE: No longer needed as of OSX Yosemite.
   install_brew_pkg boot2docker
   install_brew_pkg git
+  install_brew_pkg openssl
+  install_brew_pkg python
+  # NOTE: reattach-to-user-namespace technically no longer needed as of OSX
+  # Yosemite, but grunt-concurrent doesn't work in Tmux without it.
+  install_brew_pkg reattach-to-user-namespace
 else
   # Linux specific packages
   install_brew_pkg git '--with-brewed-curl --with-brewed-openssl'

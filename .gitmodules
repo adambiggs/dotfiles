@@ -14,5 +14,5 @@
 	path = libs/nvm
 	url = https://github.com/creationix/nvm.git
 [submodule "themes/glyph-patched-fonts"]
-	path = themes/glyph-patched-fonts
+	path = themes/nerd-fonts
 	url = https://github.com/ryanoasis/nerd-fonts.git

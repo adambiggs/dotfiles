@@ -36830,11 +36830,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>356 477 201 309 0 0 2560 1440 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1149 227 1349 542 0 0 2560 1417 </string>
+	<string>966 95 1349 408 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>481 888 924 485 0 0 2560 1417 </string>
+	<string>257 331 924 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>760 787 400 129 0 0 1920 1177 </string>
+	<string>1088 984 384 129 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 589 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -37396,11 +37396,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>DejaVuSansMonoForPowerlinePlusNerdFileTypesPlusPomicons 12</string>
+			<string>SauceCodeProPlusNerdFileTypesPlusFontAwesomePlusOcticonsPlusPomicons 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>DejaVuSansMonoForPowerlinePlusNerdFileTypesPlusPomicons 12</string>
+			<string>BitstreamVeraSansMonoPlusNerdFileTypesPlusFontAwesomePlusOcticonsPlusPomicons 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -37566,7 +37566,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.0695550441741943</real>
+			<real>1.0301282405853271</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -38315,7 +38315,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>457997651.59073001</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>459702815.51626199</real>
+	<real>460913769.91798699</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>0000</string>
@@ -38391,7 +38391,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-07-27T15:11:56Z</date>
+	<date>2015-08-11T16:48:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

@@ -1,3 +1,26 @@
+<a name="3.3.1"></a>
+## [3.3.1](https://github.com/adambiggs/dotfiles/compare/3.3.0...v3.3.1) (2015-08-12)
+
+
+### Bug Fixes
+
+* **tmux:** `grunt-concurrent` broken after removing OSX clipboard hack ([2f221b6](https://github.com/adambiggs/dotfiles/commit/2f221b6))
+
+### Features
+
+* **iterm:** updated `nerd-fonts` and changed iTerm fonts ([1579c53](https://github.com/adambiggs/dotfiles/commit/1579c53))
+* **tmux:** increase main pane width to make space for GitGutter symbols in Vim ([f210b86](https://github.com/adambiggs/dotfiles/commit/f210b86))
+* **tmux:** minor change to Tmuxinator layout ([fd5dfa4](https://github.com/adambiggs/dotfiles/commit/fd5dfa4))
+* **tmux:** remove OSX clipboard workaround - issue fixed in Yosemite ([3d4a99f](https://github.com/adambiggs/dotfiles/commit/3d4a99f))
+* **vim:** perform `ag` searches from within Vim and narrow results with FZF ([1e143ed](https://github.com/adambiggs/dotfiles/commit/1e143ed))
+* **vim:** removed `ag.nvim` plugin ([263a20a](https://github.com/adambiggs/dotfiles/commit/263a20a))
+
+
+### BREAKING CHANGES
+
+* Tmux will no longer sync the clipboard with OSX in versions before Yosemite.
+
+
 <a name="3.3.0"></a>
 # 3.3.0 (2015-07-21)
 

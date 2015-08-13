@@ -443,14 +443,22 @@
           return split(ls, '\n')
         endfunction
 
-        function! s:bufopen(e)
-          execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+        function! s:bufopen(lines)
+          if len(a:lines) < 2 | return | endif
+
+          let cmd = get({'ctrl-x': 'sbuffer',
+                      \ 'ctrl-v': 'vert sbuffer',
+                      \ 'ctrl-t': 'tab sb'}, a:lines[0], 'buffer')
+          let list = a:lines[1:]
+
+          let first = list[0]
+          execute cmd matchstr(first, '^[ 0-9]*')
         endfunction
 
         nnoremap <silent> <C-@> :call fzf#run({
         \  'source':  reverse(<sid>buflist()),
-        \  'sink':    function('<sid>bufopen'),
-        \  'options': '+m',
+        \  'sink*':    function('<sid>bufopen'),
+        \  'options': '+m --ansi --expect=ctrl-t,ctrl-v,ctrl-x',
         \  'down':    len(<sid>buflist()) + 2
         \})<CR>
 

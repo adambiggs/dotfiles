@@ -29,9 +29,10 @@
   Plug 'osyo-manga/vim-over'
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
-  "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-  Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
-  Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+  "Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
+  "Plug 'tacahiroy/ctrlp-funky'
+  "Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
 
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'

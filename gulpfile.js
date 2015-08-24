@@ -4,7 +4,6 @@ var fs        = require('fs');
 var git       = require('gulp-git');
 var gulp      = require('gulp');
 var parseArgs = require('minimist');
-var util      = require('gulp-util');
 
 
 // Parse CLI options and set defaults.

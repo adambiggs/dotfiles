@@ -1,3 +1,22 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/adambiggs/dotfiles/compare/3.3.1...v4.0.0) (2015-08-24)
+
+
+### Bug Fixes
+
+* **zsh:** `sudo` doesn't work with aliases ([d0fa593](https://github.com/adambiggs/dotfiles/commit/d0fa593))
+
+### Features
+
+* added `slackshot` script to ease debugging running processes ([3712427](https://github.com/adambiggs/dotfiles/commit/3712427))
+* **tmux:** switched from `tmuxinator` to `tmuxp` ([015b73f](https://github.com/adambiggs/dotfiles/commit/015b73f))
+* **vim:** don't open folds when navigating to them via block movements ([7ee22a8](https://github.com/adambiggs/dotfiles/commit/7ee22a8))
+* **vim:** open buffers in splits/tabs using FZF ([387b702](https://github.com/adambiggs/dotfiles/commit/387b702))
+* **vim:** removed unused `neovim-ruby` submodule ([7c83a7a](https://github.com/adambiggs/dotfiles/commit/7c83a7a))
+* **vim:** switch (again) from CtrlP to FZF (and live with the daily segfaults) ([67c8394](https://github.com/adambiggs/dotfiles/commit/67c8394))
+
+
+
 <a name="3.3.1"></a>
 ## [3.3.1](https://github.com/adambiggs/dotfiles/compare/3.3.0...v3.3.1) (2015-08-12)
 

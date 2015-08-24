@@ -7,9 +7,6 @@
 [submodule "libs/zgen"]
 	path = libs/zgen
 	url = https://github.com/tarjoilija/zgen.git
-[submodule "libs/neovim-ruby"]
-	path = libs/neovim-ruby
-	url = https://github.com/alexgenco/neovim-ruby.git
 [submodule "libs/nvm"]
 	path = libs/nvm
 	url = https://github.com/creationix/nvm.git

@@ -107,6 +107,7 @@
   set gdefault          " Substitute all matches on a line by default
   set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead.
   set viewoptions=cursor,folds
+  set foldopen-=block
 
 " }
 

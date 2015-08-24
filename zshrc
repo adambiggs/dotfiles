@@ -77,6 +77,7 @@ fi
 ### ALIASES ###
 
 # Basic shortcuts
+alias sudo='sudo ' # @see http://askubuntu.com/a/22043
 alias ..='cd ..'
 alias kmux='tmux kill-server'
 alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'

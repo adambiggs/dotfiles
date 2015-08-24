@@ -56,7 +56,6 @@ RUN \
 
 # TMUX config
 #ADD .tmux.conf /root/.tmux.conf
-#RUN gem install tmuxinator
 
 # NeoVim config
 #RUN mkdir -p /root/.nvim/autoload

@@ -25,12 +25,12 @@ fi
 
 # pip
 echo -e "\n${blue}Updating certain pip packages...${clear}"
-pip install -U neovim awscli
+pip install -U neovim awscli tmuxp
 echo -e "${green}Done.${clear}"
 
 # gem
 echo -e "\n${blue}Updating certain ruby gems...${clear}"
-gem update tmuxinator CoffeeTags
+gem update CoffeeTags
 echo -e "${green}Done.${clear}"
 
 # Git submodules

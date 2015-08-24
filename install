@@ -150,13 +150,13 @@ fi
 # Ruby Gems
 echo -e "\n${blue}Installing Ruby gems...${clear}"
 install_ruby_gem CoffeeTags
-install_ruby_gem tmuxinator
 echo -e "${green}Done.${clear}"
 
 # PIP packages
 echo -e "\n${blue}Installing PIP packages...${clear}"
 install_pip_pkg neovim
 install_pip_pkg awscli
+install_pip_pkg tmuxp
 echo -e "${green}Done.${clear}"
 
 # Vim-Plug

@@ -12,7 +12,6 @@ ln -sfhv $SCRIPT_PATH/gitconfig ~/.gitconfig
 ln -sfhv $SCRIPT_PATH/gitignore ~/.gitignore
 ln -sfhv $SCRIPT_PATH/nvimrc ~/.nvimrc
 ln -sfhv $SCRIPT_PATH/tmux.conf ~/.tmux.conf
-ln -sfhv $SCRIPT_PATH/tmuxinator ~/.tmuxinator
 ln -sfhv $SCRIPT_PATH/zlogin ~/.zlogin
 ln -sfhv $SCRIPT_PATH/zshrc ~/.zshrc
 echo -e "${green}Done.${clear}"

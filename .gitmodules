@@ -16,3 +16,6 @@
 [submodule "themes/glyph-patched-fonts"]
 	path = themes/nerd-fonts
 	url = https://github.com/ryanoasis/nerd-fonts.git
+[submodule "scripts/stackshot"]
+	path = scripts/stackshot
+	url = https://gist.github.com/8574566.git

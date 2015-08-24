@@ -90,6 +90,7 @@ alias nvim-backtrace='gdb -q -n -ex bt -batch /usr/local/bin/nvim /cores/core.* 
 
 # Scripts
 alias fr='$HOME/.dotfiles/scripts/find-and-replace.sh'
+alias stackshot='sudo $HOME/.dotfiles/scripts/stackshot/stackshot.sh'
 
 # Docker
 alias drun='docker run --rm -ti'

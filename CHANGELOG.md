@@ -1,3 +1,16 @@
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/adambiggs/dotfiles/compare/4.0.0...v4.0.1) (2015-08-25)
+
+
+### Features
+
+* **tmux:** fancy CPU monitor icon 😎 ([2e49e48](https://github.com/adambiggs/dotfiles/commit/2e49e48))
+* **tmux:** fine-tuned some config settings ([705759f](https://github.com/adambiggs/dotfiles/commit/705759f))
+* **tmux:** improved WiFi status line icon 🍕 ([4e4dd67](https://github.com/adambiggs/dotfiles/commit/4e4dd67))
+* **zsh:** added `tmuxp` command completion ([29b7083](https://github.com/adambiggs/dotfiles/commit/29b7083))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/adambiggs/dotfiles/compare/3.3.1...v4.0.0) (2015-08-24)
 

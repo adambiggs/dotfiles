@@ -316,6 +316,13 @@
       let g:airline#extensions#tabline#show_tabs     = 1
       let g:airline#extensions#tabline#tab_nr_type   = 2 " Show # of splits and tab #
       let g:airline#extensions#tabline#show_tab_type = 1
+
+      " Custom symbols
+      if !exists('g:airline_symbols')
+        let g:airline_symbols = { }
+      endif
+      let g:airline_symbols.branch   = ''
+      let g:airline_symbols.readonly = ''
     endif
   " }
 

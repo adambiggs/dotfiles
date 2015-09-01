@@ -85,6 +85,7 @@ alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminf
 
 # Git
 alias github='gitit'
+alias gitgraph='git log --all --graph --decorate --oneline'
 
 # NeoVim
 alias nvim-debug='ulimit -c unlimited && nvim'

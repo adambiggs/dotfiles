@@ -1,3 +1,17 @@
+<a name="4.0.2"></a>
+## [4.0.2](https://github.com/adambiggs/dotfiles/compare/4.0.1...v4.0.2) (2015-09-01)
+
+
+### Features
+
+* **iterm:** switched to iTerm 3 beta ([1cca6c5](https://github.com/adambiggs/dotfiles/commit/1cca6c5))
+* **tmux:** added project `tmuxp` layout file ([c151186](https://github.com/adambiggs/dotfiles/commit/c151186))
+* **tmux:** more fancy symbols! ✨ ([32ac2c6](https://github.com/adambiggs/dotfiles/commit/32ac2c6))
+* **vim:** improved some airline symbols 🔧 ([dcb7144](https://github.com/adambiggs/dotfiles/commit/dcb7144))
+* **zsh:** added `gitgraph` alias ([1c1fa9d](https://github.com/adambiggs/dotfiles/commit/1c1fa9d))
+
+
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://github.com/adambiggs/dotfiles/compare/4.0.0...v4.0.1) (2015-08-25)
 

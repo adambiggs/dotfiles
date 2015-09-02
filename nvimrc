@@ -328,9 +328,8 @@
 
   " Tmuxline {
     if isdirectory(expand("~/.nvim/plugged/tmuxline.vim/"))
-      "let g:tmuxline_preset = 'crosshair'
-      "let g:tmuxline_theme  = 'airline_insert'
-      "let g:airline#extensions#tmuxline#enabled = 0
+      let g:airline#extensions#tmuxline#enabled       = 1
+      let g:airline#extensions#tmuxline#snapshot_file = "~/.dotfiles/tmuxline.conf"
       let g:tmuxline_preset = {
         \'a'    : [' #S'],
         \'b'    : [' #(whoami)'],

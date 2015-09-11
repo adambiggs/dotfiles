@@ -413,22 +413,30 @@
     if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
 
       " Config {
-        let NERDTreeShowBookmarks       = 0
+        let NERDTreeAutoCenterThreshold = 50
+        let NERDTreeAutoDeleteBuffer    = 1
+        let NERDTreeDirArrows           = 1
         let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
         let NERDTreeMapOpenVSplit       = 'v'
-        let NERDTreeAutoCenterThreshold = 50
-        let NERDTreeWinSize             = 35
-        let NERDTreeAutoDeleteBuffer    = 1
-        let NERDTreeChDirMode           = 0
-        let NERDTreeQuitOnOpen          = 1
+        let NERDTreeMinimalUI           = 1
         let NERDTreeMouseMode           = 2
+        let NERDTreeQuitOnOpen          = 1
+        let NERDTreeShowBookmarks       = 1
         let NERDTreeShowHidden          = 1
+        let NERDTreeSortHiddenFirst     = 1
+        let NERDTreeWinSize             = 35
 
-        " NERDTress File highlighting
+        " File highlighting
         function! NERDTreeHighlightFile(extension, fg, bg)
           exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg
           exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
         endfunction
+
+        " Repo-specific bookmarks
+        if isdirectory(expand(".git"))
+          let g:NERDTreeBookmarksFile = '.git/.nerdtree-bookmarks'
+        endif
+
       " }
 
       " Mappings {

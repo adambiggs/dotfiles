@@ -273,8 +273,8 @@
 
 " Plugin Config {
 
-  " WebDevIcons {
-    if isdirectory(expand("~/.nvim/plugged/vim-webdevicons/"))
+  " Nerd Icons {
+    if isdirectory(expand("~/.nvim/plugged/vim-devicons/"))
       let g:WebDevIconsNerdTreeAfterGlyphPadding  = ' '
       let g:WebDevIconsUnicodeDecorateFolderNodes = 1
     endif

@@ -38,7 +38,7 @@
   "Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
   Plug 'adambiggs/vim-snippets'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
   " Coding
   Plug 'adambiggs/vim-autoclose'

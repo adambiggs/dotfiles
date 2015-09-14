@@ -331,10 +331,10 @@
       let g:airline#extensions#tmuxline#enabled       = 1
       let g:airline#extensions#tmuxline#snapshot_file = "~/.dotfiles/tmuxline.conf"
       let g:tmuxline_preset = {
-        \'a'    : [' #S'],
+        \'a'    : [' #S'],
         \'b'    : [' #(whoami)'],
-        \'win'  : [' #I', '#W'],
-        \'cwin' : [' #I', '#W'],
+        \'win'  : [' #I', '#W'],
+        \'cwin' : [' #I', '#W'],
         \'x'    : ['#(~/.dotfiles/scripts/now-playing.sh)', '#(~/.dotfiles/scripts/cpu-load.py)', '#(~/.dotfiles/scripts/wifi-signal.sh)', '#(battery -t -p)'],
         \'y'    : ['  %a %b %e'],
         \'z'    : [' %l:%M %p'] }

@@ -1,3 +1,20 @@
+<a name="4.0.3"></a>
+## [4.0.3](https://github.com/adambiggs/dotfiles/compare/4.0.2...v4.0.3) (2015-09-14)
+
+
+### Bug Fixes
+
+* **vim:** NERDTree folder icons not showing up ([c762f2b](https://github.com/adambiggs/dotfiles/commit/c762f2b))
+
+### Features
+
+* **tmux:** swapped some tmux status line icons 💸 ([da72c4d](https://github.com/adambiggs/dotfiles/commit/da72c4d))
+* **vim:** automatically keep Tmux theme up to date with Tmuxline changes ([cd0b26e](https://github.com/adambiggs/dotfiles/commit/cd0b26e))
+* **vim:** git repo specific NERDTree bookmarks ([36149c3](https://github.com/adambiggs/dotfiles/commit/36149c3))
+* **vim:** YouCompleteMe `install.sh` script deprecated in favour of `install.py` ([42b49ff](https://github.com/adambiggs/dotfiles/commit/42b49ff))
+
+
+
 <a name="4.0.2"></a>
 ## [4.0.2](https://github.com/adambiggs/dotfiles/compare/4.0.1...v4.0.2) (2015-09-01)
 

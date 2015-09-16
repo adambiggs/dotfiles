@@ -42,7 +42,7 @@
   username = adambiggs
 
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 
 [filter "hawser"]
   clean    = git hawser clean %f

@@ -463,8 +463,9 @@
           if len(a:lines) < 2 | return | endif
 
           let cmd = get({'ctrl-x': 'sbuffer',
-                      \ 'ctrl-v': 'vert sbuffer',
-                      \ 'ctrl-t': 'tab sb'}, a:lines[0], 'buffer')
+            \ 'ctrl-v': 'vert sbuffer',
+            \ 'ctrl-t': 'tab sb',
+            \ 'ctrl-d': 'bd'}, a:lines[0], 'buffer')
           let list = a:lines[1:]
 
           let first = list[0]
@@ -472,11 +473,11 @@
         endfunction
 
         nnoremap <silent> <C-@> :call fzf#run({
-        \  'source':  reverse(<sid>buflist()),
-        \  'sink*':    function('<sid>bufopen'),
-        \  'options': '+m --ansi --expect=ctrl-t,ctrl-v,ctrl-x',
-        \  'down':    len(<sid>buflist()) + 2
-        \})<CR>
+          \  'source':  reverse(<sid>buflist()),
+          \  'sink*':    function('<sid>bufopen'),
+          \  'options': '+m --ansi --expect=ctrl-t,ctrl-v,ctrl-x,ctrl-d',
+          \  'down':    len(<sid>buflist()) + 2
+          \})<CR>
 
 
         " Narrow Ag results within Vim
@@ -484,15 +485,15 @@
         function! s:ag_to_qf(line)
           let parts = split(a:line, ':')
           return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
-                \ 'text': join(parts[3:], ':')}
+            \ 'text': join(parts[3:], ':')}
         endfunction
 
         function! s:ag_handler(lines)
           if len(a:lines) < 2 | return | endif
 
           let cmd = get({'ctrl-x': 'split',
-                      \ 'ctrl-v': 'vertical split',
-                      \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
+            \ 'ctrl-v': 'vertical split',
+            \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
           let list = map(a:lines[1:], 's:ag_to_qf(v:val)')
 
           let first = list[0]

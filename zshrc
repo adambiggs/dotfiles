@@ -28,7 +28,7 @@ if ! zgen saved; then
   zgen load supercrabtree/k
 
   # Theme.
-  zgen oh-my-zsh themes/agnoster
+  zgen load adambiggs/zsh-theme adambiggs.zsh-theme
 
   # Save init script.
   zgen save

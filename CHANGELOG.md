@@ -1,3 +1,14 @@
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/adambiggs/dotfiles/compare/4.0.3...v4.1.0) (2015-10-01)
+
+
+### Features
+
+* **tmux:** cleaned up status line & made a fancy custom battery status widget 🔋 ([019f323](https://github.com/adambiggs/dotfiles/commit/019f323))
+* **vim:** delete buffers in FZF buffer browser with `ctrl-d` ([1b67490](https://github.com/adambiggs/dotfiles/commit/1b67490))
+
+
+
 <a name="4.0.3"></a>
 ## [4.0.3](https://github.com/adambiggs/dotfiles/compare/4.0.2...v4.0.3) (2015-09-14)
 

@@ -5,7 +5,7 @@ BATTERY_VALUE="${BATTERY_PERCENTAGE%?}"
 
 if [ "$BATTERY_VALUE" -gt "90" ]; then
   ICON=" "
-elif [ "$BATTERY_VALUE" -gt "50" ]; then
+elif [ "$BATTERY_VALUE" -gt "55" ]; then
   ICON=" "
 elif [ "$BATTERY_VALUE" -gt "30" ]; then
   ICON=" "

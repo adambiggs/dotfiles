@@ -333,7 +333,7 @@
       let g:tmuxline_preset = {
         \'a'    : ['   %a %b %e'],
         \'b'    : ['  %l:%M %p'],
-        \'c'    : ['  #S'],
+        \'c'    : ['   #S'],
         \'win'  : [' #I #W'],
         \'cwin' : [' #I #W'],
         \'x'    : ['#(~/.dotfiles/scripts/now-playing.sh) '],

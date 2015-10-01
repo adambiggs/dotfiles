@@ -1,3 +1,22 @@
+<a name="4.2.0"></a>
+# [4.2.0](https://github.com/adambiggs/dotfiles/compare/4.1.0...v4.2.0) (2015-10-01)
+
+
+### Bug Fixes
+
+* **vim:** previous folds aren't remembered when opening `nvimrc` ([59b9bdc](https://github.com/adambiggs/dotfiles/commit/59b9bdc))
+
+### Features
+
+* **iterm:** increased font size ([384c0f7](https://github.com/adambiggs/dotfiles/commit/384c0f7))
+* **tmux:** fancy new wifi strength meter ([d6f23ab](https://github.com/adambiggs/dotfiles/commit/d6f23ab))
+* **tmux:** status line polish ([5cb77a3](https://github.com/adambiggs/dotfiles/commit/5cb77a3))
+* **tmux:** tweaked battery icon percentages ([35716d1](https://github.com/adambiggs/dotfiles/commit/35716d1))
+* **update:** keep `pip` up to date ([e0f2f16](https://github.com/adambiggs/dotfiles/commit/e0f2f16))
+* **update:** update all gems now that I don't need Compass at work anymore ([97c1476](https://github.com/adambiggs/dotfiles/commit/97c1476))
+
+
+
 <a name="4.1.0"></a>
 # [4.1.0](https://github.com/adambiggs/dotfiles/compare/4.0.3...v4.1.0) (2015-10-01)
 

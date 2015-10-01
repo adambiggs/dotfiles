@@ -31,4 +31,6 @@ NOW_PLAYING=$(osascript <<EOF
   end is_app_running
 EOF)
 
-echo $NOW_PLAYING
+if [[ ! -z $NOW_PLAYING ]]; then
+  echo " $NOW_PLAYING"
+fi

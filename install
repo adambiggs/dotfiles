@@ -12,8 +12,6 @@ function install_brew_pkg() {
   if [ -z $pkg_installed ]; then
     if [ $pkg_name == 'neovim' ]; then
       brew tap neovim/homebrew-neovim
-    elif [ $pkg_name == 'battery' ]; then
-      brew tap Goles/battery
     fi
     brew install $args $pkg_name
   fi
@@ -75,7 +73,6 @@ install_brew_pkg zsh
 install_brew_pkg ctags
 install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
-install_brew_pkg battery
 install_brew_pkg wget
 echo -e "${green}Done.${clear}"
 

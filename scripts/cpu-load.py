@@ -8,7 +8,7 @@ import psutil
 def get_cpu_percent():
   cpu = psutil.cpu_percent(interval=1)
   #return cpu
-  return '  {0}%'.format(cpu)
+  return ' {0}%'.format(cpu)
 
 def main():
   try:

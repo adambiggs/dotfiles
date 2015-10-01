@@ -29,8 +29,8 @@ pip install -U pip neovim awscli tmuxp
 echo -e "${green}Done.${clear}"
 
 # gem
-echo -e "\n${blue}Updating certain ruby gems...${clear}"
-gem update CoffeeTags
+echo -e "\n${blue}Updating ruby gems...${clear}"
+gem update
 echo -e "${green}Done.${clear}"
 
 # Git submodules

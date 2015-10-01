@@ -25,7 +25,7 @@ fi
 
 # pip
 echo -e "\n${blue}Updating certain pip packages...${clear}"
-pip install -U neovim awscli tmuxp
+pip install -U pip neovim awscli tmuxp
 echo -e "${green}Done.${clear}"
 
 # gem

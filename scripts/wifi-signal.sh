@@ -3,7 +3,7 @@ REPORT=`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/
 SSID=`echo "$REPORT" | grep " SSID" | sed -e 's/^.*: //g'`
 SIGNAL=`echo "$REPORT" | grep CtlRSSI | sed -e 's/^.*: //g'`
 
-if [ "$SIGNAL" -gt "-60" ]; then
+if [ "$SIGNAL" -ge "-60" ]; then
   WIFI_BARS="●●●●"
 elif [ "$SIGNAL" -lt "-60" ]; then
   WIFI_BARS="●●●◯"

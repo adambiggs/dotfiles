@@ -33,7 +33,7 @@ update_brew_pkg_head tmux
 
 # pip
 echo -e "\n${blue}Updating certain pip packages...${clear}"
-pip install -U pip neovim awscli tmuxp
+pip install -U pip neovim awscli tmuxp docker-compose
 echo -e "${green}Done.${clear}"
 
 # gem

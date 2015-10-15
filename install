@@ -154,6 +154,7 @@ echo -e "\n${blue}Installing PIP packages...${clear}"
 install_pip_pkg neovim
 install_pip_pkg awscli
 install_pip_pkg tmuxp
+install_pip_pkg docker-compose
 echo -e "${green}Done.${clear}"
 
 # Vim-Plug

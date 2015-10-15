@@ -1,8 +1,24 @@
-#!/bin/zsh
+#!/bin/bash
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Source external scripts.
 source $SCRIPT_PATH/scripts/colors
+
+# Update a `HEAD` brew package if there are remote changes available.
+function update_brew_pkg_head() {
+  pkg_name=$1
+  repo_path=/Library/Caches/Homebrew/$pkg_name--git/
+  local_sha=`cd $repo_path && git rev-parse @`
+  remote_sha=`cd $repo_path && git fetch && git rev-parse @{u}`
+
+  echo -e "\n${blue}Updating ${clear}$pkg_name${blue} to latest HEAD...${clear}"
+  if [[ $local_sha == $remote_sha ]]; then
+    echo -e "${green}Already up to date.${clear}"
+  else
+    brew reinstall --HEAD $pkg_name
+    echo -e "\n${green}Done.${clear}"
+  fi
+}
 
 # Homebrew
 echo -e "\n${blue}Updating Homebrew packages...${clear}"
@@ -11,17 +27,9 @@ brew upgrade --all
 brew cleanup
 echo -e "${green}Done.${clear}"
 
-# NeoVim
-echo -e "\n${blue}Updating NeoVim to latest HEAD...${clear}"
-NEOVIM_REPO_PATH=/Library/Caches/Homebrew/neovim--git/
-NEOVIM_LOCAL_SHA=`cd $NEOVIM_REPO_PATH && git rev-parse @`
-NEOVIM_REMOTE_SHA=`cd $NEOVIM_REPO_PATH && git fetch && git rev-parse @{u}`
-if [[ $NEOVIM_LOCAL_SHA == $NEOVIM_REMOTE_SHA ]]; then
-  echo -e "${green}NeoVim already up to date.${clear}"
-else
-  brew reinstall --HEAD neovim
-  echo -e "\n${green}Done.${clear}"
-fi
+# HEAD Homebrew packages
+update_brew_pkg_head neovim
+update_brew_pkg_head tmux
 
 # pip
 echo -e "\n${blue}Updating certain pip packages...${clear}"

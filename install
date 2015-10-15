@@ -71,7 +71,7 @@ install_brew_pkg python
 install_brew_pkg neovim '--HEAD'
 install_brew_pkg zsh
 install_brew_pkg ctags
-install_brew_pkg tmux
+install_brew_pkg tmux '--HEAD'
 install_brew_pkg the_silver_searcher
 install_brew_pkg wget
 echo -e "${green}Done.${clear}"

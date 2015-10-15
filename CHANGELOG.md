@@ -1,3 +1,20 @@
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/adambiggs/dotfiles/compare/4.2.1...v5.0.0) (2015-10-15)
+
+
+### Bug Fixes
+
+* **tmux:** cron job to kill `notifyd` as workaround for El Capitan memory leak ([381413a](https://github.com/adambiggs/dotfiles/commit/381413a))
+* **tmux:** deprecated options causing warning messages on session start ([70f4fb6](https://github.com/adambiggs/dotfiles/commit/70f4fb6))
+* **tmux:** wifi signal bars empty if signal is exactly `-60` ([0b4fb83](https://github.com/adambiggs/dotfiles/commit/0b4fb83))
+
+### Features
+
+* **tmux:** use latest HEAD version of Tmux ([42d0502](https://github.com/adambiggs/dotfiles/commit/42d0502))
+* install `docker-compose` with `pip` ([1d163f5](https://github.com/adambiggs/dotfiles/commit/1d163f5))
+
+
+
 <a name="4.2.1"></a>
 ## [4.2.1](https://github.com/adambiggs/dotfiles/compare/4.2.0...v4.2.1) (2015-10-01)
 

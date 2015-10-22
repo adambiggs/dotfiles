@@ -1,3 +1,18 @@
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/adambiggs/dotfiles/compare/5.0.0...v5.0.1) (2015-10-22)
+
+
+### Bug Fixes
+
+* **tmux:** mouse scrolling broken after tmux v2.1 update ([eabb31c](https://github.com/adambiggs/dotfiles/commit/eabb31c))
+
+### Features
+
+* **tmux:** easily page through shell history ([c02c2ff](https://github.com/adambiggs/dotfiles/commit/c02c2ff))
+* **zsh:** remove unused tmux plugin ([f4b7ef4](https://github.com/adambiggs/dotfiles/commit/f4b7ef4))
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/adambiggs/dotfiles/compare/4.2.1...v5.0.0) (2015-10-15)
 

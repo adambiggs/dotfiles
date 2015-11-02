@@ -2,9 +2,14 @@
 "   vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker=\ {,\ } foldmethod=marker spell:
 " }
 
+" Config Directories {
+  let b:config_directory = '~/.config/nvim'
+  let b:plugin_directory = b:config_directory . '/plugged'
+" }
+
 " Plugins {
 
-  call plug#begin('~/.nvim/plugged')
+  call plug#begin(b:plugin_directory)
 
   " Theme
   Plug 'chriskempson/base16-vim'
@@ -15,7 +20,7 @@
   Plug 'mbbill/undotree'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'scrooloose/nerdtree'
-  Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': '~/.nvim/nerdtree_plugin/coffee_filter.vim' }
+  Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
   Plug 'vim-scripts/restore_view.vim'
   Plug 'ryanoasis/vim-devicons'
   "Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -76,7 +81,7 @@
   "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
-  Plug 'adambiggs/vdebug', { 'branch': 'ordered-path-maps' }
+  Plug 'joonty/vdebug'
   "Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
@@ -274,29 +279,29 @@
 " Plugin Config {
 
   " Nerd Icons {
-    if isdirectory(expand("~/.nvim/plugged/vim-devicons/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-devicons'))
       let g:WebDevIconsNerdTreeAfterGlyphPadding  = ' '
       let g:WebDevIconsUnicodeDecorateFolderNodes = 1
     endif
   " }
 
   " LocalRC {
-    if isdirectory(expand("~/.nvim/plugged/vim-localrc/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-localrc'))
       let g:localrc_filename = '.vimrc.local'
       let g:localrc_filetype = '/^\.vimrc\..*\<%s\>.*\.local$'
     endif
   " }
 
   " ProSession {
-  if isdirectory(expand("~/.nvim/plugged/vim-prosession/"))
-    let g:prosession_dir             = "~/.nvim/session/"
+  if isdirectory(expand(b:plugin_directory . '/vim-prosession'))
+    let g:prosession_dir             = b:config_directory . "/session/"
     let g:prosession_per_branch      = 1
     let g:prosession_default_session = 0
   endif
   " }
 
   " Indent Guides {
-    if isdirectory(expand("~/.nvim/plugged/vim-indent-guides/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-indent-guides'))
       let g:indent_guides_start_level           = 1
       let g:indent_guides_auto_colors           = 0
       let g:indent_guides_enable_on_vim_startup = 1
@@ -307,7 +312,7 @@
   " }
 
   " Airline {
-    if isdirectory(expand("~/.nvim/plugged/vim-airline/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-airline'))
       let g:airline_exclude_preview                  = 1
       let g:airline_detect_iminsert                  = 1
       let g:airline_detect_crypt                     = 0 " https://github.com/bling/vim-airline/issues/792
@@ -327,7 +332,7 @@
   " }
 
   " Tmuxline {
-    if isdirectory(expand("~/.nvim/plugged/tmuxline.vim/"))
+    if isdirectory(expand(b:plugin_directory . '/tmuxline.vim'))
       let g:airline#extensions#tmuxline#enabled       = 1
       let g:airline#extensions#tmuxline#snapshot_file = "~/.dotfiles/tmuxline.conf"
       let g:tmuxline_preset = {
@@ -343,7 +348,7 @@
   " }
 
   " YouCompleteMe {
-    if isdirectory(expand("~/.nvim/plugged/YouCompleteMe/"))
+    if isdirectory(expand(b:plugin_directory . '/YouCompleteMe'))
 
       " Config {
         let g:ycm_min_num_of_chars_for_completion               = 1
@@ -374,7 +379,7 @@
   " }
 
   " Syntastic {
-    if isdirectory(expand("~/.nvim/plugged/syntastic/"))
+    if isdirectory(expand(b:plugin_directory . '/syntastic'))
       let g:syntastic_mode_map = { 'mode': 'active',
         \ 'active_filetypes': [],
         \ 'passive_filetypes': ['html', 'coffee'] }
@@ -382,7 +387,7 @@
   " }
 
   " Neomake {
-    if isdirectory(expand("~/.nvim/plugged/neomake/"))
+    if isdirectory(expand(b:plugin_directory . '/neomake'))
       autocmd BufWritePost *.coffee Neomake
 
       " Generate tags via CoffeeTags
@@ -395,7 +400,7 @@
   " }
 
   " UndoTree {
-    if isdirectory(expand("~/.nvim/plugged/undotree/"))
+    if isdirectory(expand(b:plugin_directory . '/undotree'))
 
       " Config {
         let g:undotree_SplitWidth         = 35
@@ -411,7 +416,7 @@
   " }
 
   " NERDTree {
-    if isdirectory(expand("~/.nvim/plugged/nerdtree/"))
+    if isdirectory(expand(b:plugin_directory . '/nerdtree'))
 
       " Config {
         let NERDTreeAutoCenterThreshold = 50
@@ -531,7 +536,7 @@
   " }
 
   " CtrlP {
-    if isdirectory(expand("~/.nvim/plugged/ctrlp.vim/"))
+    if isdirectory(expand(b:plugin_directory . '/ctrlp.vim'))
 
       " Config {
         let g:ctrlp_user_command = 'ag %s
@@ -557,13 +562,13 @@
   " }
 
   " AutoClose {
-    if isdirectory(expand("~/.nvim/plugged/vim-autoclose/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-autoclose'))
       let g:autoclose_vim_commentmode = 1
     endif
   " }
 
   " CoffeeScript {
-    if isdirectory(expand("~/.nvim/plugged/vim-coffee-script/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-coffee-script'))
 
       " Config {
         let coffee_compile_vert = 1
@@ -581,7 +586,7 @@
   " }
 
   " Over.vim {
-    if isdirectory(expand("~/.nvim/plugged/vim-over/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-over'))
 
       " Config {
         let g:over#command_line#paste_escape_chars = '/.*$^~'
@@ -597,13 +602,13 @@
   " }
 
   " CoffeeTags {
-    if isdirectory(expand("~/.nvim/plugged/CoffeeTags/"))
+    if isdirectory(expand(b:plugin_directory . '/CoffeeTags'))
       let g:CoffeeAutoTagIncludeVars = 1
     endif
   " }
 
   " Tagbar {
-    if isdirectory(expand("~/.nvim/plugged/tagbar/"))
+    if isdirectory(expand(b:plugin_directory . '/tagbar'))
 
       " Config {
         let g:tagbar_autoshowtag = 1  " Open folds if necessary when navigating to a tag
@@ -639,7 +644,7 @@
   " }
 
   " EasyMotion {
-    if isdirectory(expand("~/.nvim/plugged/vim-easymotion/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-easymotion'))
 
       " Use <Leader> as easymotion prefix.
       map <Leader> <Plug>(easymotion-prefix)
@@ -656,13 +661,13 @@
   " }
 
   " Handlebars {
-    if isdirectory(expand("~/.nvim/plugged/vim-mustache-handlebars/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-mustache-handlebars'))
       let g:mustache_abbreviations = 1
     endif
   " }
 
   " Vdebug {
-    if isdirectory(expand("~/.nvim/plugged/vdebug/"))
+    if isdirectory(expand(b:plugin_directory . '/vdebug'))
       let g:vdebug_options                    = { }
       let g:vdebug_options['server']          = ''
       let g:vdebug_options['break_on_open']   = 0
@@ -671,28 +676,28 @@
   " }
 
   " GitGutter {
-    if isdirectory(expand("~/.nvim/plugged/vim-gitgutter/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-gitgutter'))
       let g:gitgutter_max_signs = 10000
       let g:gitgutter_map_keys  = 0
     endif
   " }
 
   " Incsearch.vim {
-    if isdirectory(expand("~/.nvim/plugged/incsearch.vim/"))
+    if isdirectory(expand(b:plugin_directory . '/incsearch.vim'))
       map / <Plug>(incsearch-forward)
       map ? <Plug>(incsearch-backward)
     endif
   " }
 
   " Incsearch-EasyMotion.vim {
-    if isdirectory(expand("~/.nvim/plugged/incsearch-easymotion.vim/"))
+    if isdirectory(expand(b:plugin_directory . '/incsearch-easymotion.vim'))
       map <Leader>/ <Plug>(incsearch-easymotion-/)
       map <Leader>? <Plug>(incsearch-easymotion-?)
     endif
   " }
 
   " EasyAlign {
-    if isdirectory(expand("~/.nvim/plugged/vim-easy-align/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-easy-align'))
 
       " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
       vmap <CR> <Plug>(EasyAlign)
@@ -709,7 +714,7 @@
   " }
 
   " Fugitive {
-    if isdirectory(expand("~/.nvim/plugged/vim-fugitive/"))
+    if isdirectory(expand(b:plugin_directory . '/vim-fugitive'))
       nnoremap <silent> <leader>gs :Gstatus<CR>
       nnoremap <silent> <leader>gd :Gdiff<CR>
       nnoremap <silent> <leader>gc :Gcommit<CR>
@@ -726,7 +731,7 @@
   " }
 
   " UtilSnips {
-    if isdirectory(expand("~/.nvim/plugged/ultisnips"))
+    if isdirectory(expand(b:plugin_directory . '/ultisnips'))
 
       " Config {
         let g:UltiSnipsEditSplit = 'vertical'
@@ -749,7 +754,7 @@
   " Initialize directories {
     function! InitializeDirectories()
       let parent = $HOME
-      let prefix = 'nvim'
+      let prefix = 'config/nvim'
       let dir_list = {
         \ 'backup': 'backupdir',
         \ 'views': 'viewdir',

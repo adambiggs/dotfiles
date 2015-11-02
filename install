@@ -159,11 +159,11 @@ echo -e "${green}Done.${clear}"
 
 # Vim-Plug
 echo -e "\n${blue}Installing Vim-Plug...${clear}"
-VIMPLUG_PATH=~/.nvim/autoload/plug.vim
+VIMPLUG_PATH=~/.config/nvim/autoload/plug.vim
 if [ -e "$VIMPLUG_PATH" ]; then
   echo -e "${green}Already installed.${clear}"
 else
-  curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo $VIMPLUG_PATH --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   echo -e "${green}Done.${clear}"
 fi
 

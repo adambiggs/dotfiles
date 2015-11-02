@@ -146,7 +146,11 @@
 
   " Colorscheme
   let base16colorspace=256  " Access colors present in 256 colorspace
-  colorscheme base16-eighties
+  try
+    colorscheme base16-eighties
+  catch /^Vim\%((\a\+)\)\=:E185/
+    " It's ok, we're probably just running the initial installation.
+  endtry
 
   " Tmux
   if exists('$TMUX')

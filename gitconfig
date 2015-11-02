@@ -3,7 +3,7 @@
   email = adam.biggs@lightmaker.com
 
 [core]
-  excludesfile = /Users/adam/.gitignore
+	excludesfile = /Users/adam/.gitignore
   excludefile  = /Users/adam/.gitignore
   editor       = nvim
 

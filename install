@@ -126,11 +126,6 @@ echo -e "${green}Done.${clear}"
 #install_patched_fonts
 #echo -e "${green}Done.${clear}"
 
-# fzf
-echo -e "\n${blue}Installing fzf...${clear}"
-libs/fzf/install
-echo -e "${green}Done.${clear}"
-
 # iTerm CLI
 if [[ $OSTYPE == darwin* ]]; then
   echo -e "\n${blue}Installing iTerm cli integration...${clear}"

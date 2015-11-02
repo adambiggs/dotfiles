@@ -163,9 +163,7 @@ fi
 
 # Vim plugins
 echo -e "\n${blue}Starting NeoVim and installing plugins...${clear}"
-echo -e "You'll have to quit NeoVim manually when complete."
-echo -e "See: https://github.com/junegunn/vim-plug/issues/104"
-nvim +PlugInstall
+nvim +PlugInstall +qall
 echo -e "${green}Done.${clear}"
 
 echo ""

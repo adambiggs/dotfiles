@@ -56,7 +56,6 @@ fi
 brew update
 if [[ $OSTYPE == darwin* ]]; then
   # Mac specific packages
-  install_brew_pkg boot2docker
   install_brew_pkg git
   install_brew_pkg openssl
   install_brew_pkg python

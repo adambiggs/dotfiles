@@ -1,3 +1,32 @@
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/adambiggs/dotfiles/compare/5.0.1...v6.0.0) (2015-11-02)
+
+
+### Bug Fixes
+
+* **install:** already-installed check sometimes fails ([d48d2f9](https://github.com/adambiggs/dotfiles/commit/d48d2f9))
+* **vim:** don't throw an error if `colorscheme` isn't found ([1b88383](https://github.com/adambiggs/dotfiles/commit/1b88383))
+
+### Features
+
+* **install:** don't install boot2docker anymore ([ae5bfc9](https://github.com/adambiggs/dotfiles/commit/ae5bfc9))
+* **install:** don't try to automatically install patched fonts ([5d90464](https://github.com/adambiggs/dotfiles/commit/5d90464))
+* **install:** FZF already installed using `vim-plug` ([b9bfb3f](https://github.com/adambiggs/dotfiles/commit/b9bfb3f))
+* **install:** quit Vim after installing plugins ([8608d40](https://github.com/adambiggs/dotfiles/commit/8608d40))
+* **vim:** change NeoVim config directory to new XDG path ([44aa0d1](https://github.com/adambiggs/dotfiles/commit/44aa0d1))
+
+
+### BREAKING CHANGES
+
+* install: Patched fonts should be manually installed for the time
+being.
+* vim: 1. Run `./link` command
+2. Reinstall `vim-plug` at `~/.config/nvim/autoload/plug.vim`
+3. Reinstall Vim plugins with `:PlugInstall`
+4. Clean up old config: `$ rm -rf ~/.nvim`
+
+
+
 <a name="5.0.1"></a>
 ## [5.0.1](https://github.com/adambiggs/dotfiles/compare/5.0.0...v5.0.1) (2015-10-22)
 

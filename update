@@ -28,7 +28,7 @@ echo -e "${green}Done.${clear}"
 
 # HEAD Homebrew packages
 update_brew_pkg_head neovim
-update_brew_pkg_head tmux
+#update_brew_pkg_head tmux
 
 # pip
 echo -e "\n${blue}Updating certain pip packages...${clear}"

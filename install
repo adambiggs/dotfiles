@@ -8,8 +8,10 @@ source $SCRIPT_PATH/scripts/colors
 function install_brew_pkg() {
   pkg_name=$1
   args=$2
-  pkg_installed=`brew ls | grep -q $pkg_name`
-  if ! $pkg_installed; then
+  `brew ls | grep -q $pkg_name`
+  if [ $? == 0 ]; then
+    echo -e "${blue}Already installed:${clear} $pkg_name"
+  else
     if [ $pkg_name == 'neovim' ]; then
       brew tap neovim/homebrew-neovim
     fi
@@ -20,8 +22,10 @@ function install_brew_pkg() {
 # Install a Homebrew Cask package if not already installed.
 function install_brew_cask() {
   cask_name=$1
-  cask_insalled=`brew cask ls | grep -q $cask_name`
-  if ! $cask_insalled; then
+  `brew cask ls | grep -q $cask_name`
+  if [ $? == 0 ]; then
+    echo -e "${blue}Already installed:${clear} $cask_name"
+  else
     brew cask install $cask_name
   fi
 }
@@ -29,8 +33,10 @@ function install_brew_cask() {
 # Install a Gem if not already installed.
 function install_ruby_gem() {
   gem_name=$1
-  gem_installed=`gem list --no-versions | grep -q $gem_name`
-  if ! $gem_installed; then
+  `gem list --no-versions | grep -q $gem_name`
+  if [ $? == 0 ]; then
+    echo -e "${blue}Already installed:${clear} $gem_name"
+  else
     gem install $gem_name
   fi
 }
@@ -41,6 +47,8 @@ function install_pip_pkg() {
   pip_pkg_installed=`pip list | grep $pip_pkg_name`
   if [[ -z $pip_pkg_installed ]]; then
     pip install $pip_pkg_name
+  else
+    echo -e "${blue}Already installed:${clear} $pip_pkg_name"
   fi
 }
 

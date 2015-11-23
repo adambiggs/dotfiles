@@ -351,7 +351,7 @@
         \'win'  : [' #I #W'],
         \'cwin' : [' #I #W'],
         \'x'    : ['#(~/.dotfiles/scripts/now-playing.sh) '],
-        \'y'    : ['#(~/.dotfiles/scripts/cpu-load.py) #[fg=colour244]  #[fg=colour7] #(~/.dotfiles/scripts/battery-icon.sh) '],
+        \'y'    : [' #(~/.dotfiles/scripts/cpu-load.py) #[fg=colour244]  #[fg=colour7] #(~/.dotfiles/scripts/battery-icon.sh) '],
         \'z'    : ['#(~/.dotfiles/scripts/wifi-signal.sh) '] }
     endif
   " }

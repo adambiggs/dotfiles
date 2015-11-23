@@ -6,13 +6,13 @@ SIGNAL=`echo "$REPORT" | grep CtlRSSI | sed -e 's/^.*: //g'`
 if [ "$SIGNAL" -ge "-60" ]; then
   WIFI_BARS="●●●●"
 elif [ "$SIGNAL" -lt "-60" ]; then
-  WIFI_BARS="●●●◯"
+  WIFI_BARS="●●●○"
 elif [ "$SIGNAL" -lt "-70" ]; then
-  WIFI_BARS="●●◯◯"
+  WIFI_BARS="●●○○"
 elif [ "$SIGNAL" -lt "-80" ]; then
-  WIFI_BARS="●◯◯◯"
+  WIFI_BARS="●○○○"
 else
-  WIFI_BARS="◯◯◯◯"
+  WIFI_BARS="○○○○"
 fi
 
 MSG="$SSID $WIFI_BARS"

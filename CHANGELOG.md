@@ -1,3 +1,30 @@
+<a name="7.0.0"></a>
+# [7.0.0](https://github.com/adambiggs/dotfiles/compare/6.0.0...v7.0.0) (2015-11-23)
+
+
+### Bug Fixes
+
+* **install:** how do exit code work?? ([088894e](https://github.com/adambiggs/dotfiles/commit/088894e))
+* **vim:** `.` character displayed after icons in NERDTree ([2c7e1ef](https://github.com/adambiggs/dotfiles/commit/2c7e1ef))
+* **vim:** temp file directory paths configured incorrectly ([02d4c7c](https://github.com/adambiggs/dotfiles/commit/02d4c7c))
+* **zsh:** `vimclean` alias doesn't do anything ([b907b33](https://github.com/adambiggs/dotfiles/commit/b907b33))
+
+### Features
+
+* **install:** switch from `iterm2-nightly` to `iterm2-beta` ([1e0cac7](https://github.com/adambiggs/dotfiles/commit/1e0cac7))
+* **tmux:** switch to v2.1 stable ([55be3e6](https://github.com/adambiggs/dotfiles/commit/55be3e6))
+* **vim:** reactivate `vim-tmux-focus-events` now that NeoVim added support ([8b0bf15](https://github.com/adambiggs/dotfiles/commit/8b0bf15))
+* **vim:** use `vdebug` "compact" style watch window ([3b0530b](https://github.com/adambiggs/dotfiles/commit/3b0530b))
+* **zsh:** add Go paths to `.zshrc` ([9bdc206](https://github.com/adambiggs/dotfiles/commit/9bdc206))
+* updated `nerd-fonts` and fixed broken icons ([5ac93a1](https://github.com/adambiggs/dotfiles/commit/5ac93a1))
+
+
+### BREAKING CHANGES
+
+* install: You should `$ brew cask uninstall iterm2-nightly` and then run `$ ./install` to make the switch.
+
+
+
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/adambiggs/dotfiles/compare/5.0.1...v6.0.0) (2015-11-02)
 

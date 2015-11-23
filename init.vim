@@ -23,7 +23,7 @@
   Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
   Plug 'vim-scripts/restore_view.vim'
   Plug 'ryanoasis/vim-devicons'
-  "Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'junegunn/vim-peekaboo'
 
   " Search & Navigation
@@ -107,6 +107,7 @@
   set undoreload=10000  " Maximum number lines to save for undo on a buffer reload
   set updatetime=750
   "set smartindent
+  set autoread
   set shiftround
   set visualbell
   set gdefault          " Substitute all matches on a line by default

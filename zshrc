@@ -88,7 +88,7 @@ fi
 alias sudo='sudo ' # @see http://askubuntu.com/a/22043
 alias ..='cd ..'
 alias kmux='tmux kill-server'
-alias vimclean='rm -rf ~/.viminfo ~/.vimswap ~/.vimviews ~/.vimbackup ~/.nviminfo ~/.nvimswap ~/.nvimviews ~/.nvimbackup'
+alias vimclean='rm -rf ~/.config/nvim/session/* ~/.config/nvim/swap/* ~/.config/nvim/undo/*  ~/.config/nvim/views/*'
 
 # Git
 alias github='gitit'

@@ -287,6 +287,10 @@
     if isdirectory(expand(b:plugin_directory . '/vim-devicons'))
       let g:WebDevIconsNerdTreeAfterGlyphPadding  = ' '
       let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+      " Fix dots after icons in NERDTree
+      " https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
+      autocmd FileType nerdtree setlocal nolist
     endif
   " }
 

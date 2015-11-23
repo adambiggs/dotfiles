@@ -759,7 +759,7 @@
   " Initialize directories {
     function! InitializeDirectories()
       let parent = $HOME
-      let prefix = 'config/nvim'
+      let prefix = 'config/nvim/'
       let dir_list = {
         \ 'backup': 'backupdir',
         \ 'views': 'viewdir',
@@ -772,7 +772,7 @@
       let common_dir = parent . '/.' . prefix
 
       for [dirname, settingname] in items(dir_list)
-        let directory = common_dir . dirname . '//'
+        let directory = common_dir . dirname . '/'
         if exists("*mkdir")
           if !isdirectory(directory)
             call mkdir(directory)

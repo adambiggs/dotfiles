@@ -81,7 +81,7 @@
   "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
-  Plug 'joonty/vdebug'
+  Plug 'joonty/vdebug', { 'branch': 'master' }
   "Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
@@ -677,10 +677,11 @@
 
   " Vdebug {
     if isdirectory(expand(b:plugin_directory . '/vdebug'))
-      let g:vdebug_options                    = { }
-      let g:vdebug_options['server']          = ''
-      let g:vdebug_options['break_on_open']   = 0
-      let g:vdebug_options['continuous_mode'] = 1
+      let g:vdebug_options                       = { }
+      let g:vdebug_options['server']             = ''
+      let g:vdebug_options['break_on_open']      = 0
+      let g:vdebug_options['continuous_mode']    = 1
+      let g:vdebug_options['watch_window_style'] = 'compact'
     endif
   " }
 

@@ -75,6 +75,7 @@
   Plug 'StanAngeloff/php.vim', { 'for': 'php' }
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+  Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
 
   " Building
   Plug 'benekastah/neomake'

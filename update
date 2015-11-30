@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Source external scripts.
@@ -47,7 +47,7 @@ echo -e "${green}Done.${clear}"
 
 # zgen
 echo -e "\n${blue}Updating zgen...${clear}"
-source ~/.dotfiles/libs/zgen/zgen.zsh
+source $SCRIPT_PATH/libs/zgen/zgen.zsh
 zgen-selfupdate
 echo -e "${green}Done.${clear}"
 

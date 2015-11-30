@@ -1,3 +1,18 @@
+<a name="7.1.0"></a>
+# [7.1.0](https://github.com/adambiggs/dotfiles/compare/7.0.0...v7.1.0) (2015-11-30)
+
+
+### Bug Fixes
+
+* **update:** `zgen-selfupdate` command fails ([95bdabd](https://github.com/adambiggs/dotfiles/commit/95bdabd))
+
+### Features
+
+* **install:** install `docker` and `docker-machine` with homebrew ([909f787](https://github.com/adambiggs/dotfiles/commit/909f787))
+* **vim:** added `vim-css-color` plugin ([63ea644](https://github.com/adambiggs/dotfiles/commit/63ea644))
+
+
+
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/adambiggs/dotfiles/compare/6.0.0...v7.0.0) (2015-11-23)
 

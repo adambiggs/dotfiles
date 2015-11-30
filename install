@@ -81,6 +81,8 @@ install_brew_pkg ctags
 install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
 install_brew_pkg wget
+install_brew_pkg docker
+install_brew_pkg docker-machine
 echo -e "${green}Done.${clear}"
 
 # Homebrew Casks

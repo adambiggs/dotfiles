@@ -151,6 +151,7 @@ fi
 # Ruby Gems
 echo -e "\n${blue}Installing Ruby gems...${clear}"
 install_ruby_gem CoffeeTags
+install_ruby_gem neovim
 echo -e "${green}Done.${clear}"
 
 # PIP packages

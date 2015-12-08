@@ -30,19 +30,25 @@ echo -e "${green}Done.${clear}"
 update_brew_pkg_head neovim
 #update_brew_pkg_head tmux
 
-# pip
-echo -e "\n${blue}Updating certain pip packages...${clear}"
-pip install -U pip neovim awscli tmuxp docker-compose
+# Git submodules
+echo -e "\n${blue}Updating Git submodules...${clear}"
+git submodule update --remote --rebase
 echo -e "${green}Done.${clear}"
 
 # gem
-echo -e "\n${blue}Updating ruby gems...${clear}"
+echo -e "\n${blue}Updating Ruby gems...${clear}"
 gem update
 echo -e "${green}Done.${clear}"
 
-# Git submodules
-echo -e "\n${blue}Updating git submodules...${clear}"
-git submodule update --remote --rebase
+# pip
+echo -e "\n${blue}Updating certain PIP packages...${clear}"
+pip install -U pip neovim awscli tmuxp docker-compose
+echo -e "${green}Done.${clear}"
+
+# Tmux plugins
+echo -e "\n${blue}Updating Tmux plugins...${clear}"
+$SCRIPT_PATH/libs/tpm/bin/clean_plugins
+$SCRIPT_PATH/libs/tpm/bin/update_plugins all
 echo -e "${green}Done.${clear}"
 
 # zgen

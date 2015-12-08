@@ -19,3 +19,6 @@
 [submodule "scripts/battery-status"]
 	path = scripts/battery-status
 	url = https://github.com/tmux-plugins/tmux-battery
+[submodule "libs/tpm"]
+	path = libs/tpm
+	url = https://github.com/tmux-plugins/tpm.git

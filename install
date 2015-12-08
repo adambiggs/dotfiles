@@ -162,6 +162,12 @@ install_pip_pkg tmuxp
 install_pip_pkg docker-compose
 echo -e "${green}Done.${clear}"
 
+# Tmux plugins
+echo -e "\n${blue}Installing Tmux plugins...${clear}"
+$SCRIPT_PATH/libs/tpm/bin/clean_plugins
+$SCRIPT_PATH/libs/tpm/bin/install_plugins
+echo -e "${green}Done.${clear}"
+
 # Vim-Plug
 echo -e "\n${blue}Installing Vim-Plug...${clear}"
 VIMPLUG_PATH=~/.config/nvim/autoload/plug.vim

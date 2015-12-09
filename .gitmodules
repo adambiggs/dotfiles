@@ -22,3 +22,7 @@
 [submodule "libs/tpm"]
 	path = libs/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "libs/zplug"]
+	path = libs/zplug
+	url = https://github.com/b4b4r07/zplug.git
+	branch = master

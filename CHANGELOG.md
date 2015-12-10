@@ -1,3 +1,17 @@
+<a name="7.1.1"></a>
+## [7.1.1](https://github.com/adambiggs/dotfiles/compare/7.1.0...v7.1.1) (2015-12-10)
+
+
+### Features
+
+* **install:** added `neovim` ruby gem ([3b6f7e3](https://github.com/adambiggs/dotfiles/commit/3b6f7e3))
+* **tmux:** added `tmux-copycat` plugin ([c6fa8d4](https://github.com/adambiggs/dotfiles/commit/c6fa8d4))
+* **tmux:** added `tmux-prefix-highlight` plugin to status line ([1651470](https://github.com/adambiggs/dotfiles/commit/1651470))
+* **tmux:** installed `tpm` (tmux plugin manager) ([ad503b3](https://github.com/adambiggs/dotfiles/commit/ad503b3))
+* **vim:** added `vim-rhubarb` plugin ([d980ec5](https://github.com/adambiggs/dotfiles/commit/d980ec5))
+
+
+
 <a name="7.1.0"></a>
 # [7.1.0](https://github.com/adambiggs/dotfiles/compare/7.0.0...v7.1.0) (2015-11-30)
 

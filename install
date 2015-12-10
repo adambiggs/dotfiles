@@ -189,4 +189,7 @@ zplug install
 zplug load --verbose
 echo -e "${green}Done.${clear}"
 
-echo -e "\n${green}All done.${clear}\n"
+# Create symlinks
+source $SCRIPT_PATH/link
+
+echo -e "${green}All done.${clear}\n"

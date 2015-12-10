@@ -51,17 +51,14 @@ $SCRIPT_PATH/libs/tpm/bin/clean_plugins
 $SCRIPT_PATH/libs/tpm/bin/update_plugins all
 echo -e "${green}Done.${clear}"
 
-# zgen
-echo -e "\n${blue}Updating zgen...${clear}"
-source $SCRIPT_PATH/libs/zgen/zgen.zsh
-zgen-selfupdate
+# zplug
+echo -e "\n${blue}Updating ZSH plugins...${clear}"
+zplug update --self
+zplug update
+zplug clean
+zplug load --verbose
 echo -e "${green}Done.${clear}"
 
-echo -e "\n${blue}Updating zgen plugins...${clear}"
-zgen-update
-#zgen-save # For some reason this breaks the zsh template...
-echo -e "${green}Done.${clear}"
-
-echo -e "\n💻  ${blue}You should start a new terminal session now.${clear}"
+echo -e "\n${green}All done.${clear}"
 
 echo ""

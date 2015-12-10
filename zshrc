@@ -1,37 +1,30 @@
+
+
 ### PLUGINS ###
-source $HOME/.dotfiles/libs/zgen/zgen.zsh
+source ~/.dotfiles/libs/zplug/zplug
 
-# check if there's no init script
-if ! zgen saved; then
-  echo "Creating zgen init script..."
+zplug "Tarrasch/zsh-bd"
+zplug "jimmijj/zsh-syntax-highlighting"
+zplug "peterhurford/git-it-on.zsh"
+zplug "plugins/brew-cask", from:oh-my-zsh
+zplug "plugins/cake", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/npm", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/pip", from:oh-my-zsh
+zplug "plugins/symfony2", from:oh-my-zsh
+zplug "sdurrheimer/docker-compose-zsh-completion"
+zplug "supercrabtree/k"
+zplug "zsh-users/zsh-completions", of:src
+zplug "zsh-users/zsh-history-substring-search"
 
-  # oh-my-zsh plugins.
-  zgen oh-my-zsh
-  zgen oh-my-zsh plugins/cake
-  zgen oh-my-zsh plugins/command-not-found
-  zgen oh-my-zsh plugins/docker
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/npm
-  zgen oh-my-zsh plugins/osx
-  zgen oh-my-zsh plugins/pip
-  zgen oh-my-zsh plugins/symfony2
-  zgen oh-my-zsh plugins/brew-cask
+# Theme.
+zplug "adambiggs/zsh-theme", of:adambiggs.zsh-theme
 
-  # Other plugins.
-  zgen load Tarrasch/zsh-bd
-  zgen load zsh-users/zsh-completions src
-  zgen load sdurrheimer/docker-compose-zsh-completion
-  zgen load zsh-users/zsh-history-substring-search
-  zgen load jimmijj/zsh-syntax-highlighting
-  zgen load peterhurford/git-it-on.zsh
-  zgen load supercrabtree/k
-
-  # Theme.
-  zgen load adambiggs/zsh-theme adambiggs.zsh-theme
-
-  # Save init script.
-  zgen save
-fi
+# Source plugins.
+zplug load --verbose
 
 
 ### COMPLETIONS ###

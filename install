@@ -183,4 +183,13 @@ echo -e "\n${blue}Starting NeoVim and installing plugins...${clear}"
 nvim +PlugInstall +qall
 echo -e "${green}Done.${clear}"
 
-echo ""
+# ZSH plugins
+echo -e "\n${blue}Installing ZSH plugins...${clear}"
+zplug install
+zplug load --verbose
+echo -e "${green}Done.${clear}"
+
+# Create symlinks
+source $SCRIPT_PATH/link
+
+echo -e "${green}All done.${clear}\n"

@@ -7,8 +7,7 @@ Currently running NeoVim + Tmux using iTerm2 nightly in OSX Yosemite.
 
 ## Setup
 - `$ git clone https://github.com/adambiggs/dotfiles.git ~/.dotfiles`
-- `$ ~/.dotfiles/install`
-- `$ ~/.dotfiles/link`
+- `$ source ~/.dotfiles/install`
 
 ## Update
-- `$ ~/.dotfiles/update`
+- `$ source ~/.dotfiles/update`

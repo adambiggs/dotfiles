@@ -1,3 +1,18 @@
+<a name="8.0.1"></a>
+## [8.0.1](https://github.com/adambiggs/dotfiles/compare/8.0.0...v8.0.1) (2015-12-10)
+
+
+### Bug Fixes
+
+* **zsh:** `zsh-syntax-highlighting` plugin needs to be loaded last ([05e4369](https://github.com/adambiggs/dotfiles/commit/05e4369))
+
+### Features
+
+* **zsh:** change `zplug` directory to `~/.config/zplug` ([f96bcd6](https://github.com/adambiggs/dotfiles/commit/f96bcd6))
+* **zsh:** check for uninstalled plugins on login and prompt to install ([5fa5db8](https://github.com/adambiggs/dotfiles/commit/5fa5db8))
+
+
+
 <a name="8.0.0"></a>
 # [8.0.0](https://github.com/adambiggs/dotfiles/compare/7.1.1...v8.0.0) (2015-12-10)
 

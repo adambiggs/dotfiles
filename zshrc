@@ -1,6 +1,7 @@
 
 
 ### PLUGINS ###
+export ZPLUG_HOME=~/.config/zplug
 source ~/.dotfiles/libs/zplug/zplug
 
 zplug "Tarrasch/zsh-bd"

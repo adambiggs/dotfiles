@@ -1,3 +1,22 @@
+<a name="8.0.0"></a>
+# [8.0.0](https://github.com/adambiggs/dotfiles/compare/7.1.1...v8.0.0) (2015-12-10)
+
+
+### Features
+
+* **install:** create symlinks as part of install command ([c293182](https://github.com/adambiggs/dotfiles/commit/c293182))
+* **install:** install ZSH plugins ([e0635a8](https://github.com/adambiggs/dotfiles/commit/e0635a8))
+* **update:** switch from `zgen` to `zplug` ([510d1b7](https://github.com/adambiggs/dotfiles/commit/510d1b7))
+* **zsh:** add `zplug` submodule ([1b25cc1](https://github.com/adambiggs/dotfiles/commit/1b25cc1))
+* **zsh:** switch from `zgen` to `zplug` ([c589093](https://github.com/adambiggs/dotfiles/commit/c589093))
+
+
+### BREAKING CHANGES
+
+* update: `update` command must be sourced, e.g.: `$ source ~/.dotfiles/update`
+
+
+
 <a name="7.1.1"></a>
 ## [7.1.1](https://github.com/adambiggs/dotfiles/compare/7.1.0...v7.1.1) (2015-12-10)
 

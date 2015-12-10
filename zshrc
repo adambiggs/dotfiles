@@ -5,7 +5,7 @@ export ZPLUG_HOME=~/.config/zplug
 source ~/.dotfiles/libs/zplug/zplug
 
 zplug "Tarrasch/zsh-bd"
-zplug "jimmijj/zsh-syntax-highlighting"
+zplug "jimmijj/zsh-syntax-highlighting", nice:19 # Set `nice` priority to load this plugin last.
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/brew-cask", from:oh-my-zsh
 zplug "plugins/cake", from:oh-my-zsh

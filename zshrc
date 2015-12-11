@@ -5,6 +5,7 @@ export ZPLUG_HOME=~/.config/zplug
 source ~/.dotfiles/libs/zplug/zplug
 
 zplug "Tarrasch/zsh-bd"
+zplug "akoenig/gulp.plugin.zsh"
 zplug "jimmijj/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/brew-cask", from:oh-my-zsh

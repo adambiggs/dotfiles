@@ -5,7 +5,7 @@ export ZPLUG_HOME=~/.config/zplug
 source ~/.dotfiles/libs/zplug/zplug
 
 zplug "Tarrasch/zsh-bd"
-zplug "jimmijj/zsh-syntax-highlighting", nice:19 # Set `nice` priority to load this plugin last.
+zplug "jimmijj/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/brew-cask", from:oh-my-zsh
 zplug "plugins/cake", from:oh-my-zsh
@@ -19,7 +19,7 @@ zplug "plugins/symfony2", from:oh-my-zsh
 zplug "sdurrheimer/docker-compose-zsh-completion"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
 
 # Theme.
 zplug "adambiggs/zsh-theme", of:adambiggs.zsh-theme

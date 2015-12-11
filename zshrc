@@ -18,7 +18,7 @@ zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/symfony2", from:oh-my-zsh
 zplug "sdurrheimer/docker-compose-zsh-completion"
 zplug "supercrabtree/k"
-zplug "zsh-users/zsh-completions", of:src
+zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 
 # Theme.

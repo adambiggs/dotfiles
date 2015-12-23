@@ -70,18 +70,21 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 ### PATHS ###
 
 # Ruby
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+RVMPATH=$HOME/.rvm/bin
+echo $PATH | grep -q $RVMPATH || export PATH=$PATH:$RVMPATH
 
 # Go
 export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+echo $PATH | grep -q $GOPATH/bin || export PATH=$PATH:$GOPATH/bin
+echo $PATH | grep -q $GOROOT/bin || export PATH=$PATH:$GOROOT/bin
 
 # Add Homebrew paths if `brew` is installed.
 if command -v brew >/dev/null; then
-  HOMEBREW=/usr/local/bin:/usr/local/sbin
-  export PATH=$HOMEBREW:$PATH
+  BREWBIN=/usr/local/bin
+  BREWSBIN=/usr/local/sbin
+  echo $PATH | grep -q $BREWBIN || export PATH=$PATH:$BREWBIN
+  echo $PATH | grep -q $BREWSBIN || export PATH=$PATH:$BREWSBIN
 fi
 
 

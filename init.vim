@@ -83,6 +83,7 @@
   "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
+  Plug 'airblade/vim-rooter'
   Plug 'joonty/vdebug', { 'branch': 'master' }
   "Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'

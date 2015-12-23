@@ -127,7 +127,7 @@
   set showmode                  " Display the current mode
   set cursorline                " Highlight current line
   set linespace=0               " No extra spaces between rows
-  set nu                        " Line numbers on
+  set number                    " Line numbers on
   set showmatch                 " Show matching brackets/parenthesis
   set winminheight=0            " Windows can be 0 line high
   set ignorecase                " Case insensitive search

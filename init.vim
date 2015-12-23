@@ -138,6 +138,7 @@
   set foldenable                " Auto fold code
   set list
   set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+  set diffopt=filler,vertical   " Vertical diff view
 
   highlight clear SignColumn    " SignColumn should match background
   highlight clear LineNr        " Current line number row will have same background color in relative mode

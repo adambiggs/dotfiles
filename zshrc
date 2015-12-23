@@ -90,9 +90,10 @@ fi
 
 ### ALIASES ###
 
-# Basic shortcuts
+# General shortcuts
 alias sudo='sudo ' # @see http://askubuntu.com/a/22043
 alias ..='cd ..'
+alias echopath='echo $PATH | tr ":" "\012"'
 alias kmux='tmux kill-server'
 alias vimclean='rm -rf ~/.config/nvim/session/* ~/.config/nvim/swap/* ~/.config/nvim/undo/*  ~/.config/nvim/views/*'
 

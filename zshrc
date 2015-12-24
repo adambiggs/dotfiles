@@ -70,8 +70,8 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 ### PATHS ###
 
 # Ruby
-RVMPATH=$HOME/.rvm/bin
-echo $PATH | grep -q $RVMPATH || export PATH=$PATH:$RVMPATH
+RUBYPATH=$HOME/.gem/ruby/2.0.0/bin
+echo $PATH | grep -q $RUBYPATH || export PATH=$PATH:$RUBYPATH
 
 # Go
 export GOPATH=$HOME/golang

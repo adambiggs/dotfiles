@@ -37,7 +37,7 @@ function install_ruby_gem() {
   if [ $? == 0 ]; then
     echo -e "${blue}Already installed:${clear} $gem_name"
   else
-    gem install $gem_name
+    gem install --user-install $gem_name
   fi
 }
 

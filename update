@@ -37,7 +37,7 @@ echo -e "${green}Done.${clear}"
 
 # gem
 echo -e "\n${blue}Updating Ruby gems...${clear}"
-gem update
+gem update --user-install
 echo -e "${green}Done.${clear}"
 
 # pip

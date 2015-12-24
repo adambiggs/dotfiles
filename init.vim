@@ -115,6 +115,7 @@
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
   Plug 'adambiggs/vim-snippets'
+  Plug 'Shougo/context_filetype.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
 
   " Coding

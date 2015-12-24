@@ -112,7 +112,8 @@
   "Plug 'marijnh/tern_for_vim'
   Plug 'SirVer/ultisnips'
   Plug 'adambiggs/vim-snippets'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
 
   " Coding
   Plug 'adambiggs/vim-autoclose'
@@ -455,6 +456,21 @@
 
       " Mappings {
         let g:ycm_key_list_previous_completion = ['<C-Tab>', '<Up>']
+      " }
+
+    endif
+  " }
+
+  " Deoplete {
+    if isdirectory(expand(b:plugin_directory . '/deoplete.nvim'))
+
+      " Config {
+        let g:deoplete#enable_at_startup = 1
+      " }
+
+      " Mappings {
+        inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+        inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
       " }
 
     endif

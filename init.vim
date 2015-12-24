@@ -110,9 +110,11 @@
 
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'
-  Plug 'SirVer/ultisnips'
-  Plug 'adambiggs/vim-snippets'
+  "Plug 'SirVer/ultisnips'
+  "Plug 'adambiggs/vim-snippets'
   "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
   Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
 
   " Coding
@@ -471,6 +473,18 @@
       " Mappings {
         inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
         inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+      " }
+
+    endif
+  " }
+
+  " Neosnippet {
+    if isdirectory(expand(b:plugin_directory . '/neosnippet'))
+
+      " Mappings {
+        imap <C-s> <Plug>(neosnippet_expand_or_jump)
+        smap <C-s> <Plug>(neosnippet_expand_or_jump)
+        xmap <C-s> <Plug>(neosnippet_expand_target)
       " }
 
     endif

@@ -87,10 +87,7 @@ echo -e "${green}Done.${clear}"
 
 # Homebrew Casks
 echo -e "\n${blue}Installing Homebrew Casks...${clear}"
-if [ -z `brew ls | grep brew-cask` ]; then
-  brew install caskroom/cask/brew-cask
-  brew tap caskroom/versions
-fi
+brew tap | grep -q caskroom/versions || brew tap caskroom/versions
 if [[ $OSTYPE == darwin* ]]; then
   # Mac spcific apps
   install_brew_cask iterm2-beta

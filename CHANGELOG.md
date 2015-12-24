@@ -1,3 +1,34 @@
+<a name="9.0.0"></a>
+# [9.0.0](https://github.com/adambiggs/dotfiles/compare/8.0.1...v9.0.0) (2015-12-24)
+
+
+### Bug Fixes
+
+* **brew:** `cask` is now included with `brew` ([c6fc381](https://github.com/adambiggs/dotfiles/commit/c6fc381))
+* **install:** script tries to set `zsh` as default shell when already set ([32b53f1](https://github.com/adambiggs/dotfiles/commit/32b53f1))
+* **zsh:** completions not working ([6c1b0dc](https://github.com/adambiggs/dotfiles/commit/6c1b0dc))
+* **zsh:** don't add duplicate entries to `$PATH` ([a017622](https://github.com/adambiggs/dotfiles/commit/a017622))
+* **zsh:** load `zsh-history-substring-search` after `zsh-syntax-highlighting` ([06c3971](https://github.com/adambiggs/dotfiles/commit/06c3971))
+
+### Features
+
+* **find-and-replace:** run `sed` command on each file separately ([9f772b4](https://github.com/adambiggs/dotfiles/commit/9f772b4))
+* **ruby:** switched from `rvm` back to system `ruby` ([18bebaf](https://github.com/adambiggs/dotfiles/commit/18bebaf))
+* **update:** clear `zplug` cache after updating ([2fdbf28](https://github.com/adambiggs/dotfiles/commit/2fdbf28))
+* **vim:** installed `airblade/vim-rooter` plugin ([15f4d73](https://github.com/adambiggs/dotfiles/commit/15f4d73))
+* **vim:** open diffs vertically ([4a3c647](https://github.com/adambiggs/dotfiles/commit/4a3c647))
+* **zsh:** added `echopath` alias to print `$PATH` in a nice way ([154b331](https://github.com/adambiggs/dotfiles/commit/154b331))
+* **zsh:** added gulp task completion plugin ([b13608e](https://github.com/adambiggs/dotfiles/commit/b13608e))
+
+
+### BREAKING CHANGES
+
+* brew: you should run `$ brew uninstall brew-cask --force`
+* ruby: should run `$ rvm implode` to get rid of `rvm`
+* ruby: need to run `./install` script again to reinstall gems
+
+
+
 <a name="8.0.1"></a>
 ## [8.0.1](https://github.com/adambiggs/dotfiles/compare/8.0.0...v8.0.1) (2015-12-10)
 

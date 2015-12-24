@@ -52,6 +52,17 @@ function install_pip_pkg() {
   fi
 }
 
+# Install a Pip v3 package if not already installed.
+function install_pip3_pkg() {
+  pip_pkg_name=$1
+  pip_pkg_installed=`pip3 list | grep $pip_pkg_name`
+  if [[ -z $pip_pkg_installed ]]; then
+    pip3 install $pip_pkg_name
+  else
+    echo -e "${blue}Already installed:${clear} $pip_pkg_name"
+  fi
+}
+
 # Homebrew
 echo -e "\n${blue}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
@@ -75,6 +86,7 @@ else
   install_brew_pkg git '--with-brewed-curl --with-brewed-openssl'
 fi
 install_brew_pkg python
+install_brew_pkg python3
 install_brew_pkg neovim '--HEAD'
 install_brew_pkg zsh
 install_brew_pkg ctags
@@ -157,6 +169,7 @@ install_pip_pkg neovim
 install_pip_pkg awscli
 install_pip_pkg tmuxp
 install_pip_pkg docker-compose
+install_pip3_pkg neovim
 echo -e "${green}Done.${clear}"
 
 # Tmux plugins

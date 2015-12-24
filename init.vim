@@ -104,7 +104,7 @@
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  "Plug 'ctrlpvim/ctrlp.vim' " FZF currently broken in NeoVim :(
+  "Plug 'ctrlpvim/ctrlp.vim'
   "Plug 'tacahiroy/ctrlp-funky'
   "Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
 

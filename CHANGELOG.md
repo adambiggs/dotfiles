@@ -1,3 +1,14 @@
+<a name="9.1.0"></a>
+# [9.1.0](https://github.com/adambiggs/dotfiles/compare/9.0.0...v9.1.0) (2015-12-24)
+
+
+### Features
+
+* **install:** installed python v3 and `pip3` version of `neovim` package ([8d0df08](https://github.com/adambiggs/dotfiles/commit/8d0df08))
+* **vim:** switch from `YouCompleteMe` to `deoplete` ([67713de](https://github.com/adambiggs/dotfiles/commit/67713de))
+
+
+
 <a name="9.0.0"></a>
 # [9.0.0](https://github.com/adambiggs/dotfiles/compare/8.0.1...v9.0.0) (2015-12-24)
 

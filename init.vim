@@ -7,6 +7,75 @@
   let b:plugin_directory = b:config_directory . '/plugged'
 " }
 
+" Functions {
+
+  " Update NeoVim remote plugins {
+    function! UpdateRPlugin(info)
+      if has('nvim')
+        silent UpdateRemotePlugins
+        echomsg 'rplugin updated: ' . a:info['name'] . ', restart vim for changes'
+      endif
+    endfunction
+  " }
+
+  " Initialize directories {
+    function! InitializeDirectories()
+      let parent = $HOME
+      let prefix = '.config/nvim/'
+      let dir_list = {
+        \ 'backup': 'backupdir',
+        \ 'views': 'viewdir',
+        \ 'swap': 'directory' }
+
+      if has('persistent_undo')
+        let dir_list['undo'] = 'undodir'
+      endif
+
+      let common_dir = parent . '/' . prefix
+
+      for [dirname, settingname] in items(dir_list)
+        let directory = common_dir . dirname . '/'
+        if exists("*mkdir")
+          if !isdirectory(directory)
+            call mkdir(directory)
+          endif
+        endif
+        if !isdirectory(directory)
+          echo "Warning: Unable to create backup directory: " . directory
+          echo "Try: mkdir -p " . directory
+        else
+          let directory = substitute(directory, " ", "\\\\ ", "g")
+          exec "set " . settingname . "=" . directory
+        endif
+      endfor
+    endfunction
+    call InitializeDirectories()
+  " }
+
+  " Strip whitespace {
+    function! StripTrailingWhitespace()
+      " Preparation: save last search, and cursor position.
+      let _s=@/
+      let l = line(".")
+      let c = col(".")
+      " do the business:
+      %s/\s\+$//e
+      " clean up: restore previous search history, and cursor position
+      let @/=_s
+      call cursor(l, c)
+    endfunction
+    autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+  " }
+
+  " Open Markdown file in Marked.app {
+    function! s:setupMarkdownPreview()
+      nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
+    endfunction
+    autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
+  " }
+
+" }
+
 " Plugins {
 
   call plug#begin(b:plugin_directory)
@@ -759,66 +828,6 @@
       " }
 
     endif
-  " }
-
-" }
-
-" Functions {
-
-  " Initialize directories {
-    function! InitializeDirectories()
-      let parent = $HOME
-      let prefix = '.config/nvim/'
-      let dir_list = {
-        \ 'backup': 'backupdir',
-        \ 'views': 'viewdir',
-        \ 'swap': 'directory' }
-
-      if has('persistent_undo')
-        let dir_list['undo'] = 'undodir'
-      endif
-
-      let common_dir = parent . '/' . prefix
-
-      for [dirname, settingname] in items(dir_list)
-        let directory = common_dir . dirname . '/'
-        if exists("*mkdir")
-          if !isdirectory(directory)
-            call mkdir(directory)
-          endif
-        endif
-        if !isdirectory(directory)
-          echo "Warning: Unable to create backup directory: " . directory
-          echo "Try: mkdir -p " . directory
-        else
-          let directory = substitute(directory, " ", "\\\\ ", "g")
-          exec "set " . settingname . "=" . directory
-        endif
-      endfor
-    endfunction
-    call InitializeDirectories()
-  " }
-
-  " Strip whitespace {
-    function! StripTrailingWhitespace()
-      " Preparation: save last search, and cursor position.
-      let _s=@/
-      let l = line(".")
-      let c = col(".")
-      " do the business:
-      %s/\s\+$//e
-      " clean up: restore previous search history, and cursor position
-      let @/=_s
-      call cursor(l, c)
-    endfunction
-    autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-  " }
-
-  " Open Markdown file in Marked.app {
-    function! s:setupMarkdownPreview()
-      nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
-    endfunction
-    autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
   " }
 
 " }

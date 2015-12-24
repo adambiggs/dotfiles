@@ -28,7 +28,6 @@ echo -e "${green}Done.${clear}"
 
 # HEAD Homebrew packages
 update_brew_pkg_head neovim
-#update_brew_pkg_head tmux
 
 # Git submodules
 echo -e "\n${blue}Updating Git submodules...${clear}"

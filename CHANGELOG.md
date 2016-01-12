@@ -1,3 +1,18 @@
+<a name="9.2.0"></a>
+# [9.2.0](https://github.com/adambiggs/dotfiles/compare/9.1.0...v9.2.0) (2016-01-12)
+
+
+### Bug Fixes
+
+* **vim:** custom vim snippets not working ([dcb9b4b](https://github.com/adambiggs/dotfiles/commit/dcb9b4b))
+
+### Features
+
+* **vim:** added `context_filetype.vim` plugin ([a114abd](https://github.com/adambiggs/dotfiles/commit/a114abd))
+* **vim:** switch from `ultisnips` to `neosnippet` ([3996746](https://github.com/adambiggs/dotfiles/commit/3996746))
+
+
+
 <a name="9.1.0"></a>
 # [9.1.0](https://github.com/adambiggs/dotfiles/compare/9.0.0...v9.1.0) (2015-12-24)
 

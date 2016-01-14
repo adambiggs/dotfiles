@@ -69,6 +69,9 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 ### PATHS ###
 
+# Repos
+export REPO_PATH=$HOME/Repos
+
 # Ruby
 RUBYPATH=$HOME/.gem/ruby/2.0.0/bin
 echo $PATH | grep -q $RUBYPATH || export PATH=$PATH:$RUBYPATH

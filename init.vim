@@ -413,7 +413,7 @@
         let g:airline_symbols = { }
       endif
       let g:airline_symbols.branch   = ''
-      let g:airline_symbols.readonly = ''
+      let g:airline_symbols.readonly = ''
     endif
   " }
 

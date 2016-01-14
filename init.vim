@@ -84,7 +84,7 @@
   Plug 'chriskempson/base16-vim'
 
   " UI
-  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline'
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree'
   Plug 'nathanaelkane/vim-indent-guides'
@@ -401,7 +401,7 @@
     if isdirectory(expand(b:plugin_directory . '/vim-airline'))
       let g:airline_exclude_preview                  = 1
       let g:airline_detect_iminsert                  = 1
-      let g:airline_detect_crypt                     = 0 " https://github.com/bling/vim-airline/issues/792
+      let g:airline_detect_crypt                     = 0 " https://github.com/vim-airline/vim-airline/issues/792
       let g:airline_powerline_fonts                  = 1
       let g:airline#extensions#tabline#enabled       = 1
       let g:airline#extensions#tabline#show_tabs     = 1

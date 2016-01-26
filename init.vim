@@ -132,11 +132,13 @@
   Plug 'airblade/vim-gitgutter'
 
   " Syntax
+  Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
   Plug 'beyondwords/vim-twig', { 'for': 'twig' }
   Plug 'briancollins/vim-jst', { 'for': 'jst' }
   Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
   Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
   Plug 'elzr/vim-json', { 'for': 'json' }
+  Plug 'fatih/vim-go', { 'for': 'go' }
   Plug 'groenewege/vim-less', { 'for': 'less' }
   Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
   Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown' }
@@ -149,7 +151,6 @@
   Plug 'StanAngeloff/php.vim', { 'for': 'php' }
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'wavded/vim-stylus', { 'for': 'stylus' }
-  Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
 
   " Building
   Plug 'benekastah/neomake'

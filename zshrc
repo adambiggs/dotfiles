@@ -5,6 +5,7 @@ export ZPLUG_HOME=~/.config/zplug
 source ~/.dotfiles/libs/zplug/zplug
 
 zplug "akoenig/gulp.plugin.zsh"
+zplug "djui/alias-tips"
 zplug "jimmijj/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/brew-cask", from:oh-my-zsh
@@ -53,6 +54,7 @@ export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/20
 export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
 export FZF_DEFAULT_COMMAND='ag -l -g ""' # Use ag as the default source for fzf
 export FZF_DEFAULT_OPTS='--multi'
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT='    '
 
 
 ### KEY BINDINGS ###

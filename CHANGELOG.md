@@ -1,3 +1,22 @@
+<a name="9.3.0"></a>
+# [9.3.0](https://github.com/adambiggs/dotfiles/compare/9.2.0...v9.3.0) (2016-02-02)
+
+
+### Bug Fixes
+
+* **vim:** `vim-airline` readonly icon displays missing character ([daaadfc](https://github.com/adambiggs/dotfiles/commit/daaadfc))
+* **vim:** `vim-airline` themes moved to a separate repo ([9eee713](https://github.com/adambiggs/dotfiles/commit/9eee713))
+
+### Features
+
+* **vim:** installed `vim-go` plugin ([04138c2](https://github.com/adambiggs/dotfiles/commit/04138c2))
+* **zsh:** export `REPO_PATH` environment variable ([71039ca](https://github.com/adambiggs/dotfiles/commit/71039ca))
+* **zsh:** installed `alias-tips` plugin ([f512644](https://github.com/adambiggs/dotfiles/commit/f512644))
+* **zsh:** installed `zsh-autosuggestions` plugin ([37ad353](https://github.com/adambiggs/dotfiles/commit/37ad353))
+* **zsh:** uninstalled `k` and `bd` plugins ([6e4ca5d](https://github.com/adambiggs/dotfiles/commit/6e4ca5d))
+
+
+
 <a name="9.2.0"></a>
 # [9.2.0](https://github.com/adambiggs/dotfiles/compare/9.1.0...v9.2.0) (2016-01-12)
 

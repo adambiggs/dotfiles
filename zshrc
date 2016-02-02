@@ -18,6 +18,7 @@ zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/symfony2", from:oh-my-zsh
 zplug "sdurrheimer/docker-compose-zsh-completion"
+zplug "tarruda/zsh-autosuggestions", at:v0.1.x
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
 
@@ -42,20 +43,28 @@ zplug load --verbose
 
 
 ### CONFIG ###
+unset COMPLETION_WAITING_DOTS # https://github.com/tarruda/zsh-autosuggestions#known-issues
+#export COMPLETION_WAITING_DOTS=true
 export DEFAULT_USER="adam"
-export COMPLETION_WAITING_DOTS=true
-export DISABLE_UPDATE_PROMPT=true
-export DISABLE_CORRECTION=true
-# export DISABLE_UNTRACKED_FILES_DIRTY=true # Improves repo status check time.
-export UPDATE_ZSH_DAYS=1
-export EDITOR='nvim'
 export DISABLE_AUTO_TITLE=true
-export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/2007#issuecomment-74863439
-export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
+export DISABLE_CORRECTION=true
+#export DISABLE_UNTRACKED_FILES_DIRTY=true # Improves repo status check time.
+export DISABLE_UPDATE_PROMPT=true
+export EDITOR='nvim'
 export FZF_DEFAULT_COMMAND='ag -l -g ""' # Use ag as the default source for fzf
 export FZF_DEFAULT_OPTS='--multi'
+export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
+export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/2007#issuecomment-74863439
+export UPDATE_ZSH_DAYS=1
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='    '
 
+
+### AUTOSUGGESTIONS ###
+if zplug check tarruda/zsh-autosuggestions; then
+  ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down) # Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
+  ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}") # Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
+  autosuggest_start # Enable autosuggestions
+fi
 
 ### KEY BINDINGS ###
 KEYTIMEOUT=1 # Prevents key timeout lag.

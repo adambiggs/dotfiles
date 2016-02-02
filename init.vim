@@ -85,6 +85,7 @@
 
   " UI
   Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree'
   Plug 'nathanaelkane/vim-indent-guides'

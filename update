@@ -34,6 +34,9 @@ echo -e "\n${blue}Updating Git submodules...${clear}"
 git submodule update --remote --rebase
 echo -e "${green}Done.${clear}"
 
+# Fonts
+source $SCRIPT_PATH/install-fonts
+
 # gem
 echo -e "\n${blue}Updating Ruby gems...${clear}"
 gem update --user-install

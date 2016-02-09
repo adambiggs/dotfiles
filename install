@@ -140,10 +140,7 @@ git submodule update --remote --rebase
 echo -e "${green}Done.${clear}"
 
 # Fonts
-#echo -e "\n${blue}Installing patched fonts...${clear}"
-#source $SCRIPT_PATH/scripts/install-fonts
-#install_patched_fonts
-#echo -e "${green}Done.${clear}"
+source $SCRIPT_PATH/install-fonts
 
 # iTerm CLI
 if [[ $OSTYPE == darwin* ]]; then

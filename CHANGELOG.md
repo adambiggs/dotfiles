@@ -1,3 +1,18 @@
+<a name="9.3.1"></a>
+## [9.3.1](https://github.com/adambiggs/dotfiles/compare/9.3.0...v9.3.1) (2016-02-09)
+
+
+### Bug Fixes
+
+* **zsh:** `zsh-autosuggestions` conflicts with `fzf` shell integration ([f085dd8](https://github.com/adambiggs/dotfiles/commit/f085dd8))
+
+### Features
+
+* **fonts:** added script to install/update the icon font I use ([e3edf07](https://github.com/adambiggs/dotfiles/commit/e3edf07))
+* **zsh:** updated `zsh-autosuggestions` and fixed path change ([51b5c2a](https://github.com/adambiggs/dotfiles/commit/51b5c2a))
+
+
+
 <a name="9.3.0"></a>
 # [9.3.0](https://github.com/adambiggs/dotfiles/compare/9.2.0...v9.3.0) (2016-02-02)
 

@@ -18,7 +18,7 @@ zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/symfony2", from:oh-my-zsh
 zplug "sdurrheimer/docker-compose-zsh-completion"
-zplug "tarruda/zsh-autosuggestions", at:v0.1.x
+zplug "tarruda/zsh-autosuggestions", of:"dist/autosuggestions.zsh"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
 

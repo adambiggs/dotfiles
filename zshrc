@@ -18,7 +18,7 @@ zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/symfony2", from:oh-my-zsh
 zplug "sdurrheimer/docker-compose-zsh-completion"
-zplug "tarruda/zsh-autosuggestions", of:"dist/autosuggestions.zsh"
+zplug "tarruda/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
 
@@ -63,7 +63,6 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT='    '
 if zplug check tarruda/zsh-autosuggestions; then
   ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down) # Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
   ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}") # Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
-  autosuggest_start # Enable autosuggestions
 fi
 
 ### KEY BINDINGS ###

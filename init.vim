@@ -1,24 +1,24 @@
-" Modeline and Notes {
-"   vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker=\ {,\ } foldmethod=marker foldlevel=0 spell:
-" }
+" Modeline and Notes {{
+"   vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker={{,}} foldmethod=marker foldlevel=0 spell:
+" }}
 
-" Config Directories {
+" Config Directories {{
   let b:config_directory = '~/.config/nvim'
   let b:plugin_directory = b:config_directory . '/plugged'
-" }
+" }}
 
-" Functions {
+" Functions {{
 
-  " Update NeoVim remote plugins {
+  " Update NeoVim remote plugins {{
     function! UpdateRPlugin(info)
       if has('nvim')
         silent UpdateRemotePlugins
         echomsg 'rplugin updated: ' . a:info['name'] . ', restart vim for changes'
       endif
     endfunction
-  " }
+  " }}
 
-  " Initialize directories {
+  " Initialize directories {{
     function! InitializeDirectories()
       let parent = $HOME
       let prefix = '.config/nvim/'
@@ -50,9 +50,9 @@
       endfor
     endfunction
     call InitializeDirectories()
-  " }
+  " }}
 
-  " Strip whitespace {
+  " Strip whitespace {{
     function! StripTrailingWhitespace()
       " Preparation: save last search, and cursor position.
       let _s=@/
@@ -65,18 +65,18 @@
       call cursor(l, c)
     endfunction
     autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-  " }
+  " }}
 
-  " Open Markdown file in Marked.app {
+  " Open Markdown file in Marked.app {{
     function! s:setupMarkdownPreview()
       nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
     endfunction
     autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
-  " }
+  " }}
 
-" }
+" }}
 
-" Plugins {
+" Plugins {{
 
   call plug#begin(b:plugin_directory)
 
@@ -170,9 +170,9 @@
 
   call plug#end()
 
-" }
+" }}
 
-" General {
+" General {{
 
   scriptencoding utf-8
   set shell=/bin/zsh    " Use zsh as shell
@@ -193,9 +193,9 @@
   set viewoptions=cursor,folds
   set foldopen-=block
 
-" }
+" }}
 
-" Vim UI {
+" Vim UI {{
 
   set mousehide                 " Hide the mouse cursor while typing
   set background=dark           " Assume a dark background
@@ -261,9 +261,9 @@
     set t_Co=256      " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
   endif
 
-" }
+" }}
 
-" Formatting {
+" Formatting {{
 
   set nowrap        " Do not wrap long lines
   set shiftwidth=2  " Use indents of 2 spaces
@@ -292,32 +292,32 @@
   autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
   autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
-" }
+" }}
 
-" Syntax {
+" Syntax {{
 
-  " Vagrantfile {
+  " Vagrantfile {{
     augroup vagrant
       autocmd!
       autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
     augroup END
-  " }
+  " }}
 
-  " Handlebars {
+  " Handlebars {{
     autocmd FileType html.handlebars setlocal foldmethod=indent
-  " }
+  " }}
 
-  " Stylus {
+  " Stylus {{
     autocmd FileType stylus setlocal foldmethod=indent
-  " }
+  " }}
 
-  " PHP {
+  " PHP {{
     autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-  " }
+  " }}
 
-" }
+" }}
 
-" Keymaps {
+" Keymaps {{
 
   let mapleader = ','
 
@@ -358,11 +358,11 @@
   " Find merge conflict markers
   map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
 
-" }
+" }}
 
-" Plugin Config {
+" Plugin Config {{
 
-  " Nerd Icons {
+  " Nerd Icons {{
     if isdirectory(expand(b:plugin_directory . '/vim-devicons'))
       let g:WebDevIconsNerdTreeAfterGlyphPadding  = ' '
       let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -371,24 +371,24 @@
       " https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
       autocmd FileType nerdtree setlocal nolist
     endif
-  " }
+  " }}
 
-  " LocalRC {
+  " LocalRC {{
     if isdirectory(expand(b:plugin_directory . '/vim-localrc'))
       let g:localrc_filename = '.vimrc.local'
       let g:localrc_filetype = '/^\.vimrc\..*\<%s\>.*\.local$'
     endif
-  " }
+  " }}
 
-  " ProSession {
+  " ProSession {{
   if isdirectory(expand(b:plugin_directory . '/vim-prosession'))
     let g:prosession_dir             = b:config_directory . "/session/"
     let g:prosession_per_branch      = 1
     let g:prosession_default_session = 0
   endif
-  " }
+  " }}
 
-  " Indent Guides {
+  " Indent Guides {{
     if isdirectory(expand(b:plugin_directory . '/vim-indent-guides'))
       let g:indent_guides_start_level           = 1
       let g:indent_guides_auto_colors           = 0
@@ -397,9 +397,9 @@
       autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
       autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
     endif
-  " }
+  " }}
 
-  " Airline {
+  " Airline {{
     if isdirectory(expand(b:plugin_directory . '/vim-airline'))
       let g:airline_exclude_preview                  = 1
       let g:airline_detect_iminsert                  = 1
@@ -417,9 +417,9 @@
       let g:airline_symbols.branch   = ''
       let g:airline_symbols.readonly = ''
     endif
-  " }
+  " }}
 
-  " Tmuxline {
+  " Tmuxline {{
     if isdirectory(expand(b:plugin_directory . '/tmuxline.vim'))
       let g:airline#extensions#tmuxline#enabled       = 1
       let g:airline#extensions#tmuxline#snapshot_file = "~/.dotfiles/tmuxline.conf"
@@ -433,12 +433,12 @@
         \'y'    : [' #(~/.dotfiles/scripts/cpu-load.py) #[fg=colour244]  #[fg=colour7] #(~/.dotfiles/scripts/battery-icon.sh) '],
         \'z'    : ['#(~/.dotfiles/scripts/wifi-signal.sh) '] }
     endif
-  " }
+  " }}
 
-  " YouCompleteMe {
+  " YouCompleteMe {{
     if isdirectory(expand(b:plugin_directory . '/YouCompleteMe'))
 
-      " Config {
+      " Config {{
         let g:ycm_min_num_of_chars_for_completion               = 1
         let g:ycm_complete_in_comments                          = 1
         let g:ycm_cache_omnifunc                                = 0
@@ -457,55 +457,55 @@
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
         autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
         autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         let g:ycm_key_list_previous_completion = ['<C-Tab>', '<Up>']
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " Deoplete {
+  " Deoplete {{
     if isdirectory(expand(b:plugin_directory . '/deoplete.nvim'))
 
-      " Config {
+      " Config {{
         let g:deoplete#enable_at_startup = 1
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
         inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " Neosnippet {
+  " Neosnippet {{
     if isdirectory(expand(b:plugin_directory . '/neosnippet'))
 
-      " Config {
+      " Config {{
         let g:neosnippet#snippets_directory = b:plugin_directory . '/vim-snippets/snippets'
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         imap <C-s> <Plug>(neosnippet_expand_or_jump)
         smap <C-s> <Plug>(neosnippet_expand_or_jump)
         xmap <C-s> <Plug>(neosnippet_expand_target)
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " Syntastic {
+  " Syntastic {{
     if isdirectory(expand(b:plugin_directory . '/syntastic'))
       let g:syntastic_mode_map = { 'mode': 'active',
         \ 'active_filetypes': [],
         \ 'passive_filetypes': ['html', 'coffee'] }
     endif
-  " }
+  " }}
 
-  " Neomake {
+  " Neomake {{
     if isdirectory(expand(b:plugin_directory . '/neomake'))
       autocmd BufWritePost *.coffee Neomake
 
@@ -516,28 +516,28 @@
 
       let g:neomake_coffee_enabled_makers = ['coffeelint', 'coffeetags']
     endif
-  " }
+  " }}
 
-  " UndoTree {
+  " UndoTree {{
     if isdirectory(expand(b:plugin_directory . '/undotree'))
 
-      " Config {
+      " Config {{
         let g:undotree_SplitWidth         = 35
         let g:undotree_TreeNodeShape      = '◉'
         let g:undotree_SetFocusWhenToggle = 1
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         nnoremap <Leader>u :UndotreeToggle<CR>
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " NERDTree {
+  " NERDTree {{
     if isdirectory(expand(b:plugin_directory . '/nerdtree'))
 
-      " Config {
+      " Config {{
         let NERDTreeAutoCenterThreshold = 50
         let NERDTreeAutoDeleteBuffer    = 1
         let NERDTreeDirArrows           = 1
@@ -562,19 +562,19 @@
           let g:NERDTreeBookmarksFile = '.git/.nerdtree-bookmarks'
         endif
 
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         map <C-e> :NERDTreeToggle<CR>
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " FZF {
+  " FZF {{
     if isdirectory(expand("~/.fzf/"))
 
-      " Config {
+      " Config {{
         " Select buffers with FZF
         " @see https://github.com/junegunn/fzf/wiki/Examples-(vim)#select-buffer
         function! s:buflist()
@@ -598,11 +598,11 @@
         endfunction
 
         nnoremap <silent> <C-@> :call fzf#run({
-          \  'source':  reverse(<sid>buflist()),
-          \  'sink*':    function('<sid>bufopen'),
-          \  'options': '+m --ansi --expect=ctrl-t,ctrl-v,ctrl-x,ctrl-d',
-          \  'down':    len(<sid>buflist()) + 2
-          \})<CR>
+          \   'source':  reverse(<sid>buflist()),
+          \   'sink*':    function('<sid>bufopen'),
+          \   'options': '+m --ansi --expect=ctrl-t,ctrl-v,ctrl-x,ctrl-d',
+          \   'down':    len(<sid>buflist()) + 2
+          \ })<CR>
 
 
         " Narrow Ag results within Vim
@@ -634,30 +634,30 @@
         endfunction
 
         command! -nargs=* Ag call fzf#run({
-        \ 'source':  printf('ag --nogroup --column --color %s', <q-args>),
-        \ 'sink*':    function('<sid>ag_handler'),
-        \ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
-        \            '--multi --bind ctrl-a:select-all,ctrl-d:deselect-all '.
-        \            '--color hl:68,hl+:110',
-        \ 'down':    '50%'
+        \   'source':  printf('ag --nogroup --column --color %s', <q-args>),
+        \   'sink*':    function('<sid>ag_handler'),
+        \   'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
+        \              '--multi --bind ctrl-a:select-all,ctrl-d:deselect-all '.
+        \              '--color hl:68,hl+:110',
+        \   'down':    '50%'
         \ })
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         nnoremap <silent> <C-p> :FZF<CR>
         autocmd WinEnter \[FZF\] startinsert
         autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
         autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
         autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " CtrlP {
+  " CtrlP {{
     if isdirectory(expand(b:plugin_directory . '/ctrlp.vim'))
 
-      " Config {
+      " Config {{
         let g:ctrlp_user_command = 'ag %s
               \ --ignore-case
               \ --hidden
@@ -671,65 +671,65 @@
         let g:ctrlp_max_files   = 0
         let g:ctrlp_lazy_update = 10
         let g:ctrlp_extensions  = ['tag']
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         nnoremap <C-@> :CtrlPBuffer<CR>
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " AutoClose {
+  " AutoClose {{
     if isdirectory(expand(b:plugin_directory . '/vim-autoclose'))
       let g:autoclose_vim_commentmode = 1
     endif
-  " }
+  " }}
 
-  " CoffeeScript {
+  " CoffeeScript {{
     if isdirectory(expand(b:plugin_directory . '/vim-coffee-script'))
 
-      " Config {
+      " Config {{
         let coffee_compile_vert = 1
         let coffee_watch_vert   = 1
         let coffee_run_vert     = 1
         autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
         autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         nnoremap <Leader>cw :CoffeeWatch<CR>
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " Over.vim {
+  " Over.vim {{
     if isdirectory(expand(b:plugin_directory . '/vim-over'))
 
-      " Config {
+      " Config {{
         let g:over#command_line#paste_escape_chars = '/.*$^~'
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         nnoremap <Leader>o :OverCommandLine<CR>%s/
         nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
         vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " CoffeeTags {
+  " CoffeeTags {{
     if isdirectory(expand(b:plugin_directory . '/CoffeeTags'))
       let g:CoffeeAutoTagIncludeVars = 1
     endif
-  " }
+  " }}
 
-  " Tagbar {
+  " Tagbar {{
     if isdirectory(expand(b:plugin_directory . '/tagbar'))
 
-      " Config {
+      " Config {{
         let g:tagbar_autoshowtag = 1  " Open folds if necessary when navigating to a tag
         let g:tagbar_autoclose   = 1  " Focus cursor inside tagbar when opened, and auto close after navigation
         let g:tagbar_foldlevel   = 1  " Custom fold level
@@ -753,16 +753,16 @@
           \     'o' : 'object',
           \   }
           \ }
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         nnoremap <Leader><Leader>t :Tagbar<CR>
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-  " EasyMotion {
+  " EasyMotion {{
     if isdirectory(expand(b:plugin_directory . '/vim-easymotion'))
 
       " Config {{
@@ -804,15 +804,15 @@
       " }}
 
     endif
-  " }
+  " }}
 
-  " Handlebars {
+  " Handlebars {{
     if isdirectory(expand(b:plugin_directory . '/vim-mustache-handlebars'))
       let g:mustache_abbreviations = 1
     endif
-  " }
+  " }}
 
-  " Vdebug {
+  " Vdebug {{
     if isdirectory(expand(b:plugin_directory . '/vdebug'))
       let g:vdebug_options                       = { }
       let g:vdebug_options['server']             = ''
@@ -820,16 +820,16 @@
       let g:vdebug_options['continuous_mode']    = 1
       let g:vdebug_options['watch_window_style'] = 'compact'
     endif
-  " }
+  " }}
 
-  " GitGutter {
+  " GitGutter {{
     if isdirectory(expand(b:plugin_directory . '/vim-gitgutter'))
       let g:gitgutter_max_signs = 10000
       let g:gitgutter_map_keys  = 0
     endif
-  " }
+  " }}
 
-  " EasyAlign {
+  " EasyAlign {{
     if isdirectory(expand(b:plugin_directory . '/vim-easy-align'))
 
       " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
@@ -844,9 +844,9 @@
       nmap <Leader>a= vip<Leader>a=
 
     endif
-  " }
+  " }}
 
-  " Fugitive {
+  " Fugitive {{
     if isdirectory(expand(b:plugin_directory . '/vim-fugitive'))
       nnoremap <silent> <leader>gs :Gstatus<CR>
       nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -861,23 +861,23 @@
       nnoremap <silent> <leader>gi :Git add -p %<CR>
       nnoremap <silent> <leader>gg :SignifyToggle<CR>
     endif
-  " }
+  " }}
 
-  " UtilSnips {
+  " UtilSnips {{
     if isdirectory(expand(b:plugin_directory . '/ultisnips'))
 
-      " Config {
+      " Config {{
         let g:UltiSnipsEditSplit = 'vertical'
-      " }
+      " }}
 
-      " Mappings {
+      " Mappings {{
         " Change default UltiSnips mappings for compatibility with YCM
         let g:UltiSnipsExpandTrigger       = '<C-s>'
         let g:UltiSnipsJumpForwardTrigger  = '<C-s>'
         let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
-      " }
+      " }}
 
     endif
-  " }
+  " }}
 
-" }
+" }}

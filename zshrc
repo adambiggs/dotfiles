@@ -157,3 +157,6 @@ source ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh
 
 # iTerm cli integration.
 source /Users/adam/.iterm2_shell_integration.zsh
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -765,16 +765,43 @@
   " EasyMotion {
     if isdirectory(expand(b:plugin_directory . '/vim-easymotion'))
 
-      " Use <Leader> as easymotion prefix.
-      map <Leader> <Plug>(easymotion-prefix)
+      " Config {{
 
-      " Search
-      nmap s <Plug>(easymotion-s2)
-      vmap s <Plug>(easymotion-s2)
+        " Over window search
+        function! s:incsearch_config(...) abort
+          return incsearch#util#deepextend(deepcopy({
+          \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+          \   'keymap': {
+          \     "\<CR>": '<Over>(easymotion)'
+          \   },
+          \   'is_expr': 0
+          \ }), get(a:, 1, {}))
+        endfunction
 
-      " Same-line navigation
-      map <Leader>h <Plug>(easymotion-linebackward)
-      map <Leader>l <Plug>(easymotion-lineforward)
+        noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+        noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+        noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
+
+      " }}
+
+      " Mappings {{
+
+        " Use <Leader> as easymotion prefix.
+        map <Leader> <Plug>(easymotion-prefix)
+
+        " Over window motions
+        nmap <Leader>f <Plug>(easymotion-overwin-f2)
+        "nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+        " Search
+        nmap s <Plug>(easymotion-sn)
+        vmap s <Plug>(easymotion-sn)
+
+        " Same-line navigation
+        map <Leader>h <Plug>(easymotion-linebackward)
+        map <Leader>l <Plug>(easymotion-lineforward)
+
+      " }}
 
     endif
   " }
@@ -799,20 +826,6 @@
     if isdirectory(expand(b:plugin_directory . '/vim-gitgutter'))
       let g:gitgutter_max_signs = 10000
       let g:gitgutter_map_keys  = 0
-    endif
-  " }
-
-  " Incsearch.vim {
-    if isdirectory(expand(b:plugin_directory . '/incsearch.vim'))
-      map / <Plug>(incsearch-forward)
-      map ? <Plug>(incsearch-backward)
-    endif
-  " }
-
-  " Incsearch-EasyMotion.vim {
-    if isdirectory(expand(b:plugin_directory . '/incsearch-easymotion.vim'))
-      map <Leader>/ <Plug>(incsearch-easymotion-/)
-      map <Leader>? <Plug>(incsearch-easymotion-?)
     endif
   " }
 

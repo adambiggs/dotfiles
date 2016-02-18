@@ -1,3 +1,19 @@
+<a name="9.3.2"></a>
+## [9.3.2](https://github.com/adambiggs/dotfiles/compare/9.3.1...v9.3.2) (2016-02-18)
+
+
+### Bug Fixes
+
+* **zsh:** breaking changes in latest `zsh-autosuggestions` update ([39540f1](https://github.com/adambiggs/dotfiles/commit/39540f1))
+
+### Features
+
+* **iterm:** enable bold fonts ([2bd490a](https://github.com/adambiggs/dotfiles/commit/2bd490a))
+* **vim:** update easymotion config ([a8465bc](https://github.com/adambiggs/dotfiles/commit/a8465bc))
+* **zsh:** reactivate `fzf` tab completion after `zsh-autosuggestions` bug fix ([14905b2](https://github.com/adambiggs/dotfiles/commit/14905b2))
+
+
+
 <a name="9.3.1"></a>
 ## [9.3.1](https://github.com/adambiggs/dotfiles/compare/9.3.0...v9.3.1) (2016-02-09)
 

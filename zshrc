@@ -27,10 +27,10 @@ zplug "adambiggs/zsh-theme", of:adambiggs.zsh-theme
 
 # Check for uninstalled plugins.
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
 fi
 
 # Source plugins.

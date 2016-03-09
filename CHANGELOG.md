@@ -1,3 +1,23 @@
+<a name="9.4.0"></a>
+# [9.4.0](https://github.com/adambiggs/dotfiles/compare/9.3.2...v9.4.0) (2016-03-09)
+
+
+### Bug Fixes
+
+* **tmux:** `tmuxline.vim` plugin breaks TPM plugins ([c80f1ea](https://github.com/adambiggs/dotfiles/commit/c80f1ea))
+* **zsh:** zsh theme stopped working ([92b5a75](https://github.com/adambiggs/dotfiles/commit/92b5a75))
+
+### Features
+
+* **tmux:** disable `reattach-to-user-namespace` because I don't need it anymore ([2ed1ac2](https://github.com/adambiggs/dotfiles/commit/2ed1ac2))
+* **tmux:** installed `tmux-yank` plugin ([f032813](https://github.com/adambiggs/dotfiles/commit/f032813))
+* **tmux:** switch CPU load from custom script to `tmux-cpu` plugin ([b9f84e0](https://github.com/adambiggs/dotfiles/commit/b9f84e0))
+* **vim:** installed `fzf.vim` and disabled custom commands ([348a047](https://github.com/adambiggs/dotfiles/commit/348a047))
+* **vim:** uninstalled `vim-tmux-focus-events` because NeoVim doesn't need it ([175fcaf](https://github.com/adambiggs/dotfiles/commit/175fcaf))
+* **zsh:** make sure all files exist before sourcing them ([ba5e48c](https://github.com/adambiggs/dotfiles/commit/ba5e48c))
+
+
+
 <a name="9.3.2"></a>
 ## [9.3.2](https://github.com/adambiggs/dotfiles/compare/9.3.1...v9.3.2) (2016-02-18)
 

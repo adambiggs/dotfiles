@@ -23,6 +23,7 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
 
 # Theme.
+setopt prompt_subst # Make sure propt is able to be generated properly.
 zplug "adambiggs/zsh-theme", of:adambiggs.zsh-theme
 
 # Check for uninstalled plugins.

@@ -421,7 +421,7 @@
 
   " Tmuxline {{
     if isdirectory(expand(b:plugin_directory . '/tmuxline.vim'))
-      let g:airline#extensions#tmuxline#enabled       = 1
+      let g:airline#extensions#tmuxline#enabled       = 0
       let g:airline#extensions#tmuxline#snapshot_file = "~/.dotfiles/tmuxline.conf"
       let g:tmuxline_preset = {
         \'a'    : ['   %a %b %e'],

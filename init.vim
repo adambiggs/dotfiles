@@ -104,14 +104,9 @@
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
-  "Plug 'ctrlpvim/ctrlp.vim'
-  "Plug 'tacahiroy/ctrlp-funky'
-  "Plug 'JazzCore/ctrlp-cmatcher', { 'do': 'CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ./install.sh' }
 
   " Autocomplete
   "Plug 'marijnh/tern_for_vim'
-  "Plug 'SirVer/ultisnips'
-  "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
   Plug 'adambiggs/vim-snippets'
@@ -154,7 +149,6 @@
 
   " Building
   Plug 'benekastah/neomake'
-  "Plug 'scrooloose/syntastic' " Hopefully can be replaced with neomake
 
   " Workflow
   Plug 'airblade/vim-rooter'
@@ -434,37 +428,6 @@
     endif
   " }}
 
-  " YouCompleteMe {{
-    if isdirectory(expand(b:plugin_directory . '/YouCompleteMe'))
-
-      " Config {{
-        let g:ycm_min_num_of_chars_for_completion               = 1
-        let g:ycm_complete_in_comments                          = 1
-        let g:ycm_cache_omnifunc                                = 0
-        let g:ycm_collect_identifiers_from_tags_files           = 1 " enable completion from tags
-        let g:ycm_collect_identifiers_from_comments_and_strings = 1
-        let g:ycm_seed_identifiers_with_syntax                  = 1
-        let g:ycm_add_preview_to_completeopt                    = 1
-        let g:ycm_autoclose_preview_window_after_completion     = 1
-        let g:ycm_disable_for_files_larger_than_kb              = 5000
-
-        " Enable omni completion.
-        autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-        autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-        autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-        autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-        autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-        autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-      " }}
-
-      " Mappings {{
-        let g:ycm_key_list_previous_completion = ['<C-Tab>', '<Up>']
-      " }}
-
-    endif
-  " }}
-
   " Deoplete {{
     if isdirectory(expand(b:plugin_directory . '/deoplete.nvim'))
 
@@ -493,14 +456,6 @@
         xmap <C-s> <Plug>(neosnippet_expand_target)
       " }}
 
-    endif
-  " }}
-
-  " Syntastic {{
-    if isdirectory(expand(b:plugin_directory . '/syntastic'))
-      let g:syntastic_mode_map = { 'mode': 'active',
-        \ 'active_filetypes': [],
-        \ 'passive_filetypes': ['html', 'coffee'] }
     endif
   " }}
 
@@ -648,32 +603,6 @@
         autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
         autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
         autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
-      " }}
-
-    endif
-  " }}
-
-  " CtrlP {{
-    if isdirectory(expand(b:plugin_directory . '/ctrlp.vim'))
-
-      " Config {{
-        let g:ctrlp_user_command = 'ag %s
-              \ --ignore-case
-              \ --hidden
-              \ --files-with-matches
-              \ --nocolor
-              \ --nogroup
-              \ --ignore .git
-              \ --ignore .DS_Store
-              \ -g ""'
-        let g:ctrlp_match_func  = { 'match' : 'matcher#cmatch' } " User cmatcher
-        let g:ctrlp_max_files   = 0
-        let g:ctrlp_lazy_update = 10
-        let g:ctrlp_extensions  = ['tag']
-      " }}
-
-      " Mappings {{
-        nnoremap <C-@> :CtrlPBuffer<CR>
       " }}
 
     endif
@@ -859,23 +788,6 @@
       " Mnemonic _i_nteractive
       nnoremap <silent> <leader>gi :Git add -p %<CR>
       nnoremap <silent> <leader>gg :SignifyToggle<CR>
-    endif
-  " }}
-
-  " UtilSnips {{
-    if isdirectory(expand(b:plugin_directory . '/ultisnips'))
-
-      " Config {{
-        let g:UltiSnipsEditSplit = 'vertical'
-      " }}
-
-      " Mappings {{
-        " Change default UltiSnips mappings for compatibility with YCM
-        let g:UltiSnipsExpandTrigger       = '<C-s>'
-        let g:UltiSnipsJumpForwardTrigger  = '<C-s>'
-        let g:UltiSnipsJumpBackwardTrigger = '<C-b>'
-      " }}
-
     endif
   " }}
 

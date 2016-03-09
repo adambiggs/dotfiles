@@ -71,9 +71,11 @@ KEYTIMEOUT=1 # Prevents key timeout lag.
 bindkey -v
 
 # Bind UP and DOWN arrow keys for subsstring search.
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+if zplug check zsh-users/zsh-history-substring-search; then
+  zmodload zsh/terminfo
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
+  bindkey "$terminfo[kcud1]" history-substring-search-down
+fi
 
 
 ### PATHS ###
@@ -151,13 +153,13 @@ alias lmpm-builder='~/Repos/lmpm/builder/use.sh'
 ### LIBRARY CONFIG ###
 
 # NVM
-source ~/.dotfiles/libs/nvm/nvm.sh
+[ -f ~/.dotfiles/libs/nvm/nvm.sh ] && source ~/.dotfiles/libs/nvm/nvm.sh
 
 # Base16 theme.
-source ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh
+[ -f ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh ] && source ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh
 
 # iTerm cli integration.
-source /Users/adam/.iterm2_shell_integration.zsh
+[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

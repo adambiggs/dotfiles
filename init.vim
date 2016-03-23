@@ -95,10 +95,10 @@
   Plug 'junegunn/vim-peekaboo'
   Plug 'kopischke/vim-stay', { 'branch': 'fix/real-sessionload' }
   Plug 'majutsushi/tagbar'
-  Plug 'mbbill/undotree'
+  Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ryanoasis/vim-devicons'
-  Plug 'scrooloose/nerdtree' | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
+  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] } | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
   " Search & Navigation
@@ -108,7 +108,7 @@
   Plug 'kshenoy/vim-signature'
   Plug 'Lokaltog/vim-easymotion'
   "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
-  Plug 'osyo-manga/vim-over'
+  Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
@@ -154,14 +154,12 @@
   Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
   Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
-  " Building
-  Plug 'benekastah/neomake'
-
   " Workflow
   Plug 'airblade/vim-rooter'
+  Plug 'benekastah/neomake', { 'on': ['Neomake'] }
   Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'ciaranm/detectindent'
+  Plug 'ciaranm/detectindent', { 'on': 'DetectIndent' }
   Plug 'edkolev/tmuxline.vim'
   Plug 'joonty/vdebug', { 'branch': 'master' }
   Plug 'thinca/vim-localrc'

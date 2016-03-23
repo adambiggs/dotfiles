@@ -92,27 +92,23 @@
   Plug 'chriskempson/base16-vim'
 
   " UI
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+  Plug 'junegunn/vim-peekaboo'
+  Plug 'kopischke/vim-stay', { 'branch': 'fix/real-sessionload' }
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'scrooloose/nerdtree'
-  Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
-  Plug 'kopischke/vim-stay', { 'branch': 'fix/real-sessionload' }
   Plug 'ryanoasis/vim-devicons'
-  Plug 'junegunn/vim-peekaboo'
+  Plug 'scrooloose/nerdtree' | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
+  Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
   " Search & Navigation
   Plug 'bronson/vim-visual-star-search'
+  Plug 'haya14busa/incsearch.vim' | Plug 'haya14busa/incsearch-easymotion.vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' } | Plug 'junegunn/fzf.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'Lokaltog/vim-easymotion'
   "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
   Plug 'osyo-manga/vim-over'
-  Plug 'haya14busa/incsearch.vim'
-  Plug 'haya14busa/incsearch-easymotion.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' }
-  Plug 'junegunn/fzf.vim'
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
@@ -129,13 +125,13 @@
   Plug 'junegunn/vim-easy-align'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-repeat'
-  Plug 'vim-scripts/visualrepeat'
   Plug 'tpope/vim-surround'
+  Plug 'vim-scripts/visualrepeat'
 
   " Source Control
+  Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
-  Plug 'airblade/vim-gitgutter'
 
   " Syntax
   Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
@@ -163,14 +159,13 @@
 
   " Workflow
   Plug 'airblade/vim-rooter'
-  Plug 'joonty/vdebug', { 'branch': 'master' }
   Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'
+  Plug 'joonty/vdebug', { 'branch': 'master' }
   Plug 'thinca/vim-localrc'
-  Plug 'tpope/vim-obsession'
-  Plug 'dhruvasagar/vim-prosession'
+  Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 
   call plug#end()
 

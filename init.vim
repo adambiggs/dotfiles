@@ -154,7 +154,7 @@
   " Workflow
   Plug 'airblade/vim-rooter'
   Plug 'joonty/vdebug', { 'branch': 'master' }
-  "Plug 'benmills/vimux'
+  Plug 'benmills/vimux'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent'
   Plug 'edkolev/tmuxline.vim'

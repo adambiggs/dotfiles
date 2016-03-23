@@ -91,7 +91,7 @@
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'scrooloose/nerdtree'
   Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
-  Plug 'vim-scripts/restore_view.vim'
+  Plug 'kopischke/vim-stay', { 'branch': 'fix/real-sessionload' }
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/vim-peekaboo'
 
@@ -184,7 +184,7 @@
   set visualbell
   set gdefault          " Substitute all matches on a line by default
   set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead.
-  set viewoptions=cursor,folds
+  set viewoptions=cursor,folds,slash,unix
   set foldopen-=block
 
 " }}

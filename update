@@ -44,7 +44,7 @@ echo -e "${green}Done.${clear}"
 
 # pip
 echo -e "\n${blue}Updating certain PIP packages...${clear}"
-pip install -U pip neovim awscli tmuxp docker-compose setuptools
+pip2 install -U pip neovim awscli tmuxp docker-compose setuptools
 pip3 install -U pip neovim setuptools
 echo -e "${green}Done.${clear}"
 

@@ -115,10 +115,10 @@
   Plug 'junegunn/fzf.vim'
 
   " Autocomplete
-  "Plug 'marijnh/tern_for_vim'
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
   Plug 'adambiggs/vim-snippets'
+  Plug 'carlitux/deoplete-ternjs'
   Plug 'Shougo/context_filetype.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
 

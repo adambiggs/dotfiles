@@ -64,14 +64,22 @@
       let @/=_s
       call cursor(l, c)
     endfunction
-    autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
+    augroup trailing-whitespace
+      autocmd!
+      autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+    augroup end
   " }}
 
   " Open Markdown file in Marked.app {{
     function! s:setupMarkdownPreview()
       nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
     endfunction
-    autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
+
+    augroup markdown-preview
+      autocmd!
+      autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
+    augroup end
   " }}
 
 " }}
@@ -268,46 +276,53 @@
   set splitright    " Puts new vsplit windows to the right of the current
   set splitbelow    " Puts new split windows to the bottom of the current
 
-  " JSON syntax settings
-  autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1
+  " Commands {{
+    augroup formatting
+      autocmd!
 
-  " Automatically check for changed files outside Vim
-  augroup changes
-    autocmd!
-    autocmd BufRead,BufEnter,FocusGained * checktime
-  augroup END
+      " Automatically check for changed files outside Vim
+      autocmd BufRead,BufEnter,FocusGained * silent! checktime
 
-  " Enable omni-completion.
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+      " Omni-completion.
+      autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+      autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+      autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+      autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+      autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+      autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+      autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+      autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
+
+    augroup end
+  " }}
 
 " }}
 
 " Syntax {{
 
-  " Vagrantfile {{
-    augroup vagrant
-      autocmd!
-      autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-    augroup END
-  " }}
+  augroup syntax
+    autocmd!
 
-  " Handlebars {{
+    " CoffeeScript
+    autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
+    autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
+    " JSON
+    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1
+
+    " Vagrantfile
+    autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+
+    " Handlebars
     autocmd FileType html.handlebars setlocal foldmethod=indent
-  " }}
 
-  " Stylus {{
+    " Stylus
     autocmd FileType stylus setlocal foldmethod=indent
-  " }}
 
-  " PHP {{
+    " PHP
     autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
-  " }}
+
+  augroup end
 
 " }}
 
@@ -363,7 +378,10 @@
 
       " Fix dots after icons in NERDTree
       " https://github.com/ryanoasis/vim-devicons/issues/110#issue-103801335
-      autocmd FileType nerdtree setlocal nolist
+      augroup nerdtree
+        autocmd!
+        autocmd FileType nerdtree setlocal nolist
+      augroup end
     endif
   " }}
 
@@ -388,8 +406,12 @@
       let g:indent_guides_auto_colors           = 0
       let g:indent_guides_enable_on_vim_startup = 1
       let g:indent_guides_exclude_filetypes     = ['help', 'nerdtree', 'startify']
-      autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
-      autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
+
+      augroup indent-guides
+        autocmd!
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
+      augroup end
     endif
   " }}
 
@@ -462,7 +484,6 @@
 
   " Neomake {{
     if isdirectory(expand(b:plugin_directory . '/neomake'))
-      autocmd BufWritePost *.coffee Neomake
 
       " Generate tags via CoffeeTags
       let g:neomake_coffee_coffeetags_maker = {
@@ -470,6 +491,11 @@
         \ }
 
       let g:neomake_coffee_enabled_makers = ['coffeelint', 'coffeetags']
+
+      augroup neomake
+        autocmd!
+        autocmd BufWritePost *.coffee Neomake
+      augroup end
     endif
   " }}
 
@@ -603,11 +629,16 @@
       " Mappings {{
         nnoremap <silent> <C-@> :Buffers<CR>
         nnoremap <silent> <C-p> :FZF<CR>
+      " }}
 
-        autocmd WinEnter \[FZF\] startinsert
-        autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
-        autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
-        autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
+      " Commands {{
+        augroup fzf
+          autocmd!
+          autocmd WinEnter \[FZF\] startinsert
+          autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-p> <Esc>
+          autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-k> <Up>
+          autocmd TermOpen term://*/fzf* tnoremap <buffer> <C-j> <Down>
+        augroup end
       " }}
 
     endif
@@ -626,8 +657,6 @@
         let coffee_compile_vert = 1
         let coffee_watch_vert   = 1
         let coffee_run_vert     = 1
-        autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
-        autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
       " }}
 
       " Mappings {{

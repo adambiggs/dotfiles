@@ -125,7 +125,7 @@
   Plug 'Shougo/neosnippet-snippets'
 
   " Coding
-  Plug 'adambiggs/vim-autoclose'
+  Plug 'cohama/lexima.vim'
   Plug 'junegunn/vim-easy-align'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-repeat'

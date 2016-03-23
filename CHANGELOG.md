@@ -1,3 +1,22 @@
+<a name="9.5.0"></a>
+# [9.5.0](https://github.com/adambiggs/dotfiles/compare/9.4.0...v9.5.0) (2016-03-23)
+
+
+### Bug Fixes
+
+* **update:** `pip` packages sometimes not updated in both Python v2 and v3 ([eb497c8](https://github.com/adambiggs/dotfiles/commit/eb497c8))
+
+### Features
+
+* **vim:** added keymaps for switching tabs ([54a4d65](https://github.com/adambiggs/dotfiles/commit/54a4d65))
+* **vim:** disable `vdebug` continuous mode by default ([49e270f](https://github.com/adambiggs/dotfiles/commit/49e270f))
+* **vim:** installed `deoplete-ternjs` plugin ([ade7c84](https://github.com/adambiggs/dotfiles/commit/ade7c84))
+* **vim:** installed `neoinclude.vim` and `neopairs.vim` ([671c33e](https://github.com/adambiggs/dotfiles/commit/671c33e))
+* **vim:** replace `restore_view` plugin with `vim-stay` ([b392670](https://github.com/adambiggs/dotfiles/commit/b392670))
+* **vim:** started using `vimux` plugin again ([e4bc853](https://github.com/adambiggs/dotfiles/commit/e4bc853))
+
+
+
 <a name="9.4.0"></a>
 # [9.4.0](https://github.com/adambiggs/dotfiles/compare/9.3.2...v9.4.0) (2016-03-09)
 

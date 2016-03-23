@@ -115,12 +115,14 @@
   Plug 'junegunn/fzf.vim'
 
   " Autocomplete
-  Plug 'Shougo/neosnippet'
-  Plug 'Shougo/neosnippet-snippets'
   Plug 'adambiggs/vim-snippets'
   Plug 'carlitux/deoplete-ternjs'
   Plug 'Shougo/context_filetype.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
+  Plug 'Shougo/neoinclude.vim'
+  Plug 'Shougo/neopairs.vim'
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
 
   " Coding
   Plug 'adambiggs/vim-autoclose'

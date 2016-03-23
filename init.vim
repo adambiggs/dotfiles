@@ -355,6 +355,10 @@
   map zl zL
   map zh zH
 
+  " Faster tab switching
+  map <C-m> :tabnext<CR>
+  map <C-n> :tabprevious<CR>
+
   " Terminal split navigation
   if has('nvim')
     tmap <C-j> <C-\><C-n><C-j>

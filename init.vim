@@ -750,7 +750,7 @@
       let g:vdebug_options                       = { }
       let g:vdebug_options['server']             = ''
       let g:vdebug_options['break_on_open']      = 0
-      let g:vdebug_options['continuous_mode']    = 1
+      let g:vdebug_options['continuous_mode']    = 0
       let g:vdebug_options['watch_window_style'] = 'compact'
     endif
   " }}

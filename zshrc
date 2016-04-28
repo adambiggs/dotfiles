@@ -2,29 +2,29 @@
 
 ### PLUGINS ###
 export ZPLUG_HOME=~/.config/zplug
-source ~/.dotfiles/libs/zplug/zplug
+source ~/.dotfiles/libs/zplug/init.zsh
 
-zplug "akoenig/gulp.plugin.zsh"
+zplug "akoenig/gulp.plugin.zsh", nice:10
 zplug "djui/alias-tips"
 zplug "jimmijj/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 zplug "peterhurford/git-it-on.zsh"
-zplug "plugins/brew-cask", from:oh-my-zsh
-zplug "plugins/cake", from:oh-my-zsh
+zplug "plugins/brew-cask", from:oh-my-zsh, nice:10
+zplug "plugins/cake", from:oh-my-zsh, nice:10
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh, nice:10
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/symfony2", from:oh-my-zsh
+zplug "plugins/symfony2", from:oh-my-zsh, nice:10
 zplug "sdurrheimer/docker-compose-zsh-completion"
-zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-autosuggestions", nice:10
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
 
 # Theme.
 setopt prompt_subst # Make sure propt is able to be generated properly.
-zplug "adambiggs/zsh-theme", of:adambiggs.zsh-theme
+zplug "adambiggs/zsh-theme", use:adambiggs.zsh-theme
 
 # Check for uninstalled plugins.
 if ! zplug check --verbose; then

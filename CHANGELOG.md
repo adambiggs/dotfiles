@@ -1,3 +1,24 @@
+<a name="9.6.0"></a>
+# [9.6.0](https://github.com/adambiggs/dotfiles/compare/9.5.0...v9.6.0) (2016-04-28)
+
+
+### Bug Fixes
+
+* `find-and-replace.sh` not properly escaping search string ([d1f5b82](https://github.com/adambiggs/dotfiles/commit/d1f5b82))
+* **zsh:** add `-f` flag to `dlc` alias for newer `docker-compose` versions ([bac74c7](https://github.com/adambiggs/dotfiles/commit/bac74c7))
+* **zsh:** command history isn't saved between shell sessions ([8f4818d](https://github.com/adambiggs/dotfiles/commit/8f4818d))
+
+### Features
+
+* **find-and-replace:** escape find/replace params and tell user what's going on ([906da41](https://github.com/adambiggs/dotfiles/commit/906da41))
+* **vim:** enable spellcheck for markdown files ([80e7314](https://github.com/adambiggs/dotfiles/commit/80e7314))
+* **vim:** more on-demand plugin loading ([2025b16](https://github.com/adambiggs/dotfiles/commit/2025b16))
+* **vim:** replace `vim-autoclose` plugin with `lexima.vim` ([4e03906](https://github.com/adambiggs/dotfiles/commit/4e03906))
+* update `nerd-fonts` and switch fonts in iTerm ([48951df](https://github.com/adambiggs/dotfiles/commit/48951df))
+* **zsh:** update `zplug` to v2 and fix breaking changes in config ([ef19526](https://github.com/adambiggs/dotfiles/commit/ef19526))
+
+
+
 <a name="9.5.0"></a>
 # [9.5.0](https://github.com/adambiggs/dotfiles/compare/9.4.0...v9.5.0) (2016-03-23)
 

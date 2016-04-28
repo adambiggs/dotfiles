@@ -44,6 +44,20 @@ zplug load --verbose
 
 
 ### CONFIG ###
+
+# ZSH history
+setopt hist_expire_dups_first
+setopt hist_fcntl_lock
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_lex_words
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt share_history
+
+export SAVEHIST=10000
+export HISTFILE=~/.zsh_history
+
 unset COMPLETION_WAITING_DOTS # https://github.com/tarruda/zsh-autosuggestions#known-issues
 #export COMPLETION_WAITING_DOTS=true
 export DEFAULT_USER="adam"

@@ -149,7 +149,7 @@ alias 2ds='boot2docker start && $(boot2docker shellinit)'
 # Docker Compose
 alias dc='docker-compose'
 alias dcu='docker-compose up -d'
-alias dcl='docker-compose logs'
+alias dcl='docker-compose logs -f'
 alias dcr='docker-compose run --rm'
 docker_compose_rm() {
   docker-compose stop $@

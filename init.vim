@@ -123,7 +123,7 @@
 
   " Coding
   Plug 'cohama/lexima.vim'
-  Plug 'junegunn/vim-easy-align'
+  Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'

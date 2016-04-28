@@ -3,7 +3,7 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 source $SCRIPT_PATH/colors
 
 # Input.
-FIND=$(echo $1 | sed -e 's/[\/&]/\\&/g')
+FIND=$(echo $1 | sed -e 's/[]\/$*.^|[]/\\&/g')
 REPLACE=$(echo $2 | sed -e 's/[\/&]/\\&/g')
 DIR=$3
 

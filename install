@@ -85,6 +85,7 @@ else
   # Linux specific packages
   install_brew_pkg git '--with-brewed-curl --with-brewed-openssl'
 fi
+install_brew_pkg zplug
 install_brew_pkg python
 install_brew_pkg python3
 install_brew_pkg neovim '--HEAD'
@@ -192,6 +193,7 @@ echo -e "${green}Done.${clear}"
 
 # ZSH plugins
 echo -e "\n${blue}Installing ZSH plugins...${clear}"
+ZPLUG_HOME=`brew --prefix zplug`
 zplug install
 zplug load --verbose
 echo -e "${green}Done.${clear}"

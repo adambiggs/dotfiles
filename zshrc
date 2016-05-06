@@ -1,8 +1,8 @@
 
 
 ### PLUGINS ###
-export ZPLUG_HOME=~/.config/zplug
-source ~/.dotfiles/libs/zplug/init.zsh
+export ZPLUG_HOME=`brew --prefix zplug`
+source $ZPLUG_HOME/init.zsh
 
 zplug "akoenig/gulp.plugin.zsh", nice:10
 zplug "djui/alias-tips"

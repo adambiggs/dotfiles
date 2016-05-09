@@ -1,3 +1,21 @@
+<a name="9.6.1"></a>
+## [9.6.1](https://github.com/adambiggs/dotfiles/compare/9.6.0...v9.6.1) (2016-05-09)
+
+
+### Bug Fixes
+
+* **zsh:** path errors after updating `zplug` ([5085901](https://github.com/adambiggs/dotfiles/commit/5085901))
+
+### Features
+
+* **vim:** installed `FastFold` plugin ([7a2cae0](https://github.com/adambiggs/dotfiles/commit/7a2cae0))
+* **vim:** load `vim-easy-align` plugin on-demand ([57adc16](https://github.com/adambiggs/dotfiles/commit/57adc16))
+* **vim:** update `deoplete` plugin config ([81296ff](https://github.com/adambiggs/dotfiles/commit/81296ff))
+* replace `zplug` git submodule with Homebrew formula ([2a57bad](https://github.com/adambiggs/dotfiles/commit/2a57bad))
+* **zsh:** alias `l` for `ls -lAh` and enable color output ([52ff703](https://github.com/adambiggs/dotfiles/commit/52ff703))
+
+
+
 <a name="9.6.0"></a>
 # [9.6.0](https://github.com/adambiggs/dotfiles/compare/9.5.0...v9.6.0) (2016-04-28)
 

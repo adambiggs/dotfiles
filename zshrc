@@ -55,6 +55,8 @@ setopt hist_reduce_blanks
 setopt hist_save_no_dups
 setopt share_history
 
+export CLICOLOR=1
+export BLOCK_SIZE=human-readable # https://www.gnu.org/software/coreutils/manual/html_node/Block-size.html
 export SAVEHIST=10000
 export HISTFILE=~/.zsh_history
 
@@ -121,6 +123,7 @@ fi
 # General shortcuts
 alias sudo='sudo ' # @see http://askubuntu.com/a/22043
 alias ..='cd ..'
+alias l='ls -lAh'
 alias echopath='echo $PATH | tr ":" "\012"'
 alias kmux='tmux kill-server'
 alias vimclean='rm -rf ~/.config/nvim/session/* ~/.config/nvim/swap/* ~/.config/nvim/undo/*  ~/.config/nvim/views/*'

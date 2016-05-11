@@ -46,9 +46,9 @@ zplug load --verbose
 ### CONFIG ###
 
 # ZSH history
+setopt append_history
 setopt hist_expire_dups_first
 setopt hist_fcntl_lock
-setopt hist_find_no_dups
 setopt hist_ignore_all_dups
 setopt hist_lex_words
 setopt hist_reduce_blanks
@@ -57,6 +57,7 @@ setopt share_history
 
 export CLICOLOR=1
 export BLOCK_SIZE=human-readable # https://www.gnu.org/software/coreutils/manual/html_node/Block-size.html
+export HISTSIZE=11000
 export SAVEHIST=10000
 export HISTFILE=~/.zsh_history
 

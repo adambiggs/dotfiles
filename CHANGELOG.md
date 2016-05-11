@@ -1,3 +1,17 @@
+<a name="9.6.2"></a>
+## [9.6.2](https://github.com/adambiggs/dotfiles/compare/9.6.1...v9.6.2) (2016-05-11)
+
+
+### Bug Fixes
+
+* **zsh:** `zsh-autosuggestions` not showing some history items ([7fe8ac9](https://github.com/adambiggs/dotfiles/commit/7fe8ac9))
+
+### Features
+
+* **zsh:** rename `lmpm-builder` alias to `lmpm` ([4c274d8](https://github.com/adambiggs/dotfiles/commit/4c274d8))
+
+
+
 <a name="9.6.1"></a>
 ## [9.6.1](https://github.com/adambiggs/dotfiles/compare/9.6.0...v9.6.1) (2016-05-09)
 

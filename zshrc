@@ -165,7 +165,7 @@ alias dcrm=docker_compose_rm
 alias dm='docker-machine'
 
 # LMPM
-alias lmpm-builder='~/Repos/lmpm/builder/use.sh'
+alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 
 
 ### LIBRARY CONFIG ###

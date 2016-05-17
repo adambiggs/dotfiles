@@ -1,3 +1,20 @@
+<a name="9.7.0"></a>
+# [9.7.0](https://github.com/adambiggs/dotfiles/compare/9.6.2...v9.7.0) (2016-05-17)
+
+
+### Bug Fixes
+
+* **vim:** folds won't stay open in `init.vim` ([2372332](https://github.com/adambiggs/dotfiles/commit/2372332))
+* **vim:** trailing whitespace not removed when saving Yaml files ([f7237aa](https://github.com/adambiggs/dotfiles/commit/f7237aa))
+
+### Features
+
+* **install:** switch from VirtualBox to VMware Fusion ([b8b3333](https://github.com/adambiggs/dotfiles/commit/b8b3333))
+* **vim:** `:Ag` command passes arguments directly to `ag` CLI ([c534350](https://github.com/adambiggs/dotfiles/commit/c534350))
+* **vim:** enable syntax highlighting for Symfony `*.yml.dist` files ([d7b333a](https://github.com/adambiggs/dotfiles/commit/d7b333a))
+
+
+
 <a name="9.6.2"></a>
 ## [9.6.2](https://github.com/adambiggs/dotfiles/compare/9.6.1...v9.6.2) (2016-05-11)
 

@@ -107,8 +107,8 @@ if [[ $OSTYPE == darwin* ]]; then
   install_brew_cask spectacle
   install_brew_cask flycut
   install_brew_cask sourcetree
-  install_brew_cask virtualbox
   install_brew_cask karabiner
+  install_brew_cask vmware-fusion
 fi
 echo -e "${green}Done.${clear}"
 

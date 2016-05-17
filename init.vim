@@ -321,6 +321,9 @@
     " Markdown
     autocmd BufNewFile,BufRead *.md setlocal spell
 
+    " Yaml
+    autocmd BufNewFile,BufRead *.yml.dist set filetype=yaml
+
   augroup end
 
 " }}

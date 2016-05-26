@@ -94,7 +94,7 @@
   " UI
   Plug 'junegunn/vim-peekaboo'
   Plug 'Konfekt/FastFold'
-  Plug 'kopischke/vim-stay', { 'branch': 'fix/real-sessionload' }
+  Plug 'kopischke/vim-stay', { 'branch': 'release/1.4.0' }
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
   Plug 'nathanaelkane/vim-indent-guides'

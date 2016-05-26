@@ -163,6 +163,7 @@
   Plug 'ciaranm/detectindent', { 'on': 'DetectIndent' }
   Plug 'edkolev/tmuxline.vim'
   Plug 'joonty/vdebug', { 'branch': 'master' }
+  Plug 'nhooyr/neoman.vim', { 'on': 'Man' }
   Plug 'thinca/vim-localrc'
   Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
 

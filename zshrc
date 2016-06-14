@@ -102,7 +102,7 @@ export REPO_PATH=$HOME/Repos
 
 # Ruby
 if command -v gem >/dev/null; then
-  GEMPATH=`gem environment gempath`
+  GEMPATH=$HOME/.gem/ruby/2.0.0/bin
   echo $PATH | grep -q $GEMPATH || export PATH=$GEMPATH:$PATH
 fi
 

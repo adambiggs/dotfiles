@@ -99,6 +99,8 @@
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] } | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
+  "Plug 'justinmk/vim-dirvish'
+  "Plug 'tpope/vim-eunuch'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
   " Search & Navigation
@@ -563,6 +565,47 @@
 
       " Mappings {{
         map <C-e> :NERDTreeToggle<CR>
+      " }}
+
+    endif
+  " }}
+
+  " Dirvish {{
+    if isdirectory(expand(b:plugin_directory . '/vim-dirvish'))
+
+      " Config {{
+        let g:dirvish_relative_paths = 0
+      " }}
+
+      " Mappings {{
+        nnoremap <C-e> :Dirvish<CR>
+      " }}
+
+      " Commands & Plugin Mappings {{
+        augroup dirvish
+          autocmd!
+
+          function! s:setupDirvish()
+            keeppatterns sort r /[^\/]$/ " Sort folders first
+
+            " Fix EasyMotion
+            map <buffer> <Leader>j $T/<Plug>(easymotion-j)
+            map <buffer> <Leader>k $T/<Plug>(easymotion-k)
+
+            " Toggle open/close with same mapping
+            nmap <buffer> <C-e> <Plug>(dirvish_quit)
+
+            " Navigate to parent directory
+            nmap <buffer> .. <Plug>(dirvish_up)
+
+            " Open files in vertical split
+            nnoremap <buffer> <C-v> :call dirvish#open('vsplit', 0)<CR>
+            xnoremap <buffer> <C-v> :call dirvish#open('vsplit', 0)<CR>
+
+          endfunction
+
+          autocmd FileType dirvish call s:setupDirvish()
+        augroup end
       " }}
 
     endif

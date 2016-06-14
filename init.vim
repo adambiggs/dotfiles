@@ -191,6 +191,7 @@
   set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead
   set viewoptions=cursor,folds,slash,unix
   set foldopen-=block
+  set maxmapdepth=100   " Reduce maximum remaps to throw 'recursive mapping' error sooner
 
 " }}
 

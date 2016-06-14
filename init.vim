@@ -399,6 +399,13 @@
     endif
   " }}
 
+  " Rooter {{
+    if isdirectory(expand(b:plugin_directory . '/vim-rooter'))
+      let g:rooter_change_directory_for_non_project_files = 'current'
+      let g:rooter_silent_chdir = 1
+    endif
+  " }}
+
   " ProSession {{
   if isdirectory(expand(b:plugin_directory . '/vim-prosession'))
     let g:prosession_dir             = b:config_directory . "/session/"

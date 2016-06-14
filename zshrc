@@ -101,25 +101,25 @@ fi
 export REPO_PATH=$HOME/Repos
 
 # Ruby
-RUBYPATH=$HOME/.gem/ruby/2.0.0/bin
-echo $PATH | grep -q $RUBYPATH || export PATH=$PATH:$RUBYPATH
+if command -v gem >/dev/null; then
+  GEMPATH=`gem environment gempath`
+  echo $PATH | grep -q $GEMPATH || export PATH=$GEMPATH:$PATH
+fi
 
 # Go
-export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go/libexec
-echo $PATH | grep -q $GOPATH/bin || export PATH=$PATH:$GOPATH/bin
-echo $PATH | grep -q $GOROOT/bin || export PATH=$PATH:$GOROOT/bin
+if command -v go >/dev/null; then
+  export GOPATH=`go env GOPATH`
+  export GOROOT=`go env GOROOT`
+  echo $PATH | grep -q $GOPATH/bin || export PATH=$GOPATH/bin:$PATH
+  echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
+fi
 
-# Add Homebrew paths if `brew` is installed.
+# Homebrew
 if command -v brew >/dev/null; then
-  BREWBIN=/usr/local/bin
   BREWSBIN=/usr/local/sbin
-  echo $PATH | grep -q $BREWBIN || export PATH=$PATH:$BREWBIN
-  echo $PATH | grep -q $BREWSBIN || export PATH=$PATH:$BREWSBIN
-
-  # PHP
-  PHPPATH=`brew --prefix homebrew/php/php70`/bin
-  echo $PATH | grep -q $PHPPATH || export PATH=$PATH:$PHPPATH
+  BREWBIN=/usr/local/bin
+  echo $PATH | grep -q $BREWSBIN || export PATH=$BREWSBIN:$PATH
+  echo $PATH | grep -q $BREWBIN || export PATH=$BREWBIN:$PATH
 fi
 
 

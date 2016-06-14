@@ -116,6 +116,10 @@ if command -v brew >/dev/null; then
   BREWSBIN=/usr/local/sbin
   echo $PATH | grep -q $BREWBIN || export PATH=$PATH:$BREWBIN
   echo $PATH | grep -q $BREWSBIN || export PATH=$PATH:$BREWSBIN
+
+  # PHP
+  PHPPATH=`brew --prefix homebrew/php/php70`/bin
+  echo $PATH | grep -q $PHPPATH || export PATH=$PATH:$PHPPATH
 fi
 
 

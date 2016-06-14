@@ -96,6 +96,7 @@ install_brew_pkg the_silver_searcher
 install_brew_pkg wget
 install_brew_pkg docker
 install_brew_pkg docker-machine
+install_brew_pkg php70 '--with-pear'
 echo -e "${green}Done.${clear}"
 
 # Homebrew Casks

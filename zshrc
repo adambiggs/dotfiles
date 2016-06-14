@@ -40,7 +40,7 @@ zplug load --verbose
 
 ### COMPLETIONS ###
 [ -f /usr/local/bin/aws_zsh_completer.sh ] && source /usr/local/bin/aws_zsh_completer.sh
-[ -f /usr/local/bin/tmuxp.zsh ] && source /usr/local/bin/tmuxp.zsh
+type tmuxp &> /dev/null && eval "`_TMUXP_COMPLETE=source tmuxp`"
 
 
 ### CONFIG ###

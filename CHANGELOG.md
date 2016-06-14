@@ -1,3 +1,34 @@
+<a name="9.8.0"></a>
+# [9.8.0](https://github.com/adambiggs/dotfiles/compare/9.7.0...v9.8.0) (2016-06-14)
+
+
+### Bug Fixes
+
+* `tmuxp` shell completions not working ([a0cdce4](https://github.com/adambiggs/dotfiles/commit/a0cdce4))
+* **git:** wrong path to global excludes file ([291a661](https://github.com/adambiggs/dotfiles/commit/291a661))
+* **install:** always changes default shell, even if already set correctly ([fb68728](https://github.com/adambiggs/dotfiles/commit/fb68728))
+* **update:** Homebrew cache path changed ([8c988ae](https://github.com/adambiggs/dotfiles/commit/8c988ae))
+
+### Features
+
+* **git:** add vim buffer options to `gitconfig` ([1e98d62](https://github.com/adambiggs/dotfiles/commit/1e98d62))
+* **git:** use new `compactionHeuristic` option in Git 2.9 ([a318543](https://github.com/adambiggs/dotfiles/commit/a318543))
+* **install:** install `msgpack` Pecl package ([9d449d0](https://github.com/adambiggs/dotfiles/commit/9d449d0))
+* **install:** replace system PHP with PHP 7.0 installed via Homebrew ([9d5a36e](https://github.com/adambiggs/dotfiles/commit/9d5a36e))
+* **update:** update Pecl packages ([b9e7e07](https://github.com/adambiggs/dotfiles/commit/b9e7e07))
+* **vim:** changed some mappings to fix EasyMotion in Dirvish buffers ([cedde1f](https://github.com/adambiggs/dotfiles/commit/cedde1f))
+* **vim:** extra config for `vim-rooter` plugin ([ac5398b](https://github.com/adambiggs/dotfiles/commit/ac5398b))
+* **vim:** initial setup of `vim-dirvish` (but still using NERDTree for now) ([33dcb9e](https://github.com/adambiggs/dotfiles/commit/33dcb9e))
+* **vim:** installed `neoman.vim` plugin ([8272edb](https://github.com/adambiggs/dotfiles/commit/8272edb))
+* **vim:** reduce `maxmapdepth` to catch recursive mappings sooner ([424cd80](https://github.com/adambiggs/dotfiles/commit/424cd80))
+* **vim:** set `nohidden` to prevent buildup of unnamed buffers ([3fee1f8](https://github.com/adambiggs/dotfiles/commit/3fee1f8))
+* **vim:** switch to `release/1.4.0` branch of `vim-stay` ([4d808d0](https://github.com/adambiggs/dotfiles/commit/4d808d0))
+* **vim:** switch to official `easymotion/vim-easymotion` repo ([a047638](https://github.com/adambiggs/dotfiles/commit/a047638))
+* **vim:** uninstall `FastFold` plugin ([b608ace](https://github.com/adambiggs/dotfiles/commit/b608ace))
+* **zsh:** populate library paths more intelligently ([7926995](https://github.com/adambiggs/dotfiles/commit/7926995))
+
+
+
 <a name="9.7.0"></a>
 # [9.7.0](https://github.com/adambiggs/dotfiles/compare/9.6.2...v9.7.0) (2016-05-17)
 

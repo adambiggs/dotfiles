@@ -121,7 +121,7 @@ echo -e "${green}Done.${clear}"
 
 # Use zsh as default shell
 echo -e "\n${blue}Setting ZSH as default shell...${clear}"
-ZSH_DIR=`whereis zsh`
+ZSH_DIR=`which zsh`
 DEFAULT_SHELL=`finger $LOGNAME | grep Shell | awk -F': ' '{print $3}'`
 if [ $ZSH_DIR == $DEFAULT_SHELL ]; then
   echo -e "${green}Default shell is already ${clear}$DEFAULT_SHELL${green}.${clear}"

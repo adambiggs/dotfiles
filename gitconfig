@@ -1,69 +1,71 @@
 [user]
-  name  = Adam Biggs
-  email = adam.biggs@lightmaker.com
+	name = Adam Biggs
+	email = adam.biggs@lightmaker.com
 
 [core]
-	excludesfile = /Users/adam/.gitignore
-  excludefile  = /Users/adam/.gitignore
-  editor       = nvim
+	excludesfile = /Users/adam/.gitignore_global
+	excludefile = /Users/adam/.gitignore
+	editor = nvim
 
 [color]
-  ui     = true
-  status = true
+	ui = true
+	status = true
 
 [push]
-  default = simple
+	default = simple
 
 [difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [diff]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [mergetool "Kaleidoscope"]
-  cmd           = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 
 [mergetool]
-  prompt = false
+	prompt = false
 
 [merge]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 
 [filter "media"]
-  required = true
-  clean    = git media clean %f
-  smudge   = git media smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
 
 [credential "https://github.com"]
-  username = adambiggs
+	username = adambiggs
 
 [credential]
 	helper = osxkeychain
 
 [filter "hawser"]
-  clean    = git hawser clean %f
-  smudge   = git hawser smudge %f
-  required = true
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
 
 [filter "lfs"]
-  clean    = git lfs clean %f
-  smudge   = git lfs smudge %f
-  required = true
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
 
 [alias]
-  amend = commit --amend --no-edit
-  diffc = diff --cached
-  edit  = commit --amend --only
-  ff    = merge --ff-only
-  graph = log --all --graph --pretty=format:'%C(auto)%h %s%n%C(cyan)%an%C(blue) %cr%C(auto)%d%C(reset)'
-  logg  = log --graph --decorate
+	amend = commit --amend --no-edit
+	diffc = diff --cached
+	edit = commit --amend --only
+	ff = merge --ff-only
+	graph = log --all --graph --pretty=format:'%C(auto)%h %s%n%C(cyan)%an%C(blue) %cr%C(auto)%d%C(reset)'
+	logg = log --graph --decorate
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
+[commit]
+	template = /Users/adam/.stCommitMsg

@@ -37,12 +37,18 @@ echo -e "${green}Done.${clear}"
 # Fonts
 source $SCRIPT_PATH/install-fonts
 
-# gem
+# Pecl
+echo -e "\n${blue}Updating Pecl packages...${clear}"
+pecl update-channels
+pecl upgrade msgpack
+echo -e "${green}Done.${clear}"
+
+# Gem
 echo -e "\n${blue}Updating Ruby gems...${clear}"
 gem update --user-install
 echo -e "${green}Done.${clear}"
 
-# pip
+# Pip
 echo -e "\n${blue}Updating certain PIP packages...${clear}"
 pip2 install -U pip neovim awscli tmuxp docker-compose setuptools
 pip3 install -U pip neovim setuptools

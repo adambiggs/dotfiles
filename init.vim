@@ -756,6 +756,8 @@
 
       " Config {{
 
+        let g:EasyMotion_startofline = 0
+
         " Over window search
         function! s:incsearch_config(...) abort
           return incsearch#util#deepextend(deepcopy({
@@ -767,13 +769,13 @@
           \ }), get(a:, 1, {}))
         endfunction
 
-        noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
-        noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
-        noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
-
       " }}
 
       " Mappings {{
+
+        noremap <silent><expr> /  incsearch#go(<SID>incsearch_config())
+        noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
+        noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
 
         " Use <Leader> as easymotion prefix.
         map <Leader> <Plug>(easymotion-prefix)
@@ -785,6 +787,10 @@
         " Search
         nmap s <Plug>(easymotion-sn)
         vmap s <Plug>(easymotion-sn)
+
+        " Vertical line navigation
+        map <Leader>j <Plug>(easymotion-sol-j)
+        map <Leader>k <Plug>(easymotion-sol-k)
 
         " Same-line navigation
         map <Leader>h <Plug>(easymotion-linebackward)

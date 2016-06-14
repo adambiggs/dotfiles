@@ -63,6 +63,17 @@ function install_pip3_pkg() {
   fi
 }
 
+# Install a Pecl package if not already installed.
+function install_pecl_pkg() {
+  name=$1
+  installed=`pecl list -a | grep $name`
+  if [[ -z $installed ]]; then
+    pecl install $name
+  else
+    echo -e "${blue}Already installed:${clear} $name"
+  fi
+}
+
 # Homebrew
 echo -e "\n${blue}Installing Homebrew packages...${clear}"
 if ! type brew > /dev/null; then
@@ -111,6 +122,11 @@ if [[ $OSTYPE == darwin* ]]; then
   install_brew_cask karabiner
   install_brew_cask vmware-fusion
 fi
+echo -e "${green}Done.${clear}"
+
+# Pecl packages
+echo -e "\n${blue}Installing Pecl packages...${clear}"
+install_pecl_pkg msgpack
 echo -e "${green}Done.${clear}"
 
 # Homebrew cleanup

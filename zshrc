@@ -14,7 +14,7 @@ zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh, nice:10
 zplug "plugins/npm", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh, nice:10
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/symfony2", from:oh-my-zsh, nice:10
 zplug "sdurrheimer/docker-compose-zsh-completion"

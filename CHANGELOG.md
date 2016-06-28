@@ -1,3 +1,21 @@
+<a name="9.9.0"></a>
+# [9.9.0](https://github.com/adambiggs/dotfiles/compare/9.8.0...v9.9.0) (2016-06-28)
+
+
+### Bug Fixes
+
+* **tmux:** vim cursor shape changes not working in tmux ([e5041aa](https://github.com/adambiggs/dotfiles/commit/e5041aa))
+* **vim:** `deoplete` errors when editing HTML files ([4ed1073](https://github.com/adambiggs/dotfiles/commit/4ed1073))
+* **zsh:** broken Ruby Gem binary path ([631f9f7](https://github.com/adambiggs/dotfiles/commit/631f9f7))
+* **zsh:** error on login caused by `osx` plugin ([86275b6](https://github.com/adambiggs/dotfiles/commit/86275b6))
+
+### Features
+
+* **iterm:** remove unused themes, change default directory, some other tweaks ([ee3ac28](https://github.com/adambiggs/dotfiles/commit/ee3ac28))
+* enable true color support in tmux and vim ([d1087eb](https://github.com/adambiggs/dotfiles/commit/d1087eb))
+
+
+
 <a name="9.8.0"></a>
 # [9.8.0](https://github.com/adambiggs/dotfiles/compare/9.7.0...v9.8.0) (2016-06-14)
 

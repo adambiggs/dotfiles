@@ -198,6 +198,7 @@
 
 " Vim UI {{
 
+  set termguicolors             " True color support
   set mousehide                 " Hide the mouse cursor while typing
   set background=dark           " Assume a dark background
   set showmode                  " Display the current mode

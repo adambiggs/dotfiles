@@ -430,6 +430,7 @@
 
   " Tmuxline {{
     if isdirectory(expand(b:plugin_directory . '/tmuxline.vim'))
+      let g:airline#extensions#tmuxline#enabled = 0
       let g:tmuxline_preset = {
         \'a'    : ['   %a %b %e'],
         \'b'    : ['  %l:%M %p'],

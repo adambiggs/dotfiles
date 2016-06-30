@@ -89,7 +89,7 @@
   call plug#begin(b:plugin_directory)
 
   " Theme
-  Plug 'chriskempson/base16-vim'
+  Plug 'joshdick/onedark.vim' | Plug 'joshdick/airline-onedark.vim'
 
   " UI
   "Plug 'justinmk/vim-dirvish'
@@ -102,7 +102,7 @@
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] } | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
-  Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-airline/vim-airline'
 
   " Search & Navigation
   Plug 'bronson/vim-visual-star-search'
@@ -207,9 +207,8 @@
   set colorcolumn=80
 
   " Colorscheme
-  let base16colorspace=256  " Access colors present in 256 colorspace
   try
-    colorscheme base16-eighties
+    colorscheme onedark
   catch /^Vim\%((\a\+)\)\=:E185/
     " It's ok, we're probably just running the initial installation.
   endtry
@@ -237,10 +236,6 @@
     set statusline+=\ [%{&ff}/%Y]            " Filetype
     set statusline+=\ [%{getcwd()}]          " Current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-  endif
-
-  if &term == 'xterm' || &term == 'screen'
-    set t_Co=256      " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
   endif
 
 " }}
@@ -361,6 +356,12 @@
 
 " Plugin Config {{
 
+  " One Dark {{
+    if isdirectory(expand(b:plugin_directory . '/onedark.vim'))
+      let g:onedark_terminal_italics = 1
+    endif
+  " }}
+
   " Nerd Icons {{
     if isdirectory(expand(b:plugin_directory . '/vim-devicons'))
       let g:WebDevIconsNerdTreeAfterGlyphPadding  = ' '
@@ -400,15 +401,8 @@
   " Indent Guides {{
     if isdirectory(expand(b:plugin_directory . '/vim-indent-guides'))
       let g:indent_guides_start_level           = 1
-      let g:indent_guides_auto_colors           = 0
+      let g:indent_guides_auto_colors           = 1
       let g:indent_guides_enable_on_vim_startup = 1
-      let g:indent_guides_exclude_filetypes     = ['help', 'nerdtree', 'startify']
-
-      augroup indent-guides
-        autocmd!
-        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
-        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
-      augroup end
     endif
   " }}
 
@@ -422,6 +416,7 @@
       let g:airline#extensions#tabline#show_tabs     = 1
       let g:airline#extensions#tabline#tab_nr_type   = 2 " Show # of splits and tab #
       let g:airline#extensions#tabline#show_tab_type = 1
+      let g:airline_theme                            = 'onedark'
 
       " Custom symbols
       if !exists('g:airline_symbols')
@@ -434,8 +429,6 @@
 
   " Tmuxline {{
     if isdirectory(expand(b:plugin_directory . '/tmuxline.vim'))
-      let g:airline#extensions#tmuxline#enabled       = 0
-      let g:airline#extensions#tmuxline#snapshot_file = "~/.dotfiles/tmuxline.conf"
       let g:tmuxline_preset = {
         \'a'    : ['   %a %b %e'],
         \'b'    : ['  %l:%M %p'],

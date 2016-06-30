@@ -645,12 +645,6 @@
     endif
   " }}
 
-  " AutoClose {{
-    if isdirectory(expand(b:plugin_directory . '/vim-autoclose'))
-      let g:autoclose_vim_commentmode = 1
-    endif
-  " }}
-
   " CoffeeScript {{
     if isdirectory(expand(b:plugin_directory . '/vim-coffee-script'))
 
@@ -772,12 +766,6 @@
 
       " }}
 
-    endif
-  " }}
-
-  " Handlebars {{
-    if isdirectory(expand(b:plugin_directory . '/vim-mustache-handlebars'))
-      let g:mustache_abbreviations = 1
     endif
   " }}
 

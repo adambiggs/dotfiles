@@ -1,3 +1,22 @@
+<a name="9.10.0"></a>
+# [9.10.0](https://github.com/adambiggs/dotfiles/compare/9.9.0...v9.10.0) (2016-06-30)
+
+
+### Bug Fixes
+
+* **tmux:** startup errors due to deprecated options in config ([aee4830](https://github.com/adambiggs/dotfiles/commit/aee4830))
+* **vim:** easy-align plugin sometimes doesn't work on first invocation ([b8b6936](https://github.com/adambiggs/dotfiles/commit/b8b6936))
+
+### Features
+
+* change Vim/iTerm theme from `base16` to `onedark` ([2d9550b](https://github.com/adambiggs/dotfiles/commit/2d9550b))
+* **vim:** disable indent guides when they don't make sense ([91c5374](https://github.com/adambiggs/dotfiles/commit/91c5374))
+* **vim:** forked `tmuxline.vim` ([a3da164](https://github.com/adambiggs/dotfiles/commit/a3da164))
+* **vim:** go back to stock `/` search mapping ([f738952](https://github.com/adambiggs/dotfiles/commit/f738952))
+* **vim:** uninstall `vim-stay` ([55156cb](https://github.com/adambiggs/dotfiles/commit/55156cb))
+
+
+
 <a name="9.9.0"></a>
 # [9.9.0](https://github.com/adambiggs/dotfiles/compare/9.8.0...v9.9.0) (2016-06-28)
 

@@ -1,5 +1,5 @@
 " Modeline and Notes {{
-"   vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker={{,}} foldmethod=marker spell:
+"   vim: set sw=2 ts=2 sts=2 et tw=80 foldmarker={{,}} foldmethod=marker
 " }}
 
 " Config Directories {{

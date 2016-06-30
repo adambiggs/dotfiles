@@ -95,7 +95,7 @@
   "Plug 'justinmk/vim-dirvish'
   "Plug 'tpope/vim-eunuch'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'edkolev/tmuxline.vim'
+  Plug 'adambiggs/tmuxline.vim'
   Plug 'junegunn/vim-peekaboo'
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }

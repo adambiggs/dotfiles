@@ -135,25 +135,9 @@
   Plug 'tpope/vim-rhubarb'
 
   " Syntax
+  Plug 'sheerun/vim-polyglot'
   Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
-  Plug 'beyondwords/vim-twig', { 'for': 'twig' }
-  Plug 'briancollins/vim-jst', { 'for': 'jst' }
-  Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-  Plug 'ekalinin/Dockerfile.vim', { 'for': 'dockerfile' }
-  Plug 'elzr/vim-json', { 'for': 'json' }
-  Plug 'fatih/vim-go', { 'for': 'go' }
-  Plug 'groenewege/vim-less', { 'for': 'less' }
-  Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-  Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown' }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-  Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
-  Plug 'othree/html5.vim', { 'for': 'html' }
-  Plug 'othree/xml.vim', { 'for': 'xml' }
-  Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-  Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-  Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-  Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
-  Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
   " Workflow
   Plug 'airblade/vim-rooter'

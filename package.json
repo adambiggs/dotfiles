@@ -19,9 +19,9 @@
   "homepage": "https://github.com/adambiggs/dotfiles",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-bump": "^2.0.1",
+    "gulp-bump": "^2.2.0",
     "gulp-conventional-changelog": "^1.0.0",
-    "gulp-git": "^1.7.0",
+    "gulp-git": "^1.8.0",
     "minimist": "^1.2.0"
   }
 }

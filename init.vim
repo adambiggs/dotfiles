@@ -92,23 +92,24 @@
   Plug 'chriskempson/base16-vim'
 
   " UI
+  "Plug 'justinmk/vim-dirvish'
+  "Plug 'tpope/vim-eunuch'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'edkolev/tmuxline.vim'
   Plug 'junegunn/vim-peekaboo'
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] } | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }
-  "Plug 'justinmk/vim-dirvish'
-  "Plug 'tpope/vim-eunuch'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
   " Search & Navigation
   Plug 'bronson/vim-visual-star-search'
+  Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim' | Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' } | Plug 'junegunn/fzf.vim'
   Plug 'kshenoy/vim-signature'
-  Plug 'easymotion/vim-easymotion'
-  "Plug 'lukaszkorecki/CoffeeTags' " Currently throws annoying Ruby error...
   Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 
   " Autocomplete
@@ -121,35 +122,31 @@
   Plug 'Shougo/neosnippet'
   Plug 'Shougo/neosnippet-snippets'
 
-  " Coding
-  Plug 'cohama/lexima.vim'
-  Plug 'junegunn/vim-easy-align'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-surround'
-  Plug 'vim-scripts/visualrepeat'
-
   " Source Control
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
 
   " Syntax
-  Plug 'sheerun/vim-polyglot'
   Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+  Plug 'sheerun/vim-polyglot'
 
   " Workflow
   Plug 'airblade/vim-rooter'
   Plug 'benekastah/neomake', { 'on': ['Neomake'] }
   Plug 'benmills/vimux'
-  Plug 'christoomey/vim-tmux-navigator'
   Plug 'ciaranm/detectindent', { 'on': 'DetectIndent' }
-  Plug 'edkolev/tmuxline.vim'
+  Plug 'cohama/lexima.vim'
   Plug 'joonty/vdebug', { 'branch': 'master' }
+  Plug 'junegunn/vim-easy-align'
   Plug 'nhooyr/neoman.vim', { 'on': 'Man' }
+  Plug 'scrooloose/nerdcommenter'
   Plug 'thinca/vim-localrc'
   Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
+  Plug 'vim-scripts/visualrepeat'
 
   call plug#end()
 

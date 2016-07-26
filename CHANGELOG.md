@@ -1,3 +1,18 @@
+<a name="9.11.0"></a>
+# [9.11.0](https://github.com/adambiggs/dotfiles/compare/9.10.0...v9.11.0) (2016-07-26)
+
+
+### Bug Fixes
+
+* **tmux:** tmux status line breaks after opening Vim ([ce4147a](https://github.com/adambiggs/dotfiles/commit/ce4147a))
+
+### Features
+
+* **vim:** add filetype syntax highlighting for NERDTree ([59d9d43](https://github.com/adambiggs/dotfiles/commit/59d9d43))
+* **vim:** added `:CleanJSON` command ([b7a55b8](https://github.com/adambiggs/dotfiles/commit/b7a55b8))
+
+
+
 <a name="9.10.0"></a>
 # [9.10.0](https://github.com/adambiggs/dotfiles/compare/9.9.0...v9.10.0) (2016-06-30)
 

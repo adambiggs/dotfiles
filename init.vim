@@ -67,6 +67,12 @@
     augroup end
   " }}}
 
+  " Clean JSON formatting {{{
+    function! CleanJSON()
+      %!python -m json.tool
+    endfunction
+  " }}}
+
   " Open Markdown file in Marked.app {{{
     function! s:setupMarkdownPreview()
       nnoremap <leader>md :silent !open -a Marked\ 2.app '%:p'<cr>
@@ -75,6 +81,17 @@
     augroup markdown-preview
       autocmd!
       autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkdownPreview()
+    augroup end
+  " }}}
+
+" }}}
+
+" Commands {{{
+
+  " Clean JSON Formatting {{{
+    augroup json-commands
+      autocmd!
+      autocmd BufRead,BufNewFile *.json command! CleanJSON call CleanJSON()
     augroup end
   " }}}
 

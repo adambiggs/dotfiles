@@ -144,6 +144,7 @@
   Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
   Plug 'sheerun/vim-polyglot'
+  Plug 'billyvg/tigris.nvim', { 'do': './install.sh' }
 
   " Workflow
   Plug 'airblade/vim-rooter'
@@ -160,6 +161,7 @@
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/visualrepeat'
+  Plug 'neovim/node-host', { 'do': 'npm install' }
 
   call plug#end()
 
@@ -756,6 +758,12 @@
     endif
   " }}}
 
+  " Plyglot {{{
+    if isdirectory(expand(b:plugin_directory . '/vim-polyglot'))
+      let g:polyglot_disabled = ['javascript', 'javascript.jsx'] " JavaScript is handled by tigris.nvim
+    endif
+  " }}}
+
   " ProSession {{{
   if isdirectory(expand(b:plugin_directory . '/vim-prosession'))
     let g:prosession_dir             = b:config_directory . "/session/"
@@ -804,6 +812,14 @@
         nnoremap <Leader><Leader>t :Tagbar<CR>
       " }}}
 
+    endif
+  " }}}
+
+  " Tigris {{{
+    if isdirectory(expand(b:plugin_directory . '/tigris.nvim'))
+      let g:tigris#enabled            = 1
+      let g:tigris#on_the_fly_enabled = 1
+      let g:tigris#delay              = 500
     endif
   " }}}
 

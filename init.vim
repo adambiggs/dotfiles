@@ -193,7 +193,17 @@
 
 " Vim UI {{{
 
-  set termguicolors             " True color support
+  " True color support
+  if (has('nvim'))
+    "For Neovim 0.1.3 and 0.1.4
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+
+  if (has('termguicolors'))
+    "For Neovim > 0.1.5 and Vim > patch 7.4.1799
+    set termguicolors
+  endif
+
   set mousehide                 " Hide the mouse cursor while typing
   set background=dark           " Assume a dark background
   set showmode                  " Display the current mode

@@ -75,6 +75,7 @@ export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/2007#issuecomment-74863439
 export UPDATE_ZSH_DAYS=1
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='    '
+export ZSH_CACHE_DIR=$ZSH/cache
 
 
 ### AUTOSUGGESTIONS ###

@@ -102,7 +102,7 @@
   call plug#begin(b:plugin_directory)
 
   " Theme
-  Plug 'joshdick/onedark.vim' | Plug 'joshdick/airline-onedark.vim'
+  Plug 'joshdick/onedark.vim'
 
   " UI
   "Plug 'justinmk/vim-dirvish'

@@ -987,9 +987,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>164 524 606 456 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 787 620 392 0 0 2560 1440 </string>
+	<string>650 607 620 392 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>651 658 918 507 0 0 2560 1417 </string>
+	<string>651 590 918 507 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1920 1200 0 0 1920 1177 </string>
 	<key>NeverWarnAboutShortLivedSessions_6A0C1221-64A5-4047-8A96-738B7CCBA496</key>
@@ -1841,10 +1841,12 @@
 			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
+			<key>Unicode Version</key>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
-			<true/>
+			<false/>
 			<key>Use Bright Bold</key>
 			<false/>
 			<key>Use Canonical Parser</key>
@@ -1955,7 +1957,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-10T17:49:13Z</date>
+	<date>2016-08-12T15:33:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

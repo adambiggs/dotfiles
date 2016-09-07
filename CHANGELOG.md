@@ -1,3 +1,25 @@
+<a name="9.12.0"></a>
+# [9.12.0](https://github.com/adambiggs/dotfiles/compare/9.11.0...v9.12.0) (2016-09-07)
+
+
+### Bug Fixes
+
+* **vim:** `termguicolors` option throws errors in older versions of NeoVim ([a699863](https://github.com/adambiggs/dotfiles/commit/a699863))
+* **zsh:** `npm` autocomplete plugin errors due to missing cache directory ([1680a4f](https://github.com/adambiggs/dotfiles/commit/1680a4f))
+
+### Features
+
+* **iterm:** change font to Monoid and switch to nightly builds ([18e478d](https://github.com/adambiggs/dotfiles/commit/18e478d))
+* **vim:** `airline-onedark` theme merged into main repo ([10607e4](https://github.com/adambiggs/dotfiles/commit/10607e4))
+* **vim:** install `tigris.nvim` for intelligent JavaScript syntax highlighting ([019d435](https://github.com/adambiggs/dotfiles/commit/019d435))
+* **vim:** only disable `polyglot` for `.js` files if `tigris` is installed ([2545880](https://github.com/adambiggs/dotfiles/commit/2545880))
+* **vim:** set `.json` indentation to match `:CleanJSON` command ([3893deb](https://github.com/adambiggs/dotfiles/commit/3893deb))
+* update `nvm` submodule ([c4e55e0](https://github.com/adambiggs/dotfiles/commit/c4e55e0))
+* update `tpm` submodule ([6af2a4b](https://github.com/adambiggs/dotfiles/commit/6af2a4b))
+* update iTerm prefs ([e7e7531](https://github.com/adambiggs/dotfiles/commit/e7e7531))
+
+
+
 <a name="9.11.0"></a>
 # [9.11.0](https://github.com/adambiggs/dotfiles/compare/9.10.0...v9.11.0) (2016-07-26)
 

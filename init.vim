@@ -308,7 +308,7 @@
     autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
     " JSON
-    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1
+    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=4 tabstop=4 softtabstop=4
 
     " Vagrantfile
     autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby

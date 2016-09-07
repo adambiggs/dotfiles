@@ -770,7 +770,9 @@
 
   " Plyglot {{{
     if isdirectory(expand(b:plugin_directory . '/vim-polyglot'))
-      let g:polyglot_disabled = ['javascript', 'javascript.jsx'] " JavaScript is handled by tigris.nvim
+      if isdirectory(expand(b:plugin_directory . '/tigris.nvim'))
+        let g:polyglot_disabled = ['javascript', 'javascript.jsx'] " JavaScript is handled by tigris.nvim
+      endif
     endif
   " }}}
 

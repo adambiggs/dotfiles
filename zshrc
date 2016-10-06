@@ -6,7 +6,7 @@ source `brew --prefix zplug`/init.zsh
 
 zplug "akoenig/gulp.plugin.zsh", nice:10
 zplug "djui/alias-tips"
-zplug "jimmijj/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
+zplug "zsh-users/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/brew-cask", from:oh-my-zsh, nice:10
 zplug "plugins/cake", from:oh-my-zsh, nice:10

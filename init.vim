@@ -110,6 +110,7 @@
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'adambiggs/tmuxline.vim'
   Plug 'junegunn/vim-peekaboo'
+  Plug 'kassio/neoterm'
   Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
   Plug 'nathanaelkane/vim-indent-guides'
@@ -744,6 +745,21 @@
         smap <C-s> <Plug>(neosnippet_expand_or_jump)
         xmap <C-s> <Plug>(neosnippet_expand_target)
       " }}}
+
+    endif
+  " }}}
+
+  " Neoterm {{{
+    if isdirectory(expand(b:plugin_directory . '/neoterm'))
+
+      let g:neoterm_shell      = "zsh"
+      let g:neoterm_autoinsert = 1
+
+      nnoremap <silent> <C-c> :T 
+      " hide/close terminal
+      nnoremap <silent> <C-x> :call neoterm#close()<cr>
+      " clear terminal
+      nnoremap <silent> <C-l> :call neoterm#clear()<cr>
 
     endif
   " }}}

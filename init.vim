@@ -681,18 +681,19 @@
     if isdirectory(expand(b:plugin_directory . '/nerdtree'))
 
       " Config {{{
-        let NERDTreeAutoCenterThreshold = 50
-        let NERDTreeAutoDeleteBuffer    = 1
-        let NERDTreeDirArrows           = 1
-        let NERDTreeIgnore              = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
-        let NERDTreeMapOpenVSplit       = 'v'
-        let NERDTreeMinimalUI           = 1
-        let NERDTreeMouseMode           = 2
-        let NERDTreeQuitOnOpen          = 1
-        let NERDTreeShowBookmarks       = 1
-        let NERDTreeShowHidden          = 1
-        let NERDTreeSortHiddenFirst     = 1
-        let NERDTreeWinSize             = 35
+        let NERDTreeAutoCenterThreshold   = 50
+        let NERDTreeAutoDeleteBuffer      = 1
+        let NERDTreeDirArrows             = 1
+        let NERDTreeIgnore                = ['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '\.map$', '.DS_Store']
+        let NERDTreeMapOpenVSplit         = 'v'
+        let NERDTreeMinimalUI             = 1
+        let NERDTreeMouseMode             = 2
+        let NERDTreeQuitOnOpen            = 1
+        let NERDTreeShowBookmarks         = 1
+        let NERDTreeShowHidden            = 1
+        let NERDTreeSortHiddenFirst       = 1
+        let NERDTreeWinSize               = 35
+        let NERDTreeCascadeSingleChildDir = 0
 
         " File highlighting
         function! NERDTreeHighlightFile(extension, fg, bg)

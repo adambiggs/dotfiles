@@ -987,11 +987,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>164 524 606 456 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 607 620 392 0 0 1920 1200 </string>
+	<string>970 787 620 392 0 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>651 590 918 507 0 0 2560 1417 </string>
+	<string>651 719 918 507 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1200 0 0 1920 1177 </string>
+	<string>0 0 2560 1440 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_6A0C1221-64A5-4047-8A96-738B7CCBA496</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_6A0C1221-64A5-4047-8A96-738B7CCBA496_selection</key>
@@ -1854,7 +1854,7 @@
 			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use HFS Plus Mapping</key>
-			<true/>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
@@ -1875,6 +1875,10 @@
 	<true/>
 	<key>NoSyncConfirmBeta</key>
 	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncInstallUtilitiesPackage</key>
@@ -1957,7 +1961,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-12T15:33:55Z</date>
+	<date>2016-09-09T16:14:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -3635,7 +3639,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160808-nightly</string>
+	<string>3.0.20160823-nightly</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>

@@ -123,6 +123,12 @@ if command -v brew >/dev/null; then
   echo $PATH | grep -q $BREWBIN || export PATH=$BREWBIN:$PATH
 fi
 
+# Composer
+if command -v composer >/dev/null; then
+  COMPOSERBIN=$HOME/.composer/vendor/bin
+  echo $PATH | grep -q $COMPOSERBIN || export PATH=$PATH:$COMPOSERBIN
+fi
+
 
 ### ALIASES ###
 

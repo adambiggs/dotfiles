@@ -184,9 +184,6 @@ alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 # NVM
 [ -f ~/.dotfiles/libs/nvm/nvm.sh ] && source ~/.dotfiles/libs/nvm/nvm.sh
 
-# Base16 theme.
-[ -f ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh ] && source ~/.dotfiles/themes/base16-shell/base16-eighties.dark.sh
-
 # iTerm cli integration.
 [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 

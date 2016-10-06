@@ -22,7 +22,7 @@ function update_brew_pkg_head() {
 # Homebrew
 echo -e "\n${blue}Updating Homebrew packages...${clear}"
 brew update
-brew upgrade --all
+brew upgrade
 brew cleanup
 echo -e "${green}Done.${clear}"
 
@@ -44,8 +44,8 @@ echo -e "${green}Done.${clear}"
 
 # Pip
 echo -e "\n${blue}Updating certain PIP packages...${clear}"
-pip2 install -U pip neovim awscli tmuxp docker-compose setuptools
-pip3 install -U pip neovim setuptools
+pip2 install -U pip neovim awscli tmuxp setuptools
+pip3 install -U pip neovim awscli tmuxp setuptools
 echo -e "${green}Done.${clear}"
 
 # Tmux plugins

@@ -37,12 +37,6 @@ echo -e "${green}Done.${clear}"
 # Fonts
 source $SCRIPT_PATH/install-fonts
 
-# Pecl
-echo -e "\n${blue}Updating Pecl packages...${clear}"
-pecl update-channels
-pecl upgrade msgpack
-echo -e "${green}Done.${clear}"
-
 # Gem
 echo -e "\n${blue}Updating Ruby gems...${clear}"
 gem update --user-install

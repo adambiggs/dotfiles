@@ -149,7 +149,7 @@
 
   " Workflow
   Plug 'airblade/vim-rooter'
-  Plug 'benekastah/neomake', { 'on': ['Neomake'] }
+  Plug 'neomake/neomake'
   Plug 'benmills/vimux'
   Plug 'ciaranm/detectindent', { 'on': 'DetectIndent' }
   Plug 'cohama/lexima.vim'

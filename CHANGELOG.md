@@ -1,3 +1,25 @@
+<a name="9.13.0"></a>
+# [9.13.0](https://github.com/adambiggs/dotfiles/compare/9.12.0...v9.13.0) (2016-10-06)
+
+
+### Bug Fixes
+
+* **zsh:** `zsh-history-substring-search` keybindings broken ([191e2a2](https://github.com/adambiggs/dotfiles/commit/191e2a2))
+
+### Features
+
+* **install:** install `msgpack` and `composer` via Homebrew ([bec5419](https://github.com/adambiggs/dotfiles/commit/bec5419))
+* **install:** install Atom ([573f86e](https://github.com/adambiggs/dotfiles/commit/573f86e))
+* **vim:** disable NERDTree single child directory cascading ([5b66aba](https://github.com/adambiggs/dotfiles/commit/5b66aba))
+* **vim:** install `jspc.vim` and fix Deoplete/Tern omni-completion config ([cece831](https://github.com/adambiggs/dotfiles/commit/cece831))
+* **vim:** install `neoterm` ([bb72877](https://github.com/adambiggs/dotfiles/commit/bb72877))
+* **vim:** switch to official `neomake/neomake` repo ([6296a4c](https://github.com/adambiggs/dotfiles/commit/6296a4c))
+* **zsh:** add Composer bins to PATH ([96bba74](https://github.com/adambiggs/dotfiles/commit/96bba74))
+* **zsh:** switch to official `zsh-users/zsh-syntax-highlighting` repo ([027e77a](https://github.com/adambiggs/dotfiles/commit/027e77a))
+* **zsh:** update Docker Compose aliases ([21c0b60](https://github.com/adambiggs/dotfiles/commit/21c0b60))
+
+
+
 <a name="9.12.0"></a>
 # [9.12.0](https://github.com/adambiggs/dotfiles/compare/9.11.0...v9.12.0) (2016-09-07)
 

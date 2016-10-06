@@ -127,7 +127,8 @@
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
-  Plug 'carlitux/deoplete-ternjs'
+  Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+  Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'Shougo/context_filetype.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
   Plug 'Shougo/neoinclude.vim'
@@ -186,6 +187,7 @@
   set gdefault          " Substitute all matches on a line by default
   set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead
   set viewoptions=cursor,folds,slash,unix
+  set completeopt=longest,menuone
   set foldopen-=block
   set maxmapdepth=100   " Reduce maximum remaps to throw 'recursive mapping' error sooner
 
@@ -282,16 +284,6 @@
 
       " Automatically check for changed files outside Vim
       autocmd BufRead,BufEnter,FocusGained * silent! checktime
-
-      " Omni-completion.
-      autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-      autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-      autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-      autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-      autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-      autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-      autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-      autocmd FileType php setlocal omnifunc=phpcd#CompletePHP
 
     augroup end
   " }}}
@@ -430,6 +422,15 @@
       " Config {{{
         let g:deoplete#enable_at_startup     = 1
         let g:deoplete#enable_refresh_always = 0
+
+        let g:deoplete#omni#functions = {}
+        let g:deoplete#omni#functions.javascript = [
+          \ 'tern#Complete',
+          \ 'jspc#omni'
+        \ ]
+
+        let g:deoplete#sources = {}
+        let g:deoplete#sources['javascript.jsx'] = ['buffer', 'neosnippet', 'ternjs']
       " }}}
 
       " Mappings {{{

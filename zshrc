@@ -6,11 +6,11 @@ source `brew --prefix zplug`/init.zsh
 
 zplug "akoenig/gulp.plugin.zsh", nice:10
 zplug "djui/alias-tips"
-zplug "zsh-users/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/brew-cask", from:oh-my-zsh, nice:10
 zplug "plugins/cake", from:oh-my-zsh, nice:10
 zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/composer", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh, nice:10
 zplug "plugins/npm", from:oh-my-zsh
@@ -21,6 +21,7 @@ zplug "sdurrheimer/docker-compose-zsh-completion"
 zplug "zsh-users/zsh-autosuggestions", nice:10
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", nice:19 # Should be loaded last.
+zplug "zsh-users/zsh-syntax-highlighting", nice:18 # Should be loaded 2nd last.
 
 # Theme.
 setopt prompt_subst # Make sure propt is able to be generated properly.

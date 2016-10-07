@@ -102,7 +102,7 @@ echo -e "\n${blue}Installing Homebrew Casks...${clear}"
 brew tap | grep -q caskroom/versions || brew tap caskroom/versions
 if [[ $OSTYPE == darwin* ]]; then
   # Mac spcific apps
-  install_brew_cask iterm2-beta
+  install_brew_cask iterm2-nightly
   install_brew_cask spectacle
   install_brew_cask flycut
   install_brew_cask sourcetree

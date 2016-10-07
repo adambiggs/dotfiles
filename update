@@ -59,7 +59,6 @@ echo -e "\n${blue}Updating ZSH plugins...${clear}"
 zplug update
 zplug clean
 zplug clear
-zplug load --verbose
 echo -e "${green}Done.${clear}"
 
 echo -e "\n${green}All done.${clear}"

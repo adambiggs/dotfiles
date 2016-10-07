@@ -69,7 +69,7 @@
 
   " Clean JSON formatting {{{
     function! CleanJSON()
-      %!python -m json.tool
+      %!jq --monochrome-output .
     endfunction
   " }}}
 
@@ -301,7 +301,7 @@
     autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
     " JSON
-    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=4 tabstop=4 softtabstop=4
+    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=2 tabstop=2 softtabstop=2
 
     " Vagrantfile
     autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby

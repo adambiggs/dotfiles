@@ -1,3 +1,19 @@
+<a name="9.13.1"></a>
+## [9.13.1](https://github.com/adambiggs/dotfiles/compare/9.13.0...v9.13.1) (2016-10-07)
+
+
+### Bug Fixes
+
+* **update:** shell exits unexpectedly after running update script ([c59aa5c](https://github.com/adambiggs/dotfiles/commit/c59aa5c))
+
+### Features
+
+* **iterm:** switch back to nightly ([63e7d91](https://github.com/adambiggs/dotfiles/commit/63e7d91))
+* **vim:** switch from `python json.tool` to `jq` for JSON formatting tool ([4dd4c28](https://github.com/adambiggs/dotfiles/commit/4dd4c28))
+* **zsh:** reinstall `composer` plugin ([1fcf779](https://github.com/adambiggs/dotfiles/commit/1fcf779))
+
+
+
 <a name="9.13.0"></a>
 # [9.13.0](https://github.com/adambiggs/dotfiles/compare/9.12.0...v9.13.0) (2016-10-06)
 

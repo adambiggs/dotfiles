@@ -78,9 +78,6 @@ if [[ $OSTYPE == darwin* ]]; then
   install_brew_pkg git
   install_brew_pkg openssl
   install_brew_pkg python
-  # NOTE: reattach-to-user-namespace technically no longer needed as of OSX
-  # Yosemite, but grunt-concurrent doesn't work in Tmux without it.
-  install_brew_pkg reattach-to-user-namespace
 else
   # Linux specific packages
   install_brew_pkg git '--with-brewed-curl --with-brewed-openssl'
@@ -94,8 +91,6 @@ install_brew_pkg ctags
 install_brew_pkg tmux
 install_brew_pkg the_silver_searcher
 install_brew_pkg wget
-install_brew_pkg docker
-install_brew_pkg docker-machine
 install_brew_pkg php70
 install_brew_pkg php70-msgpack
 install_brew_pkg composer
@@ -112,7 +107,6 @@ if [[ $OSTYPE == darwin* ]]; then
   install_brew_cask flycut
   install_brew_cask sourcetree
   install_brew_cask karabiner
-  install_brew_cask vmware-fusion
   install_brew_cask atom
 fi
 echo -e "${green}Done.${clear}"

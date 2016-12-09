@@ -1,3 +1,14 @@
+<a name="10.0.1"></a>
+## [10.0.1](https://github.com/adambiggs/dotfiles/compare/v10.0.0...v10.0.1) (2016-12-09)
+
+
+### Features
+
+* **vim:** enable JavaScript syntax code folding ([705bdc0](https://github.com/adambiggs/dotfiles/commit/705bdc0))
+* **vim:** prefix comments with a space (for StandardJS code style) ([9b1bf5f](https://github.com/adambiggs/dotfiles/commit/9b1bf5f))
+
+
+
 <a name="10.0.0"></a>
 # [10.0.0](https://github.com/adambiggs/dotfiles/compare/9.13.1...v10.0.0) (2016-12-09)
 

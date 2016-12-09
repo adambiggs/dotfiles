@@ -124,7 +124,6 @@
   Plug 'haya14busa/incsearch.vim' | Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' } | Plug 'junegunn/fzf.vim'
   Plug 'kshenoy/vim-signature'
-  Plug 'osyo-manga/vim-over', { 'on': 'OverCommandLine' }
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
@@ -205,6 +204,11 @@
   if (has('termguicolors'))
     "For Neovim > 0.1.5 and Vim > patch 7.4.1799
     set termguicolors
+  endif
+
+  " Live substitution preview
+  if exists('&inccommand')
+    set inccommand=split
   endif
 
   set mousehide                 " Hide the mouse cursor while typing
@@ -369,6 +373,10 @@
 
   " Find merge conflict markers
   map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+  " Quick find/replace
+  nnoremap <Leader>o :%s/<C-r><C-w>/
+  vnoremap <Leader>o "zy:%s/<C-r><C-o>"/
 
 " }}}
 
@@ -767,22 +775,6 @@
   " One Dark {{{
     if isdirectory(expand(b:plugin_directory . '/onedark.vim'))
       let g:onedark_terminal_italics = 1
-    endif
-  " }}}
-
-  " Over.vim {{{
-    if isdirectory(expand(b:plugin_directory . '/vim-over'))
-
-      " Config {{{
-        let g:over#command_line#paste_escape_chars = '/.*$^~'
-      " }}}
-
-      " Mappings {{{
-        nnoremap <Leader>o :OverCommandLine<CR>%s/
-        nnoremap <Leader>O :OverCommandLine<CR>%s/<C-r><C-w>/
-        vnoremap <Leader>O "zy:OverCommandLine<CR>%s/<C-v>/
-      " }}}
-
     endif
   " }}}
 

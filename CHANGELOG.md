@@ -1,3 +1,29 @@
+<a name="10.0.0"></a>
+# [10.0.0](https://github.com/adambiggs/dotfiles/compare/9.13.1...v10.0.0) (2016-12-09)
+
+
+### Bug Fixes
+
+* Docker Compose sometimes times out when launching services ([d848968](https://github.com/adambiggs/dotfiles/commit/d848968))
+
+
+### Features
+
+* **zsh:** limit `dcl` alias to last 200 lines of container logs ([145dfb3](https://github.com/adambiggs/dotfiles/commit/145dfb3))
+* remove trailing whitespace when saving stylus files ([37b3b7f](https://github.com/adambiggs/dotfiles/commit/37b3b7f))
+* replace `gulp` with NPM scripts ([2c81b3a](https://github.com/adambiggs/dotfiles/commit/2c81b3a))
+* **brew:** install `yarn` ([94e49ff](https://github.com/adambiggs/dotfiles/commit/94e49ff))
+* **git:** add `.tern-port` to global ignore ([58e9665](https://github.com/adambiggs/dotfiles/commit/58e9665))
+* **vim:** add `deoplete-padawan` plugin ([f169e73](https://github.com/adambiggs/dotfiles/commit/f169e73))
+* **vim:** remove `tigris` plugin ([a660660](https://github.com/adambiggs/dotfiles/commit/a660660))
+* **vim:** replace `vim-over` with native NeoVim substitution preview ([b6efceb](https://github.com/adambiggs/dotfiles/commit/b6efceb))
+* **zsh:** add Java to $PATH ([58dd725](https://github.com/adambiggs/dotfiles/commit/58dd725))
+* **zsh:** add Yarn binaries to $PATH ([d215a8d](https://github.com/adambiggs/dotfiles/commit/d215a8d))
+* **zsh:** change ruby path ([8355b51](https://github.com/adambiggs/dotfiles/commit/8355b51))
+* **zsh:** swap oh-my-zsh plugins for prezto and replace some other plugins ([a8b8362](https://github.com/adambiggs/dotfiles/commit/a8b8362))
+
+
+
 <a name="9.13.1"></a>
 ## [9.13.1](https://github.com/adambiggs/dotfiles/compare/9.13.0...9.13.1) (2016-10-07)
 

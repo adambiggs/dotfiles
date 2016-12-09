@@ -1,6 +1,6 @@
 {
   "name": "adambiggs-dotfiles",
-  "version": "9.13.1",
+  "version": "10.0.0",
   "description": "Repo for my personal dotfiles",
   "private": true,
   "main": "zshrc",

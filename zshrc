@@ -77,6 +77,7 @@ export NVIM_TUI_ENABLE_CURSOR_SHAPE=1 # https://github.com/neovim/neovim/pull/20
 export UPDATE_ZSH_DAYS=1
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='    '
 export ZSH_CACHE_DIR=$ZSH/cache
+export COMPOSE_HTTP_TIMEOUT=120
 
 
 ### AUTOSUGGESTIONS ###

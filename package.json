@@ -1,27 +1,21 @@
 {
-  "name": "adams-dotfiles",
+  "name": "adambiggs-dotfiles",
   "version": "9.13.1",
   "description": "Repo for my personal dotfiles",
   "private": true,
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Warning: no test specified\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adambiggs/dotfiles.git"
-  },
+  "main": "zshrc",
+  "repository": "adambiggs/dotfiles",
   "author": "Adam Biggs <adam.biggs@lightmaker.com>",
-  "license": "",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adambiggs/dotfiles/issues"
   },
   "homepage": "https://github.com/adambiggs/dotfiles",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-bump": "^2.4.0",
-    "gulp-conventional-changelog": "^1.0.0",
-    "gulp-git": "^1.11.3",
-    "minimist": "^1.2.0"
+    "conventional-changelog-cli": "^1.2.0"
+  },
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "version": "npm run changelog && git add CHANGELOG.md"
   }
 }

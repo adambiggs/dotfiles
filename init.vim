@@ -63,7 +63,7 @@
 
     augroup trailing-whitespace
       autocmd!
-      autocmd FileType c,coffee,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yaml,perl,sql autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+      autocmd FileType c,coffee,cpp,go,java,javascript,json,perl,php,puppet,python,rust,sql,stylus,twig,xml,yaml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
     augroup end
   " }}}
 

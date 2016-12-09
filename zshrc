@@ -100,10 +100,8 @@ fi
 export REPO_PATH=$HOME/Repos
 
 # Ruby
-if command -v gem >/dev/null; then
-  GEMPATH=$HOME/.gem/ruby/2.0.0/bin
-  echo $PATH | grep -q $GEMPATH || export PATH=$GEMPATH:$PATH
-fi
+RUBYPATH=/usr/local/opt/ruby/bin
+echo $PATH | grep -q $RUBYPATH || export PATH=$RUBYPATH:$PATH
 
 # Go
 if command -v go >/dev/null; then

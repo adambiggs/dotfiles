@@ -95,6 +95,7 @@ install_brew_pkg php70
 install_brew_pkg php70-msgpack
 install_brew_pkg composer
 install_brew_pkg jq
+install_brew_pkg yarn
 echo -e "${green}Done.${clear}"
 
 # Homebrew Casks

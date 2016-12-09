@@ -38,7 +38,7 @@ echo -e "${green}Done.${clear}"
 source $SCRIPT_PATH/install-fonts
 
 # Gem
-echo -e "\n${blue}Updating Ruby gems...${clear}"
+echo -e "${blue}Updating Ruby gems...${clear}"
 gem update --user-install
 echo -e "${green}Done.${clear}"
 

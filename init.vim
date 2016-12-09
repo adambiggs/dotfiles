@@ -724,6 +724,14 @@
     endif
   " }}}
 
+  " NERDCommenter {{{
+    if isdirectory(expand(b:plugin_directory . '/nerdcommenter'))
+
+      let g:NERDSpaceDelims = 1
+
+    endif
+  " }}}
+
   " Neomake {{{
     if isdirectory(expand(b:plugin_directory . '/neomake'))
 

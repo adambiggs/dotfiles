@@ -304,6 +304,9 @@
     autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
     autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
+    " JavaScript
+    autocmd FileType javascript,javascript.jsx setlocal foldmethod=indent foldlevel=1
+
     " JSON
     autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=2 tabstop=2 softtabstop=2
 

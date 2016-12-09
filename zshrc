@@ -117,6 +117,10 @@ if command -v go >/dev/null; then
   echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
 fi
 
+# Java
+JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
+[ -f $JAVA_HOME/bin/java ] && export JAVA_HOME=$JAVA_HOME
+
 # Homebrew
 if command -v brew >/dev/null; then
   BREWSBIN=/usr/local/sbin

@@ -14,6 +14,7 @@ zplug "modules/homebrew", from:prezto
 zplug "modules/node", from:prezto
 zplug "modules/osx", from:prezto
 zplug "peterhurford/git-it-on.zsh"
+zplug "plugins/yarn", from:oh-my-zsh
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search", defer:3 # Should be loaded last.

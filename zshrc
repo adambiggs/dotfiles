@@ -58,8 +58,6 @@ export HISTSIZE=11000
 export SAVEHIST=10000
 export HISTFILE=~/.zsh_history
 
-unset COMPLETION_WAITING_DOTS # https://github.com/tarruda/zsh-autosuggestions#known-issues
-#export COMPLETION_WAITING_DOTS=true
 export DEFAULT_USER="adam"
 export DISABLE_AUTO_TITLE=true
 export DISABLE_CORRECTION=true

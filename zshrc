@@ -188,6 +188,11 @@ alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 # NVM
 [ -f ~/.dotfiles/libs/nvm/nvm.sh ] && source ~/.dotfiles/libs/nvm/nvm.sh
 
+# Export NPM_PATH after starting NVM
+if command -v npm >/dev/null; then
+  export NPM_PATH=`npm root -g`
+fi
+
 # iTerm cli integration.
 [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 

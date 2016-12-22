@@ -57,7 +57,6 @@ echo -e "${green}Done.${clear}"
 # zplug
 echo -e "\n${blue}Updating ZSH plugins...${clear}"
 zplug update
-zplug clean
 zplug clear
 echo -e "${green}Done.${clear}"
 

@@ -4,6 +4,7 @@
 export ZPLUG_HOME=~/.config/zplug
 source `brew --prefix zplug`/init.zsh
 
+zplug "aws/aws-cli", use:"bin/aws_zsh_completer.sh"
 zplug "djui/alias-tips"
 zplug "docker/compose", as:command, use:"contrib/completion/zsh/_docker-compose"
 zplug "docker/docker", as:command, use:"contrib/completion/zsh/_docker"
@@ -35,9 +36,7 @@ fi
 # Source plugins.
 zplug load --verbose
 
-
 ### COMPLETIONS ###
-[ -f /usr/local/bin/aws_zsh_completer.sh ] && source /usr/local/bin/aws_zsh_completer.sh
 type tmuxp &> /dev/null && eval "`_TMUXP_COMPLETE=source tmuxp`"
 
 

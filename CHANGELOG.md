@@ -1,3 +1,23 @@
+<a name="10.1.0"></a>
+# [10.1.0](https://github.com/adambiggs/dotfiles/compare/v10.0.1...v10.1.0) (2016-12-22)
+
+
+### Bug Fixes
+
+* **tmux:** navigating between vim panes not working in Tmux ([64c1758](https://github.com/adambiggs/dotfiles/commit/64c1758))
+* **update:** `$ zplug clean` command not working with latest version of `zplug` ([01335bf](https://github.com/adambiggs/dotfiles/commit/01335bf))
+* **zsh:** Yarn global binary path doesn't use NVM ([35ae680](https://github.com/adambiggs/dotfiles/commit/35ae680))
+
+
+### Features
+
+* **vim:** add `posva/vim-vue` plugin ([5495c8d](https://github.com/adambiggs/dotfiles/commit/5495c8d))
+* **zsh:** add `yarn` completions ([34ab5f0](https://github.com/adambiggs/dotfiles/commit/34ab5f0))
+* **zsh:** export new `NPM_PATH` environment variable ([e774999](https://github.com/adambiggs/dotfiles/commit/e774999))
+* **zsh:** manage AWS completions with `zplug` ([af89907](https://github.com/adambiggs/dotfiles/commit/af89907))
+
+
+
 <a name="10.0.1"></a>
 ## [10.0.1](https://github.com/adambiggs/dotfiles/compare/v10.0.0...v10.0.1) (2016-12-09)
 

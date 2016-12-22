@@ -145,6 +145,7 @@
   " Syntax
   Plug 'ap/vim-css-color', { 'for': ['css', 'stylus', 'sass'] }
   Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+  Plug 'posva/vim-vue'
   Plug 'sheerun/vim-polyglot'
 
   " Workflow

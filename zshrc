@@ -127,12 +127,6 @@ if command -v composer >/dev/null; then
   echo $PATH | grep -q $COMPOSERBIN || export PATH=$PATH:$COMPOSERBIN
 fi
 
-# Yarn
-if command -v yarn >/dev/null; then
-  YARNBIN=`yarn global bin`
-  echo $PATH | grep -q $YARNBIN || export PATH=$PATH:$YARNBIN
-fi
-
 
 ### ALIASES ###
 
@@ -191,6 +185,12 @@ alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 # Export NPM_PATH after starting NVM
 if command -v npm >/dev/null; then
   export NPM_PATH=`npm root -g`
+fi
+
+# Add Yarn global binaries to $PATH after starting NVM
+if command -v yarn >/dev/null; then
+  YARNBIN=`yarn global bin`
+  echo $PATH | grep -q $YARNBIN || export PATH=$PATH:$YARNBIN
 fi
 
 # iTerm cli integration.

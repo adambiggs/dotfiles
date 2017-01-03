@@ -129,7 +129,7 @@
   Plug 'adambiggs/vim-snippets'
   Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
   Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'pbogut/deoplete-padawan', { 'for': ['php'] }
+  Plug 'padawan-php/deoplete-padawan', { 'for': ['php'] }
   Plug 'Shougo/context_filetype.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
   Plug 'Shougo/neoinclude.vim'

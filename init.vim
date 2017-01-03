@@ -745,10 +745,11 @@
         \ }
 
       let g:neomake_coffee_enabled_makers = ['coffeelint', 'coffeetags']
+      let g:neomake_jsx_enabled_makers = ['eslint']
 
       augroup neomake
         autocmd!
-        autocmd BufWritePost *.coffee Neomake
+        autocmd BufWritePost * Neomake
       augroup end
     endif
   " }}}

@@ -1,3 +1,22 @@
+<a name="10.1.1"></a>
+## [10.1.1](https://github.com/adambiggs/dotfiles/compare/v10.1.0...v10.1.1) (2017-01-03)
+
+
+### Bug Fixes
+
+* **install:** changing default shell to ZSH doesn't work ([aed5c2c](https://github.com/adambiggs/dotfiles/commit/aed5c2c))
+* **install:** deprecation warnings when installing PIP packages ([b0cb73a](https://github.com/adambiggs/dotfiles/commit/b0cb73a))
+* **install:** duplicate PIP "already installed" messages are confusing ([096cb63](https://github.com/adambiggs/dotfiles/commit/096cb63))
+* **install:** installation of homebrew PHP fails ([e55d684](https://github.com/adambiggs/dotfiles/commit/e55d684))
+
+
+### Features
+
+* **git:** use SourceTree for diffs ([a27ce58](https://github.com/adambiggs/dotfiles/commit/a27ce58))
+* **vim:** enable Neomake for all buffer types ([6e29ecf](https://github.com/adambiggs/dotfiles/commit/6e29ecf))
+
+
+
 <a name="10.1.0"></a>
 # [10.1.0](https://github.com/adambiggs/dotfiles/compare/v10.0.1...v10.1.0) (2016-12-22)
 

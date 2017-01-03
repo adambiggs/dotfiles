@@ -48,7 +48,7 @@ function install_ruby_gem() {
 # Install a Pip package if not already installed.
 function install_pip_pkg() {
   name=$1
-  installed=`pip list | grep $name`
+  installed=`pip list --format=legacy | grep $name`
   if [[ -z $installed ]]; then
     pip install $name
   else
@@ -59,7 +59,7 @@ function install_pip_pkg() {
 # Install a Pip v3 package if not already installed.
 function install_pip3_pkg() {
   name=$1
-  installed=`pip3 list | grep $name`
+  installed=`pip3 list --format=legacy | grep $name`
   if [[ -z $installed ]]; then
     pip3 install $name
   else

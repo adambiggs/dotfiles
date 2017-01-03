@@ -125,7 +125,10 @@ DEFAULT_SHELL=`finger $LOGNAME | grep Shell | awk -F': ' '{print $3}'`
 if [ $ZSH_DIR == $DEFAULT_SHELL ]; then
   echo -e "${green}Default shell is already ${clear}$DEFAULT_SHELL${green}.${clear}"
 else
-  chsh -s `which zsh`
+  # Make sure homebrew ZSH is in list of acceptable shells
+  cat /etc/shells | grep -q $ZSH_DIR || echo $ZSH_DIR | sudo tee -a /etc/shells
+  # Change the default shell
+  chsh -s $ZSH_DIR
   echo -e "${green}Done.${clear}"
 fi
 

@@ -14,6 +14,10 @@ function install_brew_pkg() {
   else
     if [ $name == 'neovim' ]; then
       brew tap neovim/homebrew-neovim
+    elif [ $name == 'php70' ]; then
+      brew tap homebrew/dupes
+      brew tap homebrew/versions
+      brew tap homebrew/homebrew-php
     fi
     brew install $args $name
   fi

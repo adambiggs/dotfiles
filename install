@@ -63,7 +63,7 @@ function install_pip3_pkg() {
   if [[ -z $installed ]]; then
     pip3 install $name
   else
-    echo -e "${blue}Already installed:${clear} $name"
+    echo -e "${blue}Already installed (pip3):${clear} $name"
   fi
 }
 

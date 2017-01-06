@@ -180,7 +180,8 @@ alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 ### LIBRARY CONFIG ###
 
 # NVM
-[ -f ~/.dotfiles/libs/nvm/nvm.sh ] && source ~/.dotfiles/libs/nvm/nvm.sh
+export NVM_DIR="$HOME/.config/nvm"
+[ -d $NVM_DIR ] || mkdir $NVM_DIR
 
 # Export NPM_PATH after starting NVM
 if command -v npm >/dev/null; then

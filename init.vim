@@ -630,7 +630,7 @@
       " }}}
 
       " Mappings {{{
-        nnoremap <silent> <C-@> :Buffers<CR>
+        nnoremap <silent> <C-Space> :Buffers<CR>
         nnoremap <silent> <C-p> :FZF<CR>
       " }}}
 

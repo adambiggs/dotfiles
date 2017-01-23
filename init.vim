@@ -139,6 +139,7 @@
 
   " Source Control
   Plug 'airblade/vim-gitgutter'
+  Plug 'jreybert/vimagit'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
 

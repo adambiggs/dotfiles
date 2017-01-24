@@ -17,10 +17,4 @@ ln -sfhv $SCRIPT_PATH/zshrc ~/.zshrc
 ln -sfhv $SCRIPT_PATH/init.vim ~/.config/nvim/init.vim
 echo -e "${green}Done.${clear}"
 
-if [[ $OSTYPE == darwin* ]]; then
-  echo -e "\n${blue}Linking custom Karabiner key mappings...${clear}"
-  ln -sfv $SCRIPT_PATH/prefs/karabiner/private.xml ~/Library/Application\ Support/Karabiner/private.xml
-  echo -e "${green}Done.${clear}"
-fi
-
 echo ""

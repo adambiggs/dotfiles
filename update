@@ -15,7 +15,7 @@ function update_brew_pkg_head() {
     echo -e "${green}Already up to date.${clear}"
   else
     brew reinstall --HEAD $pkg_name
-    echo -e "\n${green}Done.${clear}"
+    echo -e "\n${green}✔${clear}"
   fi
 }
 
@@ -24,7 +24,7 @@ echo -e "\n${blue}Updating Homebrew packages...${clear}"
 brew update
 brew upgrade
 brew cleanup
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 # HEAD Homebrew packages
 update_brew_pkg_head neovim
@@ -32,30 +32,30 @@ update_brew_pkg_head neovim
 # Git submodules
 echo -e "\n${blue}Updating Git submodules...${clear}"
 git submodule update --remote --rebase
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 # Gem
-echo -e "${blue}Updating Ruby gems...${clear}"
-gem update --user-install
-echo -e "${green}Done.${clear}"
+echo -e "\n${blue}Updating Ruby gems...${clear}"
+gem update
+echo -e "${green}✔${clear}"
 
 # Pip
 echo -e "\n${blue}Updating certain PIP packages...${clear}"
 pip2 install -U pip neovim awscli tmuxp setuptools
 pip3 install -U pip neovim awscli tmuxp setuptools
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 # Tmux plugins
 echo -e "\n${blue}Updating Tmux plugins...${clear}"
 $SCRIPT_PATH/libs/tpm/bin/clean_plugins
 $SCRIPT_PATH/libs/tpm/bin/update_plugins all
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 # zplug
 echo -e "\n${blue}Updating ZSH plugins...${clear}"
 zplug update
 zplug clear
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 echo -e "\n${green}All done.${clear}"
 

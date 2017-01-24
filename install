@@ -71,21 +71,22 @@ else
   # Linux specific packages
   install_pkg brew ls install git '--with-brewed-curl --with-brewed-openssl'
 fi
-install_pkg brew ls install zplug
-install_pkg brew ls install python
-install_pkg brew ls install python3
-install_pkg brew ls install neovim '--HEAD'
-install_pkg brew ls install zsh
+install_pkg brew ls install composer
 install_pkg brew ls install ctags
-install_pkg brew ls install tmux
-install_pkg brew ls install the_silver_searcher
-install_pkg brew ls install wget
+install_pkg brew ls install jq
+install_pkg brew ls install neovim '--HEAD'
+install_pkg brew ls install nvm
 install_pkg brew ls install php70
 install_pkg brew ls install php70-msgpack
-install_pkg brew ls install composer
-install_pkg brew ls install jq
+install_pkg brew ls install python
+install_pkg brew ls install python3
+install_pkg brew ls install ruby
+install_pkg brew ls install the_silver_searcher
+install_pkg brew ls install tmux
+install_pkg brew ls install wget
 install_pkg brew ls install yarn
-install_pkg brew ls install nvm
+install_pkg brew ls install zplug
+install_pkg brew ls install zsh
 echo -e "${green}✔${clear}"
 
 # Install casks
@@ -93,11 +94,11 @@ echo -e "\n${blue}Installing Homebrew casks...${clear}"
 install_pkg 'brew cask' ls install font-monoid-nerd-font-mono
 if [[ $OSTYPE == darwin* ]]; then
   # Mac spcific casks
-  install_pkg 'brew cask' ls install iterm2-nightly
-  install_pkg 'brew cask' ls install spectacle
-  install_pkg 'brew cask' ls install flycut
-  install_pkg 'brew cask' ls install sourcetree
   install_pkg 'brew cask' ls install atom
+  install_pkg 'brew cask' ls install flycut
+  install_pkg 'brew cask' ls install iterm2-nightly
+  install_pkg 'brew cask' ls install sourcetree
+  install_pkg 'brew cask' ls install spectacle
 fi
 echo -e "${green}✔${clear}"
 

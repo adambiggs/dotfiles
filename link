@@ -15,6 +15,6 @@ ln -sfhv $SCRIPT_PATH/tmux.conf ~/.tmux.conf
 ln -sfhv $SCRIPT_PATH/zlogin ~/.zlogin
 ln -sfhv $SCRIPT_PATH/zshrc ~/.zshrc
 ln -sfhv $SCRIPT_PATH/init.vim ~/.config/nvim/init.vim
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 echo ""

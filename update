@@ -57,6 +57,6 @@ zplug update
 zplug clear
 echo -e "${green}✔${clear}"
 
-echo -e "\n${green}All done.${clear}"
+echo -e "\n🍕 ${green}All done${clear} 🍕"
 
 echo ""

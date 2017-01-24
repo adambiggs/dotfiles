@@ -1,13 +1,16 @@
-# Dotfiles
-My various dotfiles with a simple script to link them up and install everything
-on a new machine.
+# Adam's Dotfiles
+My dotfiles with some scripts to make installation and updating easy.
 
-Currently running NeoVim + Tmux using iTerm2 nightly in OSX Yosemite.
+Currently running NeoVim + Tmux using iTerm2 nightly in OSX Sierra.
 
 
 ## Setup
 - `$ git clone https://github.com/adambiggs/dotfiles.git ~/.dotfiles`
-- `$ source ~/.dotfiles/install`
+
+## Install
+- `$ cd ~/.dotfiles`
+- `$ cli/install`
 
 ## Update
-- `$ source ~/.dotfiles/update`
+- `$ cd ~/.dotfiles`
+- `$ cli/update`

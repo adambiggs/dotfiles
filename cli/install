@@ -2,7 +2,7 @@
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Source external scripts.
-source $SCRIPT_PATH/scripts/colors
+source $SCRIPT_PATH/../scripts/colors
 
 
 ## Functions ##
@@ -133,8 +133,8 @@ echo -e "${green}✔${clear}"
 
 # Install tmux plugins
 echo -e "\n${blue}Installing Tmux plugins...${clear}"
-$SCRIPT_PATH/libs/tpm/bin/clean_plugins
-$SCRIPT_PATH/libs/tpm/bin/install_plugins
+$SCRIPT_PATH/../libs/tpm/bin/clean_plugins
+$SCRIPT_PATH/../libs/tpm/bin/install_plugins
 echo -e "${green}✔${clear}"
 
 

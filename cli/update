@@ -2,7 +2,7 @@
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Source external scripts.
-source $SCRIPT_PATH/scripts/colors
+source $SCRIPT_PATH/../scripts/colors
 
 # Update a `HEAD` brew package if there are remote changes available.
 function update_brew_pkg_head() {
@@ -31,7 +31,9 @@ update_brew_pkg_head neovim
 
 # Git submodules
 echo -e "\n${blue}Updating Git submodules...${clear}"
+cd $SCRIPT_PATH/..
 git submodule update --remote --rebase
+cd $SCRIPT_PATH
 echo -e "${green}✔${clear}"
 
 # Gem
@@ -47,12 +49,16 @@ echo -e "${green}✔${clear}"
 
 # Tmux plugins
 echo -e "\n${blue}Updating Tmux plugins...${clear}"
-$SCRIPT_PATH/libs/tpm/bin/clean_plugins
-$SCRIPT_PATH/libs/tpm/bin/update_plugins all
+$SCRIPT_PATH/../libs/tpm/bin/clean_plugins
+$SCRIPT_PATH/../libs/tpm/bin/update_plugins all
 echo -e "${green}✔${clear}"
 
 # zplug
 echo -e "\n${blue}Updating ZSH plugins...${clear}"
+export ZPLUG_HOME=~/.config/zplug
+source `brew --prefix zplug`/init.zsh
+source $SCRIPT_PATH/../plugins.zsh
+zplug load
 zplug update
 zplug clear
 echo -e "${green}✔${clear}"

@@ -1,3 +1,25 @@
+<a name="11.0.0"></a>
+# [11.0.0](https://github.com/adambiggs/dotfiles/compare/v10.1.1...v11.0.0) (2017-01-24)
+
+
+### Bug Fixes
+
+* **iterm:** emojis causing rendering issues ([5252ce6](https://github.com/adambiggs/dotfiles/commit/5252ce6))
+* **tmux:** tmux clipboard still not syncing with system clipboard ([fc89cc4](https://github.com/adambiggs/dotfiles/commit/fc89cc4))
+* **vim:** FZF buffer browsing keymap broken in OSX Sierra ([0724990](https://github.com/adambiggs/dotfiles/commit/0724990))
+
+
+### Features
+
+* **vim:** install `vimagit` plugin ([13e8c19](https://github.com/adambiggs/dotfiles/commit/13e8c19))
+* install nerd-fonts via `caskroom-fonts` and remove Git submodule ([d87a561](https://github.com/adambiggs/dotfiles/commit/d87a561))
+* install NVM via Homebrew instead of git submodule ([4d618b5](https://github.com/adambiggs/dotfiles/commit/4d618b5))
+* move install/update scripts to `cli/` directory and update readme ([417252b](https://github.com/adambiggs/dotfiles/commit/417252b))
+* replaced Karabiner with BetterTouchTool ([f01b425](https://github.com/adambiggs/dotfiles/commit/f01b425))
+* switch to Homebrew Ruby ([0d5d610](https://github.com/adambiggs/dotfiles/commit/0d5d610))
+
+
+
 <a name="10.1.1"></a>
 ## [10.1.1](https://github.com/adambiggs/dotfiles/compare/v10.1.0...v10.1.1) (2017-01-03)
 

@@ -4,124 +4,111 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 # Source external scripts.
 source $SCRIPT_PATH/scripts/colors
 
-# Install a Homebrew package if not already installed.
-function install_brew_pkg() {
-  name=$1
-  args=$2
-  `brew ls | grep -q $name`
+
+## Functions ##
+
+# Install a package using the given arguments if not already installed.
+function install_pkg() {
+  bin=$1
+  list_cmd=$2
+  install_cmd=$3
+  name=$4
+  args=$5
+  $bin $list_cmd 2>/dev/null | grep -q $name
   if [ $? == 0 ]; then
-    echo -e "${blue}Already installed:${clear} $name"
+    echo -e "$name ${blue}already installed with ${clear}$bin"
   else
-    if [ $name == 'neovim' ]; then
-      brew tap neovim/homebrew-neovim
-    elif [ $name == 'php70' ]; then
-      brew tap homebrew/dupes
-      brew tap homebrew/versions
-      brew tap homebrew/homebrew-php
-    fi
-    brew install $args $name
+    echo -e "${blue}Installing ${clear}$name${blue}...${clear}"
+    $bin $install_cmd $args $name
   fi
 }
 
-# Install a Homebrew Cask package if not already installed.
-function install_brew_cask() {
-  name=$1
-  `brew cask ls | grep -q $name`
+# Add a Homebrew tap if not already added.
+function install_tap() {
+  tap=$1
+  brew tap | grep -q $tap
   if [ $? == 0 ]; then
-    echo -e "${blue}Already installed:${clear} $name"
+    echo -e "$tap ${blue}already tapped${clear}"
   else
-    brew cask install $name
+    echo -e "${blue}Adding ${clear}$tap${blue} tap...${clear}"
+    brew tap $tap
   fi
 }
 
-# Install a Gem if not already installed.
-function install_ruby_gem() {
-  name=$1
-  `gem list --no-versions | grep -q $name`
-  if [ $? == 0 ]; then
-    echo -e "${blue}Already installed:${clear} $name"
-  else
-    gem install --user-install $name
-  fi
-}
 
-# Install a Pip package if not already installed.
-function install_pip_pkg() {
-  name=$1
-  installed=`pip list --format=legacy | grep $name`
-  if [[ -z $installed ]]; then
-    pip install $name
-  else
-    echo -e "${blue}Already installed:${clear} $name"
-  fi
-}
+## Homebrew ##
 
-# Install a Pip v3 package if not already installed.
-function install_pip3_pkg() {
-  name=$1
-  installed=`pip3 list --format=legacy | grep $name`
-  if [[ -z $installed ]]; then
-    pip3 install $name
-  else
-    echo -e "${blue}Already installed (pip3):${clear} $name"
-  fi
-}
-
-# Homebrew
-echo -e "\n${blue}Installing Homebrew packages...${clear}"
+# Install Homebrew
 if ! type brew > /dev/null; then
+  echo -e "\n${blue}Installing Homebrew...${clear}"
   if [[ $OSTYPE == darwin* ]]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   else
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
   fi
+  echo -e "${green}✔${clear}"
 fi
+
+# Install taps
+echo -e "\n${blue}Adding Homebrew taps...${clear}"
+install_tap caskroom/fonts
+install_tap caskroom/versions
+install_tap homebrew/dupes # For PHP
+install_tap homebrew/php
+install_tap homebrew/versions # For PHP
+install_tap neovim/neovim
+echo -e "${green}✔${clear}"
+
+# Install packages
+echo -e "\n${blue}Installing Homebrew packages...${clear}"
 brew update
 if [[ $OSTYPE == darwin* ]]; then
   # Mac specific packages
-  install_brew_pkg git
-  install_brew_pkg openssl
-  install_brew_pkg python
+  install_pkg brew ls install git
+  install_pkg brew ls install openssl
+  install_pkg brew ls install python
 else
   # Linux specific packages
-  install_brew_pkg git '--with-brewed-curl --with-brewed-openssl'
+  install_pkg brew ls install git '--with-brewed-curl --with-brewed-openssl'
 fi
-install_brew_pkg zplug
-install_brew_pkg python
-install_brew_pkg python3
-install_brew_pkg neovim '--HEAD'
-install_brew_pkg zsh
-install_brew_pkg ctags
-install_brew_pkg tmux
-install_brew_pkg the_silver_searcher
-install_brew_pkg wget
-install_brew_pkg php70
-install_brew_pkg php70-msgpack
-install_brew_pkg composer
-install_brew_pkg jq
-install_brew_pkg yarn
-install_brew_pkg nvm
-echo -e "${green}Done.${clear}"
+install_pkg brew ls install zplug
+install_pkg brew ls install python
+install_pkg brew ls install python3
+install_pkg brew ls install neovim '--HEAD'
+install_pkg brew ls install zsh
+install_pkg brew ls install ctags
+install_pkg brew ls install tmux
+install_pkg brew ls install the_silver_searcher
+install_pkg brew ls install wget
+install_pkg brew ls install php70
+install_pkg brew ls install php70-msgpack
+install_pkg brew ls install composer
+install_pkg brew ls install jq
+install_pkg brew ls install yarn
+install_pkg brew ls install nvm
+echo -e "${green}✔${clear}"
 
-# Homebrew Casks
-echo -e "\n${blue}Installing Homebrew Casks...${clear}"
-brew tap | grep -q caskroom/versions || brew tap caskroom/versions
+# Install casks
+echo -e "\n${blue}Installing Homebrew casks...${clear}"
+install_pkg 'brew cask' ls install font-monoid-nerd-font-mono
 if [[ $OSTYPE == darwin* ]]; then
-  # Mac spcific apps
-  install_brew_cask iterm2-nightly
-  install_brew_cask spectacle
-  install_brew_cask flycut
-  install_brew_cask sourcetree
-  install_brew_cask karabiner
-  install_brew_cask atom
+  # Mac spcific casks
+  install_pkg 'brew cask' ls install iterm2-nightly
+  install_pkg 'brew cask' ls install spectacle
+  install_pkg 'brew cask' ls install flycut
+  install_pkg 'brew cask' ls install sourcetree
+  install_pkg 'brew cask' ls install atom
 fi
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
-# Homebrew cleanup
+# Cleanup
 echo -e "\n${blue}Cleaning up Homebrew installation files...${clear}"
 brew cleanup
 brew cask cleanup
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
+
+
+## ZSH ##
 
 # Use zsh as default shell
 echo -e "\n${blue}Setting ZSH as default shell...${clear}"
@@ -134,13 +121,70 @@ else
   cat /etc/shells | grep -q $ZSH_DIR || echo $ZSH_DIR | sudo tee -a /etc/shells
   # Change the default shell
   chsh -s $ZSH_DIR
-  echo -e "${green}Done.${clear}"
+  echo -e "${green}✔${clear}"
 fi
 
-# Global .gitignore
-echo -e "\n${blue}Setting global Git ignore file path...${clear}"
+# Install ZSH plugins
+# TODO - currently broken...
+# echo -e "\n${blue}Installing ZSH plugins...${clear}"
+# zplug install
+# zplug load --verbose
+# echo -e "${green}✔${clear}"
+
+
+## Ruby ##
+
+# Install gems
+echo -e "\n${blue}Installing Ruby gems...${clear}"
+install_pkg gem 'list --no-versions' install CoffeeTags
+install_pkg gem 'list --no-versions' install neovim
+echo -e "${green}✔${clear}"
+
+
+## PIP ##
+
+# Install packages
+echo -e "\n${blue}Installing PIP packages...${clear}"
+install_pkg pip 'list --format=legacy' install awscli
+install_pkg pip 'list --format=legacy' install neovim
+install_pkg pip 'list --format=legacy' install tmuxp
+install_pkg pip3 'list --format=legacy' install neovim
+echo -e "${green}✔${clear}"
+
+
+## Tmux ##
+
+# Install tmux plugins
+echo -e "\n${blue}Installing Tmux plugins...${clear}"
+$SCRIPT_PATH/libs/tpm/bin/clean_plugins
+$SCRIPT_PATH/libs/tpm/bin/install_plugins
+echo -e "${green}✔${clear}"
+
+
+## Vim ##
+
+# Install Vim-Plug
+echo -e "\n${blue}Installing Vim-Plug...${clear}"
+VIMPLUG_PATH=~/.config/nvim/autoload/plug.vim
+if [ -e "$VIMPLUG_PATH" ]; then
+  echo -e "${green}Already installed.${clear}"
+else
+  curl -fLo $VIMPLUG_PATH --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  echo -e "${green}✔${clear}"
+fi
+
+# Install plugins
+echo -e "\n${blue}Starting NeoVim and installing plugins...${clear}"
+nvim +PlugInstall +qall
+echo -e "${green}✔${clear}"
+
+
+## Git ##
+
+# Add global .gitignore
+echo -en "\n${blue}Setting global Git ignore file path...${clear} "
 git config --global core.excludesfile ~/.gitignore
-echo -e "${green}Done.${clear}"
+echo -e "${green}✔${clear}"
 
 # Git submodules
 echo -e "\n${blue}Installing Git submodules...${clear}"
@@ -148,10 +192,10 @@ git submodule init
 git submodule update --remote --rebase
 echo -e "${green}Done.${clear}"
 
-# Fonts
-source $SCRIPT_PATH/install-fonts
 
-# iTerm CLI
+## Other ##
+
+# Install iTerm CLI
 if [[ $OSTYPE == darwin* ]]; then
   echo -e "\n${blue}Installing iTerm cli integration...${clear}"
   ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
@@ -159,52 +203,9 @@ if [[ $OSTYPE == darwin* ]]; then
     echo -e "${green}Already installed.${clear}"
   else
     curl -L iterm2.com/misc/install_shell_integration.sh | bash
-    echo -e "${green}Done.${clear}"
+    echo -e "${green}✔${clear}"
   fi
 fi
-
-# Ruby Gems
-echo -e "\n${blue}Installing Ruby gems...${clear}"
-install_ruby_gem CoffeeTags
-install_ruby_gem neovim
-echo -e "${green}Done.${clear}"
-
-# PIP packages
-echo -e "\n${blue}Installing PIP packages...${clear}"
-install_pip_pkg neovim
-install_pip_pkg awscli
-install_pip_pkg tmuxp
-install_pip_pkg docker-compose
-install_pip3_pkg neovim
-echo -e "${green}Done.${clear}"
-
-# Tmux plugins
-echo -e "\n${blue}Installing Tmux plugins...${clear}"
-$SCRIPT_PATH/libs/tpm/bin/clean_plugins
-$SCRIPT_PATH/libs/tpm/bin/install_plugins
-echo -e "${green}Done.${clear}"
-
-# Vim-Plug
-echo -e "\n${blue}Installing Vim-Plug...${clear}"
-VIMPLUG_PATH=~/.config/nvim/autoload/plug.vim
-if [ -e "$VIMPLUG_PATH" ]; then
-  echo -e "${green}Already installed.${clear}"
-else
-  curl -fLo $VIMPLUG_PATH --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  echo -e "${green}Done.${clear}"
-fi
-
-# Vim plugins
-echo -e "\n${blue}Starting NeoVim and installing plugins...${clear}"
-nvim +PlugInstall +qall
-echo -e "${green}Done.${clear}"
-
-# ZSH plugins
-echo -e "\n${blue}Installing ZSH plugins...${clear}"
-ZPLUG_HOME=`brew --prefix zplug`
-zplug install
-zplug load --verbose
-echo -e "${green}Done.${clear}"
 
 # Create symlinks
 source $SCRIPT_PATH/link

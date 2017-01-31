@@ -7,15 +7,16 @@ source $SCRIPT_PATH/../scripts/colors
 # Update a `HEAD` brew package if there are remote changes available.
 function update_brew_pkg_head() {
   pkg_name=$1
-  echo -e "\n${blue}Updating ${clear}$pkg_name${blue} to latest HEAD...${clear}"
+  echo -en "\n${blue}Updating ${clear}$pkg_name${blue} to latest HEAD...${clear} "
   repo_path=~/Library/Caches/Homebrew/$pkg_name--git/
   local_sha=`cd $repo_path && git rev-parse @`
   remote_sha=`cd $repo_path && git fetch && git rev-parse @{u}`
   if [[ $local_sha == $remote_sha ]]; then
-    echo -e "${green}Already up to date.${clear}"
+    echo -e "${green}✔${clear}"
   else
+    echo ""
     brew reinstall --HEAD $pkg_name
-    echo -e "\n${green}✔${clear}"
+    echo -e "${green}✔${clear}"
   fi
 }
 
@@ -28,6 +29,11 @@ echo -e "${green}✔${clear}"
 
 # HEAD Homebrew packages
 update_brew_pkg_head neovim
+
+# Vim plugins
+echo -en "\n${blue}Updating Vim plugins...${clear} "
+nvim +PlugUpgrade +PlugUpdate +qall
+echo -e "${green}✔${clear}"
 
 # Git submodules
 echo -e "\n${blue}Updating Git submodules...${clear}"

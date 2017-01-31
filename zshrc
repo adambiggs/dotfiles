@@ -4,7 +4,7 @@
 export ZPLUG_HOME=~/.config/zplug
 source `brew --prefix zplug`/init.zsh
 
-source ./plugins.zsh
+source ~/.dotfiles/plugins.zsh
 
 # Check for uninstalled plugins.
 if ! zplug check --verbose; then

@@ -7,8 +7,6 @@ zplug "docker/docker", as:command, use:"contrib/completion/zsh/_docker"
 zplug "gulpjs/gulp", use:"completion/zsh"
 zplug "modules/directory", from:prezto
 zplug "modules/git", from:prezto
-zplug "modules/homebrew", from:prezto
-zplug "modules/node", from:prezto
 zplug "modules/osx", from:prezto
 zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/yarn", from:oh-my-zsh

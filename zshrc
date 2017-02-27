@@ -162,7 +162,8 @@ alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 
 # NVM
 export NVM_DIR="$HOME/.config/nvm"
-[ -d $NVM_DIR ] || mkdir $NVM_DIR
+mkdir -p $NVM_DIR
+source '/usr/local/opt/nvm/nvm.sh'
 
 # Export NPM_PATH after starting NVM
 if command -v npm >/dev/null; then

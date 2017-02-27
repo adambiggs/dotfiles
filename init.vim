@@ -111,7 +111,6 @@
   Plug 'adambiggs/tmuxline.vim'
   Plug 'junegunn/vim-peekaboo'
   Plug 'kassio/neoterm'
-  Plug 'majutsushi/tagbar'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'

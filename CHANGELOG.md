@@ -1,3 +1,23 @@
+<a name="11.1.0"></a>
+# [11.1.0](https://github.com/adambiggs/dotfiles/compare/v11.0.0...v11.1.0) (2017-03-06)
+
+
+### Bug Fixes
+
+* **tmux:** zsh plugins not working in Tmux ([2cceb33](https://github.com/adambiggs/dotfiles/commit/2cceb33))
+* **zsh:** NVM wasn't getting sourced correctly ([06a63e7](https://github.com/adambiggs/dotfiles/commit/06a63e7))
+
+
+### Features
+
+* **cli/update:** update Vim plugins ([4141ceb](https://github.com/adambiggs/dotfiles/commit/4141ceb))
+* **vim:** enable JSON syntax highlighting for relevant config files ([9811afc](https://github.com/adambiggs/dotfiles/commit/9811afc))
+* **vim:** switch from Deoplete to NCM ([e6b8ff3](https://github.com/adambiggs/dotfiles/commit/e6b8ff3))
+* **vim:** uninstall `tagbar` plugin that I wasn't using ([fffc036](https://github.com/adambiggs/dotfiles/commit/fffc036))
+* **zsh:** remove unused `homebrew` and `node` plugins ([cbce151](https://github.com/adambiggs/dotfiles/commit/cbce151))
+
+
+
 <a name="11.0.0"></a>
 # [11.0.0](https://github.com/adambiggs/dotfiles/compare/v10.1.1...v11.0.0) (2017-01-24)
 

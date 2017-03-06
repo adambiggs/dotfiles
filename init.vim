@@ -142,7 +142,6 @@
   Plug 'cohama/lexima.vim'
   Plug 'joonty/vdebug', { 'branch': 'master' }
   Plug 'junegunn/vim-easy-align'
-  Plug 'nhooyr/neoman.vim', { 'on': 'Man' }
   Plug 'scrooloose/nerdcommenter'
   Plug 'thinca/vim-localrc'
   Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'

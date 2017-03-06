@@ -5,15 +5,6 @@
 
 " Functions {{{
 
-  " Update NeoVim remote plugins {{{
-    function! UpdateRPlugin(info)
-      if has('nvim')
-        silent UpdateRemotePlugins
-        echomsg 'rplugin updated: ' . a:info['name'] . ', restart vim for changes'
-      endif
-    endfunction
-  " }}}
-
   " Initialize directories {{{
     function! InitializeDirectories()
       let parent = $HOME
@@ -747,22 +738,6 @@
         autocmd!
         autocmd BufWritePost * Neomake
       augroup end
-    endif
-  " }}}
-
-  " Neosnippet {{{
-    if isdirectory(expand(b:plugin_directory . '/neosnippet'))
-
-      " Config {{{
-        let g:neosnippet#snippets_directory = b:plugin_directory . '/vim-snippets/snippets'
-      " }}}
-
-      " Mappings {{{
-        imap <C-s> <Plug>(neosnippet_expand_or_jump)
-        smap <C-s> <Plug>(neosnippet_expand_or_jump)
-        xmap <C-s> <Plug>(neosnippet_expand_target)
-      " }}}
-
     endif
   " }}}
 

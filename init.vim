@@ -304,6 +304,7 @@
     autocmd FileType javascript,javascript.jsx setlocal foldmethod=indent foldlevel=1
 
     " JSON
+    autocmd BufNewFile,BufRead .babelrc,.tern-project set filetype=json
     autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=2 tabstop=2 softtabstop=2
 
     " Vagrantfile

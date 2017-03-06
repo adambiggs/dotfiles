@@ -126,15 +126,10 @@
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
-  Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'padawan-php/deoplete-padawan', { 'for': ['php'] }
-  Plug 'Shougo/context_filetype.vim'
-  Plug 'Shougo/deoplete.nvim', { 'do': function('UpdateRPlugin') }
-  Plug 'Shougo/neoinclude.vim'
-  Plug 'Shougo/neopairs.vim'
-  Plug 'Shougo/neosnippet'
-  Plug 'Shougo/neosnippet-snippets'
+  Plug 'SirVer/ultisnips'
+  Plug 'roxma/nvim-completion-manager'
+  Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+  Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install --no-ansi && composer run-script parse-stubs --no-ansi'}
 
   " Source Control
   Plug 'airblade/vim-gitgutter'
@@ -785,6 +780,25 @@
     endif
   " }}}
 
+  " Nvim Completion Manager {{{
+    if isdirectory(expand(b:plugin_directory . '/nvim-completion-manager'))
+
+      " Supress the annoying completion messages
+      set shortmess+=c
+
+      " Tab completion mappings
+      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+      inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+      " Trigger the popup after typing 2 characters
+      let g:cm_refresh_default_min_word_len=2
+
+      " Use fuzzy matcher
+      let g:cm_matcher = {'module': 'cm_matchers.fuzzy_matcher', 'case': 'smartcase'}
+
+    endif
+  " }}}
+
   " One Dark {{{
     if isdirectory(expand(b:plugin_directory . '/onedark.vim'))
       let g:onedark_terminal_italics = 1
@@ -869,6 +883,23 @@
       " Mappings {{{
         nnoremap <Leader>u :UndotreeToggle<CR>
       " }}}
+
+    endif
+  " }}}
+
+  " Ultisnips {{{
+    if isdirectory(expand(b:plugin_directory . '/ultisnips'))
+
+      " Trigger Ultisnips or show NCM popup hints with the same key
+      let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
+      inoremap <silent> <c-s> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
+
+      " Other Ultisnips trigger mappings
+      let g:UltiSnipsJumpForwardTrigger="<c-s>"
+      let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+      " Source extra snippets
+      autocmd FileType javascript.jsx UltiSnipsAddFiletypes javascript-mocha-standardjs.javascript-sinon-chai-standardjs
 
     endif
   " }}}

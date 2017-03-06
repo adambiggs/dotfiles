@@ -415,31 +415,6 @@
     endif
   " }}}
 
-  " Deoplete {{{
-    if isdirectory(expand(b:plugin_directory . '/deoplete.nvim'))
-
-      " Config {{{
-        let g:deoplete#enable_at_startup     = 1
-        let g:deoplete#enable_refresh_always = 0
-
-        let g:deoplete#omni#functions = {}
-        let g:deoplete#omni#functions.javascript = [
-          \ 'tern#Complete',
-          \ 'jspc#omni'
-        \ ]
-
-        let g:deoplete#sources = {}
-        let g:deoplete#sources['javascript.jsx'] = ['buffer', 'neosnippet', 'ternjs']
-      " }}}
-
-      " Mappings {{{
-        inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-        inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-      " }}}
-
-    endif
-  " }}}
-
   " Dirvish {{{
     if isdirectory(expand(b:plugin_directory . '/vim-dirvish'))
 
@@ -525,10 +500,6 @@
 
         " Use <Leader> as easymotion prefix.
         map <Leader> <Plug>(easymotion-prefix)
-
-        " Over window motions
-        nmap <Leader>f <Plug>(easymotion-overwin-f2)
-        "nmap <Leader>w <Plug>(easymotion-overwin-w)
 
         " Search
         nmap s <Plug>(easymotion-sn)

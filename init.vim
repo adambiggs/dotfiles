@@ -478,8 +478,6 @@
 
       " Config {{{
 
-        let g:EasyMotion_startofline = 0
-
         " Over window search
         function! s:incsearch_config(...) abort
           return incsearch#util#deepextend(deepcopy({
@@ -506,8 +504,8 @@
         vmap s <Plug>(easymotion-sn)
 
         " Vertical line navigation
-        map <Leader>j <Plug>(easymotion-sol-j)
-        map <Leader>k <Plug>(easymotion-sol-k)
+        map <Leader>j <Plug>(easymotion-j)
+        map <Leader>k <Plug>(easymotion-k)
 
         " Same-line navigation
         map <Leader>h <Plug>(easymotion-linebackward)

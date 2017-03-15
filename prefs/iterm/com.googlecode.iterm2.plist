@@ -1123,11 +1123,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1206 716 445 77 0 0 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 787 620 392 0 0 2560 1440 </string>
+	<string>650 607 620 392 0 0 1920 1200 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 962 918 416 0 0 2560 1418 </string>
+	<string>269 845 918 494 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 2560 1440 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_6A0C1221-64A5-4047-8A96-738B7CCBA496</key>
@@ -1980,7 +1980,7 @@
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Version</key>
-			<integer>8</integer>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -2093,7 +2093,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-14T18:45:41Z</date>
+	<date>2017-03-07T20:24:17Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -3773,7 +3773,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20170214-nightly</string>
+	<string>3.1.20170307-nightly</string>
 	<key>kCommandHistoryHasEverBeenUsed</key>
 	<true/>
 </dict>

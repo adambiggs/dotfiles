@@ -377,15 +377,19 @@
 
   " Airline {{{
     if isdirectory(expand(b:plugin_directory . '/vim-airline'))
-      let g:airline_exclude_preview                  = 1
-      let g:airline_detect_iminsert                  = 1
-      let g:airline_detect_crypt                     = 0 " https://github.com/vim-airline/vim-airline/issues/792
-      let g:airline_powerline_fonts                  = 1
-      let g:airline#extensions#tabline#enabled       = 1
-      let g:airline#extensions#tabline#show_tabs     = 1
-      let g:airline#extensions#tabline#tab_nr_type   = 2 " Show # of splits and tab #
+      let g:airline_exclude_preview = 1
+      let g:airline_detect_iminsert = 1
+      " let g:airline_detect_crypt = 0 " https://github.com/vim-airline/vim-airline/issues/792
+      let g:airline_powerline_fonts = 1
+      let g:airline#extensions#tabline#enabled = 1
+      let g:airline#extensions#tabline#show_tabs = 1
+      let g:airline#extensions#tabline#tab_nr_type = 2 " Show # of splits and tab #
       let g:airline#extensions#tabline#show_tab_type = 1
-      let g:airline_theme                            = 'onedark'
+      let g:airline_theme = 'onedark'
+      let g:airline_left_sep = ''
+      let g:airline_left_alt_sep = ''
+      let g:airline_right_sep = ''
+      let g:airline_right_alt_sep = ''
 
       " Custom symbols
       if !exists('g:airline_symbols')

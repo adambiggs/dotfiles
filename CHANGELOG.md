@@ -1,3 +1,16 @@
+<a name="11.2.0"></a>
+# [11.2.0](https://github.com/adambiggs/dotfiles/compare/v11.1.0...v11.2.0) (2017-03-22)
+
+
+### Features
+
+* **vim:** EasyMotion `j`/`k` motions go to first character of line ([9a3074a](https://github.com/adambiggs/dotfiles/commit/9a3074a))
+* **vim:** enable folds for `*.vue` files ([5b101e1](https://github.com/adambiggs/dotfiles/commit/5b101e1))
+* **vim:** remove unused `neoman` plugin ([24427d3](https://github.com/adambiggs/dotfiles/commit/24427d3))
+* rounded corners ⚫️ ([e56a0b9](https://github.com/adambiggs/dotfiles/commit/e56a0b9))
+
+
+
 <a name="11.1.0"></a>
 # [11.1.0](https://github.com/adambiggs/dotfiles/compare/v11.0.0...v11.1.0) (2017-03-06)
 

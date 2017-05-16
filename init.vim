@@ -117,10 +117,11 @@
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
-  Plug 'SirVer/ultisnips'
-  Plug 'roxma/nvim-completion-manager'
-  Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
   Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install --no-ansi && composer run-script parse-stubs --no-ansi'}
+  Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+  Plug 'roxma/nvim-completion-manager'
+  Plug 'Shougo/neco-vim'
+  Plug 'SirVer/ultisnips'
 
   " Source Control
   Plug 'airblade/vim-gitgutter'

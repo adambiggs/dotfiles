@@ -298,7 +298,7 @@
     autocmd FileType vue setlocal foldmethod=syntax
 
     " JSON
-    autocmd BufNewFile,BufRead .babelrc,.tern-project set filetype=json
+    autocmd BufNewFile,BufRead .babelrc,.eslintrc,.tern-project set filetype=json
     autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=2 tabstop=2 softtabstop=2
 
     " Vagrantfile

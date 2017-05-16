@@ -99,7 +99,7 @@
   "Plug 'justinmk/vim-dirvish'
   "Plug 'tpope/vim-eunuch'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'adambiggs/tmuxline.vim'
+  Plug 'kevinkjt2000/tmuxline.vim'
   Plug 'junegunn/vim-peekaboo'
   Plug 'kassio/neoterm'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
@@ -831,15 +831,21 @@
   " Tmuxline {{{
     if isdirectory(expand(b:plugin_directory . '/tmuxline.vim'))
       let g:airline#extensions#tmuxline#enabled = 0
+      let g:tmuxline_separators = {
+        \ 'left'      : '',
+        \ 'left_alt'  : '>',
+        \ 'right'     : '',
+        \ 'right_alt' : '<',
+        \ 'space'     : ' ' }
       let g:tmuxline_preset = {
-        \'a'    : ['   %a %b %e'],
-        \'b'    : ['  %l:%M %p'],
-        \'c'    : ['   #S #{prefix_highlight}'],
-        \'win'  : [' #I #W'],
-        \'cwin' : [' #I #W'],
-        \'x'    : ['#(~/.dotfiles/scripts/now-playing.sh) '],
-        \'y'    : [' #{cpu_percentage} #[fg=colour244]  #[fg=colour7] #(~/.dotfiles/scripts/battery-icon.sh) '],
-        \'z'    : ['#(~/.dotfiles/scripts/wifi-signal.sh) '] }
+        \ 'a'    : [' %a %b %e'],
+        \ 'b'    : [' %l:%M %p'],
+        \ 'c'    : ['#{prefix_highlight}'],
+        \ 'win'  : [' #I #W'],
+        \ 'cwin' : [' #I #W'],
+        \ 'x'    : ['#(~/.dotfiles/scripts/now-playing.sh) '],
+        \ 'y'    : [' #{cpu_percentage} #[fg=colour244]#[fg=colour7] #(~/.dotfiles/scripts/battery-icon.sh)'],
+        \ 'z'    : ['#(~/.dotfiles/scripts/wifi-signal.sh)'] }
     endif
   " }}}
 

@@ -21,4 +21,4 @@ if [ -z "$SSID" ];then
   MSG="No WiFi"
 fi
 
-printf "  $MSG"
+printf " $MSG"

@@ -1,3 +1,22 @@
+<a name="11.2.1"></a>
+## [11.2.1](https://github.com/adambiggs/dotfiles/compare/v11.2.0...v11.2.1) (2017-05-16)
+
+
+### Bug Fixes
+
+* **vim:** folds no longer enabled in `.vue` files ([713d18b](https://github.com/adambiggs/dotfiles/commit/713d18b))
+
+
+### Features
+
+* **tmux:** fix tmuxline colors by switching to active fork of `tmuxline.vim` and clean up some formatting ([04086d4](https://github.com/adambiggs/dotfiles/commit/04086d4))
+* **vim:** add `neco-vim` plugin ([1a118da](https://github.com/adambiggs/dotfiles/commit/1a118da))
+* **vim:** add syntax highlighting for `.eslintrc` files ([04fee48](https://github.com/adambiggs/dotfiles/commit/04fee48))
+* **vim:** enable NERDCommenter for all different syntaxes in `.vue` files ([e41cd89](https://github.com/adambiggs/dotfiles/commit/e41cd89))
+* **vim:** strip trailing whitespace when saving `.vue` files ([97102ba](https://github.com/adambiggs/dotfiles/commit/97102ba))
+
+
+
 <a name="11.2.0"></a>
 # [11.2.0](https://github.com/adambiggs/dotfiles/compare/v11.1.0...v11.2.0) (2017-03-22)
 

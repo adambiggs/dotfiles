@@ -295,7 +295,8 @@
     autocmd FileType javascript,javascript.jsx setlocal foldmethod=indent foldlevel=1
 
     " Vue
-    autocmd FileType vue setlocal foldmethod=syntax
+    autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.sass foldmethod=syntax
+    autocmd FileType vue.html.javascript.sass syntax sync fromstart " Prevent issue where syntax highlighting stops working
 
     " JSON
     autocmd BufNewFile,BufRead .babelrc,.eslintrc,.tern-project set filetype=json

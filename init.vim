@@ -300,7 +300,7 @@
 
     " JSON
     autocmd BufNewFile,BufRead .babelrc,.eslintrc,.tern-project set filetype=json
-    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=1 shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=2 shiftwidth=2 tabstop=2 softtabstop=2
 
     " Vagrantfile
     autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby

@@ -299,7 +299,7 @@
     autocmd FileType vue.html.javascript.sass syntax sync fromstart " Prevent issue where syntax highlighting stops working
 
     " JSON
-    autocmd BufNewFile,BufRead .babelrc,.eslintrc,.tern-project set filetype=json
+    autocmd BufNewFile,BufRead .babelrc,.eslintrc,.tern-project,.jsdoc2mdrc set filetype=json
     autocmd FileType json setlocal conceallevel=0 foldmethod=syntax foldlevel=2 shiftwidth=2 tabstop=2 softtabstop=2
 
     " Vagrantfile

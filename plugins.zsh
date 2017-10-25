@@ -8,7 +8,7 @@ zplug "gulpjs/gulp", use:"completion/zsh"
 zplug "modules/directory", from:prezto
 zplug "modules/git", from:prezto
 zplug "modules/osx", from:prezto
-zplug "peterhurford/git-it-on.zsh"
+# zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-completions"

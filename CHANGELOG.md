@@ -1,3 +1,26 @@
+<a name="11.3.0"></a>
+# [11.3.0](https://github.com/adambiggs/dotfiles/compare/v11.2.1...v11.3.0) (2017-10-25)
+
+
+### Bug Fixes
+
+* **vim:** syntax highlighting sometimes stops working for `.vue` files ([f245ad8](https://github.com/adambiggs/dotfiles/commit/f245ad8))
+
+
+### Features
+
+* **git:** change email address ([927e0c4](https://github.com/adambiggs/dotfiles/commit/927e0c4))
+* update `battery-status` ([c2d1f46](https://github.com/adambiggs/dotfiles/commit/c2d1f46))
+* update `tpm` ([48694cf](https://github.com/adambiggs/dotfiles/commit/48694cf))
+* **vim:** add JSON syntax highlighting for `.jsdoc2mdrc` files ([2670763](https://github.com/adambiggs/dotfiles/commit/2670763))
+* **vim:** change default fold level for JSON files ([7545b66](https://github.com/adambiggs/dotfiles/commit/7545b66))
+* **vim:** install `far.vim` find-and-replace plugin ([f013c1a](https://github.com/adambiggs/dotfiles/commit/f013c1a))
+* **vim:** new `:W` command to quickly save and delete a buffer ([a8de8ce](https://github.com/adambiggs/dotfiles/commit/a8de8ce))
+* **zsh:** disable `git-it-on` plugin ([4db7506](https://github.com/adambiggs/dotfiles/commit/4db7506))
+* **zsh:** install NVM via `zsh-nvm` plugin instead of Homebrew ([04cd11e](https://github.com/adambiggs/dotfiles/commit/04cd11e))
+
+
+
 <a name="11.2.1"></a>
 ## [11.2.1](https://github.com/adambiggs/dotfiles/compare/v11.2.0...v11.2.1) (2017-05-16)
 
@@ -519,9 +542,9 @@
 
 ### BREAKING CHANGES
 
-* brew: you should run `$ brew uninstall brew-cask --force`
-* ruby: should run `$ rvm implode` to get rid of `rvm`
-* ruby: need to run `./install` script again to reinstall gems
+* **brew:** you should run `$ brew uninstall brew-cask --force`
+* **ruby:** should run `$ rvm implode` to get rid of `rvm`
+* **ruby:** need to run `./install` script again to reinstall gems
 
 
 
@@ -566,7 +589,7 @@
 
 ### BREAKING CHANGES
 
-* update: `update` command must be sourced, e.g.: `$ source ~/.dotfiles/update`
+* **update:** `update` command must be sourced, e.g.: `$ source ~/.dotfiles/update`
 
 
 
@@ -610,7 +633,7 @@
 
 ### BREAKING CHANGES
 
-* install: You should `$ brew cask uninstall iterm2-nightly` and then run `$ ./install` to make the switch.
+* **install:** You should `$ brew cask uninstall iterm2-nightly` and then run `$ ./install` to make the switch.
 
 
 
@@ -635,9 +658,9 @@
 
 ### BREAKING CHANGES
 
-* install: Patched fonts should be manually installed for the time
+* **install:** Patched fonts should be manually installed for the time
 being.
-* vim: 1. Run `./link` command
+* **vim:** 1. Run `./link` command
 2. Reinstall `vim-plug` at `~/.config/nvim/autoload/plug.vim`
 3. Reinstall Vim plugins with `:PlugInstall`
 4. Clean up old config: `$ rm -rf ~/.nvim`
@@ -806,7 +829,7 @@ being.
 
 ### BREAKING CHANGES
 
-* tmux: Tmux will no longer sync the clipboard with OSX in versions before Yosemite.
+* **tmux:** Tmux will no longer sync the clipboard with OSX in versions before Yosemite.
 
 
 

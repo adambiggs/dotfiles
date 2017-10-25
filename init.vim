@@ -118,6 +118,7 @@
   Plug 'haya14busa/incsearch.vim' | Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' } | Plug 'junegunn/fzf.vim'
   Plug 'kshenoy/vim-signature'
+  Plug 'brooth/far.vim'
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'

@@ -2,7 +2,7 @@
 
 [user]
 	name = Adam Biggs
-	email = adam.biggs@lightmaker.com
+	email = adam.biggs@lmpm.com
 
 [core]
 	excludesfile = /Users/adam/.gitignore

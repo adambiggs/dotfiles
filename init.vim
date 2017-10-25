@@ -86,6 +86,10 @@
     augroup end
   " }}}
 
+  " Quickly save and delete a buffer {{{
+    command! W :w|bd
+  " }}}
+
 " }}}
 
 " Plugins {{{

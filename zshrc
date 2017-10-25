@@ -161,17 +161,12 @@ alias lmpm="$REPO_PATH/lmpm/builder/use.sh"
 
 ### LIBRARY CONFIG ###
 
-# NVM
-export NVM_DIR="$HOME/.config/nvm"
-mkdir -p $NVM_DIR
-source '/usr/local/opt/nvm/nvm.sh'
-
-# Export NPM_PATH after starting NVM
+# Export $NPM_PATH
 if command -v npm >/dev/null; then
   export NPM_PATH=`npm root -g`
 fi
 
-# Add Yarn global binaries to $PATH after starting NVM
+# Add Yarn global binaries to $PATH
 if command -v yarn >/dev/null; then
   YARNBIN=`yarn global bin`
   echo $PATH | grep -q $YARNBIN || export PATH=$PATH:$YARNBIN

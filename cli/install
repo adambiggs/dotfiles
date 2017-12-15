@@ -121,10 +121,8 @@ echo -e "${green}✔${clear}"
 
 # Install packages
 echo -e "\n${blue}Installing PIP packages...${clear}"
-install_pkg pip 'list --format=legacy' install awscli
-install_pkg pip 'list --format=legacy' install neovim
-install_pkg pip 'list --format=legacy' install tmuxp
-install_pkg pip3 'list --format=legacy' install neovim
+install_pkg pip2 'list --format=legacy' install awscli neovim tmuxp
+install_pkg pip3 'list --format=legacy' install awscli neovim tmuxp
 echo -e "${green}✔${clear}"
 
 

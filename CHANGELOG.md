@@ -1,3 +1,19 @@
+<a name="11.4.0"></a>
+# [11.4.0](https://github.com/adambiggs/dotfiles/compare/v11.3.0...v11.4.0) (2017-12-15)
+
+
+### Bug Fixes
+
+* **tmux:** fix deprecated config syntax ([95e52e9](https://github.com/adambiggs/dotfiles/commit/95e52e9))
+
+
+### Features
+
+* **cli/install:** install Yarn with `--without-node` flag ([efe690d](https://github.com/adambiggs/dotfiles/commit/efe690d))
+* **vim:** switch from `neomake` to `ale` ([76ded61](https://github.com/adambiggs/dotfiles/commit/76ded61))
+
+
+
 <a name="11.3.0"></a>
 # [11.3.0](https://github.com/adambiggs/dotfiles/compare/v11.2.1...v11.3.0) (2017-10-25)
 

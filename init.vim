@@ -142,19 +142,20 @@
 
   " Workflow
   Plug 'airblade/vim-rooter'
-  Plug 'neomake/neomake'
   Plug 'benmills/vimux'
   Plug 'ciaranm/detectindent', { 'on': 'DetectIndent' }
   Plug 'cohama/lexima.vim'
   Plug 'joonty/vdebug', { 'branch': 'master' }
   Plug 'junegunn/vim-easy-align'
+  " Plug 'neomake/neomake'
+  Plug 'neovim/node-host', { 'do': 'npm install' }
   Plug 'scrooloose/nerdcommenter'
   Plug 'thinca/vim-localrc'
   Plug 'tpope/vim-obsession' | Plug 'dhruvasagar/vim-prosession'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/visualrepeat'
-  Plug 'neovim/node-host', { 'do': 'npm install' }
+  Plug 'w0rp/ale'
 
   call plug#end()
 
@@ -404,6 +405,14 @@
       endif
       let g:airline_symbols.branch   = ''
       let g:airline_symbols.readonly = ''
+    endif
+  " }}}
+
+  " ALE {{{
+    if isdirectory(expand(b:plugin_directory . '/ale'))
+      let g:ale_fixers = {
+      \   'javascript': ['eslint'],
+      \ }
     endif
   " }}}
 

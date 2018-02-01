@@ -81,6 +81,7 @@ install_pkg brew ls install python
 install_pkg brew ls install python3
 install_pkg brew ls install ruby
 install_pkg brew ls install the_silver_searcher
+install_pkg brew ls install ripgrep
 install_pkg brew ls install tmux
 install_pkg brew ls install wget
 install_pkg brew ls install yarn '--without-node'

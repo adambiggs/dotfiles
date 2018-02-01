@@ -131,7 +131,7 @@
   " Source Control
   Plug 'airblade/vim-gitgutter'
   Plug 'jreybert/vimagit'
-  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-fugitive' | Plug 'junegunn/gv.vim'
   Plug 'tpope/vim-rhubarb'
 
   " Syntax
@@ -546,12 +546,10 @@
       nnoremap <silent> <leader>gd :Gdiff<CR>
       nnoremap <silent> <leader>gc :Gcommit<CR>
       nnoremap <silent> <leader>gb :Gblame<CR>
-      nnoremap <silent> <leader>gl :Glog<CR>
       nnoremap <silent> <leader>gp :Git push<CR>
       nnoremap <silent> <leader>gr :Gread<CR>
       nnoremap <silent> <leader>gw :Gwrite<CR>
       nnoremap <silent> <leader>ge :Gedit<CR>
-      " Mnemonic _i_nteractive
       nnoremap <silent> <leader>gi :Git add -p %<CR>
       nnoremap <silent> <leader>gg :SignifyToggle<CR>
     endif
@@ -636,6 +634,10 @@
     if isdirectory(expand(b:plugin_directory . '/vim-gitgutter'))
       let g:gitgutter_max_signs = 10000
       let g:gitgutter_map_keys  = 0
+
+  " Gv.vim {{{
+    if isdirectory(expand(b:plugin_directory . '/gv.vim'))
+      nnoremap <silent> <leader>gl :GV<CR>
     endif
   " }}}
 

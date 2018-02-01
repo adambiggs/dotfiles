@@ -204,6 +204,7 @@
     set inccommand=split
   endif
 
+  set mouse=a
   set mousehide                 " Hide the mouse cursor while typing
   set background=dark           " Assume a dark background
   set showmode                  " Display the current mode

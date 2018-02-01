@@ -613,8 +613,16 @@
 
       " Commands {{{
 
-        " Pass commands directly to ag CLI
-        autocmd VimEnter * command! -nargs=+ -complete=file Ag call fzf#vim#ag_raw(<q-args>)
+        " Pass commands directly to ag
+        command! -nargs=+ -complete=file Ag call fzf#vim#ag_raw(<q-args>)
+
+        " Pass commands directly to rg
+        command! -bang -nargs=* Rg
+          \ call fzf#vim#grep(
+          \   'rg --column --line-number --no-heading --color=always '.<q-args>, 1,
+          \   <bang>0 ? fzf#vim#with_preview('up:60%')
+          \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+          \   <bang>0)
 
         " Make FZF act more like CtrlP
         augroup fzf

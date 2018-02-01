@@ -635,6 +635,14 @@
       let g:gitgutter_max_signs = 10000
       let g:gitgutter_map_keys  = 0
 
+      nmap <Leader>g\ :GitGutterLineHighlightsToggle<CR>
+      nmap <Leader>gj :GitGutterNextHunk<CR>
+      nmap <Leader>gk :GitGutterPrevHunk<CR>
+      nmap <Leader>ga :GitGutterStageHunk<CR>
+      nmap <Leader>gu :GitGutterUndoHunk<CR>
+    endif
+  " }}}
+
   " Gv.vim {{{
     if isdirectory(expand(b:plugin_directory . '/gv.vim'))
       nnoremap <silent> <leader>gl :GV<CR>

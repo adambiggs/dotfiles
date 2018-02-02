@@ -1,3 +1,23 @@
+<a name="11.5.0"></a>
+# [11.5.0](https://github.com/adambiggs/dotfiles/compare/v11.4.0...v11.5.0) (2018-02-02)
+
+
+### Bug Fixes
+
+* **vim:** mouse events not working ([d9504ea](https://github.com/adambiggs/dotfiles/commit/d9504ea))
+
+
+### Features
+
+* **vim:** add extra GitGutter mappings ([ae4b0b4](https://github.com/adambiggs/dotfiles/commit/ae4b0b4))
+* **vim:** add new `:Rg` command for searching with `ripgrep` instead of `ag` ([09650bb](https://github.com/adambiggs/dotfiles/commit/09650bb))
+* **vim:** install `gv.vim` plugin ([d726425](https://github.com/adambiggs/dotfiles/commit/d726425))
+* **zsh:** install `awslogs` and `apilogs` ([400c93e](https://github.com/adambiggs/dotfiles/commit/400c93e))
+* **zsh:** install `ripgrep` and configure FZF to use `rg` instead of `ag` ([a996381](https://github.com/adambiggs/dotfiles/commit/a996381))
+* **zsh:** remove `lmpm` alias ([b8581dc](https://github.com/adambiggs/dotfiles/commit/b8581dc))
+
+
+
 <a name="11.4.0"></a>
 # [11.4.0](https://github.com/adambiggs/dotfiles/compare/v11.3.0...v11.4.0) (2017-12-15)
 
@@ -437,7 +457,7 @@
 
 ### Bug Fixes
 
-* **tmux:** `tmuxline.vim` plugin breaks TPM plugins ([c80f1ea](https://github.com/adambiggs/dotfiles/commit/c80f1ea))
+* **tmux:** `tmuxline.vim` plugin breaks TPM plugins ([c80f1ea](https://github.com/adambiggs/dotfiles/commit/c80f1ea)), closes [/github.com/edkolev/tmuxline.vim/issues/46#issuecomment-194453453](https://github.com//github.com/edkolev/tmuxline.vim/issues/46/issues/issuecomment-194453453)
 * **zsh:** zsh theme stopped working ([92b5a75](https://github.com/adambiggs/dotfiles/commit/92b5a75))
 
 
@@ -705,7 +725,7 @@ being.
 
 ### Bug Fixes
 
-* **tmux:** cron job to kill `notifyd` as workaround for El Capitan memory leak ([381413a](https://github.com/adambiggs/dotfiles/commit/381413a))
+* **tmux:** cron job to kill `notifyd` as workaround for El Capitan memory leak ([381413a](https://github.com/adambiggs/dotfiles/commit/381413a)), closes [/github.com/tmux/tmux/issues/108#issuecomment-148044780](https://github.com//github.com/tmux/tmux/issues/108/issues/issuecomment-148044780)
 * **tmux:** deprecated options causing warning messages on session start ([70f4fb6](https://github.com/adambiggs/dotfiles/commit/70f4fb6))
 * **tmux:** wifi signal bars empty if signal is exactly `-60` ([0b4fb83](https://github.com/adambiggs/dotfiles/commit/0b4fb83))
 
@@ -1270,7 +1290,7 @@ being.
 
 ### Bug Fixes
 
-* **vim:** `<C-h>` key mapping no longer working due to weird terminal behaviour ([2c1e935](https://github.com/adambiggs/dotfiles/commit/2c1e935))
+* **vim:** `<C-h>` key mapping no longer working due to weird terminal behaviour ([2c1e935](https://github.com/adambiggs/dotfiles/commit/2c1e935)), closes [/github.com/neovim/neovim/issues/2048#issuecomment-78045837](https://github.com//github.com/neovim/neovim/issues/2048/issues/issuecomment-78045837)
 * **zsh:** `2ds` boot2docker alias not working ([6de4ac4](https://github.com/adambiggs/dotfiles/commit/6de4ac4))
 
 

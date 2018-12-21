@@ -48,8 +48,7 @@
       let l = line(".")
       let c = col(".")
       " do the business:
-      %s/\s\+$//e
-      " clean up: restore previous search history, and cursor position
+      %s/\s\+$//e " clean up: restore previous search history, and cursor position
       let @/=_s
       call cursor(l, c)
     endfunction
@@ -124,11 +123,17 @@
 
   " Autocomplete
   Plug 'adambiggs/vim-snippets'
-  Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install --no-ansi && composer run-script parse-stubs --no-ansi'}
-  Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-  Plug 'roxma/nvim-completion-manager'
-  Plug 'Shougo/neco-vim'
-  Plug 'SirVer/ultisnips'
+  Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
+  Plug 'ncm2/ncm2' | Plug 'roxma/nvim-yarp'
+  Plug 'ncm2/ncm2-bufword'
+  Plug 'ncm2/ncm2-cssomni'
+  Plug 'ncm2/ncm2-html-subscope'
+  Plug 'ncm2/ncm2-path'
+  Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+  Plug 'ncm2/ncm2-tmux'
+  Plug 'ncm2/ncm2-ultisnips' | Plug 'SirVer/ultisnips'
+  Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
+  Plug 'phpactor/ncm2-phpactor' | Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 
   " Source Control
   Plug 'airblade/vim-gitgutter'
@@ -182,7 +187,7 @@
   set gdefault          " Substitute all matches on a line by default
   set noswapfile        " Temp files are annoying when editing the same file in multiple instances of Vim... Just save often instead
   set viewoptions=cursor,folds,slash,unix
-  set completeopt=longest,menuone
+  set completeopt=noinsert,menuone,noselect " IMPORTANTE: :help Ncm2PopupOpen for more information
   set foldopen-=block
   set maxmapdepth=100   " Reduce maximum remaps to throw 'recursive mapping' error sooner
 
@@ -788,21 +793,26 @@
     endif
   " }}}
 
-  " Nvim Completion Manager {{{
-    if isdirectory(expand(b:plugin_directory . '/nvim-completion-manager'))
+  " NCM2 {{{
+    if isdirectory(expand(b:plugin_directory . '/ncm2'))
 
-      " Supress the annoying completion messages
+      autocmd BufEnter * call ncm2#enable_for_buffer() " enable ncm2 for all buffers
+
+      " Press enter key to trigger snippet expansion. The parameters are the same as `:help feedkeys()`
+      inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+
+      " suppress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
       set shortmess+=c
 
-      " Tab completion mappings
+      " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+      inoremap <c-c> <ESC>
+
+      " When the <Enter> key is pressed while the popup menu is visible, it only hides the menu. Use this mapping to close the menu and also start a new line.
+      inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+      " Use <TAB> to select the popup menu:
       inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
       inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-      " Trigger the popup after typing 2 characters
-      let g:cm_refresh_default_min_word_len=2
-
-      " Use fuzzy matcher
-      let g:cm_matcher = {'module': 'cm_matchers.fuzzy_matcher', 'case': 'smartcase'}
 
     endif
   " }}}
@@ -904,13 +914,11 @@
   " Ultisnips {{{
     if isdirectory(expand(b:plugin_directory . '/ultisnips'))
 
-      " Trigger Ultisnips or show NCM popup hints with the same key
-      let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
-      inoremap <silent> <c-s> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
-
       " Other Ultisnips trigger mappings
-      let g:UltiSnipsJumpForwardTrigger="<c-s>"
-      let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+      let g:UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
+      let g:UltiSnipsJumpForwardTrigger = '<c-j>'
+      let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+      let g:UltiSnipsRemoveSelectModeMappings = 0
 
       " Source extra snippets
       autocmd FileType javascript.jsx UltiSnipsAddFiletypes javascript-mocha-standardjs.javascript-sinon-chai-standardjs

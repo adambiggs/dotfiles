@@ -302,11 +302,11 @@
     autocmd!
 
     " CoffeeScript
-    autocmd FileType coffee setlocal foldmethod=indent foldlevel=2
+    autocmd FileType coffee setlocal foldmethod=indent foldlevel=1
     autocmd FileType coffee autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
     " JavaScript
-    autocmd FileType javascript,javascript.jsx setlocal foldmethod=indent foldlevel=1
+    autocmd FileType javascript,javascript.jsx setlocal foldmethod=indent foldlevel=0
 
     " Vue
     autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.sass foldmethod=syntax

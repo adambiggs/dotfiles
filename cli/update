@@ -27,9 +27,6 @@ brew upgrade
 brew cleanup
 echo -e "${green}✔${clear}"
 
-# HEAD Homebrew packages
-update_brew_pkg_head neovim
-
 # Vim plugins
 echo -en "\n${blue}Updating Vim plugins...${clear} "
 nvim +PlugUpgrade +PlugUpdate +qall

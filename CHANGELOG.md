@@ -1,4 +1,24 @@
-<a name="11.5.0"></a>
+# [11.6.0](https://github.com/adambiggs/dotfiles/compare/v11.5.0...v11.6.0) (2018-12-21)
+
+
+### Bug Fixes
+
+* **cli/update:** homebrew no longer accepts `--HEAD` flag when reinstalling packages ([6b2615b](https://github.com/adambiggs/dotfiles/commit/6b2615b))
+
+
+### Features
+
+* **cli/install:** switch to stable version of neovim ([9a9432a](https://github.com/adambiggs/dotfiles/commit/9a9432a))
+* **vim:** add python host paths ([dd6c4c6](https://github.com/adambiggs/dotfiles/commit/dd6c4c6))
+* **vim:** reduce default fold level for js/coffee files ([7ecef8c](https://github.com/adambiggs/dotfiles/commit/7ecef8c))
+* **vim:** update to neovim completion manager 2 ([d0ae510](https://github.com/adambiggs/dotfiles/commit/d0ae510))
+* **zsh:** add php bin to path ([d765235](https://github.com/adambiggs/dotfiles/commit/d765235))
+* **zsh:** include hidden files in FZF command ([e5a11d4](https://github.com/adambiggs/dotfiles/commit/e5a11d4))
+* **zsh:** remove `gulp` completions ([0101d27](https://github.com/adambiggs/dotfiles/commit/0101d27))
+* **zsh:** rename `gitgraph` alias to `glg` ([d334128](https://github.com/adambiggs/dotfiles/commit/d334128))
+
+
+
 # [11.5.0](https://github.com/adambiggs/dotfiles/compare/v11.4.0...v11.5.0) (2018-02-02)
 
 
@@ -18,7 +38,6 @@
 
 
 
-<a name="11.4.0"></a>
 # [11.4.0](https://github.com/adambiggs/dotfiles/compare/v11.3.0...v11.4.0) (2017-12-15)
 
 
@@ -34,7 +53,6 @@
 
 
 
-<a name="11.3.0"></a>
 # [11.3.0](https://github.com/adambiggs/dotfiles/compare/v11.2.1...v11.3.0) (2017-10-25)
 
 
@@ -57,7 +75,6 @@
 
 
 
-<a name="11.2.1"></a>
 ## [11.2.1](https://github.com/adambiggs/dotfiles/compare/v11.2.0...v11.2.1) (2017-05-16)
 
 
@@ -76,7 +93,6 @@
 
 
 
-<a name="11.2.0"></a>
 # [11.2.0](https://github.com/adambiggs/dotfiles/compare/v11.1.0...v11.2.0) (2017-03-22)
 
 
@@ -89,7 +105,6 @@
 
 
 
-<a name="11.1.0"></a>
 # [11.1.0](https://github.com/adambiggs/dotfiles/compare/v11.0.0...v11.1.0) (2017-03-06)
 
 
@@ -109,7 +124,6 @@
 
 
 
-<a name="11.0.0"></a>
 # [11.0.0](https://github.com/adambiggs/dotfiles/compare/v10.1.1...v11.0.0) (2017-01-24)
 
 
@@ -131,7 +145,6 @@
 
 
 
-<a name="10.1.1"></a>
 ## [10.1.1](https://github.com/adambiggs/dotfiles/compare/v10.1.0...v10.1.1) (2017-01-03)
 
 
@@ -150,7 +163,6 @@
 
 
 
-<a name="10.1.0"></a>
 # [10.1.0](https://github.com/adambiggs/dotfiles/compare/v10.0.1...v10.1.0) (2016-12-22)
 
 
@@ -170,7 +182,6 @@
 
 
 
-<a name="10.0.1"></a>
 ## [10.0.1](https://github.com/adambiggs/dotfiles/compare/v10.0.0...v10.0.1) (2016-12-09)
 
 
@@ -181,7 +192,6 @@
 
 
 
-<a name="10.0.0"></a>
 # [10.0.0](https://github.com/adambiggs/dotfiles/compare/9.13.1...v10.0.0) (2016-12-09)
 
 
@@ -207,7 +217,6 @@
 
 
 
-<a name="9.13.1"></a>
 ## [9.13.1](https://github.com/adambiggs/dotfiles/compare/9.13.0...9.13.1) (2016-10-07)
 
 
@@ -224,7 +233,6 @@
 
 
 
-<a name="9.13.0"></a>
 # [9.13.0](https://github.com/adambiggs/dotfiles/compare/9.12.0...9.13.0) (2016-10-06)
 
 
@@ -247,7 +255,6 @@
 
 
 
-<a name="9.12.0"></a>
 # [9.12.0](https://github.com/adambiggs/dotfiles/compare/9.11.0...9.12.0) (2016-09-07)
 
 
@@ -270,7 +277,6 @@
 
 
 
-<a name="9.11.0"></a>
 # [9.11.0](https://github.com/adambiggs/dotfiles/compare/9.10.0...9.11.0) (2016-07-26)
 
 
@@ -286,7 +292,6 @@
 
 
 
-<a name="9.10.0"></a>
 # [9.10.0](https://github.com/adambiggs/dotfiles/compare/9.9.0...9.10.0) (2016-06-30)
 
 
@@ -306,7 +311,6 @@
 
 
 
-<a name="9.9.0"></a>
 # [9.9.0](https://github.com/adambiggs/dotfiles/compare/9.8.0...9.9.0) (2016-06-28)
 
 
@@ -325,7 +329,6 @@
 
 
 
-<a name="9.8.0"></a>
 # [9.8.0](https://github.com/adambiggs/dotfiles/compare/9.7.0...9.8.0) (2016-06-14)
 
 
@@ -357,7 +360,6 @@
 
 
 
-<a name="9.7.0"></a>
 # [9.7.0](https://github.com/adambiggs/dotfiles/compare/9.6.2...9.7.0) (2016-05-17)
 
 
@@ -375,7 +377,6 @@
 
 
 
-<a name="9.6.2"></a>
 ## [9.6.2](https://github.com/adambiggs/dotfiles/compare/9.6.1...9.6.2) (2016-05-11)
 
 
@@ -390,7 +391,6 @@
 
 
 
-<a name="9.6.1"></a>
 ## [9.6.1](https://github.com/adambiggs/dotfiles/compare/9.6.0...9.6.1) (2016-05-09)
 
 
@@ -409,7 +409,6 @@
 
 
 
-<a name="9.6.0"></a>
 # [9.6.0](https://github.com/adambiggs/dotfiles/compare/9.5.0...9.6.0) (2016-04-28)
 
 
@@ -431,7 +430,6 @@
 
 
 
-<a name="9.5.0"></a>
 # [9.5.0](https://github.com/adambiggs/dotfiles/compare/9.4.0...9.5.0) (2016-03-23)
 
 
@@ -451,7 +449,6 @@
 
 
 
-<a name="9.4.0"></a>
 # [9.4.0](https://github.com/adambiggs/dotfiles/compare/9.3.2...9.4.0) (2016-03-09)
 
 
@@ -472,7 +469,6 @@
 
 
 
-<a name="9.3.2"></a>
 ## [9.3.2](https://github.com/adambiggs/dotfiles/compare/9.3.1...9.3.2) (2016-02-18)
 
 
@@ -489,7 +485,6 @@
 
 
 
-<a name="9.3.1"></a>
 ## [9.3.1](https://github.com/adambiggs/dotfiles/compare/9.3.0...9.3.1) (2016-02-09)
 
 
@@ -505,7 +500,6 @@
 
 
 
-<a name="9.3.0"></a>
 # [9.3.0](https://github.com/adambiggs/dotfiles/compare/9.2.0...9.3.0) (2016-02-02)
 
 
@@ -525,7 +519,6 @@
 
 
 
-<a name="9.2.0"></a>
 # [9.2.0](https://github.com/adambiggs/dotfiles/compare/9.1.0...9.2.0) (2016-01-12)
 
 
@@ -541,7 +534,6 @@
 
 
 
-<a name="9.1.0"></a>
 # [9.1.0](https://github.com/adambiggs/dotfiles/compare/9.0.0...9.1.0) (2015-12-24)
 
 
@@ -552,7 +544,6 @@
 
 
 
-<a name="9.0.0"></a>
 # [9.0.0](https://github.com/adambiggs/dotfiles/compare/8.0.1...9.0.0) (2015-12-24)
 
 
@@ -584,7 +575,6 @@
 
 
 
-<a name="8.0.1"></a>
 ## [8.0.1](https://github.com/adambiggs/dotfiles/compare/8.0.0...8.0.1) (2015-12-10)
 
 
@@ -600,12 +590,10 @@
 
 
 
-<a name="8.0.0"></a>
 # [8.0.0](https://github.com/adambiggs/dotfiles/compare/7.1.1...8.0.0) (2015-12-10)
 
 
 
-<a name="7.1.1"></a>
 ## [7.1.1](https://github.com/adambiggs/dotfiles/compare/7.1.0...7.1.1) (2015-12-10)
 
 
@@ -629,7 +617,6 @@
 
 
 
-<a name="7.1.0"></a>
 # [7.1.0](https://github.com/adambiggs/dotfiles/compare/7.0.0...7.1.0) (2015-11-30)
 
 
@@ -645,7 +632,6 @@
 
 
 
-<a name="7.0.0"></a>
 # [7.0.0](https://github.com/adambiggs/dotfiles/compare/6.0.0...7.0.0) (2015-11-23)
 
 
@@ -673,7 +659,6 @@
 
 
 
-<a name="6.0.0"></a>
 # [6.0.0](https://github.com/adambiggs/dotfiles/compare/5.0.1...6.0.0) (2015-11-02)
 
 
@@ -703,7 +688,6 @@ being.
 
 
 
-<a name="5.0.1"></a>
 ## [5.0.1](https://github.com/adambiggs/dotfiles/compare/5.0.0...5.0.1) (2015-10-22)
 
 
@@ -719,7 +703,6 @@ being.
 
 
 
-<a name="5.0.0"></a>
 # [5.0.0](https://github.com/adambiggs/dotfiles/compare/4.2.1...5.0.0) (2015-10-15)
 
 
@@ -737,7 +720,6 @@ being.
 
 
 
-<a name="4.2.1"></a>
 ## [4.2.1](https://github.com/adambiggs/dotfiles/compare/4.2.0...4.2.1) (2015-10-01)
 
 
@@ -748,7 +730,6 @@ being.
 
 
 
-<a name="4.2.0"></a>
 # [4.2.0](https://github.com/adambiggs/dotfiles/compare/4.1.0...4.2.0) (2015-10-01)
 
 
@@ -768,7 +749,6 @@ being.
 
 
 
-<a name="4.1.0"></a>
 # [4.1.0](https://github.com/adambiggs/dotfiles/compare/4.0.3...4.1.0) (2015-10-01)
 
 
@@ -779,7 +759,6 @@ being.
 
 
 
-<a name="4.0.3"></a>
 ## [4.0.3](https://github.com/adambiggs/dotfiles/compare/4.0.2...4.0.3) (2015-09-14)
 
 
@@ -797,7 +776,6 @@ being.
 
 
 
-<a name="4.0.2"></a>
 ## [4.0.2](https://github.com/adambiggs/dotfiles/compare/4.0.1...4.0.2) (2015-09-01)
 
 
@@ -811,7 +789,6 @@ being.
 
 
 
-<a name="4.0.1"></a>
 ## [4.0.1](https://github.com/adambiggs/dotfiles/compare/4.0.0...4.0.1) (2015-08-25)
 
 
@@ -824,7 +801,6 @@ being.
 
 
 
-<a name="4.0.0"></a>
 # [4.0.0](https://github.com/adambiggs/dotfiles/compare/3.3.1...4.0.0) (2015-08-24)
 
 
@@ -844,7 +820,6 @@ being.
 
 
 
-<a name="3.3.1"></a>
 ## [3.3.1](https://github.com/adambiggs/dotfiles/compare/3.3.0...3.3.1) (2015-08-12)
 
 
@@ -869,7 +844,6 @@ being.
 
 
 
-<a name="3.3.0"></a>
 # [3.3.0](https://github.com/adambiggs/dotfiles/compare/3.2.1...3.3.0) (2015-07-21)
 
 
@@ -881,7 +855,6 @@ being.
 
 
 
-<a name="3.2.1"></a>
 ## [3.2.1](https://github.com/adambiggs/dotfiles/compare/3.2.0...3.2.1) (2015-07-21)
 
 
@@ -902,7 +875,6 @@ being.
 
 
 
-<a name="3.2.0"></a>
 # [3.2.0](https://github.com/adambiggs/dotfiles/compare/3.1.2...3.2.0) (2015-07-06)
 
 
@@ -920,7 +892,6 @@ being.
 
 
 
-<a name="3.1.2"></a>
 ## [3.1.2](https://github.com/adambiggs/dotfiles/compare/3.1.1...3.1.2) (2015-06-22)
 
 
@@ -935,7 +906,6 @@ being.
 
 
 
-<a name="3.1.1"></a>
 ## [3.1.1](https://github.com/adambiggs/dotfiles/compare/3.1.0...3.1.1) (2015-06-08)
 
 
@@ -956,7 +926,6 @@ being.
 
 
 
-<a name="3.1.0"></a>
 # [3.1.0](https://github.com/adambiggs/dotfiles/compare/3.0.0...3.1.0) (2015-05-21)
 
 
@@ -975,7 +944,6 @@ being.
 
 
 
-<a name="3.0.0"></a>
 # [3.0.0](https://github.com/adambiggs/dotfiles/compare/2.2.0...3.0.0) (2015-05-20)
 
 
@@ -996,7 +964,6 @@ being.
 
 
 
-<a name="2.2.0"></a>
 # [2.2.0](https://github.com/adambiggs/dotfiles/compare/2.1.1...2.2.0) (2015-05-15)
 
 
@@ -1019,7 +986,6 @@ being.
 
 
 
-<a name="2.1.1"></a>
 ## [2.1.1](https://github.com/adambiggs/dotfiles/compare/2.1.0...2.1.1) (2015-05-04)
 
 
@@ -1036,7 +1002,6 @@ being.
 
 
 
-<a name="2.1.0"></a>
 # [2.1.0](https://github.com/adambiggs/dotfiles/compare/2.0.0...2.1.0) (2015-05-04)
 
 
@@ -1053,7 +1018,6 @@ being.
 
 
 
-<a name="2.0.0"></a>
 # [2.0.0](https://github.com/adambiggs/dotfiles/compare/1.6.2...2.0.0) (2015-04-23)
 
 
@@ -1075,7 +1039,6 @@ being.
 
 
 
-<a name="1.6.2"></a>
 ## [1.6.2](https://github.com/adambiggs/dotfiles/compare/1.6.1...1.6.2) (2015-04-17)
 
 
@@ -1089,7 +1052,6 @@ being.
 
 
 
-<a name="1.6.1"></a>
 ## [1.6.1](https://github.com/adambiggs/dotfiles/compare/1.6.0...1.6.1) (2015-04-12)
 
 
@@ -1106,7 +1068,6 @@ being.
 
 
 
-<a name="1.6.0"></a>
 # [1.6.0](https://github.com/adambiggs/dotfiles/compare/1.5.4...1.6.0) (2015-04-11)
 
 
@@ -1129,7 +1090,6 @@ being.
 
 
 
-<a name="1.5.4"></a>
 ## [1.5.4](https://github.com/adambiggs/dotfiles/compare/1.5.3...1.5.4) (2015-04-09)
 
 
@@ -1148,7 +1108,6 @@ being.
 
 
 
-<a name="1.5.3"></a>
 ## [1.5.3](https://github.com/adambiggs/dotfiles/compare/1.5.2...1.5.3) (2015-04-08)
 
 
@@ -1171,7 +1130,6 @@ being.
 
 
 
-<a name="1.5.2"></a>
 ## [1.5.2](https://github.com/adambiggs/dotfiles/compare/1.5.1...1.5.2) (2015-03-31)
 
 
@@ -1184,7 +1142,6 @@ being.
 
 
 
-<a name="1.5.1"></a>
 ## [1.5.1](https://github.com/adambiggs/dotfiles/compare/1.5.0...1.5.1) (2015-03-30)
 
 
@@ -1195,7 +1152,6 @@ being.
 
 
 
-<a name="1.5.0"></a>
 # [1.5.0](https://github.com/adambiggs/dotfiles/compare/1.4.0...1.5.0) (2015-03-30)
 
 
@@ -1225,7 +1181,6 @@ being.
 
 
 
-<a name="1.4.0"></a>
 # [1.4.0](https://github.com/adambiggs/dotfiles/compare/1.3.1...1.4.0) (2015-03-24)
 
 
@@ -1248,7 +1203,6 @@ being.
 
 
 
-<a name="1.3.1"></a>
 ## [1.3.1](https://github.com/adambiggs/dotfiles/compare/1.3.0...1.3.1) (2015-03-24)
 
 
@@ -1270,7 +1224,6 @@ being.
 
 
 
-<a name="1.3.0"></a>
 # [1.3.0](https://github.com/adambiggs/dotfiles/compare/1.2.4...1.3.0) (2015-03-23)
 
 
@@ -1284,7 +1237,6 @@ being.
 
 
 
-<a name="1.2.4"></a>
 ## [1.2.4](https://github.com/adambiggs/dotfiles/compare/1.2.3...1.2.4) (2015-03-20)
 
 
@@ -1305,7 +1257,6 @@ being.
 
 
 
-<a name="1.2.3"></a>
 ## [1.2.3](https://github.com/adambiggs/dotfiles/compare/1.2.2...1.2.3) (2015-03-06)
 
 
@@ -1323,7 +1274,6 @@ being.
 
 
 
-<a name="1.2.2"></a>
 ## [1.2.2](https://github.com/adambiggs/dotfiles/compare/1.2.1...1.2.2) (2015-03-02)
 
 
@@ -1336,7 +1286,6 @@ being.
 
 
 
-<a name="1.2.1"></a>
 ## [1.2.1](https://github.com/adambiggs/dotfiles/compare/1.2.0...1.2.1) (2015-02-25)
 
 
@@ -1348,7 +1297,6 @@ being.
 
 
 
-<a name="1.2.0"></a>
 # [1.2.0](https://github.com/adambiggs/dotfiles/compare/1.1.1...1.2.0) (2015-02-16)
 
 
@@ -1370,7 +1318,6 @@ being.
 
 
 
-<a name="1.1.1"></a>
 ## [1.1.1](https://github.com/adambiggs/dotfiles/compare/1.1.0...1.1.1) (2015-02-11)
 
 
@@ -1385,7 +1332,6 @@ being.
 
 
 
-<a name="1.1.0"></a>
 # [1.1.0](https://github.com/adambiggs/dotfiles/compare/1.0.2...1.1.0) (2015-02-11)
 
 
@@ -1398,7 +1344,6 @@ being.
 
 
 
-<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/adambiggs/dotfiles/compare/1.0.1...1.0.2) (2015-02-11)
 
 
@@ -1412,7 +1357,6 @@ being.
 
 
 
-<a name="1.0.1"></a>
 ## [1.0.1](https://github.com/adambiggs/dotfiles/compare/1.0.0...1.0.1) (2015-02-06)
 
 
@@ -1427,7 +1371,6 @@ being.
 
 
 
-<a name="1.0.0"></a>
 # [1.0.0](https://github.com/adambiggs/dotfiles/compare/7b3c08f...1.0.0) (2015-02-06)
 
 

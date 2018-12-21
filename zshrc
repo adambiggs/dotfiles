@@ -103,6 +103,10 @@ if command -v brew >/dev/null; then
   echo $PATH | grep -q $BREWBIN || export PATH=$BREWBIN:$PATH
 fi
 
+# PHP
+PHPBIN=/usr/local/opt/php@7.1/bin
+echo $PATH | grep -q $PHPBIN || export PATH=$PHPBIN:$PATH
+
 # Composer
 if command -v composer >/dev/null; then
   COMPOSERBIN=$HOME/.composer/vendor/bin

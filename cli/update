@@ -15,7 +15,7 @@ function update_brew_pkg_head() {
     echo -e "${green}✔${clear}"
   else
     echo ""
-    brew reinstall --HEAD $pkg_name
+    brew reinstall $pkg_name
     echo -e "${green}✔${clear}"
   fi
 }

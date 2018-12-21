@@ -11,11 +11,9 @@ zplug "aws/aws-cli", use:"bin/aws_zsh_completer.sh"
 zplug "djui/alias-tips"
 zplug "docker/compose", as:command, use:"contrib/completion/zsh/_docker-compose"
 zplug "docker/docker", as:command, use:"contrib/completion/zsh/_docker"
-zplug "gulpjs/gulp", use:"completion/zsh"
 zplug "modules/directory", from:prezto
 zplug "modules/git", from:prezto
 zplug "modules/osx", from:prezto
-# zplug "peterhurford/git-it-on.zsh"
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-completions"

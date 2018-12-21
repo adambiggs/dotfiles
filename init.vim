@@ -1,6 +1,8 @@
 " Config Directories {{{
   let b:config_directory = '~/.config/nvim'
   let b:plugin_directory = b:config_directory . '/plugged'
+  let g:python_host_prog = '/usr/local/bin/python'
+  let g:python3_host_prog = '/usr/local/bin/python3'
 " }}}
 
 " Functions {{{

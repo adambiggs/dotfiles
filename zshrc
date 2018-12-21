@@ -126,7 +126,7 @@ alias vimclean='rm -rf ~/.config/nvim/session/* ~/.config/nvim/swap/* ~/.config/
 
 # Git
 alias github='gitit'
-alias gitgraph='git log --all --graph --decorate --oneline'
+alias glg='git log --all --graph --decorate --oneline'
 
 # NeoVim
 alias nvim-debug='ulimit -c unlimited && nvim'

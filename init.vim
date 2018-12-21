@@ -825,9 +825,10 @@
 
   " ProSession {{{
   if isdirectory(expand(b:plugin_directory . '/vim-prosession'))
-    let g:prosession_dir             = b:config_directory . "/session/"
-    let g:prosession_per_branch      = 1
+    let g:prosession_dir = b:config_directory . "/session/"
+    let g:prosession_per_branch = 1
     let g:prosession_default_session = 0
+    let g:prosession_on_startup = 1
   endif
   " }}}
 

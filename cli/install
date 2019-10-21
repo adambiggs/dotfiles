@@ -84,7 +84,7 @@ install_pkg brew ls install the_silver_searcher
 install_pkg brew ls install ripgrep
 install_pkg brew ls install tmux
 install_pkg brew ls install wget
-install_pkg brew ls install yarn '--without-node'
+install_pkg brew ls install yarn '--ignore-dependencies'
 install_pkg brew ls install zplug
 install_pkg brew ls install zsh
 echo -e "${green}✔${clear}"

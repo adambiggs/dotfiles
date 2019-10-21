@@ -1,5 +1,3 @@
-
-
 ### PLUGINS ###
 export ZPLUG_HOME=~/.config/zplug
 source `brew --prefix zplug`/init.zsh
@@ -104,8 +102,10 @@ if command -v brew >/dev/null; then
 fi
 
 # PHP
-PHPBIN=/usr/local/opt/php@7.1/bin
+PHPBIN=/usr/local/opt/php@7.2/bin
 echo $PATH | grep -q $PHPBIN || export PATH=$PHPBIN:$PATH
+PHPSBIN=/usr/local/opt/php@7.2/sbin
+echo $PATH | grep -q $PHPSBIN || export PATH=$PHPSBIN:$PATH
 
 # Composer
 if command -v composer >/dev/null; then

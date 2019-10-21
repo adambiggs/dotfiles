@@ -569,63 +569,12 @@
   " FZF {{{
     if isdirectory(expand(b:plugin_directory . '/fzf.vim'))
 
-      " Config {{{
-
-        " Customize fzf colors to match your color scheme
-        "let g:fzf_colors =
-        "\ { 'fg':      ['fg', 'Normal'],
-          "\ 'bg':      ['bg', 'Normal'],
-          "\ 'hl':      ['fg', 'Comment'],
-          "\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-          "\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-          "\ 'hl+':     ['fg', 'Statement'],
-          "\ 'info':    ['fg', 'PreProc'],
-          "\ 'prompt':  ['fg', 'Conditional'],
-          "\ 'pointer': ['fg', 'Exception'],
-          "\ 'marker':  ['fg', 'Keyword'],
-          "\ 'spinner': ['fg', 'Label'],
-          "\ 'header':  ['fg', 'Comment'] }
-
-        " Select buffers with FZF
-        " @see https://github.com/junegunn/fzf/wiki/Examples-(vim)#select-buffer
-        "function! s:buflist()
-          "redir => ls
-          "silent ls
-          "redir END
-          "return split(ls, '\n')
-        "endfunction
-
-        "function! s:bufopen(lines)
-          "if len(a:lines) < 2 | return | endif
-
-          "let cmd = get({'ctrl-x': 'sbuffer',
-            "\ 'ctrl-v': 'vert sbuffer',
-            "\ 'ctrl-t': 'tab sb',
-            "\ 'ctrl-d': 'bd'}, a:lines[0], 'buffer')
-          "let list = a:lines[1:]
-
-          "let first = list[0]
-          "execute cmd matchstr(first, '^[ 0-9]*')
-        "endfunction
-
-        "nnoremap <silent> <C-@> :call fzf#run({
-          "\   'source':  reverse(<sid>buflist()),
-          "\   'sink*':    function('<sid>bufopen'),
-          "\   'options': '+m --ansi --expect=ctrl-t,ctrl-v,ctrl-x,ctrl-d',
-          "\   'down':    len(<sid>buflist()) + 2
-          "\ })<CR>
-
-      " }}}
-
       " Mappings {{{
         nnoremap <silent> <C-Space> :Buffers<CR>
         nnoremap <silent> <C-p> :FZF<CR>
       " }}}
 
       " Commands {{{
-
-        " Pass commands directly to ag
-        command! -nargs=+ -complete=file Ag call fzf#vim#ag_raw(<q-args>)
 
         " Pass commands directly to rg
         command! -bang -nargs=* Rg

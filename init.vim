@@ -106,6 +106,7 @@
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'kevinkjt2000/tmuxline.vim'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+  Plug 'meain/vim-package-info', { 'do': 'npm install' }
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] } | Plug 'https://gist.github.com/17057040c94b6b9786a4.git', { 'dir': b:config_directory . '/nerdtree_plugin/coffee_filter.vim' }

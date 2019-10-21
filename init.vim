@@ -121,18 +121,16 @@
   Plug 'kshenoy/vim-signature'
 
   " Autocomplete
-  Plug 'adambiggs/vim-snippets'
-  Plug 'fgrsnau/ncm2-otherbuf', { 'branch': 'ncm2' }
-  Plug 'ncm2/ncm2' | Plug 'roxma/nvim-yarp'
-  Plug 'ncm2/ncm2-bufword'
-  Plug 'ncm2/ncm2-cssomni'
-  Plug 'ncm2/ncm2-html-subscope'
-  Plug 'ncm2/ncm2-path'
-  Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-  Plug 'ncm2/ncm2-tmux'
-  Plug 'ncm2/ncm2-ultisnips' | Plug 'SirVer/ultisnips'
-  Plug 'ncm2/ncm2-vim' | Plug 'Shougo/neco-vim'
-  Plug 'phpactor/ncm2-phpactor' | Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'josa42/coc-docker', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'josa42/coc-sh', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 
   " Source Control
   Plug 'airblade/vim-gitgutter'
@@ -420,6 +418,13 @@
       let g:ale_fixers = {
       \   'javascript': ['eslint'],
       \ }
+    endif
+  " }}}
+
+  " CoC.nvim {{{
+    if isdirectory(expand(b:plugin_directory . '/coc.nvim'))
+      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+      inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     endif
   " }}}
 
@@ -788,30 +793,6 @@
       nnoremap <silent> <C-x> :call neoterm#close()<cr>
       " clear terminal
       nnoremap <silent> <C-l> :call neoterm#clear()<cr>
-
-    endif
-  " }}}
-
-  " NCM2 {{{
-    if isdirectory(expand(b:plugin_directory . '/ncm2'))
-
-      autocmd BufEnter * call ncm2#enable_for_buffer() " enable ncm2 for all buffers
-
-      " Press enter key to trigger snippet expansion. The parameters are the same as `:help feedkeys()`
-      inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
-
-      " suppress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
-      set shortmess+=c
-
-      " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
-      inoremap <c-c> <ESC>
-
-      " When the <Enter> key is pressed while the popup menu is visible, it only hides the menu. Use this mapping to close the menu and also start a new line.
-      inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-
-      " Use <TAB> to select the popup menu:
-      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-      inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
     endif
   " }}}

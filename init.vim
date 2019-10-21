@@ -159,7 +159,6 @@
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'vim-scripts/visualrepeat'
-  Plug 'w0rp/ale'
 
   call plug#end()
 

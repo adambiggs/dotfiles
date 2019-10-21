@@ -105,7 +105,6 @@
   "Plug 'tpope/vim-eunuch'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'kevinkjt2000/tmuxline.vim'
-  Plug 'junegunn/vim-peekaboo'
   Plug 'kassio/neoterm'
   Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
   Plug 'nathanaelkane/vim-indent-guides'

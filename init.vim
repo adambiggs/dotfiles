@@ -113,7 +113,7 @@
 
   " Search & Navigation
   Plug 'bronson/vim-visual-star-search'
-  Plug 'easymotion/vim-easymotion'
+  Plug 'justinmk/vim-sneak'
   Plug 'haya14busa/incsearch.vim' | Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc' } | Plug 'junegunn/fzf.vim'
   Plug 'kshenoy/vim-signature'
@@ -834,6 +834,12 @@
     if isdirectory(expand(b:plugin_directory . '/vim-rooter'))
       let g:rooter_change_directory_for_non_project_files = 'current'
       let g:rooter_silent_chdir = 1
+    endif
+  " }}}
+
+  " Sneak {{{
+    if isdirectory(expand(b:plugin_directory . '/vim-sneak'))
+      let g:sneak#label = 1
     endif
   " }}}
 

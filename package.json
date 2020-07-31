@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/adambiggs/dotfiles",
   "devDependencies": {
-    "conventional-changelog-cli": "^2.0.25"
+    "conventional-changelog-cli": "^2.0.34"
   },
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",

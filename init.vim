@@ -63,6 +63,9 @@
     function! CleanJSON()
       %!jq --monochrome-output .
     endfunction
+    function! CleanJSONSorted()
+      %!jq --monochrome-output -S .
+    endfunction
   " }}}
 
   " Open Markdown file in Marked.app {{{
@@ -84,6 +87,7 @@
     augroup json-commands
       autocmd!
       autocmd BufRead,BufNewFile *.json command! CleanJSON call CleanJSON()
+      autocmd BufRead,BufNewFile *.json command! CleanJSONSorted call CleanJSONSorted()
     augroup end
   " }}}
 

@@ -75,8 +75,7 @@ install_pkg brew ls install composer
 install_pkg brew ls install ctags
 install_pkg brew ls install jq
 install_pkg brew ls install neovim
-install_pkg brew ls install php70
-install_pkg brew ls install php70-msgpack
+install_pkg brew ls install php@7.2
 install_pkg brew ls install python
 install_pkg brew ls install python3
 install_pkg brew ls install ruby

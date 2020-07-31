@@ -46,7 +46,6 @@ echo -e "${green}✔${clear}"
 
 # Pip
 echo -e "\n${blue}Updating certain PIP packages...${clear}"
-pip2 install -U pip awscli neovim pynvim tmuxp awslogs apilogs
 pip3 install -U pip awscli neovim pynvim tmuxp awslogs apilogs
 echo -e "${green}✔${clear}"
 

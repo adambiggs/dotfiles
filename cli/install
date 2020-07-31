@@ -122,7 +122,6 @@ echo -e "${green}✔${clear}"
 
 # Install packages
 echo -e "\n${blue}Installing PIP packages...${clear}"
-install_pkg pip2 'list --format=legacy' install awscli neovim tmuxp awslogs apilogs
 install_pkg pip3 'list --format=legacy' install awscli neovim tmuxp awslogs apilogs
 echo -e "${green}✔${clear}"
 

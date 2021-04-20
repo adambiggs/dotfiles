@@ -137,10 +137,6 @@ alias drun='docker run --rm -ti'
 alias drc='docker rm $(docker ps -a -q) 2>/dev/null' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
 alias dri='docker rmi $(docker images -q --filter "dangling=true") 2>/dev/null' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
 
-# Boot2Docker
-alias 2d='boot2docker'
-alias 2ds='boot2docker start && $(boot2docker shellinit)'
-
 # Docker Compose
 alias dc='docker-compose'
 alias dcu='docker-compose up -d --remove-orphans'
@@ -151,9 +147,6 @@ docker_compose_rm() {
   docker-compose rm --force $@
 }
 alias dcrm=docker_compose_rm
-
-# Docker Machine
-alias dm='docker-machine'
 
 # LMPM
 

@@ -1,11 +1,5 @@
 #!/bin/zsh
 
-# NVM
-export NVM_LAZY_LOAD=true
-export NVM_DIR="$HOME/.config/nvm"
-mkdir -p $NVM_DIR
-zplug "lukechilds/zsh-nvm"
-
 # Others
 zplug "aws/aws-cli", use:"bin/aws_zsh_completer.sh"
 zplug "djui/alias-tips"

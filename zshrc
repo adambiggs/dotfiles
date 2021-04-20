@@ -74,9 +74,6 @@ fi
 
 ### PATHS ###
 
-# Repos
-export REPO_PATH=$HOME/Repos
-
 # Ruby
 RUBYPATH=/usr/local/opt/ruby/bin
 echo $PATH | grep -q $RUBYPATH || export PATH=$RUBYPATH:$PATH

@@ -53,9 +53,7 @@ fi
 echo -e "\n${blue}Adding Homebrew taps...${clear}"
 install_tap caskroom/fonts
 install_tap caskroom/versions
-install_tap homebrew/dupes # For PHP
 install_tap homebrew/php
-install_tap homebrew/versions # For PHP
 install_tap neovim/neovim
 echo -e "${green}✔${clear}"
 
@@ -75,7 +73,7 @@ install_pkg brew ls install composer
 install_pkg brew ls install ctags
 install_pkg brew ls install jq
 install_pkg brew ls install neovim
-install_pkg brew ls install php@7.2
+install_pkg brew ls install php@7.4
 install_pkg brew ls install python
 install_pkg brew ls install python3
 install_pkg brew ls install ruby

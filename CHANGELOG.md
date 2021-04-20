@@ -1,3 +1,25 @@
+# [12.2.0](https://github.com/adambiggs/dotfiles/compare/v12.1.0...v12.2.0) (2021-04-20)
+
+
+### Bug Fixes
+
+* **zsh:** this fixes something... can't remember what though 🤔 ([19c26d2](https://github.com/adambiggs/dotfiles/commit/19c26d2d4898f13434a3d44bd773a6fb65f28db7))
+
+
+### Features
+
+* **zsh:** add NVM config to `.zshrc` ([86638ce](https://github.com/adambiggs/dotfiles/commit/86638ce47ffbe4874cc27a6f4172cd3aea56b91c))
+* **zsh:** remove Serverless framework tab completions ([9cf0e15](https://github.com/adambiggs/dotfiles/commit/9cf0e159a28df5e40ec6d1b53568e442fab760db))
+* **zsh:** remove unused `2d`/`2ds`/`dm` aliases ([792d209](https://github.com/adambiggs/dotfiles/commit/792d209ae3d320bacaa24527153dc6cd03ffd509))
+* new scripts to mount/unmount RAM disks ([096b2a0](https://github.com/adambiggs/dotfiles/commit/096b2a0bb9dbca77eb400ffe82687e708d469559))
+* update `battery-status` ([a206939](https://github.com/adambiggs/dotfiles/commit/a2069397add1e37856500e5977be17a9526abcb4))
+* update `tpm` ([1207fba](https://github.com/adambiggs/dotfiles/commit/1207fba8b31a49d183737bb4b40607c22de4b323))
+* **cli/install:** install PHP 7.4 ([6f898f9](https://github.com/adambiggs/dotfiles/commit/6f898f9ad64053146bbd160534fa801731ffd5b6))
+* **cli/install:** no longer install Yarn via Homebrew - it's now recommended to install via npm ([b4b1bfb](https://github.com/adambiggs/dotfiles/commit/b4b1bfb631a830fdfeb13eedb34464df0ee99702))
+* **git:** automatically push local tags when pushing code ([d1ed111](https://github.com/adambiggs/dotfiles/commit/d1ed111b93c8aa5dfdb65bf27bd7e99850c6ec28))
+
+
+
 # [12.1.0](https://github.com/adambiggs/dotfiles/compare/v12.0.0...v12.1.0) (2020-07-31)
 
 

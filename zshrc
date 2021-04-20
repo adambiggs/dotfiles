@@ -1,3 +1,8 @@
+if [ -f /etc/profile ]; then
+  PATH=""
+  source /etc/profile
+fi
+
 ### PLUGINS ###
 export ZPLUG_HOME=~/.config/zplug
 source `brew --prefix zplug`/init.zsh

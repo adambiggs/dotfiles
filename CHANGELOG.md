@@ -1,3 +1,13 @@
+# [12.3.0](https://github.com/adambiggs/dotfiles/compare/v12.2.0...v12.3.0) (2021-11-24)
+
+
+### Features
+
+* remove awscli v1 - v2 now installed via mac OS installer ([6f27c5a](https://github.com/adambiggs/dotfiles/commit/6f27c5a50866d62df0645136cf3a0161c03b253c))
+* use PHP 7.4 ([f7a6fe2](https://github.com/adambiggs/dotfiles/commit/f7a6fe26d96685bb3799f23454d212e222619f1f))
+
+
+
 # [12.2.0](https://github.com/adambiggs/dotfiles/compare/v12.1.0...v12.2.0) (2021-04-20)
 
 
@@ -8,15 +18,15 @@
 
 ### Features
 
-* **zsh:** add NVM config to `.zshrc` ([86638ce](https://github.com/adambiggs/dotfiles/commit/86638ce47ffbe4874cc27a6f4172cd3aea56b91c))
-* **zsh:** remove Serverless framework tab completions ([9cf0e15](https://github.com/adambiggs/dotfiles/commit/9cf0e159a28df5e40ec6d1b53568e442fab760db))
-* **zsh:** remove unused `2d`/`2ds`/`dm` aliases ([792d209](https://github.com/adambiggs/dotfiles/commit/792d209ae3d320bacaa24527153dc6cd03ffd509))
-* new scripts to mount/unmount RAM disks ([096b2a0](https://github.com/adambiggs/dotfiles/commit/096b2a0bb9dbca77eb400ffe82687e708d469559))
-* update `battery-status` ([a206939](https://github.com/adambiggs/dotfiles/commit/a2069397add1e37856500e5977be17a9526abcb4))
-* update `tpm` ([1207fba](https://github.com/adambiggs/dotfiles/commit/1207fba8b31a49d183737bb4b40607c22de4b323))
 * **cli/install:** install PHP 7.4 ([6f898f9](https://github.com/adambiggs/dotfiles/commit/6f898f9ad64053146bbd160534fa801731ffd5b6))
 * **cli/install:** no longer install Yarn via Homebrew - it's now recommended to install via npm ([b4b1bfb](https://github.com/adambiggs/dotfiles/commit/b4b1bfb631a830fdfeb13eedb34464df0ee99702))
 * **git:** automatically push local tags when pushing code ([d1ed111](https://github.com/adambiggs/dotfiles/commit/d1ed111b93c8aa5dfdb65bf27bd7e99850c6ec28))
+* new scripts to mount/unmount RAM disks ([096b2a0](https://github.com/adambiggs/dotfiles/commit/096b2a0bb9dbca77eb400ffe82687e708d469559))
+* update `battery-status` ([a206939](https://github.com/adambiggs/dotfiles/commit/a2069397add1e37856500e5977be17a9526abcb4))
+* update `tpm` ([1207fba](https://github.com/adambiggs/dotfiles/commit/1207fba8b31a49d183737bb4b40607c22de4b323))
+* **zsh:** add NVM config to `.zshrc` ([86638ce](https://github.com/adambiggs/dotfiles/commit/86638ce47ffbe4874cc27a6f4172cd3aea56b91c))
+* **zsh:** remove Serverless framework tab completions ([9cf0e15](https://github.com/adambiggs/dotfiles/commit/9cf0e159a28df5e40ec6d1b53568e442fab760db))
+* **zsh:** remove unused `2d`/`2ds`/`dm` aliases ([792d209](https://github.com/adambiggs/dotfiles/commit/792d209ae3d320bacaa24527153dc6cd03ffd509))
 
 
 
@@ -26,9 +36,9 @@
 ### Features
 
 * **iterm:** update iTerm prefs ([66c2859](https://github.com/adambiggs/dotfiles/commit/66c2859d47c8706ded09a0bc1572a1c29b005f32))
-* **vim:** add `CleanJSONSorted()` function ([e93aa92](https://github.com/adambiggs/dotfiles/commit/e93aa925662ae7fdd7654d08b0e9b0af0466abd9))
 * only install python pacakges using `pip3` ([9fe9b64](https://github.com/adambiggs/dotfiles/commit/9fe9b64f25441409439b8db84d7e94e49b5537c2))
 * update PHP to v7.2 ([33c1a7a](https://github.com/adambiggs/dotfiles/commit/33c1a7ae09504d43da3d3443a073edf0936f7934))
+* **vim:** add `CleanJSONSorted()` function ([e93aa92](https://github.com/adambiggs/dotfiles/commit/e93aa925662ae7fdd7654d08b0e9b0af0466abd9))
 
 
 
@@ -45,6 +55,7 @@
 * **iterm:** update prefs ([039c9f5](https://github.com/adambiggs/dotfiles/commit/039c9f55249c199b12e2d2856fbdb80353fa024c))
 * **tmux:** get vim-tmux-navigator key bindings from tmux plugin ([ff2fb8e](https://github.com/adambiggs/dotfiles/commit/ff2fb8ed553fac0d7ba6b64e3c6f27a20bae6276))
 * **tmux:** remove `reattach-to-user-namespace` clipboard workaround ([674f31f](https://github.com/adambiggs/dotfiles/commit/674f31fd4cfa0790278abb52f716ef314627e1e5))
+* update git submodules ([61e3dda](https://github.com/adambiggs/dotfiles/commit/61e3dda651fa4b93b8e87dd95b07208f935f281f))
 * **vim:** install `vim-package-info` plugin ([4ef58d1](https://github.com/adambiggs/dotfiles/commit/4ef58d19ff0d2a8e98727291b042e3ac9506b2ba))
 * **vim:** remove true color config for old versions of NeoVim ([531ed31](https://github.com/adambiggs/dotfiles/commit/531ed3183ea0f948e66ac08fd638cea1629f6681))
 * **vim:** replace `far.vim` with `ctrlsf.vim` ([05257c4](https://github.com/adambiggs/dotfiles/commit/05257c4d25ef8d4fe40922a7e9c60aacbfd4702c))
@@ -56,7 +67,6 @@
 * **zsh:** add Serverless framework tab completion sources ([efc20fb](https://github.com/adambiggs/dotfiles/commit/efc20fbc9bf305eef4c826a487677adf87228b39))
 * **zsh:** remove `fr` script ([8d01dbb](https://github.com/adambiggs/dotfiles/commit/8d01dbb201bd9f9379c5dcb4f513be84817a8aae))
 * **zsh:** update `PATH` to point to PHP 7.2 `bin` and add path to `sbin` ([3d54ba6](https://github.com/adambiggs/dotfiles/commit/3d54ba6eceab59063412e9e247ff675578222563))
-* update git submodules ([61e3dda](https://github.com/adambiggs/dotfiles/commit/61e3dda651fa4b93b8e87dd95b07208f935f281f))
 
 
 
@@ -125,13 +135,13 @@
 
 ### Features
 
-* **vim:** add JSON syntax highlighting for `.jsdoc2mdrc` files ([2670763](https://github.com/adambiggs/dotfiles/commit/2670763c0d7386abd3e78d1ca32517a247825b14))
-* **vim:** install `far.vim` find-and-replace plugin ([f013c1a](https://github.com/adambiggs/dotfiles/commit/f013c1a8e528aad37779574d30760f80ea7e754a))
-* **vim:** new `:W` command to quickly save and delete a buffer ([a8de8ce](https://github.com/adambiggs/dotfiles/commit/a8de8cef87a75622e15abf7c66ffdb6477140e9e))
+* **git:** change email address ([927e0c4](https://github.com/adambiggs/dotfiles/commit/927e0c4e29d7b244d00472583abc1a113a44c330))
 * update `battery-status` ([c2d1f46](https://github.com/adambiggs/dotfiles/commit/c2d1f46d38cd0ae6192181e1de110238a91d0706))
 * update `tpm` ([48694cf](https://github.com/adambiggs/dotfiles/commit/48694cf0931a2ac32c28a9e683359423923012bb))
-* **git:** change email address ([927e0c4](https://github.com/adambiggs/dotfiles/commit/927e0c4e29d7b244d00472583abc1a113a44c330))
+* **vim:** add JSON syntax highlighting for `.jsdoc2mdrc` files ([2670763](https://github.com/adambiggs/dotfiles/commit/2670763c0d7386abd3e78d1ca32517a247825b14))
 * **vim:** change default fold level for JSON files ([7545b66](https://github.com/adambiggs/dotfiles/commit/7545b663698672719b171505890e573dde046e5b))
+* **vim:** install `far.vim` find-and-replace plugin ([f013c1a](https://github.com/adambiggs/dotfiles/commit/f013c1a8e528aad37779574d30760f80ea7e754a))
+* **vim:** new `:W` command to quickly save and delete a buffer ([a8de8ce](https://github.com/adambiggs/dotfiles/commit/a8de8cef87a75622e15abf7c66ffdb6477140e9e))
 * **zsh:** disable `git-it-on` plugin ([4db7506](https://github.com/adambiggs/dotfiles/commit/4db75064ccdb4a6adb5ea5e65b3d3bc1e75bedf1))
 * **zsh:** install NVM via `zsh-nvm` plugin instead of Homebrew ([04cd11e](https://github.com/adambiggs/dotfiles/commit/04cd11eae96b813854722d0e62032804fcbf0faa))
 
@@ -264,9 +274,10 @@
 
 ### Features
 
-* replace `gulp` with NPM scripts ([2c81b3a](https://github.com/adambiggs/dotfiles/commit/2c81b3a453284b3afbd789fa40393fec13371e02))
 * **brew:** install `yarn` ([94e49ff](https://github.com/adambiggs/dotfiles/commit/94e49ff3258b36ef9497c7c5f320df0eea383b15))
 * **git:** add `.tern-port` to global ignore ([58e9665](https://github.com/adambiggs/dotfiles/commit/58e9665b0e52b5447baf4c517148584891fe12e8))
+* remove trailing whitespace when saving stylus files ([37b3b7f](https://github.com/adambiggs/dotfiles/commit/37b3b7f5a6447d273f8ecff87a0bd10bd6c17cec))
+* replace `gulp` with NPM scripts ([2c81b3a](https://github.com/adambiggs/dotfiles/commit/2c81b3a453284b3afbd789fa40393fec13371e02))
 * **vim:** add `deoplete-padawan` plugin ([f169e73](https://github.com/adambiggs/dotfiles/commit/f169e73c9913d9d2b24767252b6188d1922ddff2))
 * **vim:** remove `tigris` plugin ([a660660](https://github.com/adambiggs/dotfiles/commit/a6606600986064f00132933ffec7793e456d4f36))
 * **vim:** replace `vim-over` with native NeoVim substitution preview ([b6efceb](https://github.com/adambiggs/dotfiles/commit/b6efceb5b70d98cd852822f5f2717a60021ad193))
@@ -275,7 +286,6 @@
 * **zsh:** change ruby path ([8355b51](https://github.com/adambiggs/dotfiles/commit/8355b51143b2895becd67ef6db5b65d3232f7da2))
 * **zsh:** limit `dcl` alias to last 200 lines of container logs ([145dfb3](https://github.com/adambiggs/dotfiles/commit/145dfb3ac8d1c8615a05ebae43e80e2cf4d71ef0))
 * **zsh:** swap oh-my-zsh plugins for prezto and replace some other plugins ([a8b8362](https://github.com/adambiggs/dotfiles/commit/a8b8362ae14e409f5cd2a0e78893e0b01a115227))
-* remove trailing whitespace when saving stylus files ([37b3b7f](https://github.com/adambiggs/dotfiles/commit/37b3b7f5a6447d273f8ecff87a0bd10bd6c17cec))
 
 
 
@@ -328,10 +338,10 @@
 
 ### Features
 
+* **iterm:** change font to Monoid and switch to nightly builds ([18e478d](https://github.com/adambiggs/dotfiles/commit/18e478db5dab68236a79156e04a2fe6c6928e78c))
 * update `nvm` submodule ([c4e55e0](https://github.com/adambiggs/dotfiles/commit/c4e55e0635a084e3393c280650d466d64708edb1))
 * update `tpm` submodule ([6af2a4b](https://github.com/adambiggs/dotfiles/commit/6af2a4b848849ffa815238bb8df5b989c4964446))
 * update iTerm prefs ([e7e7531](https://github.com/adambiggs/dotfiles/commit/e7e7531b9bcd2315f6fbbd92b2099877a3c3f03e))
-* **iterm:** change font to Monoid and switch to nightly builds ([18e478d](https://github.com/adambiggs/dotfiles/commit/18e478db5dab68236a79156e04a2fe6c6928e78c))
 * **vim:** `airline-onedark` theme merged into main repo ([10607e4](https://github.com/adambiggs/dotfiles/commit/10607e4091fb8ff45b6300fe51fdc77b71266d73))
 * **vim:** install `tigris.nvim` for intelligent JavaScript syntax highlighting ([019d435](https://github.com/adambiggs/dotfiles/commit/019d4352074cfdaff254cf2f0c1d9ca8fb3ce247))
 * **vim:** only disable `polyglot` for `.js` files if `tigris` is installed ([2545880](https://github.com/adambiggs/dotfiles/commit/2545880ae903e822d92bddec85438950784676d2))
@@ -365,10 +375,10 @@
 
 ### Features
 
+* change Vim/iTerm theme from `base16` to `onedark` ([2d9550b](https://github.com/adambiggs/dotfiles/commit/2d9550ba4c6289af44ba0996bb857487ce0c632a))
 * **vim:** disable indent guides when they don't make sense ([91c5374](https://github.com/adambiggs/dotfiles/commit/91c5374d9f456191e726d4475dad6385f11beb70))
 * **vim:** forked `tmuxline.vim` ([a3da164](https://github.com/adambiggs/dotfiles/commit/a3da164f44af3f2f97aea35f0814dcb0130e7cab))
 * **vim:** go back to stock `/` search mapping ([f738952](https://github.com/adambiggs/dotfiles/commit/f738952bd887da97c4ef32f22e012d24909fcf34))
-* change Vim/iTerm theme from `base16` to `onedark` ([2d9550b](https://github.com/adambiggs/dotfiles/commit/2d9550ba4c6289af44ba0996bb857487ce0c632a))
 * **vim:** uninstall `vim-stay` ([55156cb](https://github.com/adambiggs/dotfiles/commit/55156cb15f19d6e62777ff2e888a0543784c6e32))
 
 
@@ -396,9 +406,9 @@
 
 ### Bug Fixes
 
+* `tmuxp` shell completions not working ([a0cdce4](https://github.com/adambiggs/dotfiles/commit/a0cdce43d5698073cc4a21ebba4cf834723d164a))
 * **git:** wrong path to global excludes file ([291a661](https://github.com/adambiggs/dotfiles/commit/291a66184b21ecb68b1db1804b8e3afdb7405b30))
 * **install:** always changes default shell, even if already set correctly ([fb68728](https://github.com/adambiggs/dotfiles/commit/fb6872869cb99d203e6002fbc29af9400df55077))
-* `tmuxp` shell completions not working ([a0cdce4](https://github.com/adambiggs/dotfiles/commit/a0cdce43d5698073cc4a21ebba4cf834723d164a))
 * **update:** Homebrew cache path changed ([8c988ae](https://github.com/adambiggs/dotfiles/commit/8c988aed28d0aeb62063c684c5f08de565bb8987))
 
 
@@ -463,11 +473,11 @@
 
 ### Features
 
-* **zsh:** alias `l` for `ls -lAh` and enable color output ([52ff703](https://github.com/adambiggs/dotfiles/commit/52ff7038fb230452be9008f0f73a36bcedb613d6))
 * replace `zplug` git submodule with Homebrew formula ([2a57bad](https://github.com/adambiggs/dotfiles/commit/2a57bade2846f92cde0a2063eb0ec95405ef843c))
 * **vim:** installed `FastFold` plugin ([7a2cae0](https://github.com/adambiggs/dotfiles/commit/7a2cae07d5320663bc7095831934b9718f9b3477))
 * **vim:** load `vim-easy-align` plugin on-demand ([57adc16](https://github.com/adambiggs/dotfiles/commit/57adc16f87450e161cdf6e378d5d070cfc47a077))
 * **vim:** update `deoplete` plugin config ([81296ff](https://github.com/adambiggs/dotfiles/commit/81296ff181a71b1e4dcd75d81c6edbac75d5d5ec))
+* **zsh:** alias `l` for `ls -lAh` and enable color output ([52ff703](https://github.com/adambiggs/dotfiles/commit/52ff7038fb230452be9008f0f73a36bcedb613d6))
 
 
 
@@ -476,19 +486,19 @@
 
 ### Bug Fixes
 
+* `find-and-replace.sh` not properly escaping search string ([d1f5b82](https://github.com/adambiggs/dotfiles/commit/d1f5b820e3b245cdadccbef3fb2db06184ee7ec0))
 * **zsh:** add `-f` flag to `dlc` alias for newer `docker-compose` versions ([bac74c7](https://github.com/adambiggs/dotfiles/commit/bac74c7a916cba7a7921c5983b58a4541ea37aff))
 * **zsh:** command history isn't saved between shell sessions ([8f4818d](https://github.com/adambiggs/dotfiles/commit/8f4818d4a276fee0e6d2af6e1aa43e6c548fa807))
-* `find-and-replace.sh` not properly escaping search string ([d1f5b82](https://github.com/adambiggs/dotfiles/commit/d1f5b820e3b245cdadccbef3fb2db06184ee7ec0))
 
 
 ### Features
 
-* **zsh:** update `zplug` to v2 and fix breaking changes in config ([ef19526](https://github.com/adambiggs/dotfiles/commit/ef19526a6d3a9f51fe203f58435bab801e0ae549))
-* update `nerd-fonts` and switch fonts in iTerm ([48951df](https://github.com/adambiggs/dotfiles/commit/48951df02a063e79e2539d47a3fb42120b748831))
 * **find-and-replace:** escape find/replace params and tell user what's going on ([906da41](https://github.com/adambiggs/dotfiles/commit/906da41f3557cb578ca7983845f61ca0524b77d7))
+* update `nerd-fonts` and switch fonts in iTerm ([48951df](https://github.com/adambiggs/dotfiles/commit/48951df02a063e79e2539d47a3fb42120b748831))
 * **vim:** enable spellcheck for markdown files ([80e7314](https://github.com/adambiggs/dotfiles/commit/80e7314377a5a8706d1cebacafbb66d21c71a71a))
 * **vim:** more on-demand plugin loading ([2025b16](https://github.com/adambiggs/dotfiles/commit/2025b164d8a24e87b1c65ca9e1a662c42857c265))
 * **vim:** replace `vim-autoclose` plugin with `lexima.vim` ([4e03906](https://github.com/adambiggs/dotfiles/commit/4e039067b41c240cf703cbd2ac9a363e6e38b330))
+* **zsh:** update `zplug` to v2 and fix breaking changes in config ([ef19526](https://github.com/adambiggs/dotfiles/commit/ef19526a6d3a9f51fe203f58435bab801e0ae549))
 
 
 
@@ -711,9 +721,9 @@
 
 ### Features
 
-* updated `nerd-fonts` and fixed broken icons ([5ac93a1](https://github.com/adambiggs/dotfiles/commit/5ac93a1a499fc98bd20a77aac777d7899bedebbf))
 * **install:** switch from `iterm2-nightly` to `iterm2-beta` ([1e0cac7](https://github.com/adambiggs/dotfiles/commit/1e0cac7dec51ebadaae29d712a199ff80bbe6059))
 * **tmux:** switch to v2.1 stable ([55be3e6](https://github.com/adambiggs/dotfiles/commit/55be3e6499d14cc08e5e5f66cc117c61753c8f17))
+* updated `nerd-fonts` and fixed broken icons ([5ac93a1](https://github.com/adambiggs/dotfiles/commit/5ac93a1a499fc98bd20a77aac777d7899bedebbf))
 * **vim:** reactivate `vim-tmux-focus-events` now that NeoVim added support ([8b0bf15](https://github.com/adambiggs/dotfiles/commit/8b0bf15d3125dc814e2636f5e378c0bffffb0898))
 * **vim:** use `vdebug` "compact" style watch window ([3b0530b](https://github.com/adambiggs/dotfiles/commit/3b0530b17737c4e319c533e9d9c454b8c9621b69))
 * **zsh:** add Go paths to `.zshrc` ([9bdc206](https://github.com/adambiggs/dotfiles/commit/9bdc206cf43c040e836709abfdc6fb31463b9d88))
@@ -877,11 +887,11 @@ being.
 
 ### Features
 
+* added `slackshot` script to ease debugging running processes ([3712427](https://github.com/adambiggs/dotfiles/commit/371242756f11bd9a2abb445cb4b51bec4d463add))
 * **tmux:** switched from `tmuxinator` to `tmuxp` ([015b73f](https://github.com/adambiggs/dotfiles/commit/015b73f956d4b1a4a7e5af2a67d518c5d87e3395))
 * **vim:** don't open folds when navigating to them via block movements ([7ee22a8](https://github.com/adambiggs/dotfiles/commit/7ee22a8e7c1dc3d3b54e5a1fd69a7640b6301094))
 * **vim:** open buffers in splits/tabs using FZF ([387b702](https://github.com/adambiggs/dotfiles/commit/387b702b1ba34b65fa29440aee7f692cb0c97b72))
 * **vim:** removed unused `neovim-ruby` submodule ([7c83a7a](https://github.com/adambiggs/dotfiles/commit/7c83a7a89fb5b6b796b2d713d1dd5ee208d40720))
-* added `slackshot` script to ease debugging running processes ([3712427](https://github.com/adambiggs/dotfiles/commit/371242756f11bd9a2abb445cb4b51bec4d463add))
 * **vim:** switch (again) from CtrlP to FZF (and live with the daily segfaults) ([67c8394](https://github.com/adambiggs/dotfiles/commit/67c839445c330f33dae2ebb36b2c9bdce1a47bef))
 
 
@@ -915,9 +925,9 @@ being.
 
 ### Features
 
+* removed private repo dependancy for `$ gulp release` task ([1b62e67](https://github.com/adambiggs/dotfiles/commit/1b62e672f4481fb22f803b64d29b002b450118fb))
 * **vim:** disable `vimux` plugin for now because I wasn't using it ([0aca592](https://github.com/adambiggs/dotfiles/commit/0aca592d3f71379f75e45881978df592e77148ec))
 * **vim:** reorganize `nvimrc` for faster launch times ([626c4df](https://github.com/adambiggs/dotfiles/commit/626c4df06459b2a5fe41bcfb53047c32ea6a4893))
-* removed private repo dependancy for `$ gulp release` task ([1b62e67](https://github.com/adambiggs/dotfiles/commit/1b62e672f4481fb22f803b64d29b002b450118fb))
 
 
 
@@ -948,10 +958,10 @@ being.
 
 * **git:** added linked `.gitconfig` file ([ace06d2](https://github.com/adambiggs/dotfiles/commit/ace06d26704e239f615481321d8a8cfd4cab7ca8))
 * **git:** added some useful command aliases ([0189308](https://github.com/adambiggs/dotfiles/commit/0189308bbd6d390e2416562e7bafbc0ba6fc51b0))
-* **tmux:** added icon to wifi status line module ([0965ed2](https://github.com/adambiggs/dotfiles/commit/0965ed2f66406282c1d40214269b2a70dfcccf03))
-* **vim:** added Incsearch.vim plugin ([596946a](https://github.com/adambiggs/dotfiles/commit/596946a823a43dd0cf9f6e0ddfa89bc6b987c081))
 * renamed linked files ([7e2fc67](https://github.com/adambiggs/dotfiles/commit/7e2fc670f9c155779796af025b19f6a92c855911))
+* **tmux:** added icon to wifi status line module ([0965ed2](https://github.com/adambiggs/dotfiles/commit/0965ed2f66406282c1d40214269b2a70dfcccf03))
 * **tmuxinator:** added layout for Docker Machine setup ([52a14cd](https://github.com/adambiggs/dotfiles/commit/52a14cd8fc6b21f982d01739b63790228a0c2a6e))
+* **vim:** added Incsearch.vim plugin ([596946a](https://github.com/adambiggs/dotfiles/commit/596946a823a43dd0cf9f6e0ddfa89bc6b987c081))
 * **vim:** renamed `.nvimrc` file and some minor cleanup ([8650120](https://github.com/adambiggs/dotfiles/commit/865012084dbff47f93647fd34e806350f6f46a86))
 * **zsh:** silence errors in Docker cleanup aliases ([9c13e6e](https://github.com/adambiggs/dotfiles/commit/9c13e6ef179c9cce91938c32f67efd7995187b7b))
 * **zsh:** update `dcu` alias, fix issue with AWS completion, and rename file ([1f9df91](https://github.com/adambiggs/dotfiles/commit/1f9df91bbe23a92b0e9fc9e1f183d053b5d7e866))
@@ -964,11 +974,11 @@ being.
 ### Features
 
 * iTerm options changed after update ([0b7bf40](https://github.com/adambiggs/dotfiles/commit/0b7bf40a5fd3b7d10b465825f90940208a792622))
-* **zsh:** update git submodules before updating zgen plugins ([eda235a](https://github.com/adambiggs/dotfiles/commit/eda235a772724642a2b325d0364cb1ed4de7454d))
 * updated NVM ([b36b507](https://github.com/adambiggs/dotfiles/commit/b36b50715ed63f9ef8a54624c5eb8b5aa3b13cfe))
 * updated patched fonts ([8086375](https://github.com/adambiggs/dotfiles/commit/8086375041f7c515ab6d14aceb71d4111ed8ee0a))
 * updated zgen ([0694e49](https://github.com/adambiggs/dotfiles/commit/0694e494ae2e0d82e21725ba6e47c4ce2efc146b))
 * **vim:** removed options that are now NeoVim defaults ([11a3521](https://github.com/adambiggs/dotfiles/commit/11a3521273a6aa3aa34cf299d70486d4636c0488))
+* **zsh:** update git submodules before updating zgen plugins ([eda235a](https://github.com/adambiggs/dotfiles/commit/eda235a772724642a2b325d0364cb1ed4de7454d))
 
 
 
@@ -983,10 +993,10 @@ being.
 
 ### Features
 
-* **vim:** reduce `updatetime` to 750ms ([8894998](https://github.com/adambiggs/dotfiles/commit/889499807483cb75d9a836d6b472cf8c29e8c1b2))
 * updated NVM to latest HEAD ([93e0c02](https://github.com/adambiggs/dotfiles/commit/93e0c02b23a591341c4534b46924404b77a5057a))
 * **vim:** change Markdown preview from `Marked.app` to `Marked 2.app` ([2d6d5e9](https://github.com/adambiggs/dotfiles/commit/2d6d5e954b3f4b589e011513edb238c94985e73d))
 * **vim:** increase GitGutter max number of signs from `500` to `10000` ([1b715f6](https://github.com/adambiggs/dotfiles/commit/1b715f683b6928dd8de2c96b69e4e08cd795dabd))
+* **vim:** reduce `updatetime` to 750ms ([8894998](https://github.com/adambiggs/dotfiles/commit/889499807483cb75d9a836d6b472cf8c29e8c1b2))
 * **zsh:** remove `zsh-notify` plugin cuz it was getting annoying ([ce3fbbf](https://github.com/adambiggs/dotfiles/commit/ce3fbbf3cb9536855903a34c935249578796434f))
 * **zsh:** uninstall `opp.zsh` - Zsh 5.0.8 has native `textobject` support ([c0f138f](https://github.com/adambiggs/dotfiles/commit/c0f138fe71daba32de80c516cebea5453279036f))
 
@@ -1020,13 +1030,13 @@ being.
 
 ### Features
 
-* **vim:** got rid of `vim-startify` because I wasn't using it ([1fd6f81](https://github.com/adambiggs/dotfiles/commit/1fd6f813989e5092ee4641484be7d9fa108fab8c))
-* **vim:** switched `tabular` plugin to `vim-easy-align` ([1665a21](https://github.com/adambiggs/dotfiles/commit/1665a21dc9413c3d4a3d86288328deedf337399a))
-* updated `nvm` ([76aaaf7](https://github.com/adambiggs/dotfiles/commit/76aaaf7b9dcf7cc2744e4f9e2290d4b43116333e))
 * **tmux:** changed leader mapping from `C-a` to `C-t` for Vim compatability ([e326d71](https://github.com/adambiggs/dotfiles/commit/e326d714e12bbb6ced8fa95380c9fa555dbc566b))
+* updated `nvm` ([76aaaf7](https://github.com/adambiggs/dotfiles/commit/76aaaf7b9dcf7cc2744e4f9e2290d4b43116333e))
 * **vim:** added `ctrlp-cmatcher` plugin ([7a7cece](https://github.com/adambiggs/dotfiles/commit/7a7cece0b9a9a0c62716c74f7dbc6beff8aa8462))
 * **vim:** added Ctrl-Space mapping for buffer browsing with CtrlP ([28d071d](https://github.com/adambiggs/dotfiles/commit/28d071db074ea8969dd89dfc4678d4a22ebdbb0b))
 * **vim:** enabled CtrlP lazy update and Tag search extension ([bdec2c5](https://github.com/adambiggs/dotfiles/commit/bdec2c5a8ba9abd404b28d52ed3b8dcf867b2b3b))
+* **vim:** got rid of `vim-startify` because I wasn't using it ([1fd6f81](https://github.com/adambiggs/dotfiles/commit/1fd6f813989e5092ee4641484be7d9fa108fab8c))
+* **vim:** switched `tabular` plugin to `vim-easy-align` ([1665a21](https://github.com/adambiggs/dotfiles/commit/1665a21dc9413c3d4a3d86288328deedf337399a))
 
 
 
@@ -1042,13 +1052,13 @@ being.
 ### Features
 
 * updated `nvm` ([2a2534b](https://github.com/adambiggs/dotfiles/commit/2a2534bb0d94bf457e979622463d77b527493ee0))
+* updated `nvm` ([a63b2c5](https://github.com/adambiggs/dotfiles/commit/a63b2c5ea1f68c04cf0b67805274e930ec6bc748))
 * updated `zgen` ([3bdb128](https://github.com/adambiggs/dotfiles/commit/3bdb128e488e1f9e7ddd0c7dba48066227f2974a))
+* updated `zgen` ([4c36faf](https://github.com/adambiggs/dotfiles/commit/4c36faff8fcbddaa1a0565b31e8037d3352e82fe))
 * **vim:** installed `vim-peekaboo` plugin ([87002f2](https://github.com/adambiggs/dotfiles/commit/87002f2969546570cc2cd31bf8fc289b2a4e586f))
 * **vim:** installed `visualrepeat` plugin ([3d1a4a9](https://github.com/adambiggs/dotfiles/commit/3d1a4a9fc6553b3d9dbb3855d3bc9195f6a60ed2))
 * **vim:** installed NERDTree CoffeeScript filter plugin ([214accd](https://github.com/adambiggs/dotfiles/commit/214accd728cc266e843468b65263c14e49008342))
 * **zsh:** added aliases to help debug NeoVim segfaults ([01b61b1](https://github.com/adambiggs/dotfiles/commit/01b61b1a19e25fb084a21b0973ca79f6d515e277))
-* updated `nvm` ([a63b2c5](https://github.com/adambiggs/dotfiles/commit/a63b2c5ea1f68c04cf0b67805274e930ec6bc748))
-* updated `zgen` ([4c36faf](https://github.com/adambiggs/dotfiles/commit/4c36faff8fcbddaa1a0565b31e8037d3352e82fe))
 
 
 
@@ -1094,12 +1104,12 @@ being.
 
 ### Features
 
-* **vim:** installed `php.vim` plugin ([1af6954](https://github.com/adambiggs/dotfiles/commit/1af6954368ee8c78a78cf886d0ee3f4fb89d3ec0))
-* updated `fzf`, `nvm`, and `zgen` submodules ([8063787](https://github.com/adambiggs/dotfiles/commit/8063787f0e40ae039d139f51b214b1f69ab713e5))
-* **iTerm:** changed font ([d0839a3](https://github.com/adambiggs/dotfiles/commit/d0839a3bbdf1db7fdcc2121d420560436b30d504))
-* **tmuxinator:** updated `lmpm.yml` to make better use of `vim-prosession` ([d861233](https://github.com/adambiggs/dotfiles/commit/d8612332de08dfccc3291e4c869ff15d9ccfec6c))
 * install glyph fonts, refactored `install`/`link`/`update` scripts ([e6272ef](https://github.com/adambiggs/dotfiles/commit/e6272effb00fb80946c3d9ea92249226bf5ef19c))
+* **iTerm:** changed font ([d0839a3](https://github.com/adambiggs/dotfiles/commit/d0839a3bbdf1db7fdcc2121d420560436b30d504))
 * removed `patched-fonts` submodule ([1d3ba37](https://github.com/adambiggs/dotfiles/commit/1d3ba37974b81b20e8ffd687ba3fbbe3204b429b))
+* **tmuxinator:** updated `lmpm.yml` to make better use of `vim-prosession` ([d861233](https://github.com/adambiggs/dotfiles/commit/d8612332de08dfccc3291e4c869ff15d9ccfec6c))
+* updated `fzf`, `nvm`, and `zgen` submodules ([8063787](https://github.com/adambiggs/dotfiles/commit/8063787f0e40ae039d139f51b214b1f69ab713e5))
+* **vim:** installed `php.vim` plugin ([1af6954](https://github.com/adambiggs/dotfiles/commit/1af6954368ee8c78a78cf886d0ee3f4fb89d3ec0))
 * **vim:** installed `vim-prosession` session management plugin ([14cbbb2](https://github.com/adambiggs/dotfiles/commit/14cbbb26946032a2b170debcc660755f5e700221))
 * **vim:** installed `vim-webdevicons` and glyph patched fonts ([a8f5533](https://github.com/adambiggs/dotfiles/commit/a8f553305f618e5934dd1743ec2d56f46acbadef))
 
@@ -1112,9 +1122,9 @@ being.
 
 * **fzf:** use `--multi` mode by default ([d478f7c](https://github.com/adambiggs/dotfiles/commit/d478f7cde377313645339afb547b28eb91543e26))
 * **fzf:** use CtrlP mappings in FZF ([7a40234](https://github.com/adambiggs/dotfiles/commit/7a4023493155aae979a16b9a0e46513ba244f7fd))
+* updated `nvm` ([caf8b80](https://github.com/adambiggs/dotfiles/commit/caf8b802abcf6ae9b5f793448fd3fb0d80e4789c))
 * **update:** update `zgen` and use it to update `zsh` plugins ([a077f18](https://github.com/adambiggs/dotfiles/commit/a077f18487a54cd8043ffddf3de6281bbb651f9a))
 * **vim:** browse buffers with FZF and remove CtrlSpace ([212e9ee](https://github.com/adambiggs/dotfiles/commit/212e9ee0f0705e0ffc2b78689ab54a1339c532f7))
-* updated `nvm` ([caf8b80](https://github.com/adambiggs/dotfiles/commit/caf8b802abcf6ae9b5f793448fd3fb0d80e4789c))
 
 
 
@@ -1147,12 +1157,12 @@ being.
 
 ### Features
 
+* update fzf ([862b118](https://github.com/adambiggs/dotfiles/commit/862b1182828dd72f3c878c59bda5abbe4e2f72aa))
 * **vim:** deactivate Tern plugin till I get around to making shit work right ([b7edb7b](https://github.com/adambiggs/dotfiles/commit/b7edb7bdcfbd03049b92ee64901b943c8b9b4703))
 * **vim:** remove Unite plugin ([48a82b4](https://github.com/adambiggs/dotfiles/commit/48a82b444557fc01c8572a7e8cd8cfdd2c671cbb))
 * **vim:** replace Unite with fzf for CtrlP mapping ([8a6cefa](https://github.com/adambiggs/dotfiles/commit/8a6cefa37d3a9221c69efa21d4955f61b7de314f))
 * **vim:** update Airline tabline config ([ab19ae1](https://github.com/adambiggs/dotfiles/commit/ab19ae160ad09f64e34d2d8cb683fb16a4af97ec))
 * **zsh:** get rid of aliases I don't use anymore ([4a741db](https://github.com/adambiggs/dotfiles/commit/4a741db0b2896ec101c1df909e05c9f918e2a05b))
-* update fzf ([862b118](https://github.com/adambiggs/dotfiles/commit/862b1182828dd72f3c878c59bda5abbe4e2f72aa))
 
 
 
@@ -1185,13 +1195,13 @@ being.
 ### Features
 
 * add `fzf` vim plugin, zsh config, and add it to install script ([c6f37d1](https://github.com/adambiggs/dotfiles/commit/c6f37d13b80e1044e0440e51a5881c577182be71))
-* **update:** rebase submodules to latest commit in remote tracking branch ([7828dc8](https://github.com/adambiggs/dotfiles/commit/7828dc8961492f4faedf156f5a3bda06a327476e))
-* **vim:** disable `smartindent` b/c it was acting weird in some scenarios ([16e0a1e](https://github.com/adambiggs/dotfiles/commit/16e0a1ea5cb0fc13dbffede985d629df111a4e5f))
 * added `fzf` git submodule ([a9ca4aa](https://github.com/adambiggs/dotfiles/commit/a9ca4aa1d1db6cc8575ff86b18c3374cdf0f8721))
 * updated `patched-fonts` to latest version ([0d894cf](https://github.com/adambiggs/dotfiles/commit/0d894cf58e6a1ef1e400345a93bb0393e865781b))
 * updated NVM to latest version ([0483ba6](https://github.com/adambiggs/dotfiles/commit/0483ba66dfec281e0ac2293f5f71d5044157202f))
+* **update:** rebase submodules to latest commit in remote tracking branch ([7828dc8](https://github.com/adambiggs/dotfiles/commit/7828dc8961492f4faedf156f5a3bda06a327476e))
 * **vim:** auto-escape pasted characters in Over.vim commands ([141cfc7](https://github.com/adambiggs/dotfiles/commit/141cfc76f4f4cad3c2e1b6132e36d6acb32f5984))
 * **vim:** change Over.vim keymaps and add one to substitute visual selection ([909b851](https://github.com/adambiggs/dotfiles/commit/909b85149c68ad7d418aebbbd2d5d856ce0c4f5e))
+* **vim:** disable `smartindent` b/c it was acting weird in some scenarios ([16e0a1e](https://github.com/adambiggs/dotfiles/commit/16e0a1ea5cb0fc13dbffede985d629df111a4e5f))
 * **vim:** disable unused Vimux keymappings ([992093f](https://github.com/adambiggs/dotfiles/commit/992093fbe4b6e3f140c6e0561934beac5bbad900))
 
 
@@ -1230,20 +1240,20 @@ being.
 
 ### Features
 
-* **zsh:** added `zsh-notify` plugin ([41f3837](https://github.com/adambiggs/dotfiles/commit/41f383725e1c0cf5b7dc08166cf4555d2f5f6037))
-* **zsh:** alias `github` to `gitit` ([007df21](https://github.com/adambiggs/dotfiles/commit/007df21a80d1b96f42b992fd9c29f629dbfab36b))
 * added aws cli zsh completions ([d2dcebb](https://github.com/adambiggs/dotfiles/commit/d2dcebb538302d2a39e1f57208c4ed9852066c55))
-* store custom Karabiner key mappings ([36f876e](https://github.com/adambiggs/dotfiles/commit/36f876ea835190a048fe7f19d615ac35ae06d7ea))
+* added iTerm CLI integration feature ([991e84f](https://github.com/adambiggs/dotfiles/commit/991e84f25264811da41d0b67ec860c9bfb41509d))
 * **docker:** much improved Dockerfile ([1e99d2a](https://github.com/adambiggs/dotfiles/commit/1e99d2a3296e1dee6ca8371a931d06903724f3fb))
+* don't create neovim spellfile symlink. use `:set spell` instead ([d90ce43](https://github.com/adambiggs/dotfiles/commit/d90ce4377459c4afba5a84ef049c64156323a019))
 * **install:** install GUI apps using Homebrew Cask ([b4b0fe7](https://github.com/adambiggs/dotfiles/commit/b4b0fe75a2e23c0daa6a5cf51524c0ccbce08ca1))
 * **install:** install Pip packages ([a05e7c8](https://github.com/adambiggs/dotfiles/commit/a05e7c86c4edf505e6cca66ebcb659154ec84e99))
 * **install:** install Ruby gems ([2612689](https://github.com/adambiggs/dotfiles/commit/2612689dcbb8f99c1a31ccff7907cd4e971740e0))
-* added iTerm CLI integration feature ([991e84f](https://github.com/adambiggs/dotfiles/commit/991e84f25264811da41d0b67ec860c9bfb41509d))
 * **install:** update script to install patched Powerline fonts ([3892ecd](https://github.com/adambiggs/dotfiles/commit/3892ecd7026c6f7b900e46b795ba739764dc1da7))
-* **vim:** switch from VimPlug back to Syntastic due to breaking NeoVim changes ([03bb909](https://github.com/adambiggs/dotfiles/commit/03bb90981654a18d6489fbddf72062bf48094c25))
-* don't create neovim spellfile symlink. use `:set spell` instead ([d90ce43](https://github.com/adambiggs/dotfiles/commit/d90ce4377459c4afba5a84ef049c64156323a019))
+* store custom Karabiner key mappings ([36f876e](https://github.com/adambiggs/dotfiles/commit/36f876ea835190a048fe7f19d615ac35ae06d7ea))
 * **vim:** move all neovim plugins to `~/.nvim/plugged` directory ([f6242b9](https://github.com/adambiggs/dotfiles/commit/f6242b9bc83ff86cf931d3f3edf3a44d79535524))
+* **vim:** switch from VimPlug back to Syntastic due to breaking NeoVim changes ([03bb909](https://github.com/adambiggs/dotfiles/commit/03bb90981654a18d6489fbddf72062bf48094c25))
 * **vim:** use a single `<Leader>` for all default EasyMotion mappings ([25119bd](https://github.com/adambiggs/dotfiles/commit/25119bd6a9ce93945b682f5d67a9cccc44851675))
+* **zsh:** added `zsh-notify` plugin ([41f3837](https://github.com/adambiggs/dotfiles/commit/41f383725e1c0cf5b7dc08166cf4555d2f5f6037))
+* **zsh:** alias `github` to `gitit` ([007df21](https://github.com/adambiggs/dotfiles/commit/007df21a80d1b96f42b992fd9c29f629dbfab36b))
 
 
 
@@ -1258,8 +1268,8 @@ being.
 
 ### Features
 
-* **update:** update git submodules ([16bbe99](https://github.com/adambiggs/dotfiles/commit/16bbe99c305162bf03ae4a1fd0111baf8192d8e1))
 * added `nvm` as a submodule ([5a467e8](https://github.com/adambiggs/dotfiles/commit/5a467e8d16d7726c5c0fb646b295270c5fdaa4c4))
+* **update:** update git submodules ([16bbe99](https://github.com/adambiggs/dotfiles/commit/16bbe99c305162bf03ae4a1fd0111baf8192d8e1))
 * **vim:** added `sass-syntax` plugin ([48a4ced](https://github.com/adambiggs/dotfiles/commit/48a4ced851691e19caa55920123ab0bccac25d44))
 * **vim:** added `vim-tmux` and `vim-tmux-focus-events` plugins ([7501f27](https://github.com/adambiggs/dotfiles/commit/7501f27e634c8f7e4961404c3008b1d0f4071ea7))
 * **vim:** on-demand plugin loading for faster launch ([f298f6f](https://github.com/adambiggs/dotfiles/commit/f298f6f13b83a5297925e6f7e73beb20240f84bc))
@@ -1280,12 +1290,12 @@ being.
 
 ### Features
 
+* install script now installs Vim plugins ([16930f9](https://github.com/adambiggs/dotfiles/commit/16930f9aaf17f3e7494e1deef5ff1643b11973d8))
 * **install:** added `ctags` and `battery` brew packages ([acccc9b](https://github.com/adambiggs/dotfiles/commit/acccc9b57d97296676432193f74d37c075938d14))
-* **tmux:** tweaked some tmux settings ([a93ab8e](https://github.com/adambiggs/dotfiles/commit/a93ab8eee2fabbfe2b4f793ddf8d70c96eadf7e5))
 * store iTerm2 preferences in the repo ([4fff5d5](https://github.com/adambiggs/dotfiles/commit/4fff5d59e8dfc67bc7c70bd7bde1a971c273eb70))
+* **tmux:** tweaked some tmux settings ([a93ab8e](https://github.com/adambiggs/dotfiles/commit/a93ab8eee2fabbfe2b4f793ddf8d70c96eadf7e5))
 * **vim:** added heading for Startify sessions ([dd159f0](https://github.com/adambiggs/dotfiles/commit/dd159f08f4d43718eb1da30298253410b5b0acd2))
 * **vim:** better looking indent guides when not using default 2-spaces ([686772c](https://github.com/adambiggs/dotfiles/commit/686772c9d0c8fd48f17b257f23af133088fda101))
-* install script now installs Vim plugins ([16930f9](https://github.com/adambiggs/dotfiles/commit/16930f9aaf17f3e7494e1deef5ff1643b11973d8))
 * **vim:** show NeoVim commit in Startify footer ([6531dd3](https://github.com/adambiggs/dotfiles/commit/6531dd369c1b257192fcd0ff2121c44157b04082))
 
 
@@ -1295,10 +1305,10 @@ being.
 
 ### Features
 
-* **vim:** added Startify plugin and customized config ([422ccac](https://github.com/adambiggs/dotfiles/commit/422ccac4953a249c394ad59e0fb543700e123e47))
 * install script ([609ace7](https://github.com/adambiggs/dotfiles/commit/609ace72ad2504c646e945e8f144729bf80f5a60))
 * more better install script ([fa3bac6](https://github.com/adambiggs/dotfiles/commit/fa3bac6b667f1059ba99b5a9f22f66cb81dda96f))
 * update script (wip) ([772dc03](https://github.com/adambiggs/dotfiles/commit/772dc0310a6c2c7b737128d7c7c4f749716dada1))
+* **vim:** added Startify plugin and customized config ([422ccac](https://github.com/adambiggs/dotfiles/commit/422ccac4953a249c394ad59e0fb543700e123e47))
 * **zsh:** only source `nvm` if it's been installed ([014893a](https://github.com/adambiggs/dotfiles/commit/014893ae35a9126fc43a9f95442ee23a7208ad58))
 
 
@@ -1314,10 +1324,10 @@ being.
 
 ### Features
 
-* **vim:** changed PHP indentation to use 4 spaces as per PSR-2 ([7dcb4f4](https://github.com/adambiggs/dotfiles/commit/7dcb4f42ee99109fb5794573581104d7053949a6))
 * installed `neovim-ruby` submodule ([680fe4f](https://github.com/adambiggs/dotfiles/commit/680fe4f67182319281043d159ab5b9351db66ddb))
 * **tmuxinator:** added window to work on base Docker images ([b8fd665](https://github.com/adambiggs/dotfiles/commit/b8fd66570da21bd6acb9836acba37ab702c44b3b))
 * **tmuxinator:** moved `spine-xp` repo into `lmpm` project directory ([75b5125](https://github.com/adambiggs/dotfiles/commit/75b5125aead3feb727692c24be7028a5c1c70b80))
+* **vim:** changed PHP indentation to use 4 spaces as per PSR-2 ([7dcb4f4](https://github.com/adambiggs/dotfiles/commit/7dcb4f42ee99109fb5794573581104d7053949a6))
 * **zsh:** added Docker Compose zsh completion plugin ([7827062](https://github.com/adambiggs/dotfiles/commit/78270620f903737d32f83252f670fb02ba3d2f4b))
 * **zsh:** updated aliases ([cfe0d2c](https://github.com/adambiggs/dotfiles/commit/cfe0d2cef0c63fb317acca3642ddfd10dce6f0cb))
 
@@ -1345,8 +1355,8 @@ being.
 
 ### Features
 
-* **tmux:** update status line every 5 seconds ([e2b6dbb](https://github.com/adambiggs/dotfiles/commit/e2b6dbbb1ae7aa9ac5be89b9ee0c038627897169))
 * **tmuxinator:** update to use new window-root feature ([1c6c55f](https://github.com/adambiggs/dotfiles/commit/1c6c55f0b86860aa2dcfcf4c9555e9ca5dd143e2))
+* **tmux:** update status line every 5 seconds ([e2b6dbb](https://github.com/adambiggs/dotfiles/commit/e2b6dbbb1ae7aa9ac5be89b9ee0c038627897169))
 * **zgen:** update to latest version ([fc00be5](https://github.com/adambiggs/dotfiles/commit/fc00be5ea3829a39c6361f019b53481903dc6e88))
 * **zsh:** add `docker-machine` alias ([8684b1c](https://github.com/adambiggs/dotfiles/commit/8684b1cb90dbe57f3012a1f7dfa5793248bef98b))
 
@@ -1357,9 +1367,9 @@ being.
 
 ### Features
 
+* added `.zlogin` file ([e402e81](https://github.com/adambiggs/dotfiles/commit/e402e81b2d511b1df6dd14839ad091a59e6c15c0))
 * **tmux:** added CPU meter and now-playing to Tmuxline template ([6e327c8](https://github.com/adambiggs/dotfiles/commit/6e327c8283896c1f467bc758eb58bebedffeedf6))
 * **tmuxinator:** got rid of unnecessary panel from main control window ([03f0c68](https://github.com/adambiggs/dotfiles/commit/03f0c68b612cd31ea1f6341587e1961001633d9e))
-* added `.zlogin` file ([e402e81](https://github.com/adambiggs/dotfiles/commit/e402e81b2d511b1df6dd14839ad091a59e6c15c0))
 
 
 
@@ -1375,12 +1385,12 @@ being.
 
 ### Features
 
+* added a couple more `Tabular` bindings ([fe89880](https://github.com/adambiggs/dotfiles/commit/fe898804db185097e68a0d573474a5e3f34edf5a))
 * **tux:** custom Tmuxline theme that works outside Vim ([007634f](https://github.com/adambiggs/dotfiles/commit/007634f70866c4cd20834b457cc66ce19522e50f))
 * **vim:** slightly smaller NERDTree window ([d6d88bc](https://github.com/adambiggs/dotfiles/commit/d6d88bc9aab72d7e3bc41ea9ec511b983feccd06))
 * **zsh:** added a few more useful zsh plugins ([87d941d](https://github.com/adambiggs/dotfiles/commit/87d941db1b07cc6cdb44a4cef718b6c2e2ddbb93))
 * **zsh:** added basic find-and-replace `sed` shortcut ([a8a54cb](https://github.com/adambiggs/dotfiles/commit/a8a54cb9ad1119eb18b77c2ce2c45bbc4c143886))
 * **zsh:** removed some unused aliases ([b622064](https://github.com/adambiggs/dotfiles/commit/b6220645d904febcb2f0aed5601dce5926274d0f))
-* added a couple more `Tabular` bindings ([fe89880](https://github.com/adambiggs/dotfiles/commit/fe898804db185097e68a0d573474a5e3f34edf5a))
 
 
 
@@ -1403,10 +1413,10 @@ being.
 
 ### Features
 
-* added powerline patched fonts as submodule ([9c09c67](https://github.com/adambiggs/dotfiles/commit/9c09c670e5c67b0372370921c1dc8886537935fe))
-* **vim:** let Airline choose it's theme automatically based on Vim theme ([aa88726](https://github.com/adambiggs/dotfiles/commit/aa8872674cd4252796235ea0de3ca47ee3df5128))
 * added `base16` terminal themes as submodules ([80d11e7](https://github.com/adambiggs/dotfiles/commit/80d11e7e5ecef899aaff6e3eec90e16a84da0905))
+* added powerline patched fonts as submodule ([9c09c67](https://github.com/adambiggs/dotfiles/commit/9c09c670e5c67b0372370921c1dc8886537935fe))
 * switched theme from `solarized` to `eighties` (using `base16` library) ([7e1a16b](https://github.com/adambiggs/dotfiles/commit/7e1a16b4e5b58f5359ffb1a60459b7518d16dbc6))
+* **vim:** let Airline choose it's theme automatically based on Vim theme ([aa88726](https://github.com/adambiggs/dotfiles/commit/aa8872674cd4252796235ea0de3ca47ee3df5128))
 
 
 
@@ -1415,11 +1425,11 @@ being.
 
 ### Bug Fixes
 
-* **vim:** spell file errors when opening certain files ([b908db5](https://github.com/adambiggs/dotfiles/commit/b908db59e01cfce733df3d6dfd6fa5fc3fa4b3e9)), closes [#1](https://github.com/adambiggs/dotfiles/issues/1)
 * cursor not changing shape in insert mode ([714972d](https://github.com/adambiggs/dotfiles/commit/714972d4db0f3ad49fa6396666f1b6fb5670c3aa))
 * did I just refer to myself in the 3rd person? ([9404d86](https://github.com/adambiggs/dotfiles/commit/9404d863874a159b2ab8054600048e82c45ee4ae))
 * link script creating weird nested links if run multiple times ([6191f48](https://github.com/adambiggs/dotfiles/commit/6191f4807285ff295b07d7b2a3be5898d2ea892c))
 * **tmuxinator:** can't do that there... ([b98e187](https://github.com/adambiggs/dotfiles/commit/b98e187c7b87f2a5182156d301f4044658b8553b))
+* **vim:** spell file errors when opening certain files ([b908db5](https://github.com/adambiggs/dotfiles/commit/b908db59e01cfce733df3d6dfd6fa5fc3fa4b3e9)), closes [#1](https://github.com/adambiggs/dotfiles/issues/1)
 
 
 
@@ -1443,13 +1453,13 @@ being.
 ### Features
 
 * added gulp release task ([8820c77](https://github.com/adambiggs/dotfiles/commit/8820c77d69e2ba95442a7d4e42fe4af2ee5fca1a))
-* don't source AWS SSH key for every new terminal ([b4db8e3](https://github.com/adambiggs/dotfiles/commit/b4db8e363890f1a9fa7c1ef5db0622ae89709c5e))
-* **lmpm:** added LMPM build script alias ([c4f329b](https://github.com/adambiggs/dotfiles/commit/c4f329b92ae122a4d6e8373aae7d1bde112daa26))
 * added some Docker aliases ([1769b1a](https://github.com/adambiggs/dotfiles/commit/1769b1a98c941e466b2e3e639da1e4162c7b0c69))
-* **vim:** clean up NeoVim temp files with `vimclean` alias ([4c25268](https://github.com/adambiggs/dotfiles/commit/4c252683c78f346c041bf6629bcb2164de0173b9))
+* don't source AWS SSH key for every new terminal ([b4db8e3](https://github.com/adambiggs/dotfiles/commit/b4db8e363890f1a9fa7c1ef5db0622ae89709c5e))
+* initial commit ([7b3c08f](https://github.com/adambiggs/dotfiles/commit/7b3c08ff9ac6ad996598dc92d694bca62bd086e8))
+* **lmpm:** added LMPM build script alias ([c4f329b](https://github.com/adambiggs/dotfiles/commit/c4f329b92ae122a4d6e8373aae7d1bde112daa26))
 * uninstalled PHP via Brew. No need for extra stuff in `$PATH` ([6261cd9](https://github.com/adambiggs/dotfiles/commit/6261cd941890af2fd4e311e8dfc1cb09add5fc1b))
 * **vim:** added `.nvimrc` file ([5b5c738](https://github.com/adambiggs/dotfiles/commit/5b5c738dc9ac2fb866fb0db5d9660334b64d7999))
-* initial commit ([7b3c08f](https://github.com/adambiggs/dotfiles/commit/7b3c08ff9ac6ad996598dc92d694bca62bd086e8))
+* **vim:** clean up NeoVim temp files with `vimclean` alias ([4c25268](https://github.com/adambiggs/dotfiles/commit/4c252683c78f346c041bf6629bcb2164de0173b9))
 
 
 

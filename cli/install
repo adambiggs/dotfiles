@@ -69,7 +69,6 @@ echo -e "${green}✔${clear}"
 # Cleanup
 echo -e "\n${blue}Cleaning up Homebrew installation files...${clear}"
 brew cleanup
-brew cask cleanup
 echo -e "${green}✔${clear}"
 
 # Create symlinks

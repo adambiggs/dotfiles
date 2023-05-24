@@ -39,14 +39,12 @@ function install_tap() {
 ## Homebrew ##
 
 # Install Homebrew
+echo -ne "\n${blue}Installing Homebrew...${clear}"
 if ! type brew > /dev/null; then
-  echo -e "\n${blue}Installing Homebrew...${clear}"
-  if [[ $OSTYPE == darwin* ]]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  else
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
-  fi
-  echo -e "${green}✔${clear}"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || exit $?
+  echo -e "\n${green}✔${clear}"
+else
+  echo -e "${green} ✔ already installed${clear}"
 fi
 
 # Install taps

@@ -10,7 +10,6 @@ mkdir -p ~/.config/nvim
 echo -e "\n${blue}Linking dotfiles into your user directory...${clear}"
 ln -sfhv $SCRIPT_PATH/../agignore ~/.agignore
 ln -sfhv $SCRIPT_PATH/../tmux.conf ~/.tmux.conf
-ln -sfhv $SCRIPT_PATH/../zlogin ~/.zlogin
 ln -sfhv $SCRIPT_PATH/../zshrc ~/.zshrc
 ln -sfhv $SCRIPT_PATH/../init.vim ~/.config/nvim/init.vim
 echo -e "${green}✔${clear}"

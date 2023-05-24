@@ -1,6 +1,3 @@
-[submodule "scripts/stackshot"]
-	path = scripts/stackshot
-	url = https://gist.github.com/8574566.git
 [submodule "scripts/battery-status"]
 	path = scripts/battery-status
 	url = https://github.com/tmux-plugins/tmux-battery

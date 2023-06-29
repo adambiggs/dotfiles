@@ -5,13 +5,14 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 source $SCRIPT_PATH/../scripts/colors
 
 # Make sure XDG config directores exist.
-mkdir -p ~/.config/nvim
+# mkdir -p ~/.config/nvim
 
-echo -e "\n${blue}Linking dotfiles into your user directory...${clear}"
+echo -e "\n${blue}Linking dotfiles...${clear}"
 ln -sfhv $SCRIPT_PATH/../agignore ~/.agignore
-ln -sfhv $SCRIPT_PATH/../tmux.conf ~/.tmux.conf
+# ln -sfhv $SCRIPT_PATH/../tmux.conf ~/.tmux.conf
 ln -sfhv $SCRIPT_PATH/../zshrc ~/.zshrc
-ln -sfhv $SCRIPT_PATH/../init.vim ~/.config/nvim/init.vim
+ln -sfhv $SCRIPT_PATH/../.zsh_plugins.txt ~/.zsh_plugins.txt
+# ln -sfhv $SCRIPT_PATH/../init.vim ~/.config/nvim/init.vim
 echo -e "${green}✔${clear}"
 
 echo ""

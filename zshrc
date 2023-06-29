@@ -1,29 +1,19 @@
-if [ -f /etc/profile ]; then
-  PATH=""
-  source /etc/profile
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# if [ -f /etc/profile ]; then
+#   PATH=""
+#   source /etc/profile
+# fi
 
 ### PLUGINS ###
-export ZPLUG_HOME=~/.config/zplug
-source `brew --prefix zplug`/init.zsh
-
-source ~/.dotfiles/plugins.zsh
-
-# Check for uninstalled plugins.
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-
-# Source plugins.
-zplug load --verbose
-
-
-### COMPLETIONS ###
-type tmuxp &> /dev/null && eval "`_TMUXP_COMPLETE=source tmuxp`"
-
+source $(brew --prefix antidote)/share/antidote/antidote.zsh
+antidote load ${ZDOTDIR:-~}/.zsh_plugins.txt
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
 
 ### CONFIG ###
 
@@ -48,7 +38,7 @@ export DISABLE_AUTO_TITLE=true
 export DISABLE_CORRECTION=true
 #export DISABLE_UNTRACKED_FILES_DIRTY=true # Improves repo status check time.
 export DISABLE_UPDATE_PROMPT=true
-export EDITOR='nvim'
+# export EDITOR='nvim'
 export FZF_DEFAULT_COMMAND='rg --files --hidden' # Use ripgrep as the default source for fzf
 export FZF_DEFAULT_OPTS='--multi'
 export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
@@ -59,10 +49,8 @@ export COMPOSE_HTTP_TIMEOUT=120
 
 
 ### AUTOSUGGESTIONS ###
-if zplug check zsh-users/zsh-autosuggestions; then
-  ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down) # Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
-  ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}") # Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
-fi
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down) # Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}") # Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
 
 
 ### KEY BINDINGS ###
@@ -70,11 +58,11 @@ KEYTIMEOUT=1 # Prevents key timeout lag.
 bindkey -v
 
 # Bind UP and DOWN arrow keys for subsstring search.
-if zplug check zsh-users/zsh-history-substring-search; then
-  zmodload zsh/terminfo
-  bindkey "$terminfo[cuu1]" history-substring-search-up
-  bindkey "$terminfo[cud1]" history-substring-search-down
-fi
+# if zplug check zsh-users/zsh-history-substring-search; then
+#   zmodload zsh/terminfo
+#   bindkey "$terminfo[cuu1]" history-substring-search-up
+#   bindkey "$terminfo[cud1]" history-substring-search-down
+# fi
 
 
 ### PATHS ###
@@ -127,16 +115,15 @@ alias sudo='sudo ' # @see http://askubuntu.com/a/22043
 alias ..='cd ..'
 alias l='ls -lAh'
 alias echopath='echo $PATH | tr ":" "\012"'
-alias kmux='tmux kill-server'
-alias vimclean='rm -rf ~/.config/nvim/session/* ~/.config/nvim/swap/* ~/.config/nvim/undo/*  ~/.config/nvim/views/*'
+# alias vimclean='rm -rf ~/.config/nvim/session/* ~/.config/nvim/swap/* ~/.config/nvim/undo/*  ~/.config/nvim/views/*'
 
 # Git
 alias github='gitit'
 alias glg='git log --all --graph --decorate --oneline'
 
 # NeoVim
-alias nvim-debug='ulimit -c unlimited && nvim'
-alias nvim-backtrace='gdb -q -n -ex bt -batch /usr/local/bin/nvim /cores/core.* > backtrace.txt && rm -f /cores/core.*'
+# alias nvim-debug='ulimit -c unlimited && nvim'
+# alias nvim-backtrace='gdb -q -n -ex bt -batch /usr/local/bin/nvim /cores/core.* > backtrace.txt && rm -f /cores/core.*'
 
 # Scripts
 alias stackshot='sudo $HOME/.dotfiles/scripts/stackshot/stackshot.sh'
@@ -157,28 +144,11 @@ docker_compose_rm() {
 }
 alias dcrm=docker_compose_rm
 
-# LMPM
-
 
 ### LIBRARY CONFIG ###
-
-# Export $NPM_PATH
-if command -v npm >/dev/null; then
-  export NPM_PATH=`npm root -g`
-fi
-
-# Add Yarn global binaries to $PATH
-if command -v yarn >/dev/null; then
-  YARNBIN=`yarn global bin`
-  echo $PATH | grep -q $YARNBIN || export PATH=$PATH:$YARNBIN
-fi
-
-# iTerm cli integration.
-[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/adam/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/adam/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

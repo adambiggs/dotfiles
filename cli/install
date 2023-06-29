@@ -47,53 +47,23 @@ else
   echo -e "${green} ✔ already installed${clear}"
 fi
 
-# Install taps
-echo -e "\n${blue}Adding Homebrew taps...${clear}"
-install_tap caskroom/fonts
-install_tap caskroom/versions
-install_tap homebrew/php
-install_tap neovim/neovim
-echo -e "${green}✔${clear}"
-
 # Install packages
 echo -e "\n${blue}Installing Homebrew packages...${clear}"
 brew update
-if [[ $OSTYPE == darwin* ]]; then
-  # Mac specific packages
-  install_pkg brew ls install git
-  install_pkg brew ls install openssl
-  install_pkg brew ls install python
-else
-  # Linux specific packages
-  install_pkg brew ls install git '--with-brewed-curl --with-brewed-openssl'
-fi
+install_pkg brew ls install git
+install_pkg brew ls install antidote
+# install_pkg brew ls install openssl
 install_pkg brew ls install composer
-install_pkg brew ls install ctags
 install_pkg brew ls install jq
-install_pkg brew ls install neovim
-install_pkg brew ls install php@7.4
+# install_pkg brew ls install neovim
 install_pkg brew ls install python
-install_pkg brew ls install python3
-install_pkg brew ls install ruby
+# install_pkg brew ls install ruby
 install_pkg brew ls install the_silver_searcher
 install_pkg brew ls install ripgrep
-install_pkg brew ls install tmux
+# install_pkg brew ls install tmux
 install_pkg brew ls install wget
-install_pkg brew ls install zplug
-install_pkg brew ls install zsh
-echo -e "${green}✔${clear}"
-
-# Install casks
-echo -e "\n${blue}Installing Homebrew casks...${clear}"
-install_pkg 'brew cask' ls install font-monoid-nerd-font-mono
-if [[ $OSTYPE == darwin* ]]; then
-  # Mac spcific casks
-  install_pkg 'brew cask' ls install atom
-  install_pkg 'brew cask' ls install flycut
-  install_pkg 'brew cask' ls install iterm2-nightly
-  install_pkg 'brew cask' ls install sourcetree
-  install_pkg 'brew cask' ls install spectacle
-fi
+# install_pkg brew ls install zplug
+# install_pkg brew ls install zsh
 echo -e "${green}✔${clear}"
 
 # Cleanup
@@ -106,76 +76,75 @@ echo -e "${green}✔${clear}"
 ## Ruby ##
 
 # Install gems
-echo -e "\n${blue}Installing Ruby gems...${clear}"
-install_pkg gem 'list --no-versions' install CoffeeTags
-install_pkg gem 'list --no-versions' install neovim
-echo -e "${green}✔${clear}"
+# echo -e "\n${blue}Installing Ruby gems...${clear}"
+# install_pkg gem 'list --no-versions' install neovim
+# echo -e "${green}✔${clear}"
 
 
 ## PIP ##
 
 # Install packages
-echo -e "\n${blue}Installing PIP packages...${clear}"
-install_pkg pip3 'list --format=legacy' install neovim tmuxp
-echo -e "${green}✔${clear}"
+# echo -e "\n${blue}Installing PIP packages...${clear}"
+# install_pkg pip3 'list --format=legacy' install neovim
+# echo -e "${green}✔${clear}"
 
 
 ## Tmux ##
 
 # Install tmux plugins
-echo -e "\n${blue}Installing Tmux plugins...${clear}"
-$SCRIPT_PATH/../libs/tpm/bin/clean_plugins
-$SCRIPT_PATH/../libs/tpm/bin/install_plugins
-echo -e "${green}✔${clear}"
+# echo -e "\n${blue}Installing Tmux plugins...${clear}"
+# $SCRIPT_PATH/../libs/tpm/bin/clean_plugins
+# $SCRIPT_PATH/../libs/tpm/bin/install_plugins
+# echo -e "${green}✔${clear}"
 
 
 ## Vim ##
 
 # Install Vim-Plug
-echo -en "\n${blue}Installing Vim-Plug...${clear} "
-VIMPLUG_PATH=~/.config/nvim/autoload/plug.vim
-if [ ! -e "$VIMPLUG_PATH" ]; then
-  echo ""
-  curl -fLo $VIMPLUG_PATH --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-echo -e "${green}✔${clear}"
+# echo -en "\n${blue}Installing Vim-Plug...${clear} "
+# VIMPLUG_PATH=~/.config/nvim/autoload/plug.vim
+# if [ ! -e "$VIMPLUG_PATH" ]; then
+#   echo ""
+#   curl -fLo $VIMPLUG_PATH --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# fi
+# echo -e "${green}✔${clear}"
 
 # Install plugins
-echo -en "\n${blue}Starting NeoVim and installing plugins...${clear} "
-nvim +PlugInstall +qall
-echo -e "${green}✔${clear}"
+# echo -en "\n${blue}Starting NeoVim and installing plugins...${clear} "
+# nvim +PlugInstall +qall
+# echo -e "${green}✔${clear}"
 
 
 ## Git ##
 
 # Add global .gitignore
-echo -en "\n${blue}Setting global Git ignore file path...${clear} "
-git config --global core.excludesfile ~/.gitignore
-echo -e "${green}✔${clear}"
+# echo -en "\n${blue}Setting global Git ignore file path...${clear} "
+# git config --global core.excludesfile ~/.gitignore
+# echo -e "${green}✔${clear}"
 
 # Git submodules
-echo -en "\n${blue}Installing Git submodules...${clear} "
-git submodule init
-git submodule update --remote --rebase
-echo -e "${green}✔${clear}"
+# echo -en "\n${blue}Installing Git submodules...${clear} "
+# git submodule init
+# git submodule update --remote --rebase
+# echo -e "${green}✔${clear}"
 
 
 ## Other ##
 
 # Install iTerm CLI
-if [[ $OSTYPE == darwin* ]]; then
-  echo -en "\n${blue}Installing iTerm cli integration...${clear} "
-  ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
-  if [ -e "$ITERM_CLI_PATH" ]; then
-    echo -e "${green}✔${clear}"
-  else
-    echo ""
-    curl -L iterm2.com/misc/install_shell_integration.sh | bash
-    echo -e "${green}✔${clear}"
-  fi
-fi
+# if [[ $OSTYPE == darwin* ]]; then
+#   echo -en "\n${blue}Installing iTerm cli integration...${clear} "
+#   ITERM_CLI_PATH=~/.iterm2_shell_integration.zsh
+#   if [ -e "$ITERM_CLI_PATH" ]; then
+#     echo -e "${green}✔${clear}"
+#   else
+#     echo ""
+#     curl -L iterm2.com/misc/install_shell_integration.sh | bash
+#     echo -e "${green}✔${clear}"
+#   fi
+# fi
 
 # Create symlinks
 source $SCRIPT_PATH/link
 
-echo -e "🍕 ${green}All done${clear} 🍕\n"
+echo -e "🍕 ${green}All done!${clear} 🍕\n"

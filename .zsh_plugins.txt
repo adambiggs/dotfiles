@@ -2,8 +2,8 @@ djui/alias-tips
 ohmyzsh/ohmyzsh path:plugins/yarn
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 romkatv/powerlevel10k kind:fpath
-zsh-users/zsh-autosuggestions
-zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-completions
 belak/zsh-utils path:completion
-# zsh-users/zsh-history-substring-search # Should be loaded last.
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search kind:defer

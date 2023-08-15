@@ -4,8 +4,8 @@
   "description": "Repo for my personal dotfiles",
   "private": true,
   "main": "zshrc",
-  "repository": "adambiggs/dotfiles",
-  "author": "Adam Biggs <adam.biggs@lightmaker.com>",
+  "repository": "https://github.com/adambiggs/dotfiles",
+  "author": "Adam Biggs <email@adambig.gs>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adambiggs/dotfiles/issues"

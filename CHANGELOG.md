@@ -1,3 +1,13 @@
+# [13.1.0](https://github.com/adambiggs/dotfiles/compare/v13.0.0...v13.1.0) (2023-08-15)
+
+
+### Features
+
+* **zsh:** install and configure `zsh-users/zsh-history-substring-search` ([234add3](https://github.com/adambiggs/dotfiles/commit/234add3d773fe09c9d081e254d44a04fca1eda27))
+* **zsh:** slightly better terminal boot times ([c646dd6](https://github.com/adambiggs/dotfiles/commit/c646dd6773a368d5d134cab72cee3a4d65d6cff0))
+
+
+
 # [13.0.0](https://github.com/adambiggs/dotfiles/compare/v12.3.0...v13.0.0) (2023-08-15)
 
 

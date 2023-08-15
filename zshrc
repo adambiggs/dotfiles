@@ -11,8 +11,15 @@ fi
 # fi
 
 ### PLUGINS ###
-source $(brew --prefix antidote)/share/antidote/antidote.zsh
-antidote load ${ZDOTDIR:-~}/.zsh_plugins.txt
+# Lazy-load antidote and generate the static load file only when needed
+zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
+if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+  (
+    source $(brew --prefix antidote)/share/antidote/antidote.zsh
+    antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
+  )
+fi
+source ${zsh_plugins}.zsh
 autoload -Uz promptinit && promptinit && prompt powerlevel10k
 
 ### CONFIG ###

@@ -1,3 +1,21 @@
+# [13.0.0](https://github.com/adambiggs/dotfiles/compare/v12.3.0...v13.0.0) (2023-08-15)
+
+
+### Bug Fixes
+
+* remove missing git submodule ([66753dd](https://github.com/adambiggs/dotfiles/commit/66753dd550e814d2dde5f0cddc8b509f626a3fc2))
+
+
+### Features
+
+* no longer manage `.gitconfig` ([952f73e](https://github.com/adambiggs/dotfiles/commit/952f73ee4479931c76f07238b194b62992accf2a))
+* no longer manage `.zlogin` ([cfe1341](https://github.com/adambiggs/dotfiles/commit/cfe1341a4e06842039c8d05f6bfc5399f4c844c5))
+* no longer manage global `.gitignore` ([550805b](https://github.com/adambiggs/dotfiles/commit/550805b9a7eff50389063b5cd96d4265398fa2a9))
+* out with the old, in with the new - bye nvim/tmux, you served me well but you're too high maintenance for my current needs ([b964b44](https://github.com/adambiggs/dotfiles/commit/b964b444338b699d0df29359520de23a72bdbfa6))
+* update to latest Homebrew install method ([c9243d4](https://github.com/adambiggs/dotfiles/commit/c9243d48de2bd3f0f7f4e7163e4e75a453ee076e))
+
+
+
 # [12.3.0](https://github.com/adambiggs/dotfiles/compare/v12.2.0...v12.3.0) (2021-11-24)
 
 

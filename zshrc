@@ -70,47 +70,9 @@ bindkey "$terminfo[cuu1]" history-substring-search-up
 bindkey "$terminfo[cud1]" history-substring-search-down
 
 
-### PATHS ###
-
-# Ruby
-RUBYPATH=/usr/local/opt/ruby/bin
-echo $PATH | grep -q $RUBYPATH || export PATH=$RUBYPATH:$PATH
-
-# Go
-if command -v go >/dev/null; then
-  export GOPATH=`go env GOPATH`
-  export GOROOT=`go env GOROOT`
-  echo $PATH | grep -q $GOPATH/bin || export PATH=$GOPATH/bin:$PATH
-  echo $PATH | grep -q $GOROOT/bin || export PATH=$GOROOT/bin:$PATH
-fi
-
-# Java
-JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
-[ -f $JAVA_HOME/bin/java ] && export JAVA_HOME=$JAVA_HOME
-
-# Homebrew
-if command -v brew >/dev/null; then
-  BREWSBIN=/usr/local/sbin
-  BREWBIN=/usr/local/bin
-  echo $PATH | grep -q $BREWSBIN || export PATH=$BREWSBIN:$PATH
-  echo $PATH | grep -q $BREWBIN || export PATH=$BREWBIN:$PATH
-fi
-
-# PHP
-PHPBIN=/usr/local/opt/php@7.4/bin
-echo $PATH | grep -q $PHPBIN || export PATH=$PHPBIN:$PATH
-PHPSBIN=/usr/local/opt/php@7.4/sbin
-echo $PATH | grep -q $PHPSBIN || export PATH=$PHPSBIN:$PATH
-
-# Composer
-if command -v composer >/dev/null; then
-  COMPOSERBIN=$HOME/.composer/vendor/bin
-  echo $PATH | grep -q $COMPOSERBIN || export PATH=$PATH:$COMPOSERBIN
-fi
-
-# NVM
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+### COMPLETIONS ###
+eval "$(aws-vault --completion-script-zsh)"
+# type tmuxp &> /dev/null && eval "`_TMUXP_COMPLETE=source tmuxp`"
 
 
 ### ALIASES ###

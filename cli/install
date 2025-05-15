@@ -1,8 +1,11 @@
 #!/bin/bash
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-# Source external scripts.
-source $SCRIPT_PATH/../scripts/colors
+# Colors
+blue=`tput setaf 4 2>/dev/null`
+green=`tput setaf 2 2>/dev/null`
+red=`tput setaf 1 2>/dev/null`
+clear=`tput sgr0 2>/dev/null`
 
 
 ## Functions ##
@@ -52,18 +55,11 @@ echo -e "\n${blue}Installing Homebrew packages...${clear}"
 brew update
 install_pkg brew ls install git
 install_pkg brew ls install antidote
-# install_pkg brew ls install openssl
-install_pkg brew ls install composer
 install_pkg brew ls install jq
-# install_pkg brew ls install neovim
-install_pkg brew ls install python
-# install_pkg brew ls install ruby
+install_pkg brew ls install neovim
 install_pkg brew ls install the_silver_searcher
 install_pkg brew ls install ripgrep
-# install_pkg brew ls install tmux
 install_pkg brew ls install wget
-# install_pkg brew ls install zplug
-# install_pkg brew ls install zsh
 echo -e "${green}✔${clear}"
 
 # Cleanup

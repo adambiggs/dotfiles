@@ -1,18 +1,21 @@
 #!/bin/bash
 SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-# Source external scripts.
-source $SCRIPT_PATH/../scripts/colors
+# Colors
+blue=`tput setaf 4 2>/dev/null`
+green=`tput setaf 2 2>/dev/null`
+red=`tput setaf 1 2>/dev/null`
+clear=`tput sgr0 2>/dev/null`
 
 # Make sure XDG config directores exist.
 # mkdir -p ~/.config/nvim
 
 echo -e "\n${blue}Linking dotfiles...${clear}"
 ln -sfhv $SCRIPT_PATH/../agignore ~/.agignore
-# ln -sfhv $SCRIPT_PATH/../tmux.conf ~/.tmux.conf
 ln -sfhv $SCRIPT_PATH/../zshrc ~/.zshrc
+ln -sfhv $SCRIPT_PATH/../zshenv ~/.zshenv
 ln -sfhv $SCRIPT_PATH/../.zsh_plugins.txt ~/.zsh_plugins.txt
-# ln -sfhv $SCRIPT_PATH/../init.vim ~/.config/nvim/init.vim
+ln -sfhv $SCRIPT_PATH/../init.vim ~/.config/nvim/init.vim
 echo -e "${green}✔${clear}"
 
 echo ""

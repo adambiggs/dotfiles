@@ -1,0 +1,62 @@
+# Interactive ZSH configuration
+# This file contains UI/UX features for human users only
+# AI agents and non-interactive shells should NOT source this file
+
+### POWERLEVEL10K INSTANT PROMPT ###
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
+### PLUGINS ###
+# Lazy-load antidote and generate the static load file only when needed
+zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
+if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+  (
+    source $(brew --prefix antidote)/share/antidote/antidote.zsh
+    antidote bundle <${zsh_plugins}.txt >${zsh_plugins}.zsh
+  )
+fi
+source ${zsh_plugins}.zsh
+autoload -Uz promptinit && promptinit && prompt powerlevel10k
+
+
+### PLUGIN CONFIGURATION ###
+
+# Autosuggestions
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down) # Add history-substring-search-* widgets to list of widgets that clear the autosuggestion
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}") # Remove *-line-or-history widgets from list of widgets that clear the autosuggestion to avoid conflict with history-substring-search-* widgets
+
+# Plugin-specific env vars
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT='    '
+export ZSH_CACHE_DIR=$ZSH/cache
+
+
+### KEY BINDINGS ###
+KEYTIMEOUT=1 # Prevents key timeout lag.
+bindkey -v
+
+# Bind UP and DOWN arrow keys for substring search.
+zmodload zsh/terminfo
+bindkey "$terminfo[cuu1]" history-substring-search-up
+bindkey "$terminfo[cud1]" history-substring-search-down
+
+# FZF key bindings
+if command -v brew >/dev/null; then
+  kb="$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+  [[ -r "$kb" ]] && source "$kb"
+fi
+bindkey '^R' fzf-history-widget
+
+
+### COMPLETIONS ###
+# (Add any interactive completion configurations here)
+
+
+### PROMPT CUSTOMIZATION ###
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

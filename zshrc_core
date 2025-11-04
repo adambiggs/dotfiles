@@ -1,0 +1,75 @@
+#!/bin/zsh
+# Core ZSH configuration for AI agents and non-interactive shells
+# This file contains only essential configuration: env vars, PATH, aliases, and functions
+# NO interactive features (prompts, plugins, keybindings, etc.)
+
+### CORE ENVIRONMENT VARIABLES ###
+
+export CLICOLOR=1
+export BLOCK_SIZE=human-readable # https://www.gnu.org/software/coreutils/manual/html_node/Block-size.html
+export HISTSIZE=11000
+export SAVEHIST=10000
+export HISTFILE=~/.zsh_history
+
+export DEFAULT_USER="adambiggs"
+export DISABLE_AUTO_TITLE=true
+export DISABLE_CORRECTION=true
+export DISABLE_UPDATE_PROMPT=true
+# export EDITOR='nvim'
+export FZF_DEFAULT_COMMAND='rg --files --hidden' # Use ripgrep as the default source for fzf
+export FZF_DEFAULT_OPTS='--multi'
+export NOTIFY_COMMAND_COMPLETE_TIMEOUT=300
+export UPDATE_ZSH_DAYS=1
+export COMPOSE_HTTP_TIMEOUT=120
+
+# ZSH history options
+setopt append_history
+setopt hist_expire_dups_first
+setopt hist_fcntl_lock
+setopt hist_ignore_all_dups
+setopt hist_lex_words
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt share_history
+
+
+### ESSENTIAL ALIASES ###
+
+# General shortcuts
+alias sudo='sudo ' # @see http://askubuntu.com/a/22043
+alias ..='cd ..'
+alias l='ls -lAh'
+alias echopath='echo $PATH | tr ":" "\012"'
+
+# Git
+alias github='gitit'
+alias glg='git log --all --graph --decorate --oneline'
+
+# Scripts
+alias stackshot='sudo $HOME/.dotfiles/scripts/stackshot/stackshot.sh'
+
+# Docker
+alias drun='docker run --rm -ti'
+alias drc='docker rm $(docker ps -a -q) 2>/dev/null' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+alias dri='docker rmi $(docker images -q --filter "dangling=true") 2>/dev/null' # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html#comment-1515979883
+
+# Docker Compose
+alias dc='docker-compose'
+alias dcu='docker-compose up -d --remove-orphans'
+alias dcl='docker-compose logs --tail 200 -f'
+alias dcr='docker-compose run --rm'
+
+
+### ESSENTIAL FUNCTIONS ###
+
+docker_compose_rm() {
+  docker-compose stop --timeout 1 $@
+  docker-compose rm --force $@
+}
+alias dcrm=docker_compose_rm
+
+
+### LOCAL OVERRIDES ###
+
+# Sensitive env vars should go here:
+[ -f ~/.zshrc_local ] && source ~/.zshrc_local

@@ -13,6 +13,8 @@ clear=`tput sgr0 2>/dev/null`
 echo -e "\n${blue}Linking dotfiles...${clear}"
 ln -sfhv $SCRIPT_PATH/../agignore ~/.agignore
 ln -sfhv $SCRIPT_PATH/../zshrc ~/.zshrc
+ln -sfhv $SCRIPT_PATH/../zshrc_core ~/.zshrc_core
+ln -sfhv $SCRIPT_PATH/../zshrc_interactive ~/.zshrc_interactive
 ln -sfhv $SCRIPT_PATH/../zshenv ~/.zshenv
 ln -sfhv $SCRIPT_PATH/../.zsh_plugins.txt ~/.zsh_plugins.txt
 ln -sfhv $SCRIPT_PATH/../init.vim ~/.config/nvim/init.vim

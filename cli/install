@@ -60,6 +60,8 @@ install_pkg brew ls install neovim
 install_pkg brew ls install the_silver_searcher
 install_pkg brew ls install ripgrep
 install_pkg brew ls install wget
+install_pkg brew ls install asdf
+install_pkg brew ls install azure-cli
 echo -e "${green}✔${clear}"
 
 # Cleanup
